@@ -64,6 +64,11 @@ public class BaoTerm extends Model {
 		}
 		return term;
 	}
+	
+	public String toString() {
+	    return label;
+	}
+
 
 
 }

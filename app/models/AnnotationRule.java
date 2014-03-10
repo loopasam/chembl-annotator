@@ -23,4 +23,7 @@ public class AnnotationRule extends Model {
 		this.baoTerm = baoTerm;
 	}
 
+	public String toString() {
+	    return rule;
+	}
 }

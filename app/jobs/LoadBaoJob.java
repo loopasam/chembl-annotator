@@ -14,6 +14,7 @@ import play.jobs.Job;
 import play.libs.WS;
 import play.libs.WS.HttpResponse;
 
+//Loads BAO from Bioportal API
 public class LoadBaoJob extends Job {
 
 	String rootClass = "http://www.bioassayontology.org/bao#BAO_0000015";

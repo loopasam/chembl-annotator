@@ -1,3 +1,9 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+baoUrl=URI BAO term
+baoId=BAO identifier
+label=Label
+definition=Definition
+children=Direct children BAO terms
