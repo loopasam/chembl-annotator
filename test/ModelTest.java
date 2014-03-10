@@ -74,6 +74,18 @@ public class ModelTest extends UnitTest {
 		bioassayTerm.addChild("http://www.bioassayontology.org/bao#BAO_0000012", "micro assay", "A set of [...]");
 		assertEquals(3, bioassayTerm.children.size());
 	}
+	
+	@Test
+	public void annotatedAssayTest() {
+		new AnnotatedAssay(2, "CHEMBL201", "balbalab description").save();
+		AnnotatedAssay assayRetrieved = AnnotatedAssay.find("byChemblId", "CHEMBL201").first();
+		assertNotNull(assayRetrieved);
+		assertNull(assayRetrieved.reviewer);
+		new User("bob@gmail.com", "secret").save();
+		User bob = User.find("byEmail", "bob@gmail.com").first();
+		assayRetrieved.setReviewer(bob);
+		assertNotNull(assayRetrieved.reviewer);
+	}
 
 
 }

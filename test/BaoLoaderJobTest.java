@@ -1,6 +1,7 @@
 import java.util.concurrent.ExecutionException;
 
 import jobs.LoadBaoJob;
+import models.BaoTerm;
 import models.User;
 
 import org.junit.Before;

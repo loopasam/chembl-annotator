@@ -29,7 +29,7 @@ public class LoadBaoJob extends Job {
 	}
 
 	private void saveTerm(String termUrl) throws UnsupportedEncodingException {
-		Logger.info(termUrl);			
+		Logger.info(termUrl);
 
 		//Populate the term
 		String encoded = URLEncoder.encode(termUrl, "UTF-8");
