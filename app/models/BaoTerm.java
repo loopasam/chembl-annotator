@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -28,7 +29,7 @@ public class BaoTerm extends Model {
 	@Lob
 	public String definition;
 
-	@OneToMany(mappedBy="baoTerm", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="baoTerm", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	public List<AnnotationRule> rules;
 
 	@ManyToMany(cascade=CascadeType.ALL)

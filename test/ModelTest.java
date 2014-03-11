@@ -77,8 +77,8 @@ public class ModelTest extends UnitTest {
 
 	@Test
 	public void annotatedAssayTest() {
-		BaoTerm bioassayTerm = BaoTerm.createOrRetrieveTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]");
-		new AnnotatedAssay(2, "CHEMBL201", "balbalab description", bioassayTerm).save();
+//		BaoTerm bioassayTerm = BaoTerm.createOrRetrieveTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]");
+		new AnnotatedAssay(2, "CHEMBL201", "balbalab description").save();
 		AnnotatedAssay assayRetrieved = AnnotatedAssay.find("byChemblId", "CHEMBL201").first();
 		assertNotNull(assayRetrieved);
 		assertNull(assayRetrieved.reviewer);

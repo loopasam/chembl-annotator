@@ -5,9 +5,13 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+
+import org.hibernate.Session;
+import org.hibernate.annotations.Type;
 
 import play.db.jpa.Model;
 
@@ -17,28 +21,29 @@ public class AnnotatedAssay extends Model {
 	@ManyToOne
 	public Reviewer reviewer;
 
-	@ManyToMany(cascade=CascadeType.ALL)
+	//TODO that was the problem all along
+	@ManyToMany(cascade=CascadeType.MERGE)
 	public List<BaoTerm> annotations;
 
 	public int assayId;
 
 	public String chemblId;
 
-	@Lob
+	//TODO put @Lob for production
+	@Type(type = "org.hibernate.type.TextType")
 	public String description;
 
 	public boolean starred;
 
 	public boolean needReview;
 
-	public AnnotatedAssay(int assayId, String chemblId, String description, BaoTerm baoTerm) {
+	public AnnotatedAssay(int assayId, String chemblId, String description) {
 		this.assayId = assayId;
 		this.description = description;
 		this.chemblId = chemblId;
 		this.needReview = false;
 		this.starred = false;
 		this.annotations = new ArrayList<>();
-		this.annotations.add(baoTerm);
 	}
 
 	public AnnotatedAssay setReviewer(Reviewer reviewer) {
@@ -47,17 +52,5 @@ public class AnnotatedAssay extends Model {
 		return this;
 	}
 
-	public static void annotate(int assayId, String chemblId, String description, BaoTerm baoTerm) {
-		AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
-		if(assay == null){
-			assay = new AnnotatedAssay(assayId, chemblId, description, baoTerm).save();
-		}else{
-			if(!assay.annotations.contains(baoTerm)){
-				assay.annotations.add(baoTerm);
-				assay.save();
-			}
-		}
-
-	}
 
 }
