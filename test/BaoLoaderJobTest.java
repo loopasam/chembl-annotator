@@ -2,7 +2,7 @@ import java.util.concurrent.ExecutionException;
 
 import jobs.LoadBaoJob;
 import models.BaoTerm;
-import models.User;
+import models.Reviewer;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -12,18 +12,18 @@ public class ModelTest extends UnitTest {
 
 	@Test
 	public void createAndRetrieveUser() {
-		new User("bob@gmail.com", "secret").save();
-		User bob = User.find("byEmail", "bob@gmail.com").first();
+		new Reviewer("bob@gmail.com", "secret").save();
+		Reviewer bob = Reviewer.find("byEmail", "bob@gmail.com").first();
 		assertNotNull(bob);
 		assertEquals("bob@gmail.com", bob.email);
 	}
 
 	@Test
 	public void tryConnectAsUser() {
-		new User("bob@gmail.com", "secret").save();
-		assertNotNull(User.connect("bob@gmail.com", "secret"));
-		assertNull(User.connect("bob@gmail.com", "badpassword"));
-		assertNull(User.connect("tom@gmail.com", "secret"));
+		new Reviewer("bob@gmail.com", "secret").save();
+		assertNotNull(Reviewer.connect("bob@gmail.com", "secret"));
+		assertNull(Reviewer.connect("bob@gmail.com", "badpassword"));
+		assertNull(Reviewer.connect("tom@gmail.com", "secret"));
 	}
 
 	@Test
@@ -74,15 +74,16 @@ public class ModelTest extends UnitTest {
 		bioassayTerm.addChild("http://www.bioassayontology.org/bao#BAO_0000012", "micro assay", "A set of [...]");
 		assertEquals(3, bioassayTerm.children.size());
 	}
-	
+
 	@Test
 	public void annotatedAssayTest() {
-		new AnnotatedAssay(2, "CHEMBL201", "balbalab description").save();
+		BaoTerm bioassayTerm = BaoTerm.createOrRetrieveTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]");
+		new AnnotatedAssay(2, "CHEMBL201", "balbalab description", bioassayTerm).save();
 		AnnotatedAssay assayRetrieved = AnnotatedAssay.find("byChemblId", "CHEMBL201").first();
 		assertNotNull(assayRetrieved);
 		assertNull(assayRetrieved.reviewer);
-		new User("bob@gmail.com", "secret").save();
-		User bob = User.find("byEmail", "bob@gmail.com").first();
+		new Reviewer("bob@gmail.com", "secret").save();
+		Reviewer bob = Reviewer.find("byEmail", "bob@gmail.com").first();
 		assayRetrieved.setReviewer(bob);
 		assertNotNull(assayRetrieved.reviewer);
 	}

@@ -8,6 +8,10 @@
 # Home page
 GET     /                                       Application.index
 
+# Home page
+GET     /jobs                                       Application.jobs
+
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

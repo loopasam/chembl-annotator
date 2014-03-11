@@ -1,0 +1,23 @@
+#{extends 'main.html' /} #{set title:'Jobs' /}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Job description</th>
+			<th>Launcher</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Download and save BAO terms related to assays</td>
+			<td><a href="@{Application.baoJob()}">Launch job</a></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Annotate all the assays based on the rules.</td>
+			<td><a href="@{Application.annotationJob()}">Launch job</a></td>
+		</tr>
+	</tbody>
+</table>

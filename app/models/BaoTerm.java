@@ -33,7 +33,7 @@ public class BaoTerm extends Model {
 
 	@ManyToMany(cascade=CascadeType.ALL)
 	public List<BaoTerm> children;
-
+	
 	public BaoTerm(String url, String label, String definition) {
 		this.baoUrl = url;
 		this.definition = definition;
