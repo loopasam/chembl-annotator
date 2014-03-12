@@ -50,6 +50,10 @@ public class AnnotatedAssay extends Model {
 		this.save();
 		return this;
 	}
+	
+	public String toString() {
+		return chemblId;
+	}
 
 	public static void annotate(int assayId, String chemblId, String description, BaoTerm baoTerm) {
 		//Checks if the assay exists already

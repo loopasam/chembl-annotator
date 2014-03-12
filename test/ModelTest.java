@@ -38,7 +38,7 @@ public class ModelTest extends UnitTest {
 	public void createAndRetrieveRules() {
 		new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]").save();
 		BaoTerm bioassayTerm = BaoTerm.find("byBaoId", "BAO_0000015").first();
-		new AnnotationRule(bioassayTerm, "SELECT * FROM foo", "identification of the word assay").save();
+		new AnnotationRule(bioassayTerm, "SELECT * FROM foo", "identification of the word assay", 1, true).save();
 		AnnotationRule bioassayRs = AnnotationRule.find("byBaoTerm", bioassayTerm).first();	
 		assertNotNull(bioassayRs);
 		//Relationship not maintained this way

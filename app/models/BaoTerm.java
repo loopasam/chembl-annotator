@@ -47,7 +47,7 @@ public class BaoTerm extends Model {
 	}
 
 	public BaoTerm addAnnotationRule(String rule, String description) {
-		AnnotationRule annotationRule = new AnnotationRule(this, rule, description).save();
+		AnnotationRule annotationRule = new AnnotationRule(this, rule, description, 1, true).save();
 		this.rules.add(annotationRule);
 		this.save();
 		return this;

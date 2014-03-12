@@ -12,7 +12,7 @@ GET     /assay/{chemblid}                                       Application.assa
 GET     /                                       Application.index
 
 # Home page
-GET     /jobs                                       Application.jobs
+GET     /jobs/?                                       Application.jobs
 
 
 # Ignore favicon requests

@@ -19,7 +19,7 @@ public class Reviewer extends Model {
 	public String email;
 	public String password;
 	public boolean isAdmin;
-		
+
 	public Reviewer(String email, String password) {
 		this.email = email;
 		this.password = password;
@@ -27,6 +27,10 @@ public class Reviewer extends Model {
 
 	public static Reviewer connect(String email, String password) {
 		return find("byEmailAndPassword", email, password).first();
+	}
+
+	public String toString() {
+		return email;
 	}
 
 }
