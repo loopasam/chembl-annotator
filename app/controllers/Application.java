@@ -12,25 +12,12 @@ import models.*;
 
 public class Application extends Controller {
 
-	//Job to check if the BAO terms needs updating
-	//if so, triggers the job synchronoously
-
 	public static void index() {
 		render();
 	}
 
 	public static void jobs() {
 		render();
-	}
-
-	public static void assay(){
-		System.out.println("listing....");
-		List<AnnotatedAssay> assays = AnnotatedAssay.findAll();
-		for (AnnotatedAssay annotatedAssay : assays) {
-			for (BaoTerm annotation : annotatedAssay.annotations) {
-				System.out.println(annotation);
-			}
-		}
 	}
 
 	public static void baoJob() {
@@ -46,15 +33,20 @@ public class Application extends Controller {
 	}
 
 	public static void annotationJob() {
-		//		if(AnnotatedAssay.findAll().size() <= 0){
-		new AnnotateAllAssaysJob().now();
-		//		}else{
-		//			Logger.info("Job not started, as there are some already " +
-		//					"existing annotated assays in the database. Delete " +
-		//					"first these terms from the table in order to " +
-		//					"be able to start the job.");
-		//		}
+		if(AnnotatedAssay.findAll().size() <= 0){
+			new AnnotateAllAssaysJob().now();
+		}else{
+			Logger.info("Job not started, as there are some already " +
+					"existing annotated assays in the database. Delete " +
+					"first these terms from the table in order to " +
+					"be able to start the job.");
+		}
 		jobs();
+	}
+	
+	public static void assay(String chemblid) {
+		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();		
+		render(assay);
 	}
 
 

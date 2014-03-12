@@ -21,6 +21,7 @@ public class BaoLoaderJobTest extends UnitTest {
 
 	@Test
 	public void loadAndSaveBaoTerms() throws InterruptedException, ExecutionException {
+		//Problem with syncronous jobs and postgres for whatever reason
 		new LoadBaoJob().now().get();
 		//test more stuff
 	}

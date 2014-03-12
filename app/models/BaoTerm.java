@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.Type;
+
 import play.db.jpa.JPABase;
 import play.db.jpa.Model;
 
@@ -26,7 +28,7 @@ public class BaoTerm extends Model {
 	public String baoId;
 	public String label;
 
-	@Lob
+	@Type(type = "org.hibernate.type.TextType")
 	public String definition;
 
 	@OneToMany(mappedBy="baoTerm", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
@@ -34,7 +36,7 @@ public class BaoTerm extends Model {
 
 	@ManyToMany(cascade=CascadeType.ALL)
 	public List<BaoTerm> children;
-	
+
 	public BaoTerm(String url, String label, String definition) {
 		this.baoUrl = url;
 		this.definition = definition;
@@ -59,15 +61,15 @@ public class BaoTerm extends Model {
 	}
 
 	public static BaoTerm createOrRetrieveTerm(String url, String label, String definition) {
-		BaoTerm term = BaoTerm.find("byBaoUrl", url).first();
+		BaoTerm term = BaoTerm.find("baoUrl", url).first();
 		if(term == null){
 			return new BaoTerm(url, label, definition).save();
 		}
 		return term;
 	}
-	
+
 	public String toString() {
-	    return label;
+		return label;
 	}
 
 

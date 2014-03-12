@@ -29,7 +29,6 @@ public class AnnotatedAssay extends Model {
 
 	public String chemblId;
 
-	//TODO put @Lob for production
 	@Type(type = "org.hibernate.type.TextType")
 	public String description;
 
@@ -52,5 +51,22 @@ public class AnnotatedAssay extends Model {
 		return this;
 	}
 
+	public static void annotate(int assayId, String chemblId, String description, BaoTerm baoTerm) {
+		//Checks if the assay exists already
+		AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
+
+		if(assay == null){
+			//If not then create a new one
+			assay = new AnnotatedAssay(assayId, chemblId, description);
+			assay.annotations.add(baoTerm);
+			assay.save();
+		}else{
+			//If the assay exists already, then update it with a new term only, if not contained already
+			if(!assay.annotations.contains(baoTerm)){
+				assay.annotations.add(baoTerm);
+				assay.save();
+			}
+		}
+	}
 
 }

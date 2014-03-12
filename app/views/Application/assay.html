@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Assay - ' + assay.chemblId /}
+
+<h1>${assay.chemblId}</h1>
+
+<h3>Assay ID: ${assay.assayId}</h3>
+<h3>Need review: ${assay.needReview}</h3>
+<h3>Description: ${assay.description}</h3>
+
+<ul>
+    #{list items:assay.annotations, as:'annotation' }
+        <li>${annotation}</li>
+    #{/list}
+</ul>

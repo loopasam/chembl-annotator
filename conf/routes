@@ -6,6 +6,9 @@
 *      /crud              module:crud
 
 # Home page
+GET     /assay/{chemblid}                                       Application.assay
+
+# Home page
 GET     /                                       Application.index
 
 # Home page

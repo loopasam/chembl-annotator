@@ -58,7 +58,6 @@ public class LoadBaoJob extends Job {
 					+ "/children/?apikey=" + apikey).setHeader("Authorization", "apikey token=" + apikey).get();
 
 			JsonArray childrenJson = childrenRes.getJson().getAsJsonObject().get("collection").getAsJsonArray();
-
 			for (JsonElement jsonElement : childrenJson) {
 
 				boolean obsoleteChild = json.get("obsolete").getAsBoolean();

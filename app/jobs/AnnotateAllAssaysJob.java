@@ -21,7 +21,6 @@ import play.jobs.Job;
 
 public class AnnotateAllAssaysJob extends Job {
 
-	//TODO clean up here
 	public void doJob() throws SQLException{
 
 		List<BaoTerm> terms = BaoTerm.findAll();
@@ -42,28 +41,12 @@ public class AnnotateAllAssaysJob extends Job {
 
 				for (Object[] object : results) {
 					
-					//Wrap in the annotated assay object
-
 					String description = (String) object[1];
 					int assayId = (int) object[0];
 					String chemblId = (String) object[2];
 
-					//Checks if the assay exists already
-					AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
-
-					if(assay == null){
-						//If not then create a new one
-						assay = new AnnotatedAssay(assayId, chemblId, description);
-						assay.annotations.add(baoTerm);
-						assay.save();
-					}else{
-						//If the assay exists already, then update it with a new term only, if not contained already
-						if(!assay.annotations.contains(baoTerm)){
-							assay.annotations.add(baoTerm);
-							assay.save();
-						}
-					}
-
+					AnnotatedAssay.annotate(assayId, chemblId, description, baoTerm);
+					
 					counterFlush++;
 					if (counterFlush%100 == 0) {
 						AnnotatedAssay.em().flush();
