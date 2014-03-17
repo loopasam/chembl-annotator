@@ -43,7 +43,20 @@ public class Application extends Controller {
 		}
 		jobs();
 	}
-	
+
+	public static void exportBao() {
+		List<BaoTerm> terms = BaoTerm.findAll();
+		StringBuilder sb = new StringBuilder();
+		sb.append("BAO_ID,label\n");
+		for (BaoTerm baoTerm : terms) {
+			sb.append(baoTerm.baoId + "," + baoTerm.label + "\n");
+		}
+
+		String file = sb.toString();
+		renderText(file);
+	}
+
+
 	public static void assay(String chemblid) {
 		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();		
 		render(assay);
