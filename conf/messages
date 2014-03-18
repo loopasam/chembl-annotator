@@ -7,3 +7,7 @@ baoId=BAO identifier
 label=Label
 definition=Definition
 children=Direct children BAO terms
+
+secure.username=Your email:
+secure.password=Your password:
+secure.signin=Log in

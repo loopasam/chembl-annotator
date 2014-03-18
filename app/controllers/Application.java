@@ -10,57 +10,38 @@ import jobs.LoadBaoJob;
 
 import models.*;
 
+@With(Secure.class)
 public class Application extends Controller {
+
+	@Before
+	static void setConnectedUser() {
+		if(Security.isConnected()) {
+			Reviewer reviewer = Reviewer.find("byEmail", Security.connected()).first();
+			renderArgs.put("reviewer", reviewer);
+		}
+	}
 
 	public static void index() {
 		render();
 	}
-
-	public static void jobs() {
-		render();
-	}
-
-	public static void baoJob() {
-		if(BaoTerm.findAll().size() <= 0){
-			new LoadBaoJob().now();
-		}else{
-			Logger.info("Job not started, as there are some already " +
-					"existing BAO terms in the database. Delete " +
-					"first these terms from the table in order to " +
-					"be able to start the job.");
-		}	
-		jobs();
-	}
-
-	public static void annotationJob() {
-		if(AnnotatedAssay.findAll().size() <= 0){
-			new AnnotateAllAssaysJob().now();
-		}else{
-			Logger.info("Job not started, as there are some already " +
-					"existing annotated assays in the database. Delete " +
-					"first these terms from the table in order to " +
-					"be able to start the job.");
-		}
-		jobs();
-	}
-
-	public static void exportBao() {
-		List<BaoTerm> terms = BaoTerm.findAll();
-		StringBuilder sb = new StringBuilder();
-		sb.append("BAO_ID,label\n");
-		for (BaoTerm baoTerm : terms) {
-			sb.append(baoTerm.baoId + "," + baoTerm.label + "\n");
-		}
-
-		String file = sb.toString();
-		renderText(file);
-	}
-
 
 	public static void assay(String chemblid) {
 		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();		
 		render(assay);
 	}
 
+	public static void randomAssay(){
+		AnnotatedAssay assay = AnnotatedAssay.find("order by random()").first();
+		render(assay);
+	}
+	
+	public static void starred(){
+		List<Object> assays = AnnotatedAssay.find("starred", true).fetch();
+		render(assays);
+	}
+
+	public static void stats(){
+		render();
+	}
 
 }

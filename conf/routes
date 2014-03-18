@@ -2,6 +2,12 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
+# Import Secure routes
+*       /                                       module:secure
+
+# Protect the admin URL
+GET     /admin/?                                Administration.index
+
 # Import CRUD routes
 *      /crud              module:crud
 
@@ -11,9 +17,11 @@ GET     /assay/{chemblid}                                       Application.assa
 # Home page
 GET     /                                       Application.index
 
-# Home page
-GET     /jobs/?                                       Application.jobs
-
+# Application routes
+GET     /rassay                                       Application.randomAssay
+GET     /stats                                       Application.stats
+GET     /starred                                       Application.starred
+GET     /stats                                       Application.stats
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

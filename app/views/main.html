@@ -1,17 +1,63 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="@{'/public/css/bootstrap.min.css'}" rel="stylesheet">
+<link href="@{'/public/fa/css/font-awesome.min.css'}" rel="stylesheet">
+#{get 'moreStyles' /}
 
-<html>
-    <head>
-        <title>#{get 'title' /}</title>
-        <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        #{get 'moreStyles' /}
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /}
-    </head>
-    <body>
-        #{doLayout /}
-    </body>
+<title>#{get 'title' /}</title>
+
+<link rel="shortcut icon" type="image/png"
+	href="@{'/public/images/favicon.png'}">
+
+</head>
+<body style="padding-top: 50px">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="@{'/public/js/bootstrap.min.js'}"></script>
+    
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="@{Application.index()}"><span
+					class="fa fa-flask"></span> ChEMBL Assay Annotator</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="${menu == 'home' ? 'active' : ''}"><a
+						href="@{Application.index()}"><span class="fa fa-home"></span>
+							Home</a></li>
+					<li class="${menu == 'rassay' ? 'active' : ''}"><a
+						href="@{Application.randomAssay()}"><span class="fa fa-random"></span>
+							Random Assay</a></li>
+					<li class="${menu == 'stats' ? 'active' : ''}"><a
+						href="@{Application.stats()}"><span class="fa fa-bar-chart-o"></span>
+							Statistics</a></li>
+					<li class="${menu == 'starred' ? 'active' : ''}"><a
+						href="@{Application.starred()}"><span class="fa fa-star"></span>
+							Starred</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><span class="fa fa-user"></span> ${reviewer} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						    #{secure.check 'admin'}
+							<li><a href="/crud"><span class="fa fa-table"></span> CRUD</a></li>
+							<li><a href="/admin"><span class="fa fa-cogs"></span> Administration</a></li>
+							#{/secure.check}
+							<li><a href=""><span class="fa fa-list-ul"></span> Annotated Assays</a></li>
+							<li><a href="@{Secure.logout()}"><span class="fa fa-sign-out"></span> Logout</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">#{doLayout /}</div>
+</body>
 </html>

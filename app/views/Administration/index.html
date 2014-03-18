@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Administration' /}
+#{set menu:'admin' /}
+
+#{set 'moreStyles'}
+    <link rel="stylesheet" type="text/css" media="screen" 
+        href="@{'/public/stylesheets/crud.css'}" />
+#{/set}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Job description</th>
+			<th>Launcher</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Download and save BAO terms related to assays</td>
+			<td><a href="@{Administration.baoJob()}">Launch job</a></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Annotate all the assays based on the rules.</td>
+			<td><a href="@{Administration.annotationJob()}">Launch job</a></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Export all the BAO term as CSV</td>
+			<td><a href="@{Administration.exportBao()}">Export BAO</a></td>
+		</tr>
+	</tbody>
+</table>
