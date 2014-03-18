@@ -7,11 +7,10 @@
 <div class="well well-lg lead">${_assay.description}</div>
 
 #{list items:_assay.annotations, as:'annotation' }
-  <h1><span class="label label-primary">${annotation.baoId} - ${annotation.label}</span></h1>
+  <h3><span class="label label-primary">${annotation.baoId} - ${annotation.label}</span></h3>
 #{/list}
 
-<hr>
-#{if _assay.reviewer != null}<h3 class="text-info"> <span class="fa fa-eye"> ${_assay.reviewer}</span></h3> #{/if}
+#{if _assay.reviewer != null}<hr><h3 class="text-success"> <span class="fa fa-eye"> ${_assay.reviewer}</span></h3> #{/if}
 
 <script type="text/javascript">
 

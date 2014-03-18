@@ -1,5 +1,31 @@
-#{extends 'main.html' /}
-#{set title:'Statistics' /}
-#{set menu:'stats' /}
+#{extends 'main.html' /} #{set title:'Statistics' /} #{set menu:'stats'
+/}
 
-<h1>Stats</h1>
+<div class="page-header">
+	<h1>
+		<span class="fa fa-bar-chart-o"></span> Statistics
+	</h1>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Number of ChEMBL assays</td>
+			<td>${chemblassays}</td>
+		</tr>
+		<tr>
+			<td>Number of automatically annotated ChEMBL assays</td>
+			<td>${annotatedchemblassays}</td>
+		</tr>
+		<tr>
+			<td>Number of curated assays</td>
+			<td>${curatedassays}</td>
+		</tr>
+	</tbody>
+</table>

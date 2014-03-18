@@ -1,8 +1,10 @@
 package controllers;
 
 import play.*;
+import play.db.jpa.JPA;
 import play.mvc.*;
 
+import java.math.BigInteger;
 import java.util.*;
 
 import jobs.AnnotateAllAssaysJob;
@@ -41,6 +43,18 @@ public class Application extends Controller {
 	}
 
 	public static void stats(){
+		int chemblassays = Integer.parseInt(JPA.em().createNativeQuery("SELECT COUNT(*) FROM assays").getResultList().get(0).toString());
+		renderArgs.put("chemblassays", chemblassays);
+		
+		int annotatedchemblassays = AnnotatedAssay.findAll().size();
+		renderArgs.put("annotatedchemblassays", annotatedchemblassays);
+		
+		double percentannotated = annotatedchemblassays / (double) chemblassays * 100.0;
+		renderArgs.put("percentannotated", percentannotated);
+		
+		long curatedassays = AnnotatedAssay.count("reviewer is not null");
+		renderArgs.put("curatedassays", curatedassays);
+		
 		render();
 	}
 
