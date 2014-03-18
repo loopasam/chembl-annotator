@@ -34,7 +34,7 @@ public class Application extends Controller {
 		AnnotatedAssay assay = AnnotatedAssay.find("order by random()").first();
 		render(assay);
 	}
-	
+
 	public static void starred(){
 		List<Object> assays = AnnotatedAssay.find("starred", true).fetch();
 		render(assays);
@@ -42,6 +42,23 @@ public class Application extends Controller {
 
 	public static void stats(){
 		render();
+	}
+
+	public static void switchTheme(String url){
+		Reviewer reviewer = Reviewer.find("byEmail", Security.connected()).first();
+		if(reviewer.coolTheme){
+			reviewer.coolTheme = false;
+		}else{
+			reviewer.coolTheme = true;	
+		}
+		reviewer.save();
+		redirect(url);
+	}
+	
+	public static void star(Long id){
+		AnnotatedAssay assay = AnnotatedAssay.findById(id);
+		assay.starred = false;
+		assay.save();
 	}
 
 }

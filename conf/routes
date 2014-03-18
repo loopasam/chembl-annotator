@@ -23,6 +23,10 @@ GET     /stats                                       Application.stats
 GET     /starred                                       Application.starred
 GET     /stats                                       Application.stats
 
+# AJAX interaction
+POST     /star/{id}        Application.star
+
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

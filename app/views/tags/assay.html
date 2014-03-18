@@ -1,0 +1,36 @@
+<div class="page-header">
+  <h1>
+  <span class="fa ${_assay.starred ? 'fa-star text-primary' : 'fa-star-o text-primary'}"></span>
+  #{if _assay.needReview} <span class="fa fa-flag text-danger"></span> #{/if} 
+  Assay ${_assay.chemblId} <small>ID: ${_assay.assayId}</small></h1>
+</div>
+<div class="well well-lg lead">${_assay.description}</div>
+
+#{list items:_assay.annotations, as:'annotation' }
+  <h1><span class="label label-primary">${annotation.baoId} - ${annotation.label}</span></h1>
+#{/list}
+
+<hr>
+#{if _assay.reviewer != null}<h3 class="text-info"> <span class="fa fa-eye"> ${_assay.reviewer}</span></h3> #{/if}
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+    $(".fa-star").click(function(){
+    	console.log("clicked starred");
+    	var that = $(this);
+    	  $.ajax({
+    	        type: "POST",
+    	        url: "@{Application.star(_assay.id)}",
+    	        data: "false",
+    	        contentType: "application/text; charset=utf-8",
+    	        dataType: "text",
+    	        success: function(data){that.removeClass("fa-star").addClass("fa-star-o");},
+    	        failure: function(errMsg) {
+    	            alert(errMsg);
+    	        }
+    	  });
+    });
+});
+
+</script>

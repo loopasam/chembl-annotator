@@ -19,10 +19,12 @@ public class Reviewer extends Model {
 	public String email;
 	public String password;
 	public boolean isAdmin;
+	public boolean coolTheme;
 
 	public Reviewer(String email, String password) {
 		this.email = email;
 		this.password = password;
+		this.coolTheme = false;
 	}
 
 	public static Reviewer connect(String email, String password) {
