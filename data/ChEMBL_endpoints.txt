@@ -1,0 +1,5399 @@
+ENDPOINT_TYPE	DESCRIPTION	CHEMBL_STANDARDISED	ACTIVITY_COUNT	ASSAY_COUNT	BAO_TERM
+Potency	Concentration or dose required to elicit a specific response	1	3029787	862	BAO_0000180?
+pGI50	Negative logarithm of molar GI50	1	2446037	4411	BAO_0000189 (GI50)
+IC50	Concentration required for 50% inhibition	1	2236874	98105	BAO_0000198 (relative IC50)?
+MIC	Minimum inhibitory concentration	1	700540	46419
+EC50	Effective concentration for 50% activity	1	508590	17215	BAO_0000188
+Inhibition	Inhibition	1	501456	59162	BAO_0000201 (percent)
+Activity	Activity	0	437953	128955	BAO_0001103 (percent)
+Ki	Inhibition constant	1	393151	30263	BAO_0000192
+ED50	Effective dose for 50% activity	1	169096	15722
+GI50	Concentration required for 50% growth inhibition	1	128342	11082	BAO_0000189
+AC50	Concentration required for 50% activity	1	114056	268	BAO_0000186
+-Log Ki		0	107852	181	BAO_0000192 (Ki)
+CC50	Concentration required for 50% cytotoxicity	1	83750	2417	BAO_0000187
+Ratio	Ratio	0	64678	12814
+Kd	Dissociation constant	1	61928	4438	BAO_0000034
+MIC50	Minimum inhibitory concentration in 50% of population	1	41520	4414
+IZ	Zone of inhibition	1	40550	5754
+MIC90	Minimum inhibitory concentration in 90% of population	1	40396	4172
+CL	Clearance	1	39490	5620
+Ratio IC50		0	35659	5618
+T1/2	Half-life	1	32392	10824
+ID50	Dose required for 50% inhibition	1	30424	2377
+pIC50	Negative logarithm of molar IC50	1	30022	1522
+LC50	Concentration required for 50% lethality	1	29894	4463
+TGI	Concentration required for total growth inhibition	1	23168	3629	BAO_0000194
+Log Ki		0	21568	1871	BAO_0000192 (Ki)
+Drug uptake	Drug uptake	0	21308	11017
+GI	Growth Inhibition	0	19784	3140	BAO_0000096 (percent)
+IFI	Inhibition Frequency (promiscuity) Index	1	19230	2
+Cmax	Maximum concentration	1	19052	5272
+Ratio Ki		0	16321	2009
+Solubility	Solubility	1	16022	2641
+IC90	Concentration required for 90% inhibition	1	15928	1026
+pKi	Negative logarithm of molar Ki	1	14965	1135
+LD50	Dose required for 50% lethality	1	14178	1235
+F	Bioavailability	1	14138	5906
+AUC	Area under curve	0	13812	6716
+XC50	Concentration required for 50% effect	1	13562	20
+MIC80	Minimum inhibitory concentration in 80% of population	1	12752	380
+Efficacy	Efficacy	0	12414	1642
+Fold change		0	12092	5721
+LogP	Log(Partition Coefficient)	1	11670	1030
+Selectivity		0	11507	1315
+Selectivity ratio	Selectivity Ratio	0	11318	2440
+T/C	Test/Control	0	11294	5282
+Biodistribution		0	11060	5421
+pA2	Negative logarithm of molar antagonist concentration giving agonist dose ratio = 2	1	10444	1662
+Emax	Maximum efficacy	0	10242	1275
+Change		0	9108	2158
+Stability		0	8975	2195
+pTGI	Negative logarithm of molar TGI	1	8945	3077	BAO_0000194
+Log IC50		0	7808	765
+Control		0	7662	2593
+Ratio EC50		0	7342	1214
+pKa	-log Ka	0	7329	1008
+IC50_Mean		0	7289	22
+Survived		0	7186	2956
+Reduction		0	6982	1856
+MBC	Minimum Bactericidal concentration	0	6577	1170
+Selectivity index		0	6245	710
+Vdss	Steady State Volume of Distribution	1	6214	2303
+Time		0	6145	2165
+Km	concentration of substrate that gives half-maximal activity	0	6139	1858	BAO_0000477
+MCC	Minimum cytotoxic concentration	1	6138	308
+Concentration		0	5868	2021
+Stabilty	Stability	0	5542	1428
+Relative potency		0	5538	737
+Intrinsic activity	Intrinsic Activity	0	5462	547
+Log EC50		0	5198	529
+MFC	Minimum Fungicidal concentration	0	5188	799
+Log D		0	4939	626
+RBA	Relative Binding Affinity	0	4927	507
+-Log EC50		0	4741	370
+Papp	Apparent permeability	0	4692	803
+ILS		0	4648	2138
+MED	minimum effective dose	0	4602	696
+Ratio CC50/EC50		0	4417	408
+AC50_uM		0	4392	19
+pLC50	Negative logarithm of molar LC50	1	4308	1865
+permeability	Permeability	0	4206	686
+Hepatotoxicity		0	3929	5
+Log LC50		0	3735	978
+CLogP	Calculated Log(Partition Coefficient)	1	3634	260
+Log GI50		0	3529	1002
+Dose		0	3519	837
+FC	Fold Change	0	3496	969
+Cytotoxicity		0	3467	501	BAO_0000006 (percent)
+TI	Therapeutic Index	0	3279	434
+TC50	Toxic concentration 50	0	3037	339
+Decrease		0	3029	658
+Tmax	Time for maximum concentration	1	3026	2124
+pKb	-log Kb	0	2986	362
+Kb	Equilibrium Binding constant	0	2912	483
+Cures		0	2903	886
+TD50	toxic dose affecting 50% of the population	0	2844	415
+Ratio CC50/IC50		0	2814	186
+MST	Median survival time	0	2745	856
+EC50_Mean		0	2735	6
+Relative activity		0	2621	375
+Kcat	Catalytic constant	0	2592	602	BAO_0000481
+Distribution		0	2551	1621
+Ke	Equilibrium constant	0	2541	518
+Kcat/Km		0	2495	543
+Diet		0	2483	89
+Kinact	Inactivation constant	0	2428	384
+PD50	Protective Dose 50 (drug reqd. to cure 50% infected organism)	0	2415	359
+logD	Distribution coefficient	0	2379	214
+Protection		0	2360	592
+Residual activity		0	2326	772
+Vmax	Maximal velocity	0	2305	709	BAO_0000586
+Log 1/C		0	2270	87
+Cp	Plasma concentration	0	2270	1253
+Increase		0	2252	698
+Delta MST		0	2163	396
+DIZ	Diameter of inhibition zone	0	2135	343
+Thermal melting change		0	2121	321
+IC95	Concentration required for 95% inhibition	1	2110	226
+k obs/[I]		0	2059	289
+EC90	Effective concentration 90	0	2011	332
+Survival	Survival	0	2001	534
+deltaTm	Change in melting temperature	0	1977	222
+Effect		0	1933	824
+pD2	Agonist potency	0	1907	369
+Body weight change		0	1900	1109
+pKB		0	1836	269
+Vd	Volume of Distribution	1	1820	975
+CLH	Hepatic clearance	0	1815	218
+IC50 ratio		0	1787	268
+SI		0	1721	253
+Optimal dose		0	1697	230
+Blood pressure		0	1672	529
+pEC50	-log (EC50)	0	1653	105
+Imax	Maximum inhibition	0	1640	229
+Toxicity		0	1610	566
+Max		0	1593	216
+-Log MIC		0	1592	60
+Ka	Association constant at equilibrium	0	1558	357
+PPB	plasma protein binding	0	1546	546
+MIC99	Minimum inhibitory concentration for 99% activity	0	1479	110
+MTD	Maximum tolerated dose	0	1472	292
+Plasma concentration		0	1469	657
+Response		0	1465	522
+Log K		0	1459	100
+Log P		0	1451	180
+Tm	Melting temperature	0	1425	213
+Displacement		0	1405	224
+MRT	Mean residence time	1	1388	475
+Duration		0	1377	399
+KB	Equilibrium Binding constant	0	1312	262
+Log10 cfu		0	1267	896
+Funbound_plasma		0	1252	286
+K app		0	1244	128
+Concentration @ Maxi		0	1244	1
+CD50	50% Curative dose	0	1243	286
+MEC	Minimum effective concentration	0	1219	226
+Inhibition zone		0	1216	352
+PI	Protection Index	0	1190	153
+SUV	Standardized Uptake Value	0	1163	1068
+Drug metabolism		0	1155	458
+Blood pressure decrease		0	1146	288
+K	Binding constant	0	1140	350
+pKd	-log (Kd)	0	1089	96
+Growth		0	1073	189
+KA	Activation constant at equilibrium	0	1058	100
+AD50	energy density necessary to induce apoptosis in 50% of the cells	0	1053	202
+Conc @ Max Fold Incr		0	1040	1
+T max		0	1036	482
+Animals		0	1029	317
+Stimulation		0	1013	249
+IA		0	1005	156
+%max	Maximum percentage	0	998	69
+ED30	Effective dose for 30% activity	0	990	134
+Blood pressure change		0	979	320
+log(1/IC50)		0	977	23
+Diuretic activity		0	926	304
+ILS max		0	903	146
+ED90	Effective dose 90	0	901	227
+Selectivity Index	Selectivity Index	0	898	86
+HepSE_hepatitis		0	888	1
+HepSE_bilirubinemia		0	888	1
+HepSE_cholecystitis		0	888	1
+HepSE_liver disease		0	888	1
+HepSE_cholelithiasis		0	888	1
+HepSE_Combined Scores		0	888	1
+HepSE_hepatic failure		0	888	1
+HepSE_hepatic necrosis		0	888	1
+HepSE_liver fatty		0	888	1
+HepSE_elevated liver function tests		0	888	1
+HepSE_liver function tests abnormal		0	888	1
+HepSE_cirrhosis		0	888	1
+HepSE_hepatomegaly		0	888	1
+HepSE_jaundice		0	888	1
+Therapeutic index		0	883	121
+CL_renal	Renal clearance	1	876	160
+Ratio ED50		0	864	161
+Phospholipidosis		0	851	21
+Mortality		0	795	403
+Log 1/D50		0	792	3
+Activation		0	783	119
+Log 1/LD10		0	776	1
+logGI50		0	767	139
+Potency ratio		0	762	116
+Inhibition rate		0	753	92
+C50	Concentration required for 50% decrease in initial absorbance of DNA	0	750	97
+Reversal		0	747	89
+Level		0	744	407
+IC80	Concentration required for 80% inhibition	0	740	76	BAO_0000191
+Radioactivity level		0	738	394
+Binding		0	737	245
+Relative binding affinity		0	735	41
+solubility	Solubility	0	699	179
+log10CFU/ml	log10 colony forming unit per 1 ml	0	696	597
+Mean arterial blood pressure change		0	690	230
+Suppression		0	677	137
+K ass		0	672	83
+Max response		0	671	97
+Blood pressure decrease (max)		0	670	90
+Systolic blood pressure decrease		0	670	205
+AC40		0	669	1
+fT>MIC	Percentage of time that the free-drug concentration exceeds the MIC for the test pathogen	0	669	623
+Heart rate		0	668	333
+%Bound_plasma		0	668	235
+ED	Effective dose	0	667	103
+MTC	minimum toxic concentration	0	661	55
+Mean survival time (change)		0	649	9
+Recovery		0	628	232
+MIC100	Minimum Inhibitory concentration for 100% activity	0	626	74
+Ratio IC50/EC50		0	622	84
+Cholesterol (total change)		0	621	38
+Log 1/MMIC		0	612	16
+Clearance		0	605	205
+AbsAC40_uM		0	597	2
+HR		0	590	213
+MPC	Minimum Protective Concentration	0	589	145
+ED20	Effective dose for 20% activity	0	585	67
+k cat		0	584	192
+Viability		0	576	150
+Variation		0	569	60
+Delta Tm		0	566	65
+ID		0	563	194
+Affinity		0	560	79
+Locomotor activity		0	560	194
+Vss		0	554	295
+fu		0	554	1
+k3/Ki		0	544	16
+Log2 MIC		0	543	24
+Activity rating		0	531	117
+EDmin		0	531	56
+Fu	percent free drug in tissue	0	527	201
+CD	Drug concentration required to double induction	0	521	32
+IC100	Inhibitory concentration for 100% activity	0	519	73
+Virus rating		0	519	162
+EC	Effective concentration	0	516	44
+Mean survival days		0	509	185
+Temperature change		0	509	166
+Ratio pKi	Ratio (-log Ki)	0	507	58
+Heart rate change		0	505	181
+AbsAC1000_uM		0	505	1
+Delta IOP		0	499	231
+Uptake		0	498	217
+Log k'		0	493	31
+Relative IC50		0	492	84
+Composite Activity - Marginal		0	490	1
+GGT Increase - Activity Score		0	490	1
+LDH Increase - Activity Score		0	490	1
+SGOT Increase - Activity Score		0	490	1
+SGPT Increase - Activity Score		0	490	1
+GGT Increase - Number of Reports		0	490	1
+LDH Increase - Number of Reports		0	490	1
+SGOT Increase - Number of Reports		0	490	1
+SGPT Increase - Number of Reports		0	490	1
+Alkaline Phosphatase Increase - Index Value		0	490	1
+Alkaline Phosphatase Increase - Activity Score		0	490	1
+Alkaline Phosphatase Increase - Number of Reports		0	490	1
+SGPT Increase - Index Value		0	490	1
+SGOT Increase - Index Value		0	490	1
+Composite Activity - Active		0	490	1
+LDH Increase - Index Value		0	490	1
+GGT Increase - Index Value		0	490	1
+Composite Activity - Score		0	490	1
+Saluretic activity		0	485	48
+Concentration_plasma		0	482	360
+HD50	Dose required for 50% hemolysis	0	482	55
+T-C		0	482	234
+UI	Ulcer index	0	478	111
+Therm_solubility	Thermodynamic solubility	0	477	55
+Paw swelling		0	477	174
+BPR	Brain plasma ratio	0	477	196
+ED25	Effective dose for 25% activity	0	476	92
+Growth Inhibition		0	469	150	BAO_0000096 (percent)
+-Log C		0	465	23
+Binding affinity		0	464	56
+Clp		0	464	158
+EC25	Effective concentration for 25% activity	0	462	53
+Log 1/Ki app		0	458	11
+RatioGI50		0	451	88
+Inflection point		0	450	18
+Fall		0	443	75
+Ki ratio		0	442	114
+Ratio TD50/ED50		0	440	60
+Anticonvulsant activity		0	440	88
+log Ks	Binding constant	0	435	69
+INH	Inhibition	0	435	122
+Rm		0	433	30
+Relative affinity		0	429	55
+Permeability		0	426	54
+Body weight change (mean)		0	424	235
+Score		0	421	88
+Log (1/C)		0	421	12
+K inact		0	417	144
+APTT	Activated Partial Thromboplastin Time	0	416	101
+Kis	Inhibitor dissociation constant in which the inhibitor affects the slope of the double reciprocal plot	0	416	71
+PB	Protein binding	0	411	163
+-logMIC	-log MIC	0	410	24
+FICI	Fractional Inhibitory concentration index	0	410	215
+k		0	406	120
+Kinetic_solubility		0	404	41
+Urine volume		0	404	211
+EC30	Effective concentration for 30% activity	0	403	62
+Block		0	403	90
+Weight		0	401	196
+logK		0	399	35
+Dead		0	397	256
+-Log KB		0	397	33
+deltaCT		0	396	234
+Retention time		0	394	72
+Log D7.4		0	392	19
+LogP app		0	391	13
+K obs		0	387	150
+Body weight		0	386	204
+Bmax	maximum binding	0	384	257	BAO_0000033
+CFU	Colony forming units	0	377	318
+Effective dose		0	376	77
+pD'2	antagonistic affinity	0	371	9
+k2		0	367	69
+Diameter of inhibition zone		0	366	107
+KE		0	359	216
+Incorporated		0	356	187
+Fa	Oral absorption	0	356	13
+AUC/dose	Area under curve/dose	0	356	119
+Hill coefficient		0	355	53
+RA		0	354	33
+CL/F	Clearance/Bioavailability	1	354	294
+Solubility ratio		0	353	17
+Mean survival time		0	353	129
+SDL		0	351	263
+Cooperativity		0	350	42
+Viable cells		0	350	90
+k'		0	345	26
+EC50_MICROM		0	344	16
+LD10	lethal dose for 10% activity	0	343	36
+MBC90	Minimum Bactericidal concentration for 90% activity	0	342	73
+Release		0	339	50
+Schizont size		0	339	1
+Log		0	338	23
+Metabolism		0	336	83
+Average weight		0	334	139
+Ratio AUC		0	333	173
+Distribution of radioactivity		0	330	104
+pED50	-log DZ50	0	329	27
+Resistance index		0	328	41
+MPC8		0	328	24
+Log D6.5		0	327	6
+Blood glucose		0	324	47
+Tumors		0	324	277
+Kapp	Apparent binding constant	0	323	75
+PFA		0	323	139
+NT		0	322	52
+LD99	Lethal dose for 99% activity	0	322	54
+Safety ratio		0	322	27
+No. of revertants per plate		0	320	41
+IC20	Inhibitory concentration for 20% activity	0	319	43
+Specific activity		0	319	63
+pKa2		0	318	71
+Antagonism		0	317	90
+Fh	Hepatic availability	0	316	2
+Cmin	Minimum concentration	0	316	306
+PT	Prothrombin time	0	315	48
+2PT	2(Prothrombin Time)	0	314	24
+ED40	Effective dose for 40% activity	0	313	39
+Log10LC50	Log10 (Lethal Concentration for 50% activity)	0	308	247
+Fg	Fraction escaping gut-wall elimination	0	308	1
+Cell number		0	308	126
+MBC50	Minimum Bactericidal concentration for 50% activity	0	307	67
+Mean injected dose/g		0	307	87
+Weight difference		0	307	93
+MES		0	306	44
+MLC	Minimum Lethal Concentration	0	305	36
+P		0	303	34
+Polyamine		0	302	157
+k cat/Km		0	301	76
+LCK	Log10 cell kill	0	299	190
+ED50 ratio		0	299	111
+pKa1		0	299	55
+APD95		0	299	94
+log(10^6/IC50)		0	297	6
+Relaxation		0	296	36
+Remaining		0	295	55
+IC12	Concentration required for 12% activity	0	294	77
+MIC95	Minimum inhibitory concentration for 95% activity	0	291	53
+Log 1/M		0	291	9
+Max inhibition		0	290	78
+Complex formation		0	290	22
+Log Pe		0	289	17
+CCIC50	Cell culture 50% inhibitory concentration	0	289	11
+Kii	Inhibitor dissociation constant in which the inhibitor affects the intercept of the double reciprocal plot	0	289	46
+PC50	Preferential cytotoxicity 50%	0	289	28
+VR		0	289	83
+HC50	Concentration required for 50% hemolysis	0	289	23
+Drug release		0	288	14
+LTKB_BD DILI severity score		0	286	3
+IC99	Concentration required for 99% inhibition	1	284	15
+D	Diffusion coefficient	0	284	194
+Analgesia		0	283	44
+Relative efficacy		0	282	39
+Blood pressure change (mean)		0	279	131
+log IC50		0	278	21
+Post antibiotic effect		0	278	268
+pKD		0	278	46
+Oral activity		0	274	94
+Average IC90		0	273	8
+Accumulation		0	273	118
+Delta logD		0	272	6
+Rate		0	270	90
+IC30	Inhibitory concentration for 30% acitivity	0	270	43
+log(1/Ki)		0	269	12
+R		0	269	32
+Formation		0	267	69
+Cell growth		0	267	111
+Hydrolysis		0	267	52
+Brain/Plasma ratio		0	267	129
+RUmax	Response Unit Maximum	0	266	28
+MBIC	Minimum biofilm inhibitory concentration	0	265	72
+Cell survived		0	265	51
+D50	Half-maximal effective dose	0	265	23
+LTS		0	263	186
+Cell death		0	263	112
+Delta G		0	263	10
+Log 1/EC50		0	262	12
+log(1/ID50)		0	261	11
+DILI positive/negative		0	261	3
+Motility		0	260	160
+Fold reversion		0	258	11
+Range		0	258	228
+ED1.5		0	257	13
+Rmax		0	256	58
+IC25	Concentration required for 25% activity	0	256	38
+Amnesia reversal		0	255	22
+Emetic episodes		0	254	108
+RF		0	253	54
+Estrogenic effect		0	253	34
+Intraocular pressure		0	253	81
+ED100	Effective dose for 100% activity	0	253	75
+Residual insulin release		0	252	34
+Excreted		0	248	125
+AP		0	248	99
+Relative Vmax		0	247	58	BAO_0000586 (vmax)?
+IG50	50% inhibition of growth	0	247	42
+Tissue distribution		0	245	170
+Ratio Ke		0	244	21
+fAUC/MIC	Free Area under the concentration time curve/Minimum Inhibitory Concentration	0	243	223
+Potentiation		0	242	22
+Toxic deaths		0	241	149
+kinact		0	241	62
+I		0	240	54
+Binding energy		0	239	6
+Median survival time		0	239	182
+No. of mice		0	238	88
+-log(1/MIC)		0	238	10
+MSD	Mean survival Days	0	238	97
+TCS50	Lethal to 50% of the tumor cells	0	238	41
+Antagonist potency		0	237	39
+pI50	-log (Inhibitory concentration for 50% activity)	0	237	11
+K0.5	Half maximal binding constant	0	236	29
+-Log IC50		0	236	27
+Max activation		0	235	19
+Survival time		0	235	149
+Kon		0	234	53	BAO_0000480
+EC80	Effective concentration for 80% activity	0	234	22
+Rate constant (k)		0	234	59
+Partition coefficient		0	232	42
+EC20	Effective concentration for 20% activity	0	231	37
+ALD50	Approximate lethal dose 50	0	231	18
+Parasitaemia		0	230	42
+LC99		0	229	20
+Glucose normalisation		0	227	44
+Mole fraction		0	227	4
+Brain concentration		0	227	195
+IC70	Inhibitory concentration for 70% activity	0	226	123
+Aggregate		0	226	68
+Retention		0	226	34
+Lethality		0	225	137
+Systolic blood pressure change		0	225	58
+Log10 CFU/ml		0	225	164
+pCC50	-log (CC50)	0	225	9
+Hypoglycemic activity		0	224	25
+Cell viability		0	224	46
+MNEC	maximum non-effective concentartion	0	223	13
+Max stimulation		0	223	24
+K2		0	222	46
+CC90	Cytotoxic concentration for 90% activity	0	222	26
+Ratio pIC50		0	221	30
+DNAUC		0	220	4
+CMC	Critical micelle concentration	0	220	29
+CF		0	218	19
+Drug degradation		0	218	71
+Log SP		0	217	5
+Relative uterine weight		0	217	59
+Efficiency		0	216	82
+Sleep time		0	216	48
+MAP		0	214	102
+Mean survival		0	213	55
+TPE		0	213	50
+Fluorescence Intensity		0	212	82
+Log RA		0	211	1
+nH		0	211	35
+NA		0	211	66
+Agonistic potency		0	210	27
+Smax	Maximum Stimulation	0	208	35
+t1/2	Half life	0	205	58
+MPE	Maximum possible effect	0	205	84
+Max effect		0	205	36
+Na		0	204	156
+Acquisition time		0	204	44
+BWD		0	203	116
+Ks	Spectral dissociation constant	0	203	70
+LD90	Lethal dose for 90% activity	0	203	49
+Basal uptake		0	202	34
+Diuretic effect		0	201	66
+Index		0	201	12
+Enhancement		0	201	36
+Delta -LogIC50 wt-mutant		0	200	8
+P50		0	200	40
+MGM		0	200	13
+Protected		0	200	63
+Mean arterial blood pressure		0	199	78
+Log kill		0	199	85
+Log 1/K		0	198	10
+Na+ excretion		0	198	131
+Taste character		0	198	143
+CT		0	197	77
+GABA ratio		0	196	17
+Blood glucose change		0	196	39
+deltaT	Change in temperature	0	196	79
+V		0	195	157
+TDS		0	195	125
+Change in amplitude response		0	193	82
+MFC90	Minimal Fungicidal Concentration 90	0	192	56
+Relative SEAP activity		0	192	73
+Relative viability		0	192	72
+IP	Inflection point for test compound to inhibit binding of radioligand	0	191	37
+Km app		0	190	33
+C10	Concentration giving a surviving fraction of 10%	0	189	25
+log Kp	Permeability coefficient	0	189	5
+PGI		0	189	42
+Delta A/min		0	188	38
+C20		0	188	19
+AB50		0	187	48
+Log 1/MIC		0	187	13
+PF50	Potentiation factor 50	0	187	37
+Resistance		0	186	32
+logPapp	log (apparent permeability)	0	185	5
+Ct	Drug concentration in Tissue	0	185	121
+Vz	Apparent volume of distribution	0	183	88
+Log PNalk		0	182	1
+EC50 ratio		0	182	19
+Relative rate of hydrolysis		0	181	32
+Reversion		0	180	25
+EC99	Effective concentration for 99% activit	0	179	23
+MPR		0	178	17
+Specific binding		0	178	54
+MTL		0	178	9
+RRT		0	177	33
+Fold selectivity		0	177	27
+Log 1/T		0	177	6
+Geometric mean		0	176	19
+k3/ki		0	176	7
+Cleavage		0	175	90
+Log TGI		0	174	60	BAO_0000194 (tgi)
+Taq inhibition		0	174	29
+-Log ED50		0	174	16
+SVT		0	173	26
+pIC25	-log (IC25)	0	172	11
+Latency		0	172	79
+GE		0	171	32
+Disease control		0	171	25
+Lowering		0	171	83
+ERH	Hepatic Extraction Ratio	0	170	21
+Tumor volume		0	170	84
+Number		0	170	105
+MAC	minimum active concentration	0	170	25
+Total radioactivity		0	169	84
+GABA shift		0	169	9
+Uterine weight		0	168	60
+CFU/ml	Colony forming units per ml	0	168	164
+pK		0	167	17
+FRP		0	166	54
+Average skin reaction		0	166	30
+Serum Ca2+		0	166	61
+Contraction		0	165	32
+MFC50	Minimal Fungicidal Concentration 50	0	165	29
+Koff		0	164	41	BAO_0000479
+TC		0	164	90
+Normalization		0	163	13
+Absorption		0	162	56
+In Vivo Blockade of [123I]1 Uptake		0	162	125
+Response ratio		0	162	3
+Parasitemia		0	162	72
+Growth_index	Growth index	0	161	27
+2aPTT	2(Activated Partial Thromboplastin Time)	0	160	16
+No. sensitive		0	160	24
+Inhibition (radial growth)		0	160	16
+Agonist activity		0	160	58
+Conversion		0	160	30
+QH	Hepatic blood flow	0	159	85
+log10(%HIA)		0	159	1
+Duration of action		0	159	59
+Resistance factor		0	159	14
+Average CC50		0	159	12
+Log kon		0	158	1	BAO_0000480 (kon)
+Allosteric enhancer (AE)		0	158	12
+Animals protected/total		0	158	97
+RIS		0	158	7
+kHOX		0	157	16
+Survived/total		0	157	113
+Relative ED50		0	157	27
+Zone size		0	157	56
+Iron change		0	156	112
+Proliferative response		0	156	16
+No. of mice protected		0	156	71
+MISS T/C		0	156	4
+ED2		0	155	20
+Log kOH-		0	155	2
+-Delta G		0	155	6
+Kic	Competitive inhibition constant	0	154	30
+Uptake ratio		0	154	30
+deltaA	Change in absorbance	0	154	11
+MBIC90		0	154	39
+CLp		0	153	67
+HACU improvement		0	153	6
+EC100	Effective concentration for 100% activity	0	153	12
+kon		0	152	16	BAO_0000480
+Reduction of live worms		0	152	27
+K inact/Ki		0	152	31
+ISA		0	151	10
+Systolic blood pressure		0	151	55
+Neurotoxicity		0	151	18
+pRA		0	150	3
+CT10		0	150	21
+K+ excretion		0	150	90
+CC100	Concentration required for 100% cytotoxicity	0	150	19
+Culture		0	150	56
+MNTD	Maximal non-toxic dose	0	149	13
+Turnover		0	149	24
+Saluretic potency		0	149	15
+Inhibition ratio		0	149	59
+Survivors at day 4		0	149	38
+LAD		0	148	13
+Apoptosis		0	148	40
+Absorbance		0	148	26
+HF		0	147	13
+Oral diuretic activity		0	147	15
+Phytotoxicity		0	147	42
+CLogD	Calculated Log(Distribution Coefficient)	1	147	9
+Relative EC30		0	145	36
+RatioAUC/MIC		0	145	144
+Average survived		0	145	79
+Activity scale		0	145	17
+Vmax/Km		0	144	56
+Mean relative potency		0	144	5
+Licking latency		0	144	69
+AUCt		0	143	76
+TT	Thrombin time	0	143	21
+Antiovulatory activity		0	143	48
+MNCC	Maximal non-cytotoxic concentration	0	143	15
+Swelling		0	143	72
+Delta T		0	143	66
+EC15	Effective concentration for 15% activity	0	142	10
+Blood pressure increase		0	142	48
+Behavior		0	142	27
+2x aPTT		0	141	22
+Fold induction		0	141	20
+BBC	BIOFILM BACTERICIDAL CONCENTRATION	0	140	20
+CHI	Chromatographic hydrophobicity index	0	140	10
+Weight loss		0	140	86
+log K	Partition coefficient	0	140	10
+HCR		0	140	9
+logIC50		0	139	11
+Ki app		0	138	23
+P50e		0	138	10
+Leishmanicidal activity		0	138	41
+Survival rate		0	138	35
+CPE index		0	138	3
+Toxic		0	137	42
+Temperature		0	137	46
+C/I ratio		0	137	94
+dP/dt		0	136	56
+Proliferation		0	136	13
+kDPPH		0	136	6
+UTC		0	135	6
+SC50	Shift concentration 50, Concentration required for 50% DNA band shift	0	135	16
+Log10TGI	Log10 (Tumor growth inhibition)	0	135	132
+Blood pressure (mean)		0	135	69
+Recovery time		0	135	52
+Normal beats		0	135	6
+No. of toxic deaths		0	135	15
+Rating		0	135	17
+Toxic dose		0	134	27
+Change in IOP		0	134	85
+Log koff		0	134	1	BAO_0000479 (koff)
+CCh		0	133	26
+GC50	Concentration for 50% reduction of cell viablity	0	133	11
+Cholesterol level		0	133	49
+Hypersensitivity factor		0	133	9
+No. of positive cases		0	133	6
+Equieffective dose		0	132	7
+Log 1/I50		0	130	13
+Log BR		0	130	6
+Fold increase		0	130	22
+Tumor weight		0	130	91
+Amount excreted		0	130	9
+Mutagenicity		0	129	59
+KB app		0	129	11
+MAD		0	128	16
+KL		0	128	24
+Glycaemia evolution		0	128	9
+Reversion activity		0	128	43
+Time constant		0	128	23
+Agonism		0	128	7
+EMR	Equieffective molar ratio	0	127	16
+Activity decrease		0	127	18
+Toxicity ratio		0	127	6
+Max salt tolerance		0	126	9
+Metabolite levels		0	126	86
+Ratio_brain/plasma		0	126	74
+p[A50]		0	125	26
+Relative velocity		0	125	21
+Plasma binding		0	125	55
+Activity index		0	125	35
+MD		0	124	32
+Fluorescence		0	124	11
+AUClast	Area under the plasma concentration-time curve up to the last quantifiable time-point	0	124	87
+logP(lung)		0	124	5
+pKA	-log Ka	0	123	22
+TCID50	Tissue culture infective dose 50	0	123	43
+Arterial blood pressure change		0	123	42
+Serum level		0	123	110
+Methemoglobin		0	123	22
+Enzyme activity		0	123	26
+kOX		0	122	13
+HI	Hemolytic index	0	122	5
+Log 1/MEC		0	122	2
+Hemolysis		0	122	28
+EC150	Effective concentration for 150% activity	0	122	10
+TR		0	121	9
+Lysis		0	121	14
+logFu	log of percent free drug in tissue	0	121	1
+Body weight change difference		0	121	35
+Life span increase		0	121	81
+Relative amplitude		0	121	16
+Inhibition potency		0	121	22
+k obs		0	120	67
+Susceptibility		0	120	20
+Alpha max	Maximal increase in activity	0	120	9
+Antagonist activity		0	119	62
+Log10GI50	Log10 (Concentration for 50% growth inhibition)	0	119	119
+ND50		0	118	40
+Stimulation index		0	118	22
+Volume		0	118	49
+ED99	Effective dose for 99% activity	0	117	23
+Blood sugar lowering		0	117	21
+Log 1/Km		0	117	3
+Increase in MST		0	116	71
+LD0		0	115	14
+Count		0	115	36
+Log ED50		0	115	10
+Cardiac rhythm decrease		0	115	39
+Metabolic stability		0	115	14
+Change in Cl- current		0	115	6
+Mean survival time (increase)		0	115	29
+SMT		0	114	20
+Mean		0	114	86
+TDI	Time dependent inhibition	0	114	28
+RLU		0	113	16
+SD90		0	113	10
+Cholesterol reduction		0	113	12
+Induction		0	113	27
+Conversion rate		0	113	29
+Secretion		0	113	16
+Rf		0	112	3
+T50	Half time of compound degradation	0	112	21
+T	Temperature	0	112	36
+Selectivity quotient		0	112	11
+Glucose utilization		0	112	1
+Inhibitory diameter		0	112	71
+OD	Optical density	0	112	6
+Q		0	111	6
+RFU	Relative Fluorescent Unit	0	111	29
+mechanism based inhibition		0	111	78
+Production		0	111	55
+t1/2(app)		0	111	29
+SP		0	110	5
+ED10		0	110	26
+CI		0	110	50
+Agonist effect (% of maximal  increase)		0	110	32
+log10CFU/g	log10CFU/g	0	110	100
+Entry latency		0	110	27
+Pc		0	110	10
+pTD50	-logTD50	0	109	2
+Fold activation		0	109	17
+pKa3		0	109	38
+DD		0	108	6
+Na+/K+		0	108	14
+Antiviral activity		0	108	37
+deltalog10CFU/ml	delta log10 colony forming units per ml	0	108	54
+Total iron output		0	108	18
+Taste class		0	108	3
+IVP		0	107	3
+IR		0	107	67
+Safety index		0	107	15
+Expression		0	107	23
+T/C x100		0	107	61
+TI50		0	107	19
+CC25	Cytotoxic concentration for 25% activity	0	106	23
+Protein binding		0	106	18
+No. of rosettes/100 Jurkat T cells		0	106	15
+Heart rate change (at D50 dose)		0	106	3
+Sensitivity		0	106	56
+MPE50		0	105	15
+Onset		0	105	13
+Inhibitory index		0	105	6
+Max reversal		0	105	55
+Estrogenic potency		0	105	7
+MBC99.9	Minimum Bactericidal concentration for 99.9% activity	0	104	4
+ID90	Inhibitory dose 90	0	104	21
+Antifertility potency		0	104	3
+Serum concentration		0	104	27
+Wet weight of tissue		0	104	104
+LD20	Lethal dose for 20% activity	0	104	5
+LED	Lowest effective dose	0	103	13
+Log I50		0	103	4
+Relative protection		0	103	9
+Log Pn		0	103	7
+TG100		0	103	10
+IS		0	102	12
+PC		0	102	12
+Protein-DNA complex formation		0	102	1
+PBI		0	102	36
+Beta2 duration		0	102	1
+ECmax	Concentration needed to induce maximal response	0	102	10
+A50	Dose required for 50% antinociceptive effect	0	101	44
+P50c		0	101	4
+ID50 ratio		0	101	4
+Affinity constant		0	101	12
+log(ratioKi)		0	101	1
+Mean arterial blood pressure decrease		0	101	33
+Blood level		0	101	78
+RE		0	100	11
+K1		0	100	30
+MID	Minimum inhibitory dose	0	100	23
+Change in response		0	99	36
+Adhesion		0	99	6
+Funbound_brain		0	99	26
+Protective index		0	99	14
+Body weight reduction		0	98	65
+Average dose per organ		0	98	98
+Amount of TNF-alpha		0	98	7
+NO release		0	98	10
+Hammett constant		0	98	2
+IC50 increase		0	98	13
+Hypothermic effect		0	98	41
+Benzidine positive cells		0	97	24
+PCMA antagonism		0	97	34
+BK		0	97	13
+BA		0	97	28
+ED15	Effective dose for 15% activity	0	97	17
+Transfection efficiency		0	96	8
+Serosal/Mucosal Ca		0	96	36
+Sweetness potency		0	96	78
+Total cholesterol		0	96	34
+pka		0	96	8
+logKw	lipophilicity parameter	0	96	7
+HDL-C		0	96	39
+koff		0	96	17	BAO_0000479
+ED95	Effective dose for 95% activity	0	96	19
+Lactone		0	96	25
+Urinary recovery		0	95	11
+Liver weight		0	95	36
+3 log kill		0	95	2
+DA release		0	95	2
+Cp(f)	Free plasma concentration	0	95	41
+CCID50	Cell culture infective dose 50	0	95	7
+Log K'		0	95	1
+Taste		0	95	32
+Ataxia		0	95	33
+Plaque reduction		0	94	86
+Animals survived		0	94	52
+Radiation prot		0	94	4
+MLD	Minimal Lethal Dose	0	94	17
+Log 1/D40		0	94	5
+LD100	Lethal dose for 100% activity	0	94	19
+IC10	Concentration required for 10% inhibition	0	94	14
+H2O2 prot		0	94	3
+log(1/EC50)		0	93	3
+Extracted		0	93	24
+Kp	Permeability coefficient	0	93	10
+APD		0	93	19
+Cells		0	93	41
+Mean aortic blood pressure		0	92	43
+Increase in ear thickness		0	92	7
+Differentiation		0	92	37
+FIC50	Fractional Inhibitory concentration given by IC50(drug combo)/IC50(drug)	0	92	64
+Max decrease		0	92	23
+Blood flow		0	92	46
+log Pe	Permeability coefficient	0	92	8
+Zone diameter		0	92	12
+Relative resistance		0	91	9
+kin		0	91	18
+Cl- excretion		0	91	80
+Survival ratio		0	91	21
+Cl- excretion (mean)		0	90	6
+Na+ excretion (mean)		0	90	6
+K+ excretion (mean)		0	90	6
+Biliary excretion		0	90	8
+Mean urine volume		0	90	8
+Polyamine level		0	90	60
+Am		0	90	12
+K 0.5		0	90	11
+ED80	Effective dose for 80% activity	0	90	25
+LDH		0	90	10
+RP		0	90	10
+A10		0	90	1
+Average consumed		0	90	90
+Distribution coefficient		0	89	7
+p[A]50		0	89	6
+REC		0	89	7
+LC100	Drug concentration causing 100% death of test organisms	0	89	17
+ki/Ki		0	89	22
+Plasma cholesterol change		0	88	22
+Increase in concentration		0	88	26
+Blockage activity		0	88	62
+Delta log10CFU/ml		0	88	88
+Kinetic constant		0	88	35
+Nuclear cataract		0	88	44
+BWC		0	88	74
+Mean logD		0	88	4
+Delta TC		0	88	27
+CCTD50		0	88	1
+pK1		0	88	21
+PDK		0	88	48
+ACT		0	88	18
+Ratio AUC/MIC		0	88	88
+Glucose transport		0	87	3
+Ovulating rats		0	87	75
+Judgments		0	87	31
+Esc loss		0	87	3
+DOM		0	87	45
+ED200		0	87	19
+Loss		0	87	29
+RAC		0	87	5
+Slope		0	87	21
+No. of rats ovulated		0	86	65
+Therapeutic ratio		0	86	13
+Active dose range		0	86	63
+Mean tumor volume		0	86	67
+HYPO		0	86	12
+Delta APD95		0	86	19
+Delta Vmax		0	86	16
+Result		0	86	80
+Revertants/plate		0	86	48
+Protection index		0	85	12
+Antibacterial activity		0	85	6
+Hepatic Extraction ratio		0	84	6
+Blood glucose decrease		0	84	6
+Antitumour activity		0	84	35
+Binding intensity		0	84	9
+ov. rat/total		0	84	58
+DNA cleavage		0	84	14
+DRF		0	84	9
+Log 1/Ki		0	84	3
+C20 APD95		0	84	21
+EII50		0	84	4
+pA10	Negative logarithm of antagonist concentration producing 10-fold shift in agonist curve	0	84	12
+Ki''		0	84	11
+LLR score		0	84	39
+Relative JC-1 accumulation		0	83	3
+CC		0	83	21
+Survival days		0	83	70
+Saldiuretic activity		0	83	54
+No. of Colony forming Units		0	82	16
+Relative inhibition		0	82	10
+Fibril formation		0	82	2
+p(1/MIC)	-log (1/MIC)	0	82	1
+NS		0	82	33
+pIC100		0	82	1
+LTC		0	82	5
+RSA	Relative Stimulatory Activity	0	82	7
+FIC		0	82	14
+Synergy		0	82	10
+Antidiuretic activity		0	81	15
+Relative activation		0	81	26
+Toxic level		0	81	23
+ND		0	81	25
+Vc/F	Apparent volume of distribution with respect to the bioavailability	0	81	75
+MHC	Minimal hemolytic concentration	0	81	10
+Ki'		0	81	22
+scMet		0	81	16
+Mycelial growth		0	80	10
+Relative amount		0	80	49
+Lipid level		0	80	67
+ALP activity		0	80	9
+CMP		0	80	10
+Kd app		0	80	11
+logRA	log (relative activity)	0	80	1
+ED300		0	80	14
+IAr		0	80	7
+T/C max		0	80	36
+Inactivation		0	79	32
+Latency time		0	79	10
+K cat		0	79	19
+ECS ratio		0	79	8
+Log BB		0	79	6
+Mean weight		0	79	17
+Systolic blood pressure (base-line)		0	78	3
+log10CCID50	log10 cell culture infective dose 50	0	78	54
+x fold		0	78	10
+MI0.5		0	78	9
+NI		0	78	23
+BBR	Blood Brain Ratio	0	78	31
+AA		0	78	7
+IF		0	78	7
+LC90	Drug concentration causing 90% death of test organisms	0	78	12
+Loss of righting reflex		0	77	5
+Accumulated counts		0	77	42
+Pm	Intrinsic permeability	0	77	23
+MMC	Minimum metabolic activity concentration	0	77	18
+Peak rhGH		0	77	10
+Heart rate decrease (max)		0	76	17
+GS		0	76	3
+Antibiotic activity		0	76	16
+Inhibition response		0	76	2
+Uterine activity		0	76	8
+Fold resistance		0	76	36
+Triglycerides		0	76	18
+Growth zone		0	76	23
+TI rating		0	76	3
+Life span		0	76	52
+Log Kmemb		0	76	1
+IC200	Concentration required for 200% activity	0	76	9
+TGIR		0	76	33
+pKa4		0	76	25
+Krel		0	76	27
+Temperature decrease		0	76	28
+Relative agonistic activity		0	75	15
+2-DG uptake stimulation		0	75	3
+Relative stability		0	75	8
+Log potency ratio		0	75	8
+HSAI		0	75	1
+Log Kd		0	75	28
+RD500		0	75	26
+CyD50		0	75	2
+XI50	Surface concentration of the inhibitor for 50% inhibition	0	75	10
+K(p,uu,CSF)		0	75	2
+Blood pressure change (max)		0	74	22
+Uterotrophic effect		0	74	16
+Plasma glucose level		0	74	24
+MGC		0	74	6
+Cured/treated		0	74	49
+EC200		0	74	5
+MDD		0	74	53
+Interferon response		0	74	13
+Drug discrimination effect		0	73	11
+No. of rabbits convulsed		0	73	45
+Hill coefficient (n50)		0	73	2
+Remaining activity		0	73	4
+Ratio Ki(app)		0	73	34
+Bioreduction		0	73	43
+FR		0	73	12
+Ki 0.5		0	73	10
+CT50	Wound Half closure time	0	73	19
+IC5	Concentration required for 5% inhibition	0	73	11
+Kel	Elimination rate constant	0	73	50
+E		0	73	13
+Log [MrI]		0	73	1
+Excretion rate		0	72	23
+TBPS shift		0	72	4
+Convulsion		0	72	15
+Delta logP		0	72	9
+LS		0	72	2
+Log A		0	72	5
+pK2		0	72	9
+Kin	Blood-brain transfer coefficient	0	72	16
+Log KD		0	72	2
+Mouse behavior activity		0	71	25
+Inhibitor level		0	71	8
+Organ weight		0	71	31
+Log10 GI50		0	71	68
+Degradation		0	71	17
+K bind		0	71	10
+PF	Potentiation factor	0	71	2
+Lw/Bw		0	71	3
+Shift		0	71	10
+logPF	log of Potentiation factor	0	71	2
+Pmax		0	71	7
+Cr		0	71	51
+FA		0	71	4
+Log CR		0	71	10
+Serum cholesterol		0	70	25
+Ulcerogenic index		0	70	58
+Relative growth		0	70	51
+Acute toxicity		0	70	47
+Log cell kill		0	70	34
+Log k'w		0	70	3
+UR		0	70	24
+logS0	log of intrinsic solubility	0	70	1
+Ki/KI		0	70	10
+Peff		0	70	8
+p24		0	70	10
+GHI		0	70	1
+Ka'		0	70	1
+logKA	Relative binding affinity constant	0	70	4
+Change in reaction time		0	69	27
+Biological activity		0	69	7
+Collapse time		0	69	3
+Drug level		0	69	37
+MCC50		0	69	18
+UN		0	69	48
+APD75		0	69	9
+MET	Metabolism	0	69	4
+RPP		0	69	19
+SS		0	69	1
+pMIC		0	69	5
+Relative Fluorescent Unit		0	68	23
+Fraction free drug in plasma		0	68	3
+Vasorelaxant effect		0	68	14
+Cholesterol change		0	68	32
+Log relative k'		0	68	1
+Diameter		0	68	31
+C		0	68	14
+C1.6		0	68	9
+PCA		0	68	30
+G30		0	68	3
+I50	Inhibitory concentration for 50% activity	0	68	24
+R%	Membrane retention	0	68	2
+pC1		0	68	3
+[3H] concentration		0	67	32
+Parasite_Clearance		0	67	29
+Mean peak APTT		0	67	1
+No. of chicks		0	67	29
+Lethal dose		0	67	12
+RIA		0	67	6
+Incidence		0	67	56
+GDP ED50		0	67	5
+Length		0	67	50
+ED150		0	67	2
+PI turnover		0	67	8
+Decrease in QA interval		0	66	23
+TG		0	66	24
+Median survival		0	66	56
+Ulcer incidence		0	66	45
+Binding activity		0	66	26
+Edema variation		0	66	25
+Glucose level		0	66	40
+Max reduction		0	66	16
+Growth delay		0	66	54
+Iron output		0	66	22
+Ratio_Papp		0	66	2
+-Log ID50		0	66	4
+BWLmax		0	66	45
+CD100		0	66	2
+Edema		0	66	43
+P50d		0	66	1
+EC2x		0	66	5
+ED85	Effective dose for 85% activity	0	66	6
+[I]		0	66	8
+MOT		0	66	9
+Analgesic efficacy		0	66	17
+Tumor area change		0	65	54
+Potency_Clk4_uM		0	65	1
+Deaths/total		0	65	37
+Log kw		0	65	4
+ka	Absorption rate constant	0	65	59
+MBEC	Microbial biofilm eradicating concentration	0	65	26
+cAMP		0	65	7
+SRR		0	65	11
+MFC99		0	65	5
+Mean arterial blood pressure change (max)		0	64	24
+Kr	Binding affinity at resting state	0	64	15
+Fraction unbound in tissue		0	64	1
+Residual insulin secretion		0	64	4
+Discrimination ratio		0	64	5
+Fraction ionised		0	64	1
+Rotarod toxicity		0	64	13
+Behavioral score		0	64	27
+Binding constant		0	64	16
+STY seizure		0	64	4
+Delta HDL		0	64	2
+Tracer		0	64	16
+Amount		0	64	30
+Log k		0	64	11
+Bound		0	64	17
+ElogD		0	64	1
+EC5X		0	64	5
+RBF		0	64	26
+CPA		0	64	3
+ITP		0	64	6
+AC3		0	64	4
+Radius of inhibition zone		0	64	8
+Cl - current change		0	63	3
+Animals protected		0	63	26
+Inhibition uptake		0	63	36
+Activity ratio		0	63	11
+AUBC	Area under the bactericidal curve	0	63	63
+AZT formation		0	63	6
+-Log KD		0	63	11
+T>MIC	Time during which total drug concentration exceeds the MIC for the test pathogen	0	63	63
+I ABC		0	63	6
+Log activity		0	63	1
+Ulcerogenic activity		0	62	14
+Max non-toxic dose		0	62	2
+cAMP accumulation		0	62	14
+Transactivation		0	62	4
+Hydrolysis rate		0	62	18
+Weight gain		0	62	47
+TN		0	62	4
+Log RAI		0	62	2
+AUC N		0	62	10
+Ki/Km		0	62	23
+PHA		0	62	24
+EC5	Effective concentration for 5% activity	0	62	9
+Vmax(app)	Apparent Maximal velocity	0	62	6
+Organ distribution		0	61	61
+Range of survival		0	61	53
+Potency_Clk2_uM		0	61	1
+Significance		0	61	5
+KH		0	61	21
+logMIC	log of MIC	0	61	21
+Alpha E		0	61	5
+KD/Ki		0	61	36
+LBF	Liver blood flow	0	61	29
+dP/dt20		0	61	2
+Ratio_ATPase activity		0	60	1
+SF		0	60	6
+Chemotherapeutic index		0	60	3
+Median day of death		0	60	54
+Sensory evaluation		0	60	48
+Potency_Dyrk1a_uM		0	60	1
+% maximum response		0	60	1
+Ratio LD50/EC50		0	60	2
+Increase in CBF		0	60	6
+Half duration		0	60	1
+Virucidal		0	60	8
+PCA shift		0	60	1
+Baseline		0	60	18
+MG MID		0	60	7
+Free		0	60	21
+DAR		0	60	56
+Anticoccidial Activity		0	60	3
+Erythroid induction		0	59	30
+Relative hydrolysis		0	59	12
+Arterial pressure		0	59	48
+Mitotic index		0	59	22
+T/C survival		0	59	56
+Food intake		0	59	29
+FSC		0	59	21
+AE Score		0	59	2
+Max PI		0	59	4
+Other		0	59	9
+UD50	ulcerogenic dose in 50% of the treated animals	0	59	38
+RHT		0	59	3
+ERP		0	59	23
+Dose ratio		0	59	17
+Relative salidiuretic activity		0	58	22
+Inhibition concentration		0	58	11
+Increase in dP/dt max		0	58	22
+Zone of stimulation		0	58	17
+Median survival day		0	58	54
+Potency_Dyrk1b_uM		0	58	1
+AWC		0	58	38
+Neuroprotection		0	58	15
+No. of entries		0	58	13
+Tp control		0	58	20
+KI_MICROM		0	58	1
+MI50	Drug concentration causing 50% induction of mitotic index	0	58	11
+IE50	Concentration required for 50% inhibitory effect	0	58	2
+Reduction factor		0	58	6
+Mean uterine weight		0	57	9
+WBC		0	57	13
+Survival increase		0	57	29
+Inhibition index		0	57	3
+Anti-pent effect		0	57	1
+Protected mice		0	57	21
+Total activity		0	57	10
+Flu intensity		0	57	8
+Reaction time		0	57	21
+Response unit		0	57	5
+NTP_AUC		0	57	14
+Average		0	57	11
+K aff		0	57	4
+TC25		0	57	9
+pA50		0	57	14
+Surviving fraction		0	57	25
+Max Achievable Bioavailability		0	56	7
+pRA2		0	56	1
+Phorbol displacement		0	56	2
+Therapeutic index 99		0	56	2
+Deuterium retention		0	56	25
+Delta APD95 (max)		0	56	7
+Log 10 cell kill		0	56	20
+Median life span		0	56	48
+Urinary volume		0	56	13
+Modification		0	56	4
+Responding		0	56	48
+ZImax/KZI	Ratio of (maximum zone of inhibition) to (concentration required to reach half maximum zone of inhibition)	0	56	2
+pTCD50	-log TCD50	0	56	24
+pRA1		0	56	1
+Lipid-soluble radioactivity		0	56	8
+Maximal non-toxic dose 50		0	55	3
+CAR		0	55	17
+Removal of microfilariae		0	55	38
+Platelet aggregation		0	55	10
+Reactors/Test group		0	55	8
+DOPA accumulation		0	55	10
+Log 1/EDMES(2.5)		0	55	1
+Saluretic score		0	55	10
+Challenge time		0	55	4
+NO formation		0	55	3
+Log 10 LC50		0	55	55
+EDMES(2.5)		0	55	1
+CLtotal		0	55	33
+Kd(app)	Apparent dissociation constant	0	55	12
+rIC50		0	55	9
+K Bind		0	55	4
+Log AP		0	55	1
+NOHA		0	55	5
+ID75		0	55	3
+TWI		0	55	45
+PO2		0	55	14
+pC		0	55	4
+Serum total triglycerides		0	55	22
+Mean arterial blood pressure change (average)		0	54	6
+PFC		0	54	30
+Receptor occupancy		0	54	9
+Polyamine content		0	54	39
+Analgesia duration		0	54	11
+Apoptotic activity		0	54	5
+Initial activity		0	54	2
+Rotation number		0	54	9
+log(10'6/IC50)		0	54	1
+deltalog10CFU	delta log10 colony forming units	0	54	24
+Maximal effect		0	54	5
+Relative ID50		0	54	11
+Log 1/LD50		0	54	3
+Reactivity		0	54	11
+Rel Max FI		0	54	2
+Total dose		0	54	44
+Delta APD90		0	54	19
+Log D50		0	54	2
+Rise HR		0	54	21
+nHill		0	54	4
+pKm	disscociation constant	0	54	7
+No. of lung colonies		0	54	20
+Punch weight/MPO activity		0	53	47
+Anti-fighting behaviour		0	53	1
+Min effective dose		0	53	7
+Clined screen test		0	53	1
+Behavioral effect		0	53	15
+ED5	Effective concentration for 5% activity	0	53	19
+Immobility time		0	53	13
+Cells positive		0	53	39
+CS index		0	53	2
+Turns		0	53	30
+Mean body weight		0	53	16
+Rhodamine-123 accumulation		0	52	4
+SER		0	52	21
+Tissue concentration		0	52	28
+Protective effect		0	52	28
+Optical density		0	52	37
+Reversal index		0	52	27
+Cardiotoxicity		0	52	3
+Eye toxicity		0	52	8
+Stool output		0	52	37
+-Log Kdiss		0	52	2
+Non-HDL-C		0	52	35
+Quantity		0	52	12
+MFC99.9	Minimum fungicidal concentration for 99.9% activity	0	52	2
+Delta p		0	52	6
+GM-MIC		0	52	2
+PTD50		0	52	5
+VERP		0	52	30
+EC95	Effective concentration for 95% activity	0	52	13
+pKp		0	52	11
+LMA		0	52	20
+Fraction experiencing seizures		0	52	46
+Relative inotropic potency		0	51	14
+		0	51	41
+cAMP activity index		0	51	2
+packed cell volume		0	51	11
+Activity of control		0	51	9
+IC90 mutant/IC90 WT		0	51	4
+Aneuploidy activty		0	51	2
+Competition factor		0	51	6
+mequiv of Na+/kg		0	51	5
+Acceptor activity		0	51	1
+ascites volume		0	51	8
+Arthritic score		0	51	18
+Cells treated		0	51	6
+Lesion length		0	51	31
+Growth Index		0	51	10
+Growth rate		0	51	10
+Total turns		0	51	11
+Foci/dish		0	51	12
+Log ESA		0	51	1
+pIC90		0	51	1
+Kiuc	Uncompetitive inhibition constant	0	51	21
+Antihypertensive score		0	51	20
+Flat body posture score (mean)		0	50	21
+BDW		0	50	15
+Beta-lactamase induction		0	50	7
+Initial blood pressure		0	50	8
+Rate of O2 consumption		0	50	50
+GT fold stimulation		0	50	2
+Modulation factor		0	50	4
+Plasma clearance		0	50	30
+Systemic effect		0	50	13
+Total excretion		0	50	32
+No effect dose		0	50	5
+Efficacy ratio		0	50	2
+Motor activity		0	50	31
+FT mean score		0	50	20
+Log 1/ratio		0	50	1
+Virus yield		0	50	42
+CTL activity		0	50	16
+DNA binding		0	50	5
+Avg IC90		0	50	2
+Delta pH		0	50	4
+Log K1		0	50	17
+logCL	log of clearance	0	50	1
+Days		0	50	24
+AUEC	Area under effect curve	0	50	8
+Antiarrhythmic activity		0	50	1
+Survivors at day 30		0	49	22
+IC	Inhibitory concentration	0	49	6
+Control Uptake		0	49	1
+Drug response		0	49	47
+Reactivation		0	49	25
+Delta TAO		0	49	4
+T99.9%	Time to clear 99.9% of the initial inoculum	0	49	45
+pEC100		0	49	2
+Delta A		0	49	20
+RIC50		0	49	5
+Clast	Last measurable concentration	0	49	24
+Vz/F		0	49	40
+KD50		0	49	8
+Ks/i		0	49	44
+CC30	Cytotoxic concentration for 30% activity	0	49	12
+ADI		0	49	1
+BSI		0	49	4
+N		0	49	37
+FI		0	49	18
+Transport rate		0	49	12
+Relative inhibitory potency		0	48	8
+CLb		0	48	8
+Cytoprotective effect		0	48	3
+Optimal concentration		0	48	3
+No. protected/tested		0	48	10
+Reversal scale value		0	48	23
+Skin tests intensity		0	48	39
+Broncho selectivity		0	48	2
+log(solubility)		0	48	6
+Plasma insulin		0	48	19
+Behavior score		0	48	12
+Efficacy index		0	48	19
+Iron excretion		0	48	18
+Cell survival		0	48	11
+Contractility		0	48	13
+Glucose rise		0	48	19
+CT10 ratio		0	48	6
+Irritation		0	48	6
+GTP shift		0	48	6
+Tm shift		0	48	10
+log10FFU		0	48	48
+P ABC		0	48	4
+IA50		0	48	3
+ID40		0	48	12
+PWT		0	48	2
+FI5	Drug concentration resulting in 5-fold increase in transcriptional activity compared to absence of the compound	0	48	2
+RH		0	48	20
+Increase in footpad thickness		0	48	33
+Contragestational activity		0	47	6
+Heart rate change (max)		0	47	6
+Antihypertensive activity		0	47	6
+Pgp AbA/analogue ratio		0	47	2
+Antagonistic activity		0	47	17
+Antimalarial activity		0	47	23
+Rectal temperature		0	47	3
+Compound remaining		0	47	11
+[35S] TBPS shift		0	47	1
+Insulin release		0	47	18
+Response rate		0	47	26
+Mean latency		0	47	20
+Relative Ki		0	47	3
+CBF Ratio		0	47	2
+FBF Ratio		0	47	2
+Mean IC50		0	47	6
+Alphax10E		0	47	3
+G Index		0	47	5
+Log Ko		0	47	4
+CFC20		0	47	4
+Diastolic blood pressure change		0	46	12
+LM		0	46	2
+Average lesion score		0	46	17
+Active/total cultures		0	46	43
+Relative ET-A IC50		0	46	1
+Tremorolytic dose		0	46	6
+Variation/Control		0	46	27
+Protected/tested		0	46	45
+Relative uptake		0	46	2
+Dose excreted		0	46	46
+Relative rate		0	46	11
+Log ILS max		0	46	3
+Active dose		0	46	8
+Competition		0	46	5
+Log SOSIP		0	46	1
+MDR ratio		0	46	3
+Mydriasis		0	46	4
+Log M50		0	46	2
+Blockade		0	46	24
+MED50		0	46	13
+ED35	Effective dose for 35% activity	0	46	7
+C175		0	46	1
+PKa		0	46	10
+REP		0	46	2
+kr		0	46	21
+Dissociation constant		0	46	5
+No. of animals with liver necrosis		0	45	12
+IOR		0	45	1
+Apparent enzyme activity		0	45	1
+Rate of hydrolysis		0	45	7
+Possible response		0	45	8
+Tubulin binding		0	45	2
+cAMP production		0	45	9
+Improvement		0	45	24
+Relative F%		0	45	1
+Relative Kd		0	45	2
+log(1/CON)	log(1/partial pressure in atmosphere at which convulsion takes place)	0	45	1
+logK(lung)		0	45	1
+OD(540nm)		0	45	2
+RAC app		0	45	5
+LV FRP		0	45	27
+ka/Ki		0	45	40
+Alpha		0	45	7
+pC60		0	45	4
+kOH		0	45	4
+Acute electroshock activity		0	45	4
+Change in response rate		0	44	17
+CPP		0	44	5
+Plasma lipid level		0	44	24
+Survivors at day 5		0	44	40
+Administered dose		0	44	37
+GSH-Px activity		0	44	2
+AUC 0-infinity		0	44	8
+Fraction cured		0	44	44
+Reversal type		0	44	13
+logK(blood)		0	44	1
+Median T/C		0	44	39
+Viscosity		0	44	11
+pA2/pKB		0	44	2
+Agonist		0	44	10
+MTD50		0	44	5
+CLint		0	44	9
+Ki ss		0	44	1
+EC75		0	44	3
+Fabs	Fraction of the dose absorbed	0	44	18
+LC30	Drug concentration causing 30% death of test organisms	0	44	6
+LVP		0	44	5
+Inhibition constant		0	44	1
+Cytotoxic concentration		0	43	10
+Ae		0	43	10
+Inhibition over time		0	43	26
+Tumor response		0	43	20
+IC50 reduction		0	43	3
+Potential		0	43	3
+Unchanged		0	43	22
+dP/dt max		0	43	6
+P (Ei)		0	43	1
+Influx		0	43	10
+Kreact		0	43	7
+Log Kw		0	43	5
+ILS30		0	43	14
+LT50	Mean time to kill 50 % of the test larvae	0	43	4
+fAUC	Free Area under the concentration time curve	0	43	33
+DR10		0	43	9
+EPMR		0	43	6
+Vdu	Unbound volume of distribution	0	43	1
+CC10	Cytotoxic concentration for 10% activity	0	43	10
+REA		0	43	4
+LD5		0	43	1
+RL		0	43	21
+TP		0	43	5
+pD		0	43	5
+Deoxyribose degradation		0	43	3
+NBT positive cells		0	42	21
+Co		0	42	1
+No. of shocks		0	42	20
+Cell protein		0	42	36
+Separation		0	42	1
+Capacity		0	42	7
+Csat/Co		0	42	1
+APD60		0	42	12
+Csat		0	42	1
+PCY		0	42	1
+RTW		0	42	31
+Daq		0	42	1
+k1		0	42	14
+C24		0	42	4
+K(p,uu,brain)		0	42	1
+Weight change at nadir		0	41	18
+PL		0	41	4
+Ionotropic activity		0	41	9
+Histamine release		0	41	11
+DNA crosslinking		0	41	12
+Migration index		0	41	31
+Pigment binding		0	41	3
+Max CF response		0	41	17
+Max intensity		0	41	16
+-Log IC25		0	41	3
+LED100		0	41	11
+MDD50		0	41	5
+ED125		0	41	2
+Log C		0	41	1
+Fmut		0	41	12
+MfI		0	41	3
+RI		0	41	2
+Body weight increase		0	41	5
+Max inhibitory effect		0	40	16
+MP		0	40	3
+Activity in animals		0	40	13
+Luciferase activity		0	40	3
+Cytokine induction		0	40	4
+Positive control		0	40	4
+Aspirin formed		0	40	6
+DNA relaxation		0	40	7
+Log 1/ID75		0	40	1
+Tumor size		0	40	14
+Delta ERPc		0	40	2
+Frequency		0	40	27
+Kpot A,B		0	40	9
+MES ED50		0	40	1
+ED99.9		0	40	7
+MTC50	minimum toxic concentration - causes 50% cell death	0	40	9
+k2/Ki		0	40	7
+EC12	Effective concentration for 12% activity	0	40	3
+RPF		0	40	3
+RTV		0	40	40
+KSV	Stem-Volmer quenching constant	0	40	23
+ASF		0	40	1
+Mean no. of revertants		0	40	30
+Temperature decrease (max)		0	39	6
+RHA		0	39	3
+Relative susceptibility		0	39	5
+Infected mosquitoes		0	39	3
+P24 concentration		0	39	11
+Topical potency		0	39	2
+Average dose		0	39	9
+BCM serum Ca		0	39	4
+Delta pCa50		0	39	11
+IS/AAR		0	39	5
+Kb app		0	39	2
+TBMIC		0	39	1
+Flea		0	39	1
+I 90		0	39	13
+TFS		0	39	28
+D150		0	39	1
+Rate of phosphorylation		0	39	3
+Functional refractory period change (max)		0	38	5
+C0	Initial plasma concentration	0	38	29
+Residual contractile activity		0	38	3
+Permeability coefficient		0	38	7
+Histone_modification		0	38	12
+PDH active/PDH total		0	38	4
+Spontaneous activity		0	38	26
+Vertebral blood flow		0	38	1
+Lipid peroxidation		0	38	5
+Partition ratio		0	38	27
+Affinity ratio		0	38	6
+Binding ratio		0	38	4
+LogPapp	Log(Apparent permeability)	1	38	11
+Log PR		0	38	3
+GT rate		0	38	4
+pKapp		0	38	3
+% NO2-		0	38	3
+Tox50		0	38	7
+EC170		0	38	1
+K aps		0	38	1
+IC75	Inhibitory concentration for 75% activity	0	38	9
+MLS		0	38	38
+DAP		0	38	7
+SD		0	38	2
+BMF	Biomagnification factor	0	38	2
+CIC		0	38	16
+Relative luciferase response		0	38	14
+Systolic blood pressure increase		0	37	23
+BUN		0	37	23
+30 day survival / total		0	37	21
+Postsynaptic antagonist		0	37	2
+Vasoconstriction effect		0	37	25
+Dose-modifying factor		0	37	8
+Hyperglycemic activity		0	37	11
+Presynaptic antagonism		0	37	1
+log(10'3/IC50)		0	37	1
+A1 selectivity		0	37	1
+Mu/kappa ratio		0	37	2
+Delta max APD		0	37	6
+P50e/P50c		0	37	1
+Tension		0	37	1
+Log Pm		0	37	2
+PFU/ml	Plaque forming units per ml	0	37	11
+TMED50	Threshold minimum 50% effective dose	0	37	8
+fCmax	Free maximum concentration of drug	0	37	31
+GMMIC		0	37	4
+H ABC		0	37	2
+RT50	Time required for 50% recovery of compound action potential	0	37	2
+VT50	Vitality time 50%	0	37	2
+Hmax		0	37	2
+IT50	Time required to decrease 50% of compound action potential	0	37	2
+L/CE		0	37	11
+NSB		0	37	3
+BNa		0	37	7
+No. of animals exhibiting toxicity / Number of animals tested		0	37	37
+Tubulin polymerization ratio		0	36	1
+MA		0	36	9
+Exp Inhib Constant		0	36	1
+Incorporation rate		0	36	12
+Intrinsic Toxicity		0	36	3
+Plasma GH release		0	36	18
+Ratio_brain/blood		0	36	9
+Relative toxicity		0	36	10
+Formation of NO2-		0	36	2
+Relative binding		0	36	3
+Reversal ability		0	36	6
+Thymidine shift		0	36	2
+Oxidation rate		0	36	8
+Uptake at C50		0	36	5
+nNOS activity		0	36	6
+%Bound_Albumin		0	36	3
+Ileal activity		0	36	6
+Cross linking		0	36	6
+Initial rates		0	36	3
+Enzyme level		0	36	3
+MIC50/MIC90		0	36	33
+36Cl- uptake		0	36	1
+Log 1/ED50		0	36	4
+Delta/kappa		0	36	2
+RBA ratio		0	36	3
+Delta cpm		0	36	28
+Delta pKi		0	36	16
+Pressure		0	36	16
+Beta t1/2		0	36	18
+Log DSF		0	36	13
+Log MIC		0	36	1
+Kdiss	Dissociation rate constant	0	36	10
+Log M		0	36	2
+RC10		0	36	2
+EC10		0	36	6
+AI50		0	36	7
+Amax		0	36	1
+RVR		0	36	5
+CMR		0	36	1
+Rs		0	36	6
+IG		0	36	6
+Kq	Quenching constant	0	36	20
+Degradation rate constant		0	36	7
+Change from Control (LV dp/dt)		0	35	7
+MF		0	35	5
+Substrate specificity		0	35	4
+Exhibiting turning		0	35	8
+T-cell inhibition		0	35	5
+Cellular reversion		0	35	3
+Brain/Blood ratio		0	35	17
+Ratio LD50/ED50		0	35	9
+Control current		0	35	3
+Seizure score		0	35	17
+Eudismic ratio		0	35	14
+Average turns		0	35	7
+McPhail index		0	35	17
+FSC recovery		0	35	2
+Minimal dose		0	35	1
+Log TCID50		0	35	5
+p alphaKa		0	35	1
+DNA damage		0	35	27
+Log 1/ED40		0	35	2
+Delta ERP		0	35	3
+GSH level		0	35	4
+-Log LC50		0	35	8
+Others		0	35	29
+pAlpha		0	35	1
+Vss/F		0	35	33
+IT100	Time required to decrease 100% of compound action potential	0	35	2
+MPC4		0	35	2
+MCD	Minimum curative dose	0	35	5
+tR		0	35	6
+Effective concentration		0	35	15
+Rate of decomposition		0	34	6
+CGI		0	34	7
+Selectivity ratio S3/1		0	34	2
+Phosphorylation rate		0	34	2
+Cell cycle analysis		0	34	7
+Rolipram activity		0	34	3
+Cardio selectivity		0	34	6
+Cells in metaphase		0	34	20
+Jump latency time		0	34	12
+Max hypotension		0	34	4
+Parent compound		0	34	4
+No. of retches		0	34	33
+LDL cholesterol		0	34	14
+PI metabolism		0	34	2
+Kill at C50		0	34	4
+Caco-2 Papp		0	34	2
+Delta Gsolv		0	34	1
+Activity A		0	34	2
+Delta Fmax		0	34	5
+HVA level		0	34	14
+SH level		0	34	6
+Log KAT		0	34	1
+Currents		0	34	4
+ED Arec		0	34	9
+Km(app)	Apparent Km	0	34	6
+Ki low		0	34	29
+E 1/2		0	34	2
+rf50		0	34	4
+EC37		0	34	5
+TAR		0	34	2
+Bapp		0	34	5
+CTS		0	34	1
+GSH		0	34	13
+KOX		0	34	2
+k0		0	34	16
+Range of survival days		0	34	34
+Phospholipidosis as % of positive control		0	33	1
+KT		0	33	1
+No. positive cases/tested		0	33	15
+Relative inhibition index		0	33	2
+Selectivity coefficient		0	33	3
+Accumulation coefficient		0	33	23
+inhibition of control		0	33	4
+Cytokinetic response		0	33	8
+Functional profile		0	33	10
+Inotropic effect		0	33	5
+Stereotypy score		0	33	13
+Specific index		0	33	2
+No of monkeys		0	33	21
+Change of CF		0	33	7
+Change of CO		0	33	7
+Change of HR		0	33	7
+Log Doct/PBS		0	33	3
+cGMP content		0	33	6
+HVA control		0	33	27
+Total score		0	33	11
+Tumor free		0	33	6
+AE activity		0	33	6
+Catalepsy		0	33	18
+Max dose		0	33	7
+Symptoms		0	33	8
+-Log 1/Kb		0	33	1
+T/C min		0	33	16
+MI100		0	33	6
+EC10x		0	33	3
+GID75	Inhibition dose causing 75% growth inhibition	0	33	7
+SSAT		0	33	4
+aPTT		0	33	5
+E1/2		0	33	3
+CD90	90% Curative dose	0	33	6
+EC2	Effective concentration for 2% activity	0	33	5
+ISC		0	33	24
+ki		0	33	17
+IM		0	33	22
+IW		0	33	22
+Maximum test concentration that did not exhibit cytotoxicity		0	33	1
+Reverse transcriptase activity		0	32	16
+CQ	Drug concentration required to quadruple induction	0	32	1
+Average No. of metastasis		0	32	14
+DNA photo-crosslinking		0	32	3
+Volume distribution		0	32	21
+Cytostatic activity		0	32	6
+Hepatic cholesterol		0	32	20
+Scavenging activity		0	32	3
+No. of circlings		0	32	4
+No. of platelets		0	32	3
+Ratio LD50/IC50		0	32	1
+Animals positive		0	32	22
+Activation time		0	32	2
+PTZ seizure		0	32	2
+Log 1/IC50		0	32	2
+Repression		0	32	2
+DA response		0	32	5
+Dry weight		0	32	4
+Plasma GH		0	32	13
+Log D6.8		0	32	1
+RLU/well		0	32	4
+Log B/F		0	32	5
+EC0.01		0	32	2
+MLD50		0	32	2
+pGC50	-log of GC50 (Concentration for 50% reduction of cell viability)	0	32	1
+Basal		0	32	6
+CIC95	cell culture 95% inhibitory concentration	0	32	10
+RBA1		0	32	1
+RBA2		0	32	1
+EC40		0	32	17
+pkB		0	32	4
+MRF		0	32	1
+Cl-		0	32	29
+Transcriptional activation		0	32	11
+No. of nonpregnant/treated		0	31	20
+MI		0	31	4
+Binding site preference		0	31	2
+Binding stoichiometry		0	31	1
+Antilipid peroxidation		0	31	6
+DHP-I susceptibility		0	31	2
+Max collateral index		0	31	2
+Change from control		0	31	2
+Max possible effect		0	31	21
+Packed cell volume		0	31	4
+Survivors at day 9		0	31	6
+Tail flick latency		0	31	18
+Tail vein toxicity		0	31	7
+Uterine wet weight		0	31	14
+Rate of formation		0	31	10
+Treatment period		0	31	5
+Decrease in Bmax		0	31	7
+Time above IC50		0	31	11
+Collateral index		0	31	2
+Urinary output		0	31	6
+-log(RatioIC50)		0	31	1
+Ca2+ transport		0	31	11
+SOD activity		0	31	3
+-Log activity		0	31	1
+Relative PT		0	31	1
+MIC+/MIC-		0	31	2
+NG ratio		0	31	2
+Delta FC		0	31	1
+pEC0.5		0	31	2
+EC0.25		0	31	2
+EC1000	Effective concentration for 1000% activity	0	31	5
+pEC15		0	31	1
+pC25		0	31	3
+FL-1		0	31	4
+SSC		0	31	4
+Crel		0	31	10
+MUD		0	31	16
+Vc	Apparent volume of the central or plasma or serum compartment	0	31	13
+Fluorescence activity ratio		0	31	4
+Dissociation rate constant		0	30	12
+KF		0	30	7
+Electrolyte excretion		0	30	11
+Concentration in serum		0	30	6
+Mean time to seizure		0	30	30
+ID (per g of organ)		0	30	30
+Inhibition (basal)		0	30	1
+Mean no. of shocks		0	30	7
+Residual secretion		0	30	1
+Serum triglyceride		0	30	8
+Speed of induction		0	30	3
+Phototoxic effect		0	30	2
+Average peak Concn		0	30	4
+DLS Concentration		0	30	2
+Mean day of death		0	30	28
+Log sweet/bitter		0	30	4
+Range of deaths		0	30	25
+Ratio LC50/IC50		0	30	7
+PTZ protection		0	30	1
+Worm reduction		0	30	10
+Skin reaction		0	30	26
+A2 selectivity		0	30	4
+NADH oxidation		0	30	12
+Cardiac force		0	30	2
+Differential		0	30	2
+Cell cycle		0	30	30
+Immobility		0	30	21
+Least dose		0	30	3
+Kcat(app)		0	30	3	BAO_0000481 (kcat)
+Velocity		0	30	2
+Log CFU		0	30	2
+Assembly		0	30	3
+-Log Kd		0	30	6
+-Log K		0	30	12
+E/Emax	Efficacy/maximum efficacy	0	30	2
+Log KA		0	30	1
+T inh		0	30	4
+T/C 1		0	30	23
+In/Fi		0	30	24
+K rel		0	30	2
+MSIC		0	30	20
+2x PT		0	30	8
+IC2x		0	30	5
+T/V		0	30	4
+VAR		0	30	2
+k2'		0	30	8
+KD'		0	30	12
+k3		0	30	9
+GM		0	30	11
+No. of cultures active/total		0	30	28
+Mean enhancement of binding		0	29	15
+Kn		0	29	3
+Top1 cleavage activity		0	29	16
+Antibody stimulation		0	29	22
+Max tolerated dose		0	29	9
+Activity remaining		0	29	13
+Blood flow change		0	29	9
+Drug uptake(free)		0	29	8
+Feed consumption		0	29	1
+Maximal efficacy		0	29	1
+Max contraction		0	29	3
+Optimal dosage		0	29	2
+Feed efficiency		0	29	1
+Toxicity zone		0	29	4
+Coronary flow		0	29	4
+No. of errors		0	29	14
+Heart weight		0	29	10
+Net log kill		0	29	25
+VDR affinity		0	29	4
+log10 TCID50	log (Tissue culture infective dose 50)	0	29	17
+MPO release		0	29	2
+Total cells		0	29	17
+New tumors		0	29	23
+PGE2 Level		0	29	3
+Reversible		0	29	5
+Acid output		0	29	28
+pKi ratio		0	29	6
+ED ratio		0	29	4
+log10cfu	log10 colony forming units	0	29	17
+-Log K0.5		0	29	1
+Delta mV		0	29	6
+log1/S		0	29	1
+pLADY		0	29	2
+Occ90	90% receptor occupancy in brain	0	29	16
+EC>90	Effective concentration for >90 % activity	0	29	1
+Nr/N		0	29	23
+pC3		0	29	1
+CLIP		0	29	1
+NCC		0	29	1
+RHR		0	29	5
+CTE		0	29	8
+RM		0	29	8
+RV		0	29	1
+BFU		0	29	27
+Respiratory frequency		0	29	21
+Mean log concentration ratio		0	28	9
+Vm		0	28	9
+Anti-uterotrophic effect		0	28	5
+Inverse relative potency		0	28	3
+Lowest effective dose		0	28	3
+Binding competition		0	28	5
+Organ weight ratio		0	28	2
+Analgesic response		0	28	24
+VCR accumulation		0	28	4
+Arrhythmias times		0	28	12
+Covalent binding		0	28	8
+Ratio GI50/EC50		0	28	4
+Saline control		0	28	18
+Tumors with CR		0	28	28
+Agonist potency		0	28	12
+Antiviral index		0	28	3
+Cellular uptake		0	28	5
+Effectiveness		0	28	6
+Gated current		0	28	5
+A-selectivity		0	28	1
+No. of rats		0	28	6
+P50e / P50c		0	28	1
+Brain uptake		0	28	15
+LogK-IAMex		0	28	2
+Relativity		0	28	9
+Adjusted Ki		0	28	1
+Edema ratio		0	28	4
+Grip score		0	28	2
+Cat score		0	28	2
+Delta P50		0	28	1
+Content		0	28	4
+pKred		0	28	1
+pLADM		0	28	1
+MIC70	Minimum inhibitory concentration in 70% of population	1	28	1
+CPE50		0	28	5
+n50e		0	28	1
+APD50		0	28	17
+AERP		0	28	20
+Glyburide reversibility		0	28	3
+Animals responding / animals tested		0	27	27
+Kt		0	27	15
+Amount of cross-linked protein		0	27	3
+Min lytic concentration		0	27	2
+Muscarinic agonist index		0	27	1
+Myoblasts with parasites		0	27	22
+Volume of ascrit fluid		0	27	2
+Cells differentiated		0	27	6
+ID (per g of tissue)		0	27	19
+Long-term survivors		0	27	19
+Reversibility ratio		0	27	1
+Survivors at day 10		0	27	6
+Plasma selectivity		0	27	2
+GTP-gammaS index		0	27	3
+Monoamine level		0	27	9
+No. of pos rxns		0	27	5
+AdoMetDC levels		0	27	1
+Apoptosis index		0	27	14
+Min oral dose		0	27	6
+Tumor uptake		0	27	2
+pKi1-pKi2		0	27	1
+Occupancy		0	27	9
+Log Kobs		0	27	1
+Delta IC		0	27	14
+ascrit		0	27	2
+p nMED		0	27	1
+FRP C20		0	27	2
+Log K2		0	27	6
+SC200		0	27	3
+T-C/C		0	27	25
+dp/dt		0	27	27
+NOEC		0	27	9
+SD50		0	27	5
+ID16		0	27	2
+ID84		0	27	2
+pCF		0	27	1
+pNF		0	27	1
+MCT		0	27	11
+ODC		0	27	1
+PD2		0	27	15
+CPM		0	27	8
+VF		0	27	11
+kn		0	27	2
+Modification of hemoglobin		0	27	12
+Alpha-adrenolytic activity		0	26	3
+Ko		0	26	4
+Lowest effective concentration		0	26	2
+No. of escape failures		0	26	14
+Natriuretic activity		0	26	5
+Speed of performance		0	26	14
+Antibiotic resistance		0	26	9
+Binding selectivity		0	26	8
+Kaliuretic activity		0	26	5
+Intrinsic efficacy		0	26	7
+Lactone production		0	26	26
+Staining potential		0	26	26
+Substrate activity		0	26	7
+Unaltered compound		0	26	2
+Urinary excretion		0	26	26
+Ventricular rate		0	26	23
+Alpha-cholesterol		0	26	4
+Residual peptide		0	26	6
+Serum Mg2+ level		0	26	9
+Surviving factor		0	26	11
+Potency_Clk3_uM		0	26	1
+Ca2+ antagonism		0	26	2
+Cleavage rate		0	26	4
+Pleural fluid		0	26	5
+Etopic beats		0	26	23
+Plaque accum		0	26	26
+Sinus beats		0	26	8
+tox/total		0	26	24
+Log beta3		0	26	3
+logEC50		0	26	5
+2 x APTT		0	26	5
+C20 FRP		0	26	14
+PC100		0	26	1
+Sp St		0	26	1
+pAI50		0	26	2
+EC125		0	26	1
+RD50		0	26	1
+ID80		0	26	1
+AP50		0	26	3
+CCCT		0	26	7
+R.I		0	26	2
+RCI		0	26	9
+ICD		0	26	1
+Kif		0	26	11
+Tp		0	26	3
+Tt		0	26	2
+B		0	26	10
+Day of first positive reaction		0	26	3
+Rate of alkylation of NBP		0	25	3
+CV		0	25	19
+No. resp animals / Total		0	25	25
+Relative enzyme activity		0	25	1
+Biological evaluation		0	25	5
+Relative tumor growth		0	25	1
+Mean graph mid point		0	25	1
+Uptake/Binding ratio		0	25	1
+Mean life extension		0	25	12
+Excess zone radius		0	25	10
+Binding inhibition		0	25	8
+Epileptogenicity		0	25	4
+Relative maximum		0	25	5
+Actual duraction		0	25	17
+Calcium release		0	25	2
+Cumulative dose		0	25	9
+T/C untreated		0	25	1
+Change in WBC		0	25	2
+Phototoxicity		0	25	8
+Rate response		0	25	25
+Max lowering		0	25	6
+Total tumors		0	25	13
+AlDH activity		0	25	8
+AH interval		0	25	12
+E2 response		0	25	1
+P50d/P50c		0	25	6
+Passivity		0	25	3
+Erythema		0	25	23
+Log AC50		0	25	5
+Log K-1		0	25	11
+Reflex		0	25	3
+EC1.5	Drug level causing 1.5 fold enhancement of enzyme activity	0	25	1
+ICmax	Maximal inhibitory concentration	0	25	4
+CS50	50% cytostatic concentration	0	25	4
+Occ	Receptor occupancy	0	25	3
+HSF		0	25	2
+Kd1		0	25	8
+Brain penetration index		0	25	17
+Delta C urate / delta C insulin		0	24	10
+LD	Lethal dose	0	24	14
+Antiinflammatory Activity		0	24	3
+Biodistribution ratio		0	24	24
+Formation of erythema		0	24	9
+No. of mice recovered		0	24	24
+Ref I oncostatic index		0	24	14
+Selectivity ratio S3/2		0	24	2
+% nucleotide present		0	24	11
+Aggregation response		0	24	23
+No. of axonal points		0	24	3
+Precursor inhibition		0	24	12
+Transport inhibition		0	24	6
+No. toxicity/tested		0	24	4
+Femoral blood flow		0	24	2
+Suppression ratio		0	24	3
+Astrocyte reversal		0	24	24
+Cardiac depression		0	24	1
+Delta latency time		0	24	2
+Time constant T1		0	24	4
+Time constant T2		0	24	4
+Enzyme inhibition		0	24	2
+Mean no. colonies		0	24	14
+Net accumulation		0	24	3
+Oncostatic index		0	24	19
+Reduction in RBS		0	24	3
+NADPH oxidation		0	24	5
+Tritium release		0	24	5
+Verapamil index		0	24	3
+Total binding		0	24	13
+Lysis diameter		0	24	4
+ODC activity		0	24	10
+Water intake		0	24	7
+HSF release		0	24	4
+Ca2+ current		0	24	7
+Cage leaving		0	24	11
+Mean score		0	24	11
+pA2 - pA10		0	24	2
+IC50/[E]		0	24	3
+Log TA98		0	24	2
+Rate max		0	24	12
+Beats/min		0	24	19
+Rel max		0	24	1
+log1/S0		0	24	1
+EC50 iGC		0	24	1
+MG-MID		0	24	2
+T/C 41		0	24	1
+T/C-CQ		0	24	1
+pKact		0	24	11
+Delyse		0	24	4
+Log D5		0	24	3
+RC50	Concentration required for 50% reduction of control absorbance	0	24	2
+kOH-		0	24	1
+ED75	Effective dose for 75% activity	0	24	4
+Emin		0	24	2
+apE		0	24	1
+ClT		0	24	6
+K'a		0	24	2
+pH		0	24	12
+BWL		0	24	24
+Urinary glucose excretion		0	24	1
+Mean hemagglutination titers		0	23	20
+PG		0	23	5
+Flat body posture score		0	23	6
+Plasma-E2 concentration		0	23	14
+Tubulin polymerization		0	23	3
+Anesthesia duration		0	23	3
+Effective molarity		0	23	4
+[Ca2+] variation		0	23	10
+Caspase induction		0	23	1
+Max IOP reduction		0	23	3
+Delta Vmax (max)		0	23	8
+Dopamine release		0	23	1
+No. of transfers		0	23	9
+Volume increase		0	23	6
+No. of crosses		0	23	14
+Phosphorolysis		0	23	2
+DHP-I stability		0	23	2
+Spleen weight		0	23	20
+Dose interval		0	23	2
+Mean log GI50		0	23	9
+QTc interval		0	23	4
+pEC0.5,diss		0	23	4
+Log10 ED50		0	23	3
+Tumor cure		0	23	12
+Change MAP		0	23	4
+ED delta20		0	23	2
+ED delta5		0	23	2
+Emax,diss		0	23	4
+Influx Ki		0	23	10
+Delta RM		0	23	1
+Palpha		0	23	4
+CL(app)	Apparent clearance	0	23	1
+CLT50		0	23	2
+MFED		0	23	5
+pC2A		0	23	1
+Kact	Concentration of compound(agonist) required for half maximal activity	0	23	6
+TOX		0	23	10
+AC10		0	23	6
+PMA		0	23	2
+RBI		0	23	2
+S.I		0	23	4
+ED6		0	23	2
+FPT		0	23	5
+Kd2		0	23	9
+ST		0	23	10
+A	Radial growth inhibition of a microbial colony	0	23	13
+Hydrogen peroxide degradation		0	23	1
+Minimal bacteriostatic concentration		0	22	8
+Ca2+		0	22	8
+TGI correlation coefficient		0	22	1
+Concentration_unbound_plasma		0	22	17
+Physical dependence capacity		0	22	9
+Change in entry latency		0	22	2
+Mean activity counts		0	22	21
+Heart rate decrease		0	22	13
+Intestinal toxicity		0	22	3
+Paw weight increase		0	22	1
+Log 1/D125 (L1210)		0	22	1
+Mean vesicle score		0	22	19
+Agonistic activity		0	22	8
+Cytocidal activity		0	22	9
+Thymidine uptake		0	22	22
+Time constant T3		0	22	3
+Edema inhibition		0	22	1
+Gastric toxicity		0	22	2
+Observed log APA		0	22	1
+PDE inhibition		0	22	2
+Tissue levels		0	22	11
+Duration time		0	22	17
+HV interval		0	22	14
+Log potency		0	22	1
+Ulcer index		0	22	15
+Ulcer score		0	22	6
+Log 1/conc		0	22	1
+Funbound		0	22	9
+Ke ratio		0	22	10
+TOC ED50		0	22	11
+Log APA		0	22	1
+X1(50)		0	22	2
+BW loss		0	22	19
+CV dose		0	22	1
+Occ50	50% receptor occupancy in brain	0	22	6
+TGI50		0	22	8
+logSI	log (Selectivity Index)	0	22	2
+E max		0	22	4
+IC>80		0	22	2
+Vrel		0	22	2
+nAUC		0	22	14
+Eggs		0	22	2
+Gain		0	22	6
+c30		0	22	1
+c90		0	22	1
+C100		0	22	2
+Increase in plasma amylase		0	22	10
+Postjunctional agonist potency		0	21	1
+BT		0	21	16
+Postjunctional antagonist potency		0	21	2
+Picoequivalents of amine/10e6 cells		0	21	1
+Final average tumor weight		0	21	21
+Absolute turn angular/3 min		0	21	3
+Initial average tumor weight		0	21	21
+Prejunctional agonist potency		0	21	1
+Serum lipoprotein cholesterol		0	21	21
+Mean number of parasites		0	21	17
+Incidence of RBC decrease		0	21	8
+Symptom initiation		0	21	7
+Swimming activity		0	21	12
+Log delta (1/T2)		0	21	1
+Pressor activity		0	21	4
+Retention ratio		0	21	1
+Thrombus weight		0	21	10
+AI recovery time		0	21	12
+Change non HDL-C		0	21	9
+Testes weight		0	21	20
+Change HDL -C		0	21	9
+Creatinine_CL		0	21	12
+No. effective		0	21	15
+Potency index		0	21	2
+QT interval		0	21	19
+Total lysis		0	21	13
+Log K' IAM		0	21	1
+Wet weight		0	21	9
+Delta pEC50		0	21	1
+AUC 0-tldc		0	21	1
+Creatinine		0	21	12
+Hill slope		0	21	3
+Log 1/D125		0	21	2
+Log TA100		0	21	2
+LH level		0	21	21
+Log CC50		0	21	1
+Relapses		0	21	11
+Log MBC		0	21	1
+Treated		0	21	18
+logC50	log of C50	0	21	1
+-Log KA		0	21	1
+Cmax/SS		0	21	2
+K calc		0	21	1
+Log K3		0	21	4
+d tox		0	21	1
+fCmin	Free minimum drug concentration	0	21	21
+GII50		0	21	1
+HD100	Dose required for 100% hemolysis	0	21	2
+Kbapp	Apparent dissociation constant	0	21	5
+Tlag	Lag time between drug administration and first detectable serum concentration	0	21	11
+K1/2	Concentration required for Half-maximal effect	0	21	2
+TGD		0	21	17
+NEA		0	21	2
+POT		0	21	1
+HTD		0	21	1
+KDs		0	21	11
+Prejunctional antagonist potency		0	21	2
+ID99		0	20	5
+NSR		0	20	11
+CTF		0	20	2
+ED3		0	20	4
+I/C		0	20	1
+K50		0	20	1
+Pw		0	20	16
+C8h		0	20	1
+DP		0	20	1
+Ip		0	20	16
+No. of mice effected/No. of treated		0	20	11
+Recovered radioactivity		0	20	20
+Serum HDL-cholesterol		0	20	11
+Serum LDL-cholesterol		0	20	11
+Fluorescence intensity		0	20	4
+Degree of resistance		0	20	2
+Mortality inhibition		0	20	1
+Concentration ratio		0	20	7
+Epidermal thickness		0	20	17
+Heart rate increase		0	20	7
+Highest active dose		0	20	19
+Hemodynamic change		0	20	20
+Plasma cholesterol		0	20	18
+Survivors at day 8		0	20	10
+Triglyceride level		0	20	13
+Tumor growth delay		0	20	12
+Ca2+ transport S/M		0	20	2
+Cytotoxic endpoint		0	20	3
+Turns/first hour		0	20	1
+Cardiac frequency		0	20	20
+Complex_formation		0	20	14
+Enhancement ratio		0	20	5
+No. of writhings		0	20	9
+Residual binding		0	20	1
+increase in RFU		0	20	1
+Decrease in RFU		0	20	1
+Change in cAMP		0	20	1
+DNA alkylation		0	20	5
+FPG correction		0	20	7
+Nephrotoxicity		0	20	16
+Catalase rate		0	20	1
+Lipophilicity		0	20	5
+PI hydrolysis		0	20	1
+Prolongation		0	20	14
+Total counts		0	20	20
+Average onset		0	20	19
+Log K delta		0	20	2
+Urinary Na+		0	20	20
+TBPS IC50		0	20	1
+2DG uptake		0	20	5
+Cmax/dose		0	20	9
+Flow rate		0	20	12
+ED (1mV)		0	20	1
+Log II50		0	20	4
+Mean LAF		0	20	5
+Mean RBF		0	20	5
+p[BH+50]		0	20	1
+-Log EC20		0	20	2
+Mean HR		0	20	5
+Removal		0	20	6
+AUC 0-6h		0	20	3
+MAPD90		0	20	1
+pID50		0	20	1
+pLADm		0	20	2
+BHIA50		0	20	2
+Emesis		0	20	14
+Intact		0	20	4
+APD90		0	20	14
+Log Y		0	20	3
+Mice		0	20	4
+k2''		0	20	6
+-ln K		0	20	1
+IC60	Inhibitory concentration for 60% activity	0	20	8
+ID95	Drug concentration causing 95% inhibitory activity	0	20	3
+[EOP']infinity/[EOH]infinity		0	19	19
+K6		0	19	3
+Survivors at day 15		0	19	10
+Lethal dose (approx)		0	19	1
+Average seizure score		0	19	16
+Blood urea nitrogen		0	19	8
+Horizontal activity		0	19	13
+Selectivitiy factor		0	19	1
+No. of metastases		0	19	6
+Time constant T4		0	19	3
+Urine osmolality		0	19	11
+Antagonist effect		0	19	12
+Combination_index		0	19	15
+Duration of block		0	19	16
+Na+ ion content		0	19	15
+Ca2+ elevation		0	19	5
+Infarct volume		0	19	13
+K+ Ion content		0	19	15
+Max hemorrhage		0	19	6
+Cation influx		0	19	5
+K+/Na+ ratio		0	19	2
+Tumor growth		0	19	12
+Skin uptake		0	19	1
+% remaining		0	19	2
+1/kobsd-ka		0	19	19
+Cmax_[GH]		0	19	4
+IC50/IC50		0	19	2
+Liver TG		0	19	12
+Log CDGH		0	19	1
+Log CDQR		0	19	1
+log KOA	Octanol-air partition coefficient	0	19	1
+Ki high		0	19	17
+pKinc		0	19	1
+pLADy		0	19	1
+K diss		0	19	5
+MED90		0	19	3
+MlogP		0	19	1
+MNTC		0	19	4
+ERP1		0	19	1
+ERP3		0	19	1
+TVI		0	19	18
+ABBC	Area between control growth and time kill curves	0	19	19
+AUMC	Area under the first moment curve	0	19	11
+Corr		0	19	9
+PFU		0	19	13
+PKC		0	19	3
+CT1		0	19	1
+CT2		0	19	1
+FOC		0	19	1
+ke		0	19	1
+Max aggregation response		0	19	15
+Parasites		0	18	18
+Log LD50		0	18	2
+Log Pc18		0	18	1
+A/B ratio		0	18	2
+Stomach		0	18	1
+CE logK'		0	18	1
+Nature		0	18	10
+Km/Kcat		0	18	3
+KD app		0	18	2
+[GSH]		0	18	4
+GHmax		0	18	1
+K eff		0	18	4
+Q1/2		0	18	1
+krel		0	18	3
+pK1a		0	18	1
+pK1b		0	18	1
+pK1d		0	18	1
+Dmax		0	18	2
+G2/M		0	18	11
+CE37		0	18	1
+MRP		0	18	3
+MTS		0	18	1
+N/A		0	18	4
+Q50	Concentration required for 50% quenching of fluorescence	0	18	1
+CT3		0	18	2
+CT5		0	18	1
+FBF		0	18	3
+GOF		0	18	2
+QT		0	18	12
+kR		0	18	3
+DT		0	18	2
+IE		0	18	4
+K'		0	18	3
+Mean day appearance of lesions		0	18	9
+Mean arterial blood pressure decrease (max)		0	18	11
+Mean no. of lung colonies		0	18	6
+Min antiviral concentration		0	18	12
+Muscarinic receptor affinity		0	18	2
+Macrophage cytotoxicity		0	18	3
+Differential affinity		0	18	1
+Uterotrophic activity		0	18	4
+No. of lung metastasis		0	18	18
+Relative molar potency		0	18	9
+Serum corticosterone		0	18	17
+Anticonvulsant dose		0	18	3
+Antiemetic activity		0	18	1
+Relative ODN uptake		0	18	2
+Dissociation ratio		0	18	1
+Glucose correction		0	18	5
+Hemolytic activity		0	18	1
+Initial rate ratio		0	18	1
+Metabolic turnover		0	18	1
+Selective toxicity		0	18	1
+Partial remission		0	18	11
+Prodrug reduction		0	18	11
+Change in conflict		0	18	4
+Chemotactic index		0	18	8
+Hypnosis duration		0	18	12
+Insulin secretion		0	18	1
+Colony formation		0	18	12
+Control response		0	18	15
+ERP observations		0	18	7
+Extremes treated		0	18	6
+Gastric emptying		0	18	1
+Med tumor weight		0	18	18
+Rate of decrease		0	18	12
+Succeeded/tested		0	18	3
+Survival treated		0	18	6
+Onset of action		0	18	4
+Polyamine pools		0	18	9
+Adduct formation		0	18	2
+Remaining rate		0	18	2
+Thyroid status		0	18	9
+Conversion dose		0	18	16
+Histamine level		0	18	13
+Cured/Infected		0	18	16
+MTX equivalent		0	18	12
+Net dry weight		0	18	2
+Fold_activity		0	18	1
+Cmax_unbound		0	18	15
+Initial_rate		0	18	12
+Phagocytosis		0	18	1
+Slow binding		0	18	8
+Thymolysis		0	18	4
+Acc. counts		0	18	4
+Average AUC		0	18	2
+Binding max		0	18	10
+TGI ratio		0	18	2
+Uncut DNA		0	18	3
+Activity B		0	18	3
+Difference		0	18	3
+GI50 ratio		0	18	2
+LC50 ratio		0	18	2
+Cell size		0	18	6
+Delta F75		0	18	3
+GI50/EC50		0	18	3
+Imbalance		0	18	2
+Relative daunomycin accumulation		0	17	1
+KR	Dissociation constant at resting state	0	17	7
+Accumulated counts/30 min		0	17	13
+DNA cleavage activity		0	17	1
+Thromboxane B2 (TxB2)		0	17	3
+Antipapilloma activity		0	17	5
+Relative lipophilicity		0	17	2
+G-protein activation		0	17	1
+Hydrophobicity index		0	17	1
+Caco-2 permeability		0	17	12
+Pigment induction		0	17	2
+Iron mobilization		0	17	4
+Mean response/min		0	17	13
+Tonic seizures		0	17	17
+Vmax / Kmax100		0	17	3
+Agonist Potency		0	17	3
+DNA replication		0	17	2
+Aberrant cells		0	17	16
+Metabolic rate		0	17	7
+LDL oxidation		0	17	5
+GABA current		0	17	5
+Rats blocked		0	17	4
+Synergy EC50		0	17	1
+Tumor burden		0	17	11
+Average score		0	17	10
+LDH release		0	17	6
+TC lowering		0	17	14
+Log Pe,max		0	17	2
+Sterilized		0	17	1
+Time spent		0	17	2
+ToxD/Surv		0	17	8
+efflux_CL		0	17	17
+influx_CL		0	17	17
+C cellular		0	17	7
+Cr release		0	17	14
+Day 22-T/C		0	17	3
+Day 9-RTV		0	17	4
+Mean IC70		0	17	2
+P2 uptake		0	17	2
+ElogDoct		0	17	2
+Max cAMP		0	17	2
+Log Po		0	17	2
+Cp max		0	17	4
+FS-SIF		0	17	2
+Vbeta	Terminal Phase Vdss	0	17	9
+clogD		0	17	1
+AUC T		0	17	7
+Load		0	17	8
+Fapp	Apparent oral bioavailability	0	17	6
+k-2		0	17	2
+MDR		0	17	6
+PEI		0	17	3
+E50		0	17	2
+Keq		0	17	5
+ABC		0	17	6
+S		0	17	12
+AD		0	17	2
+EA		0	17	1
+FE		0	17	7
+Fraction of accumulated 86Rb remaining.		0	17	9
+Unbound		0	16	3
+Alpha Ki		0	16	7
+Delta Gm		0	16	1
+Normal		0	16	11
+-Log Kb		0	16	4
+AUC inf		0	16	8
+EC50rel		0	16	4
+Infarct		0	16	15
+E/Eref		0	16	2
+ED2sec		0	16	1
+ER max		0	16	1
+Log DC		0	16	4
+Log KH		0	16	2
+Log KL		0	16	3
+MED10		0	16	2
+NOAEL	No observable adverse effect level	0	16	14
+Urine		0	16	6
+Varea		0	16	3
+logKd		0	16	2
+D7.4		0	16	1
+FC50		0	16	2
+HT50		0	16	16
+KiAH		0	16	3
+VSS		0	16	2
+pK3		0	16	5
+RTP		0	16	2
+ILB		0	16	4
+BMD		0	16	4
+A0		0	16	3
+Relative esterase susceptibility		0	16	3
+Cell protein in untreated control		0	16	11
+Mean arterial pressure change (average)		0	16	16
+Decrease in the QA interval		0	16	8
+Heart rate change (average)		0	16	16
+Relative intrinsic activity		0	16	1
+Time to max. inhibition		0	16	6
+Radioactive constituents		0	16	16
+Reduction in virus titer		0	16	14
+Relative Bioavailability		0	16	5
+Effect on polyamine pools		0	16	2
+Gastric concentration		0	16	5
+Reduction in movement		0	16	4
+Specific Displacement		0	16	4
+Amount of Acotine used		0	16	8
+Inhibition of damage		0	16	3
+Concentration_blood		0	16	14
+Resistance reversal		0	16	9
+Maximal relaxation		0	16	1
+Mutation frequency		0	16	8
+Original amplitude		0	16	2
+Tissue/Blood ratio		0	16	16
+Rate of reduction		0	16	3
+Acute tolerability		0	16	11
+Tensile strength		0	16	1
+Ulcerative index		0	16	4
+Inactivation time		0	16	11
+Inotropic potency		0	16	4
+Serum metabolite		0	16	1
+Suppressive dose		0	16	1
+Remaining ratio		0	16	1
+Amount delivered		0	16	4
+Relative value		0	16	1
+Incidence_count		0	16	16
+Ca2+ reduction		0	16	2
+Funbound_blood		0	16	6
+Funbound_serum		0	16	11
+Hematotoxicity		0	16	2
+Control value		0	16	5
+MTT reduction		0	16	4
+No. of canine		0	16	16
+Colony_count		0	16	10
+Tidal volume		0	16	8
+Probability		0	16	2
+CTS increase		0	16	1
+Carbohydrate		0	16	7
+AUC_aspirin		0	16	1
+CT-luci TAR		0	16	1
+Conc_plasma		0	16	10
+Stretches		0	16	8
+Delta IC50		0	16	2
+Dependency		0	16	10
+Dose range		0	16	7
+Fungicidal		0	16	7
+Ionization		0	16	2
+CC50/EC50		0	16	1
+No. total		0	16	8
+EC90/MIC		0	16	6
+ECAUC0.2		0	16	2
+HF ratio		0	16	2
+Inflamed		0	16	12
+Log t1/2		0	16	2
+Negation		0	16	14
+AUC 0-24h		0	16	11
+CMax		0	15	4
+RMP		0	15	12
+K-1		0	15	8
+APA		0	15	9
+B50		0	15	2
+CR		0	15	11
+Relative differentiating activity		0	15	3
+Insulin-sensitizing activity		0	15	1
+Mineral apposition rate		0	15	15
+Total number of entries		0	15	1
+Triglyceride correction		0	15	3
+Antiuterotrophic activity		0	15	3
+Hemispheres reduction		0	15	8
+No. of suncus vomited		0	15	10
+Extent of skin lesions		0	15	15
+Plasma protein binding		0	15	7
+3H-TdR incorpolation		0	15	3
+Decrease in fighting		0	15	3
+Max agonist response		0	15	9
+Alkylating activity		0	15	3
+Blood glucose level		0	15	5
+Communicating cells		0	15	5
+GTP-gamma35S bound		0	15	2
+Remaining compound		0	15	3
+Resting potential		0	15	8
+Vasodilatory rate		0	15	9
+-Log concentration		0	15	1
+Cell proliferation		0	15	6
+Inhibitory effect		0	15	9
+Log concentration		0	15	13
+Plasma half-life		0	15	5
+Preventive index		0	15	1
+Max fall in IOP		0	15	4
+PLC Stimulation		0	15	1
+Max protection		0	15	7
+NBT positivity		0	15	6
+Decrease RVR		0	15	1
+Fresh weight		0	15	6
+Log 1/Th+200		0	15	1
+Log 1/B+100		0	15	1
+Amount bound		0	15	1
+Cells living		0	15	9
+pEC50 diss		0	15	5
+Delta HDL-C		0	15	12
+kinact/Ki		0	15	3
+Alkylation		0	15	3
+Ca2+ flux		0	15	6
+Log 1/B+1		0	15	2
+Log 1/B.5		0	15	2
+Hx shift		0	15	1
+Lag time		0	15	2
+RVR ED15		0	15	1
+Log K'W		0	15	1
+T/C 1.2		0	15	12
+WLC PRA		0	15	2
+log KOW	Octanol-water partition coefficient	0	15	3
+p alpha		0	15	5
+p10 MIC		0	15	4
+t1/2eff	Effective half life	0	15	1
+-Log I50		0	15	1
+CLogD7.4	Calculated Log(Distribution Coefficient) at pH7.4	1	15	1
+Vm/Km		0	15	3
+Log2		0	15	4
+DC50	concentration required for a 50% reduction of cell viability	0	15	5
+HC30	Concentration required for 30% hemolysis	0	15	1
+VCT		0	15	7
+cpm		0	15	5
+k''		0	15	13
+pAD		0	15	1
+Area		0	15	9
+n		0	14	6
+EI		0	14	3
+RT		0	14	1
+UD		0	14	8
+VM		0	14	1
+kc		0	14	1
+C/P		0	14	1
+CLi		0	14	3
+CMI		0	14	2
+KI'		0	14	2
+Kid		0	14	6
+LWI		0	14	2
+TPO		0	14	5
+C1.3		0	14	1
+Cave	Average plasma concentration	0	14	14
+ECLT		0	14	10
+ED33		0	14	1
+HC10	Concentration required for 10% hemolysis	0	14	1
+NLCK		0	14	14
+Tmin	Time to reach Cmin	0	14	8
+AUC c		0	14	2
+AUC p		0	14	2
+G0/G1		0	14	11
+KDMPC		0	14	2
+pLD50		0	14	1
+B(DPB)		0	14	1
+Pcaco2		0	14	4
+Sp Max		0	14	1
+K alkyl		0	14	2
+Khydrol		0	14	4
+Ouabain		0	14	1
+Log Pmic		0	14	1
+Positive		0	14	6
+T/C corr		0	14	5
+ALP Level		0	14	1
+GOT Level		0	14	1
+GPT Level		0	14	1
+Peak time		0	14	8
+beta t1/2	Terminal half life	0	14	8
+Log change		0	14	11
+Lysis area		0	14	8
+Of control		0	14	13
+Ulceration		0	14	2
+dose BP/BP		0	14	13
+Potentation		0	14	1
+Stain index		0	14	2
+Amine formed		0	14	3
+Free complex		0	14	2
+MID log LC50		0	14	2
+Nitric oxide		0	14	2
+Subcut score		0	14	6
+k cat/Kuncat		0	14	8
+5-HT syndrome		0	14	6
+Abdominal fat		0	14	2
+Bleeding time		0	14	10
+Drugexcretion	Drug excretion	0	14	14
+Edema density		0	14	4
+Kidney weight		0	14	5
+Mean duration		0	14	4
+Net turns/min		0	14	8
+POT vigilance		0	14	1
+Relative t1/2		0	14	3
+GSTCP activity		0	14	5
+Histopathology		0	14	4
+Max relaxation		0	14	7
+No. of plaques		0	14	9
+Relative level		0	14	7
+max activation	Maximum activation	0	14	2
+Adjuvant effect		0	14	7
+Average latency		0	14	13
+Bilurubin Level		0	14	1
+Clonic seizures		0	14	8
+Increase in DPM		0	14	8
+Peroxidase rate		0	14	1
+Serum stability		0	14	14
+Bullatacin index		0	14	1
+Experimental DPM		0	14	2
+Hypocotyl length		0	14	5
+Infectious virus		0	14	10
+Net grain counts		0	14	2
+No. of dogs used		0	14	2
+No. of scratches		0	14	10
+Plasma histamine		0	14	2
+Pressor response		0	14	7
+Equilibrium OD340		0	14	4
+Log rate constant		0	14	1
+Prolactin control		0	14	6
+Survivors at 24 h		0	14	14
+Complete remission		0	14	8
+Control relaxation		0	14	2
+Erythema induction		0	14	13
+No. of males mated		0	14	12
+Photosensitization		0	14	1
+Plasma ALT at 24 h		0	14	10
+Therapeutic effect		0	14	2
+Intrinsic clearance		0	14	8
+Liver concentration		0	14	6
+Prolactin treatment		0	14	6
+Duration of reversal		0	14	1
+Growth delay (T-C/C)		0	14	14
+Hypotensive activity		0	14	2
+No. of dogs reverted		0	14	2
+No. of males fertile		0	14	12
+Radiation equivalent		0	14	12
+Tonic-clonic seizure		0	14	13
+Increase over control		0	14	12
+Pigmentation capacity		0	14	13
+k obs / concentration		0	14	6
+Antimicrobial activity		0	14	6
+Change in tidal volume		0	14	7
+No. of males cohabited		0	14	12
+Inhibition potency T/II		0	14	1
+Myoblast with parasites		0	14	7
+No. protected/ No.dosed		0	14	11
+Relative bioavailability		0	14	3
+Thermodynamic solubility		0	14	2
+Transcriptional activity		0	14	3
+Increase in plasma lipase		0	14	6
+No. of mice dead/day died		0	14	14
+Hind-paw lick latency time		0	14	12
+Coronary flow increase (max)		0	14	1
+Change in respiratory frequency		0	14	7
+Parasites no. per 100 Myoblasts		0	14	7
+Increase in blood pressure (P/R)		0	14	1
+Inhibitory activity decrease (mean)		0	14	6
+Intraocular pressure decrease (max)		0	14	7
+Lesion_Clearance		0	13	9
+Blockade duration		0	13	5
+DNA fragmentation		0	13	12
+Hormonal activity		0	13	4
+Min concentration		0	13	2
+Necrosis response		0	13	4
+Progressed tumors		0	13	11
+Radioligand bound		0	13	1
+Total acid output		0	13	3
+Peak concentration		0	13	13
+Behavioral response		0	13	4
+Log tumor cell kill		0	13	12
+Regression response		0	13	6
+Vascular relaxation		0	13	2
+Exploratory activity		0	13	3
+increase in response		0	13	6
+Relative cytotoxicity		0	13	4
+Relative fluorescence		0	13	4
+Anticoagulant activity		0	13	3
+Tumor inhibition ratio		0	13	13
+DNA single strand breaks		0	13	6
+Increase life span (T/C)		0	13	3
+Reduction in virus yield		0	13	13
+Body weight loss at nadir		0	13	12
+Body weight change (day 5)		0	13	2
+Spontaneous motor activity		0	13	3
+Hepatic necrosis in survivors		0	13	10
+Relative stimulatory activity		0	13	3
+Differentiation activity ratio		0	13	1
+Relative blood pressure potency		0	13	2
+Systolic blood pressure change (max)		0	13	1
+K5		0	13	2
+NE		0	13	7
+NR		0	13	4
+SB		0	13	8
+TO		0	13	13
+B/P		0	13	7
+BEI		0	13	2
+CLm		0	13	2
+HIA		0	13	2
+Kup	Drug Uptake rate	0	13	1
+MRD		0	13	8
+TPI		0	13	3
+TTO		0	13	11
+VFT		0	13	6
+E100		0	13	1
+ED37		0	13	2
+ED70		0	13	5
+K OX		0	13	5
+KDNB		0	13	1
+Vp/F	Apparent peripheral distribution volume	0	13	13
+ED250	Effective dose for 250% activity	0	13	1
+ICL50		0	13	7
+K HOX		0	13	5
+LVEDP		0	13	1
+ln Kp		0	13	1
+ln Kt		0	13	1
+EC99.9	Effective concentration for 99.9% activity	0	13	2
+Ki int		0	13	11
+Log Pa		0	13	2
+MED100		0	13	4
+RD1000		0	13	6
+RSA tR		0	13	1
+VOLSYN		0	13	3
+Attacks		0	13	9
+P value		0	13	2
+CL_Ratio		0	13	3
+Ip score		0	13	5
+Ki slope		0	13	11
+C120/ED50		0	13	2
+Log cfu/g		0	13	11
+MTX ratio		0	13	1
+Migration		0	13	7
+Ratio pKb		0	13	4
+Delta ED50		0	13	4
+Log 1/IC90		0	13	1
+Photolysis		0	13	2
+Urine/bile		0	13	13
+Drug deaths		0	13	12
+Lung weight		0	13	8
+log10PFU/ml		0	13	13
+Ki/(Km/Kcat)		0	13	2
+Vasodilation		0	13	5
+hSlo current		0	13	3
+Logit_p(conc)		0	13	2
+Oral duration		0	13	2
+Shutdown time		0	13	1
+Carbonyl group		0	13	9
+Cells arrested		0	13	11
+T-cell binding		0	13	2
+Vagal response		0	13	5
+Cell permeation		0	13	1
+Chlorine uptake		0	13	1
+Max enhancement		0	13	8
+Animals affected		0	13	10
+Malic enzyme increase		0	12	4
+Plasma corticosterone		0	12	2
+Threshold active dose		0	12	2
+Amount of Ouabain used		0	12	6
+Degranulating activity		0	12	10
+Intensity of erythemia		0	12	4
+Relative concentration		0	12	2
+Acetaldehyde Inhibition		0	12	7
+Bronchoalveolar lavages		0	12	12
+Dose (urinary recovery)		0	12	1
+Relative binding potency		0	12	2
+No. of animals with damage		0	12	8
+No. of mice protected/tested		0	12	12
+Complete spontaneous reversal		0	12	1
+Mean day of death for total dead		0	12	7
+Mean relative surviving fraction		0	12	8
+ALAT levels		0	12	6
+ASAT levels		0	12	6
+CA activity		0	12	4
+ERP (delta)		0	12	7
+Max release		0	12	1
+No. of pits		0	12	4
+Observed at		0	12	1
+Formaldehyde		0	12	8
+GDP activity		0	12	3
+GPGB tension		0	12	4
+K-1 decrease		0	12	3
+PL-017 shift		0	12	2
+Peak current		0	12	8
+Potency mean		0	12	9
+Testosterone		0	12	3
+cAMP content		0	12	3
+Change in MST		0	12	6
+O2 production		0	12	3
+Static tumors		0	12	10
+T1/2 increase		0	12	4
+Urinary level		0	12	3
+Control growth		0	12	12
+Dopamine level		0	12	8
+Fecal recovery		0	12	2
+Med tumor area		0	12	11
+Platelet count		0	12	2
+Potency vs EKC		0	12	2
+Time in flight		0	12	7
+HbS solubilized		0	12	5
+MAO deamination		0	12	2
+Mortality range		0	12	12
+Relative effect		0	12	2
+[3H] TdR uptake		0	12	6
+Average activity		0	12	1
+Fold change IC50		0	12	6
+LH concentration		0	12	12
+Myristoylpeptide		0	12	2
+Regiospecificity		0	12	11
+Unchanged tracer		0	12	4
+Vaginal activity		0	12	2
+Adjuvant activity		0	12	4
+Catalyptic action		0	12	8
+Reducing activity		0	12	1
+Tumor/blood ratio		0	12	4
+Tumor/liver ratio		0	12	4
+Untreated control		0	12	2
+Cell number change		0	12	2
+Distribution ratio		0	12	4
+LV dP/dTmax(delta)		0	12	7
+Log geometric mean		0	12	9
+Relative intensity		0	12	11
+Average weight gain		0	12	12
+Cell cycle fraction		0	12	12
+Protective activity		0	12	12
+Spermatogenic index		0	12	12
+Transacylation rate		0	12	1
+Tumor free survival		0	12	12
+Weight gain or loss		0	12	4
+Average colony count		0	12	7
+Neostigmine reversal		0	12	2
+Proconvulsant action		0	12	6
+Slope of Schild plot		0	12	1
+Logit bioavailability		0	12	1
+Macrophage activation		0	12	6
+AC		0	12	1
+E2		0	12	2
+LH		0	12	3
+SC		0	12	12
+UB		0	12	12
+av		0	12	9
+GPI		0	12	1
+K L		0	12	8
+KD1		0	12	3
+KD2		0	12	3
+MDL		0	12	2
+MFI		0	12	3
+N/T		0	12	9
+PDC		0	12	5
+RAP		0	12	2
+T/A		0	12	1
+TLm	The concentration of toxic substance at which 50 percent of the test animals survive for a specified period of exposure	0	12	1
+TVR		0	12	12
+CITH		0	12	2
+ID25		0	12	4
+L-T3		0	12	4
+OSAV		0	12	4
+VI30		0	12	4
+RH/RL		0	12	4
+RVmax		0	12	4
+Total		0	12	8
+logPc	Cationic logP	0	12	1
+pKabz		0	12	2
+pKapy		0	12	2
+Log Ka		0	12	2
+Log PI		0	12	3
+Log WS		0	12	1
+MNTD70	70% maximal non-toxic dose	0	12	1
+MNTD90	90% maximal non-toxic dose	0	12	1
+T free		0	12	2
+10^2 k1		0	12	11
+AUC 120		0	12	4
+C5a max		0	12	6
+Falling		0	12	4
+Log Pmw		0	12	1
+Log k'o		0	12	2
+T bound		0	12	2
+lesions		0	12	2
+logt1/2	log of Half life	0	12	1
+Log [-5]		0	12	3
+Log [-6]		0	12	3
+Log [-7]		0	12	3
+Log [-8]		0	12	3
+MES/TEST		0	12	8
+Serum TG		0	12	8
+TOX/TEST		0	12	10
+Urine K+		0	12	4
+log10PFU	log10 plaque forming unit	0	12	6
+FIC index		0	12	12
+Ibuprofen		0	12	2
+Log P hep		0	12	1
+QTc delta		0	12	7
+Urine Na+		0	12	4
+AbsAC35_uM		0	12	1
+Fe removed		0	12	8
+Log 1/E100		0	12	2
+Mean value		0	12	9
+Osmolality		0	12	6
+Protonated		0	12	2
+Selective index		0	11	2
+Volume of urine		0	11	6
+amount in urine		0	11	11
+General activity		0	11	6
+Lesion frequency		0	11	3
+Change of predose		0	11	5
+Degradation ratio		0	11	2
+Mice with lesions		0	11	11
+No. of mice alive		0	11	11
+Inflammation units		0	11	4
+Logit of 1/deltaCa		0	11	1
+Mean rate constant		0	11	8
+Resorbing implants		0	11	10
+Survival extension		0	11	9
+%hepatic blood flow		0	11	7
+Psychotropic Effect		0	11	4
+Ca2+ binding protein		0	11	5
+Binding site fraction		0	11	1
+Kinetic_solubility(app)	Apparent kinetic solubility	0	11	1
+Mean volume of hind paws		0	11	4
+No. of vomiting episodes		0	11	7
+Relative phosphorylation		0	11	2
+Relative rate metabolism		0	11	1
+No. of implants/pregnancy		0	11	10
+Body weight change (7 day)		0	11	5
+Protein interaction energy		0	11	2
+Suppression of parasitemia		0	11	7
+Relative inhibitory activity		0	11	2
+No. of rats with 5-HT syndrome		0	11	8
+Change in No. of trophozoites x 10E-5		0	11	3
+CA		0	11	5
+CO		0	11	3
+Pe		0	11	6
+rK		0	11	1
+AHV		0	11	3
+BGL		0	11	1
+D/P		0	11	2
+DTH		0	11	4
+HAR		0	11	1
+IPA		0	11	1
+KIs		0	11	2
+KT4		0	11	2
+KiA		0	11	1
+Low		0	11	2
+S/T		0	11	10
+[A]		0	11	6
+kHO		0	11	1
+KPCB		0	11	1
+NOEL		0	11	2
+XL50	Concentration required for 50% cross linking	0	11	6
+[EA]		0	11	6
+pFe3		0	11	1
+2x TT		0	11	1
+ClC95		0	11	3
+M.A.D		0	11	2
+MED99		0	11	1
+SEC50		0	11	2
+T1/29		0	11	1
+pKa,1		0	11	1
+pKa,2		0	11	1
+Efflux		0	11	6
+Extent		0	11	9
+K''IAM		0	11	1
+Log P'		0	11	1
+OD max		0	11	2
+Rotorod		0	11	5
+Delta Ca		0	11	1
+Diuresis		0	11	1
+Log 1/Kd		0	11	2
+Log Pion		0	11	2
+Phosphor		0	11	5
+Blood AcH		0	11	2
+Log 1/ISA		0	11	1
+Tolerance		0	11	10
+Hgb levels		0	11	1
+Onset time		0	11	6
+Ratio_EC50		0	11	4
+ATP content		0	11	3
+Drug period		0	11	1
+Translation		0	11	1
+% of control		0	11	10
+FR10 control		0	11	1
+FR10 treated		0	11	7
+log(1/Kiapp)	log(1/Ki(app))	0	11	1
+Prolonged ARP		0	11	5
+Prolonged VRP		0	11	5
+% Max Response		0	11	4
+Agonist effect		0	11	7
+Change of size		0	11	11
+Control period		0	11	3
+Dose per organ		0	11	11
+Glucose uptake		0	11	5
+Onset of block		0	11	11
+Max suppression		0	11	6
+Gastric lesion score		0	10	2
+Gellar cook activity		0	10	10
+Glucuronidation rate		0	10	3
+Inhibitory potential		0	10	1
+Max vasoconstriction		0	10	2
+Parasite suppression		0	10	6
+Phospholipidosis_MEC		0	10	1
+Body weight In. / Fi.		0	10	10
+Highest nontoxic dose		0	10	2
+Infected erythrocytes		0	10	5
+Transacetylation rate		0	10	1
+Renal blood flow change		0	10	10
+Serum total cholesterol		0	10	10
+Phosphorylating activity		0	10	2
+Post drug blood pressure		0	10	2
+Cytoplasmic vacuolization		0	10	3
+Life span increase (mean)		0	10	9
+DNA unwinding concentration		0	10	1
+Relative substrate velocity		0	10	6
+Relative ionotropic activity		0	10	1
+Substrate metabolized at 1hr		0	10	10
+Alpha-lipoprotein cholesterol		0	10	10
+Initial mean arterial pressure		0	10	3
+Relative seminal vesicle weight		0	10	5
+Force of constriction change (max)		0	10	2
+Analgesic efficacy compared to morphine		0	10	1
+Analgesic efficacy compared to epibatidine		0	10	1
+Log 1/E50		0	10	1
+Log k GSH		0	10	1
+R/S ratio		0	10	2
+Ratio pA2		0	10	4
+Substrate		0	10	9
+fCmax/MIC		0	10	10
+-Log alpha		0	10	1
+BAT weight		0	10	3
+Clonazepam		0	10	1
+Fold shift		0	10	2
+HA release		0	10	10
+Tumor area		0	10	5
+Consumption		0	10	10
+M2/M1 index		0	10	2
+Mean effect		0	10	2
+Peak effect		0	10	2
+[I] for Km'		0	10	1
+AT1 affinity		0	10	2
+Active/total		0	10	10
+Damage score		0	10	3
+GMS activity		0	10	1
+MyristoylCoA		0	10	2
+Cell toxicity		0	10	1
+HMGR activity		0	10	5
+Log TCID50/mg		0	10	10
+MAC reduction		0	10	1
+Oxygen uptake		0	10	10
+Perturbations		0	10	5
+cAMP increase		0	10	6
+Delta log10CFU		0	10	9
+Dose elevation		0	10	2
+Iron clearance		0	10	3
+Mice In. / Fi.		0	10	9
+O2 consumption		0	10	1
+Catalepsy score		0	10	7
+Cells untreated		0	10	4
+Cytochrome loss		0	10	10
+GTPase Activity		0	10	4
+Inhibition type		0	10	1
+Log sensitivity		0	10	2
+M-agonist index		0	10	2
+Max fall in MAP		0	10	5
+Max weight loss		0	10	9
+Mean inhibition		0	10	9
+Min lethal dose		0	10	1
+Relative influx		0	10	2
+Induction number		0	10	1
+MDH Reactivation		0	10	2
+Rate of rotation		0	10	7
+Relative ability		0	10	3
+Rice stem length		0	10	2
+Horizontal screen		0	10	8
+Inhibition effect		0	10	1
+Tumor half growth		0	10	1
+Cytotoxicity index		0	10	6
+Induced convulsion		0	10	8
+Uptake selectivity		0	10	2
+Mean graft survival		0	10	6
+No. of tumors/mouse		0	10	5
+Survivors at day 60		0	10	10
+Amount of metabolite		0	10	5
+Carboxylase activity		0	10	10
+Concentration_Plasma		0	10	2
+Degree of activation		0	10	2
+Z		0	10	1
+Ac		0	10	4
+K3		0	10	4
+Si		0	10	2
+Tc		0	10	3
+pI		0	10	1
+rb		0	10	1
+C/I		0	10	1
+CMT	Calcium mobilization threshold	0	10	2
+IAR		0	10	2
+Jss		0	10	5
+K12		0	10	10
+K21		0	10	10
+Km'		0	10	1
+NTD		0	10	1
+PTZ		0	10	6
+Pka		0	10	5
+R50		0	10	1
+TED	Transepidermal Delivery flux	0	10	5
+cKi		0	10	2
+k'o		0	10	2
+k/K		0	10	1
+k2c		0	10	2
+kA-		0	10	2
+kAH		0	10	2
+lnK		0	10	2
+A/Ad		0	10	5
+CMpH		0	10	3
+Ctt2		0	10	1
+Frel		0	10	1
+IC40	Inhibitory concentration for 40% activity	0	10	7
+Kon1		0	10	1
+Kon2		0	10	1
+METD		0	10	2
+PKa1		0	10	1
+PKa2		0	10	1
+TMSW	Time interval within mutant selection window	0	10	10
+pC30		0	10	3
+BBC50	Biofilm Bactericidal Concentration for 50% actvity	0	10	2
+Bmax1		0	10	4
+Cp(T)	Terminal plasma concentration	0	10	10
+Koff1		0	10	1
+Koff2		0	10	1
+Tlast	Time of last measurable concentration	0	10	10
+cLogP		0	10	1
+k3/k1		0	10	3
+pH1/2		0	10	2
+C10 N2		0	10	8
+K Bapp		0	10	3
+Median		0	10	10
+Sigmap		0	10	1
+logCMC	Log(Critical micelle concentration)	0	10	1
+AUC max		0	10	1
+K13+K23		0	10	10
+Log P16		0	10	1
+T>MIC90		0	10	10
+Writhes		0	10	7
+k'/k'+1		0	10	2
+Delta LV		0	10	1
+Function		0	10	2
+CPM x1000		0	10	2
+Efflux Ki		0	10	2
+Emesis_EC		0	10	6
+Intensity		0	10	5
+First adverse effect		0	9	7
+Intrinsic solubility		0	9	1
+Ratio_cerebrum/blood		0	9	4
+Therapeutic efficacy		0	9	9
+Trabecular thickness		0	9	9
+Anticonflict activity		0	9	8
+Content of cell cycle		0	9	3
+Eicosanoid production		0	9	5
+Ratio_cerebellum/blood		0	9	4
+Relative thymus weight		0	9	1
+Acute Therapeutic Index		0	9	1
+No. of protected/tested		0	9	2
+Relative adrenal weight		0	9	1
+Threshold concentration		0	9	2
+Endosteal eroded surface		0	9	9
+Propioaldehyde generated		0	9	3
+Derived trabecular number		0	9	8
+Animals survived >6 months		0	9	5
+Cutaneous toxicology score		0	9	3
+Directly measured thickness		0	9	9
+Total peripheral resistance		0	9	4
+Vascular accumulation ratio		0	9	1
+Derived trabecular thickness		0	9	9
+Concentration of max response		0	9	2
+Antiinflammatory change (mean)		0	9	1
+Endosteal mineralizing surface		0	9	9
+Periosteal mineralizing surface		0	9	9
+No. of axonal branch points/cell		0	9	3
+Periosteal mineral apposition rate		0	9	8
+Body weight change (average weekly)		0	9	9
+Occlusions		0	9	6
+Responders		0	9	9
+Simulation		0	9	2
+Approx. pKa		0	9	1
+Hypotension		0	9	9
+Log10 CFU/g		0	9	8
+Marrow area		0	9	9
+No. partial		0	9	6
+ST/CB ratio		0	9	6
+Tissue area		0	9	8
+Toxic/total		0	9	9
+GST activity		0	9	9
+HDL-C change		0	9	3
+PT extension		0	9	1
+Urine output		0	9	3
+Cells sickled		0	9	3
+Corpora lutea		0	9	5
+Flaking score		0	9	3
+Onset seizure		0	9	9
+Rate of death		0	9	4
+Reaction rate		0	9	6
+Recovery rate		0	9	4
+Sensitisation		0	9	1
+Stroke volume		0	9	9
+Abrasion score		0	9	3
+Acid secretion		0	9	2
+Challenge dose		0	9	3
+DA utilization		0	9	1
+Fold reduction		0	9	1
+Fold_reduction		0	9	3
+Graft survival		0	9	7
+Maxi-K current		0	9	4
+Mu/delta ratio		0	9	1
+No. of ferrets		0	9	7
+No. of strains		0	9	6
+Trabecular no.		0	9	9
+% of NO release		0	9	5
+Glucuronidation		0	9	2
+Infection score		0	9	6
+Kinase activity		0	9	2
+Na+ restoration		0	9	1
+Prodrug remains		0	9	4
+Vehicle control		0	9	1
+Binding Decrease		0	9	1
+Mortality number		0	9	9
+Na+ inactivation		0	9	4
+Primary response		0	9	1
+Control death day		0	9	7
+Pressure decrease		0	9	7
+rate constant app		0	9	2
+Gastriculcer index		0	9	1
+Light transmission		0	9	3
+No. pregnant/mated		0	9	8
+Recovered in urine		0	9	9
+Secondary response		0	9	1
+Social interaction		0	9	6
+Acetylcholine level		0	9	1
+Amylase stimulation		0	9	1
+Concentration_brain		0	9	9
+Decay-time constant		0	9	9
+Minimum single dose		0	9	3
+Antiamnesic activity		0	9	9
+Connectivity density		0	9	9
+Control tumor volume		0	9	7
+AE		0	9	9
+AQ		0	9	1
+DC	Distribution Co-efficient	0	9	1
+Pa		0	9	1
+Pt		0	9	1
+T2		0	9	9
+TW		0	9	9
+tz	Time of the last sample which has an analytical quantifiable concentration	0	9	5
+CLP		0	9	8
+COF		0	9	9
+Css	Drug concentration at steady state	0	9	6
+DSB		0	9	1
+FRE		0	9	3
+GFR		0	9	7
+HDL		0	9	5
+HHP		0	9	2
+K A		0	9	1
+LDL		0	9	4
+MRC	Minimum restrictive concentration	0	9	3
+PDR		0	9	1
+PKB		0	9	3
+PRL		0	9	2
+TAI		0	9	5
+AC30		0	9	3
+TC90	Toxic concentration of drug causing 90% reduction in cell viability	0	9	2
+TE50		0	9	1
+pKa5		0	9	8
+APD70		0	9	3
+SubG0		0	9	9
+Vagus		0	9	2
+k2/KI		0	9	2
+khydr		0	9	6
+logPi	Ionic logP	0	9	1
+INCC50	50% Inhibition of number of the colonies	0	9	9
+Log Dm		0	9	1
+T1/2 h		0	9	4
+cLogPb		0	9	1
+2x aPPT		0	9	1
+C10 air		0	9	7
+Log GTI		0	9	1
+MPC/MIC		0	9	3
+Predrug		0	9	4
+Chelator		0	9	9
+I / E100		0	9	3
+Implants		0	9	5
+Log D5.5		0	9	1
+Postdrug		0	9	4
+Pregnant		0	9	5
+Reaction		0	9	1
+Tetramer		0	9	6
+[ALP]max		0	9	1
+[LDH]max		0	9	1
+k cat/Ki		0	9	1
+AUC total		0	9	8
+Amplitude		0	9	3
+K+ output		0	9	3
+Log ratio		0	9	1
+Permeated		0	9	2
+Unwinding		0	9	8
+Ca2+ serum		0	9	2
+Chronic TI		0	9	1
+Lysis time		0	9	4
+Max change		0	9	9
+Na+ output		0	9	3
+Tissue swelling		0	8	8
+[Ca2+] increase		0	8	2
+Arrhythmia score		0	8	1
+Calculated Ratio		0	8	1
+Platelets x10e-3		0	8	7
+Ratio CIC95/IC50		0	8	1
+Reduction in AUC		0	8	3
+Tumor inhibition		0	8	7
+Anti-fXa activity		0	8	4
+Atherogenic index		0	8	2
+Cumulative amount		0	8	2
+Cysteine reaction		0	8	1
+Dose modification		0	8	1
+Lipoprotein level		0	8	2
+NSR survival rate		0	8	1
+No. of pits/slice		0	8	8
+Receptor occupied		0	8	8
+Supressive effect		0	8	2
+Vocalization time		0	8	1
+Average proportion		0	8	8
+Change in LV dp/dt		0	8	4
+Diffusion analysis		0	8	7
+Max uterine weight		0	8	7
+Normal weight gain		0	8	1
+Selectivity rating		0	8	3
+Amount incorporated		0	8	8
+Boron concentration		0	8	8
+Boron incorporation		0	8	4
+Diazepam antagonism		0	8	3
+ID (per g of femur)		0	8	2
+Log cfu/g of tissue		0	8	5
+Uterotonic activity		0	8	2
+tRNA peak exclusion		0	8	2
+Microsomal stability		0	8	4
+Hypocalcemic activity		0	8	1
+Mean total resorption		0	8	8
+Reserpine hypothermia		0	8	1
+Adrenochrome formation		0	8	2
+Relative Potency Ratio		0	8	3
+Control of P-450 marker		0	8	8
+Latency to step through		0	8	7
+Progesterone production		0	8	1
+Proportion of survivors		0	8	8
+Contractility (LV dP/dt)		0	8	8
+Enantiomeric composition		0	8	4
+Median retension latency		0	8	8
+Rate of hydride transfer		0	8	8
+Apparent binding constant		0	8	5
+No. of killed or paralyzed		0	8	3
+Revertant colonies per plate		0	8	8
+alkaline phosphatase activity		0	8	6
+Ratio of depolarizing activity		0	8	2
+Max fall		0	8	2
+Of HDL-C		0	8	3
+Papp e-6		0	8	1
+Property		0	8	2
+Severity		0	8	6
+-ln (MIC)		0	8	1
+88Y-serum		0	8	3
+Delta FFA		0	8	1
+Delta I/I		0	8	1
+Diffusion		0	8	1
+Extension		0	8	4
+HSA shift		0	8	1
+Krelative		0	8	1
+Quenching		0	8	1
+Ratio I/P		0	8	1
+HCMV yield		0	8	8
+Log effect		0	8	6
+Mass index		0	8	7
+Morphology		0	8	3
+Total rate		0	8	2
+dp/dt(max)		0	8	2
+K app ratio		0	8	2
+Ke naloxone		0	8	1
+MDA content		0	8	3
+RBC x 10e 3		0	8	5
+Restoration		0	8	4
+log(1/LD50)		0	8	1
+CAT activity		0	8	1
+Deiodination		0	8	4
+ITI activity		0	8	5
+Of non-HDL-C		0	8	3
+Skin scaling		0	8	1
+Basal control		0	8	1
+Human potency		0	8	1
+Hyperactivity		0	8	1
+Hypermotility		0	8	7
+LD50 increase		0	8	4
+Log P/(100-P)		0	8	1
+Mean pit size		0	8	8
+Mean reaction		0	8	4
+Mean response		0	8	8
+NADH oxidized		0	8	2
+Oligo shifted		0	8	1
+Skin response		0	8	2
+Thermogenesis		0	8	4
+Volume change		0	8	7
+Volume of air		0	8	8
+betat1/2(app)	Apparent terminal half life	0	8	7
+t1/2 lambda z	Apparent half-life of the terminal disposition phase	0	8	4
+Active culture		0	8	8
+Cardiac output		0	8	7
+Fever response		0	8	1
+Ki(1.8x10e-11)		0	8	2
+Oligo modified		0	8	1
+Relative to DA		0	8	1
+Rotations/10 h		0	8	2
+Weight at term		0	8	7
+rT3 Production		0	8	4
+Blood clearance		0	8	8
+Cmax_metabolite		0	8	6
+Increase (Emax)		0	8	1
+Lethal toxicity		0	8	8
+Reduction in TG		0	8	2
+Renal clearance		0	8	4
+BW		0	8	8
+DW		0	8	1
+Du		0	8	2
+G1		0	8	4
+AAL		0	8	2
+ADD		0	8	8
+ALT		0	8	8
+CLT		0	8	8
+D-2		0	8	3
+HPB		0	8	1
+I/E		0	8	3
+I80		0	8	5
+IC0		0	8	2
+K m		0	8	2
+K-2		0	8	5
+LSD		0	8	4
+M/T		0	8	7
+MPD		0	8	1
+R+V		0	8	3
+RBC		0	8	7
+ROR		0	8	1
+RRI		0	8	1
+TAD		0	8	2
+TPR		0	8	6
+V/K		0	8	3
+k-1		0	8	3
+Cdyn		0	8	7
+Dobs		0	8	1
+ED60		0	8	4
+IC27	Concentration required for 27% inhibition	0	8	1
+Ki.c		0	8	3
+Kina		0	8	4
+LD40	Lethal dose for 40% activity	0	8	1
+NSVT		0	8	5
+Vsss		0	8	1
+pBBB	Blood brain barrier permeability	0	8	2
+pEMR		0	8	1
+AUCss		0	8	4
+Bmax2		0	8	3
+CC50%		0	8	2
+EDmax		0	8	1
+K off		0	8	4
+Km/Ki		0	8	2
+LDL-C		0	8	1
+pEC90	-log (DY90)	0	8	8
+Active		0	8	6
+Cmaxss		0	8	4
+Cmedia		0	8	2
+DFMBMD		0	8	1
+Free C		0	8	1
+I/IC50		0	8	1
+K DMPC		0	8	3
+K DMPG		0	8	3
+LD app		0	8	1
+MBIC50	Minimum inhibitory concentration causing 50% reduction in biofilm formation	0	8	1
+Cocaine		0	8	2
+Delta F		0	8	2
+Delta K		0	8	1
+Density		0	8	6
+Log K'w		0	8	1
+Log PTA		0	8	1
+Log TCI		0	8	1
+t1/2abs	Absorption half-life	0	8	8
+Helicity		0	8	2
+Change in mean aortic flow		0	7	7
+Modification of adsorbed drug		0	7	1
+Activity of NADH dehydrogenase		0	7	4
+Relative rate of decomposition		0	7	3
+Decrease in No. of avoidence responses		0	7	7
+Dose effecting a 20mmHg change in diastolic blood pressure		0	7	2
+Depression		0	7	1
+Log 1/ED30		0	7	1
+PFC/spleen		0	7	7
+Pupil size		0	7	5
+D2 duration		0	7	1
+Offset time		0	7	6
+PIC seizure		0	7	2
+Acceleration		0	7	1
+Antidiuretic		0	7	3
+CNS activity		0	7	1
+Damaged area		0	7	2
+GABA agonism		0	7	5
+Lesion index		0	7	3
+Max efficacy		0	7	6
+Amount formed		0	7	1
+Saftey margin		0	7	1
+Time to onset		0	7	6
+Absolute ratio		0	7	1
+Antibody titer		0	7	3
+Avoidance time		0	7	2
+Blood Pressure		0	7	2
+DTT inhibition		0	7	1
+Depolarisation		0	7	5
+Group toxicity		0	7	2
+NO2- (mol/mol)		0	7	2
+Time to offset		0	7	4
+Unreacted drug		0	7	4
+Cell saturation		0	7	6
+Change in dP/dt		0	7	7
+Oxygen consumed		0	7	3
+Writhing number		0	7	2
+Fold stimulation		0	7	2
+Lactate produced		0	7	5
+Mean aortic flow		0	7	7
+Mitogenic effect		0	7	3
+Pyrogenic effect		0	7	4
+Receptor binding		0	7	1
+Induced frequency		0	7	7
+Oxytocic activity		0	7	4
+DNA peak exclusion		0	7	1
+Erythema intensity		0	7	1
+Increase in [Ca+2]		0	7	2
+Vomiting frequency		0	7	7
+cell kill activity		0	7	2
+Repolarization time		0	7	1
+HCMV yield reduction		0	7	7
+Irreversible binding		0	7	4
+Melanotropic potency		0	7	4
+Hypnosis potentiation		0	7	1
+Max contractile force		0	7	1
+Melanotropic activity		0	7	3
+Motor activity change		0	7	7
+Relative liver weight		0	7	7
+Virus yield reduction		0	7	7
+Anti-infectious effect		0	7	3
+Duration of immobility		0	7	1
+Incidence of occlusion		0	7	7
+Specific radioactivity		0	7	3
+Change in stroke volume		0	7	7
+Free radical scavenging		0	7	1
+Oxygen consumption rate		0	7	4
+Parasite_Clearance_time		0	7	2
+Intrinsic vasorelaxation		0	7	1
+Funbound_liver_microsomes		0	7	3
+Ba		0	7	6
+Cz	last analytical quantifiable concentration	0	7	4
+E0		0	7	2
+NC		0	7	3
+Rn		0	7	1
+T3		0	7	3
+kH		0	7	4
+C/T		0	7	7
+CPI	Critical pressure of insertion	0	7	1
+ClB		0	7	2
+ClM		0	7	1
+FLT		0	7	1
+IE1		0	7	1
+KII		0	7	3
+Ka1		0	7	5
+Kun		0	7	1
+Mrt		0	7	1
+Ctau	Drug concentration at the end of dosing interval	0	7	7
+Fmax		0	7	1
+GR50	Compound concentration for 50% growth reduction	0	7	1
+ID30		0	7	3
+LD95		0	7	2
+MCHC		0	7	4
+T.I.		0	7	4
+kC,U		0	7	1
+pKHB		0	7	1
+2x TG		0	7	2
+CIC90		0	7	1
+ILS40		0	7	2
+NTD50		0	7	2
+Papps		0	7	1
+ft1/2	Half life of free unbound fraction	0	7	6
+k act		0	7	1
+pCB50		0	7	1
+pEC20		0	7	2
+pIC30		0	7	2
+Ka(T4)		0	7	2
+Log Pc		0	7	1
+Spread		0	7	1
+rel ko		0	7	5
+sigmaH		0	7	6
+sigmaL		0	7	5
+Delta I		0	7	1
+Ki(app)	Apparent inhibition constant	0	7	3
+MED99.9		0	7	3
+Profile		0	7	4
+CBF-ID75		0	7	1
+CIC IC50		0	7	1
+LAL test		0	7	4
+LLR msad		0	7	5
+Log Dmax		0	7	2
+Log rate		0	7	1
+Max Uosm		0	7	2
+Platelet		0	7	6
+Resowing		0	7	4
+pA2-pA10		0	7	2
+-Log KD50		0	7	2
+AUC ratio		0	7	3
+CMV yield		0	7	7
+Lambda-em		0	7	2
+Lambda-ex		0	7	2
+TD50/ED50		0	7	1
+Vdss(app)	Apparent volume of distribution at steady state	0	7	7
+Block time		0	7	1
+Bitter taste intensity		0	6	6
+Increase contractility		0	6	6
+Inhibition tumor index		0	6	2
+Molar primaquine Index		0	6	1
+Amount of [3H]thymidine		0	6	3
+CBF increasing activity		0	6	1
+Relative threshold dose		0	6	3
+Antiproliferative effect		0	6	1
+Fungicidal concentration		0	6	1
+Plaque inhibition result		0	6	2
+Rate of turbidity change		0	6	1
+Spermidine concentration		0	6	6
+Synergy with methicillin		0	6	3
+Topoisomerase-I activity		0	6	1
+Average for skin reaction		0	6	3
+Immunosupressive activity		0	6	5
+Inhibitory activity ratio		0	6	2
+Average turns/first 15 min		0	6	1
+Denaturation rate constant		0	6	2
+Final plasma concentration		0	6	2
+Relative analgesic potency		0	6	1
+Relative dissociation rate		0	6	2
+Change of hemoconcentration		0	6	1
+Distribution of excreted Fe		0	6	2
+Peak radioactivity in blood		0	6	2
+No. of shocks accepted/5 min		0	6	2
+Relative metabolic stability		0	6	3
+Electrophysiological activity		0	6	1
+Respiratory system resistance		0	6	6
+Relative uterotrophic activity		0	6	2
+Cellular uptake of boron at 16h		0	6	1
+Reduction in respiratory volume		0	6	5
+Approximate colony formation unit		0	6	3
+Neurite bearing cells/total cells		0	6	6
+D2 selectivity		0	6	1
+Fallen/treated		0	6	4
+Antinociception		0	6	6
+Cell aggregates		0	6	2
+FPTase activity		0	6	6
+Latency to exit		0	6	5
+Lesion coverage		0	6	5
+No. of relapses		0	6	4
+Onset for sleep		0	6	2
+Peak inhibition		0	6	6
+Protein content		0	6	3
+Rescued neurons		0	6	6
+Retraction time		0	6	4
+Time of licking		0	6	6
+Cellular content		0	6	3
+Culture negative		0	6	2
+Decrease in tone		0	6	3
+GABA enhancement		0	6	5
+Reduction of IOP		0	6	1
+Static remission		0	6	2
+Activity regained		0	6	3
+Conjugation ratio		0	6	1
+Control of growth		0	6	6
+Developed tension		0	6	4
+Hypochromic shift		0	6	1
+Relative response		0	6	6
+Reverse potential		0	6	1
+Threshold current		0	6	4
+Thymidylate shift		0	6	2
+cpm/million cells		0	6	6
+Antagonism effects		0	6	5
+Avoidance response		0	6	6
+Bathochromic shift		0	6	1
+Drug mol/base pair		0	6	6
+Feeding deterrency		0	6	5
+Glycine antagonism		0	6	4
+Irritation of eyes		0	6	2
+Membrane integrity		0	6	1
+Ratio_[3H]:tubulin		0	6	6
+Time over 100ng/ml		0	6	1
+50% naproxen formed		0	6	1
+Antigen p24 content		0	6	2
+Concentration_urine		0	6	5
+Control cell number		0	6	6
+Duration of plateau		0	6	3
+Fibers/preparations		0	6	4
+Observed relaxivity		0	6	2
+Pancreatic response		0	6	6
+Prolongation effect		0	6	3
+Remaining at 40 min		0	6	3
+Bone mineral density		0	6	4
+Boron in media at 0h		0	6	1
+Convulsion threshold		0	6	2
+Exploration motility		0	6	4
+Heart rate (initial)		0	6	2
+Hepatocyte stability		0	6	2
+Loss of inactivation		0	6	6
+Relative Selectivity		0	6	2
+Residual RR activity		0	6	6
+Time to peak tension		0	6	3
+Change in sensitivity		0	6	1
+Max platelet response		0	6	2
+Median tumoral volume		0	6	6
+Relative permiability		0	6	1
+k-1 app		0	6	1
+pD2 app		0	6	4
+AUC 1/T1		0	6	1
+AUC conc		0	6	1
+Abortion		0	6	6
+Alpha 50		0	6	4
+Caverage		0	6	2
+Delta TG		0	6	5
+KCS, APP		0	6	6
+Log Palk		0	6	1
+Log beta		0	6	1
+MHPG_SO4		0	6	6
+OMNI med		0	6	1
+TPO(max)		0	6	2
+Vmax rel		0	6	2
+AUC units		0	6	2
+Depletion		0	6	3
+Max dV/dt		0	6	6
+Mean ED50		0	6	1
+Na+ ratio		0	6	1
+TG 2X lag		0	6	2
+Total DPM		0	6	1
+Transport		0	6	1
+Blood loss		0	6	2
+Cmax_tumor		0	6	4
+Heart Rate		0	6	1
+Relaxivity		0	6	1
+Thr uptake		0	6	5
+Acetylation		0	6	1
+Hexobarb ST		0	6	3
+RT activity		0	6	2
+Rat turning		0	6	1
+Relative Km		0	6	2	BAO_0000477 (Km)?
+Virus titer		0	6	1
+CAI activity		0	6	1
+Cr secretion		0	6	1
+GH AUC 0-180		0	6	1
+Iron binding		0	6	1
+NAD+ content		0	6	3
+Net Swelling		0	6	6
+PCP activity		0	6	2
+Agonist index		0	6	2
+Average ratio		0	6	1
+Blood lactate		0	6	6
+Change in FVR		0	6	6
+Change in MAP		0	6	3
+Change in TPR		0	6	6
+Ear thickness		0	6	4
+Egg reduction		0	6	4
+FACO Activity		0	6	3
+Fbound_plasma		0	6	6
+Free fraction		0	6	3
+Gastric score		0	6	3
+HCl Secretion		0	6	5
+Mean activity		0	6	4
+Midpoint dose		0	6	2
+No. of spikes		0	6	5
+Rat fertility		0	6	6
+Reversibility		0	6	6
+Rotorod index		0	6	1
+Serum glucose		0	6	6
+Basis motility		0	6	4
+C10 air/C10 N2		0	6	3
+Cells infected		0	6	2
+t		0	6	2
+Kc		0	6	3
+Kw		0	6	1
+LV		0	6	5
+SA		0	6	5
+ks		0	6	6
+BAV		0	6	3
+COI		0	6	1
+Cli		0	6	2
+DMF		0	6	1
+DR2		0	6	4
+EPS		0	6	6
+GRI		0	6	1
+HDT		0	6	5
+ILC		0	6	2
+K+2		0	6	2
+MSC		0	6	1
+MTT	Mean transit time	0	6	6
+NED		0	6	1
+ROI		0	6	2
+SNA		0	6	6
+TCT		0	6	3
+d50		0	6	3
+k+2		0	6	1
+pA1		0	6	1
+pKH		0	6	2
+pKL		0	6	2
+AD99		0	6	1
+CC20	Concentration required for 20% cytotoxicity	0	6	1
+CLup	Tissue uptake clearance	0	6	6
+EMax		0	6	2
+FR50	Feeding ratio when 50% of control leaf disk area consumed	0	6	1
+GI25	Concentration for 25% growth inhibition	0	6	1
+High		0	6	1
+IogP		0	6	2
+K Tm		0	6	4
+PRCF		0	6	1
+TMED		0	6	3
+VLDL		0	6	1
+Xi50		0	6	1
+pC20		0	6	2
+rapp		0	6	1
+CFU/g	CFU/g	0	6	6
+Ep2/2		0	6	1
+Kkmax	Rate constant for maximal microbial kill	0	6	4
+Occ80		0	6	1
+PCoct		0	6	2
+RD100		0	6	2
+U osm		0	6	3
+k+2/k		0	6	1
+1/krel		0	6	2
+3D PSA		0	6	1
+K+2/Ki		0	6	3
+Vdss/F		0	6	6
+k1 obs		0	6	1
+k2 obs		0	6	1
+AUC Npo		0	6	5
+Ext AUC		0	6	2
+GH peak		0	6	1
+Log MrI		0	6	1
+Log d50		0	6	3
+Nitrate		0	6	1
+Nitrite		0	6	1
+P ratio		0	6	1
+ED50 / ED50 (taxol)		0	5	3
+No. of lung lesions		0	5	4
+Residual amine (ee)		0	5	1
+Rotational behavior		0	5	5
+Surface involvement		0	5	2
+Acetylcholine change		0	5	1
+Bioavailability_oral		0	5	2
+Hepatic triglyceride		0	5	5
+Max agonist activity		0	5	5
+Progressed remission		0	5	1
+Substrate efficiency		0	5	1
+Vasopressor activity		0	5	3
+Isometric contraction		0	5	1
+Max protective effect		0	5	2
+No. of virus free mice		0	5	5
+Phospholipidosis_index		0	5	5
+Carbamoylating activity		0	5	1
+Control survivals/total		0	5	5
+Correlation coefficient		0	5	4
+No. of open arm entries		0	5	4
+Plasma cholesterol total		0	5	3
+Relative loss of potency		0	5	1
+Amount Recovered in urine		0	5	5
+IP3-sensitive Ca2+ stores		0	5	2
+Ca2+ antagonistic activity		0	5	1
+Animals with palpable tumor		0	5	5
+Fraction Recovered in urine		0	5	5
+Relative antitumor activity		0	5	1
+Negative ionotropic activity		0	5	2
+No. of guinea pigs protected		0	5	3
+Peripheral restriction index		0	5	1
+Reduction in prostate weight		0	5	2
+Enantioselectivity coefficient		0	5	5
+Negative chronotropic activity		0	5	2
+Arterial blood pressure decrease		0	5	5
+Decrease in heart norepinephrine		0	5	5
+Inhibition of increase in weight		0	5	1
+Coronary perfusion pressure change		0	5	2
+No. of rats displaying DA syndrome		0	5	5
+Coronary vascular resistance decrease		0	5	1
+Decrease in hypothalamus norepinephrine		0	5	5
+Mean no. of days post-infection to death		0	5	3
+Relative		0	5	2
+Serum T4		0	5	5
+Vmax / K		0	5	1
+Cmax/Tmax		0	5	5
+Delta H-V		0	5	2
+Delta S-H		0	5	2
+Half time		0	5	1
+Max score		0	5	5
+Morbidity		0	5	2
+Oxidation		0	5	2
+Remission		0	5	5
+Sterility		0	5	3
+TC50/IC50		0	5	1
+AUC 0-time		0	5	3
+CFR rating		0	5	5
+K inact/Km		0	5	1
+Plasma MIC		0	5	2
+IP+SC score		0	5	1
+Sleep ratio		0	5	1
+Uptake rate		0	5	1
+s-GOT level		0	5	2
+s-GPT level		0	5	2
+Apparent_pKa	Apparent pKa (negative logarithm of acid association constant)	0	5	2
+DBP/UP ratio		0	5	2
+IOP lowering		0	5	3
+Lesion score		0	5	1
+MeAIB uptake		0	5	5
+Mobilization		0	5	2
+Toxic effect		0	5	1
+Cells invaded		0	5	5
+Infusion rate		0	5	5
+Mean log LC50		0	5	3
+Molar potency		0	5	1
+Observed [pt]		0	5	1
+Positive paws		0	5	5
+SGOT activity		0	5	1
+SGPT activity		0	5	1
+Uterus effect		0	5	5
+Adrenal uptake		0	5	5
+Choline uptake		0	5	4
+Cross reaction		0	5	1
+Exudate volume		0	5	2
+Apoptotic cells		0	5	4
+IL-1 production		0	5	3
+Mitotic figures		0	5	5
+Phosphorylation		0	5	1
+Agonist response		0	5	2
+Ambulation score		0	5	5
+Loss of affinity		0	5	3
+Max potentiation		0	5	1
+No. of avoidance		0	5	4
+Of dose excreted		0	5	5
+Thy-1 expression		0	5	3
+damage reduction		0	5	1
+Anesthetic effect		0	5	4
+Bicarbonate level		0	5	3
+Delta APD90 (max)		0	5	3
+Epinephrine level		0	5	4
+Epoxide formation		0	5	5
+Platelet count/ul		0	5	5
+Average 14-day MGR		0	5	5
+Virus inactivation		0	5	3
+Antifungal activity		0	5	4
+Behavioral syndrome		0	5	3
+%		0	5	3
+X		0	5	2
+C2		0	5	5
+Kf		0	5	4
+Kh		0	5	2
+ME		0	5	1
+TD		0	5	1
+Ts		0	5	1
+VI		0	5	5
+1/n		0	5	1
+AAC	Area above the microbial killing curve	0	5	5
+AOC		0	5	1
+BUI		0	5	1
+CLd	Distribution clearance	0	5	5
+DFM		0	5	5
+I40		0	5	2
+ICA		0	5	1
+Khd		0	5	1
+Kix		0	5	3
+PPM		0	5	4
+SDS		0	5	5
+SWo		0	5	1
+pK4		0	5	3
+Cpss	Plasma concentration at steady state	0	5	5
+DR20		0	5	1
+IPol		0	5	1
+KHOX		0	5	3
+Kieq	Equilibrium inhibition constant	0	5	2
+Kpol		0	5	1
+MRTV		0	5	5
+PVCs		0	5	4
+pEC5		0	5	5
+ABD50		0	5	1
+C 8 h		0	5	1
+EBD20		0	5	2
+ED1/3		0	5	2
+I50 M		0	5	2
+pIC35		0	5	1
+AUC po		0	5	1
+K beta		0	5	1
+Vm rel		0	5	2
+AUC 100		0	5	1
+B-A/A-B		0	5	1
+LD/ED80		0	5	1
+S-phase		0	5	1
+Tubulin		0	5	1
+[I] 0.5		0	5	2
+p value		0	5	3
+AUC ED50		0	5	1
+AUC last		0	5	2
+AV block		0	5	3
+Absolute		0	5	1
+C10APD90		0	5	4
+Cmax_PTH		0	5	5
+Dilation		0	5	5
+ED delta		0	5	2
+HTS data		0	5	3
+Impaired		0	5	5
+Infected		0	5	3
+KD hydro		0	5	2
+Log 1/KL		0	5	2
+Log Ko/w		0	5	1
+Log Pcyc		0	5	1
+Necrosis		0	5	5
+Relative initial rate		0	4	1
+Serum creatinine conc		0	4	3
+Serum prolactin level		0	4	3
+Behavioral observation		0	4	4
+Competitive protection		0	4	3
+Critical concentration		0	4	1
+Functional selectivity		0	4	2
+Hydroxyproline release		0	4	4
+Radioactivity in urine		0	4	4
+Reduction in EOS count		0	4	4
+Relative initial slope		0	4	1
+Specific incorporation		0	4	4
+Max uterotonic response		0	4	1
+Amount of TXB2 formation		0	4	2
+Axonal regeneration rate		0	4	4
+No. of rats with lesions		0	4	4
+Velocity relative to ATP		0	4	1
+Relative activity of AChE		0	4	4
+Thylpositive cells/spleen		0	4	2
+Time of half inactivation		0	4	4
+Increase life span (mg/kg)		0	4	2
+No. of mice infected /total		0	4	4
+Respiratory activity change		0	4	3
+Urea Nitrogen Concentration		0	4	3
+Changes in airway resistance		0	4	4
+Fraction of Liver Blood Flow		0	4	3
+Changes in dynamic compliance		0	4	4
+Relative phosphorylation rate		0	4	4
+Change in foot-licking latency		0	4	3
+Margin before onset of hypokalemia		0	4	3
+Margin before onset of tachycardia		0	4	2
+Diastolic blood pressure decrease (30%)		0	4	3
+partition_ratio		0	4	2
+Actual clearance		0	4	4
+Cortex_Clearance		0	4	1
+Gross morphology		0	4	4
+Mean axonal area		0	4	4
+PP2A Selectivity		0	4	1
+Paraparetic mice		0	4	1
+Peak effect time		0	4	3
+Residue fraction		0	4	4
+Serum creatinine		0	4	4
+Tumor free/total		0	4	4
+Vacuole response		0	4	1
+Aggregation ratio		0	4	1
+Antibody response		0	4	1
+Behavior response		0	4	3
+Concentration_CSF		0	4	3
+Cytotoxicity IC50		0	4	2
+Formation of NO3-		0	4	2
+Inhibition period		0	4	1
+Lowering activity		0	4	3
+Max contractility		0	4	4
+Mean paw diameter		0	4	1
+Naproxen produced		0	4	4
+No. of WDS/60 min		0	4	4
+Oral availability		0	4	3
+Percent remaining		0	4	2
+Permeability rate		0	4	4
+5-HTP accumulation		0	4	4
+Cooperative effect		0	4	1
+Displacement of DP		0	4	1
+Erythema formation		0	4	2
+Lactose production		0	4	1
+Monocation species		0	4	1
+Subcutaneous score		0	4	1
+Thylpositive cells		0	4	2
+Thymidine reversal		0	4	1
+Ventricular MAPD90		0	4	4
+Apoptosis induction		0	4	2
+Average body weight		0	4	1
+Average lung weight		0	4	1
+Cyclase stimulation		0	4	2
+Duration of seizure		0	4	2
+Exhalation of 14CO2		0	4	4
+External nucleoside		0	4	2
+No. of uptake sites		0	4	2
+Plasma triglyceride		0	4	4
+Relative efficiency		0	4	4
+Relative to control		0	4	2
+Infertility activity		0	4	2
+Inhibition potential		0	4	1
+Intraperitonal score		0	4	1
+Peak striatal uptake		0	4	1
+Primary tumor weight		0	4	4
+Prodrug reconversion		0	4	4
+Punishment test msad		0	4	2
+Ratio of stimulation		0	4	2
+Temperature increase		0	4	2
+Total infarct volume		0	4	4
+Total urine activity		0	4	4
+Acute lethal toxicity		0	4	4
+Antiviral selectivity		0	4	4
+Carotid Flow Decrease		0	4	1
+Formation of compound		0	4	1
+Heart weight absolute		0	4	1
+k eff (rel)		0	4	3
+%Bound_brain		0	4	1
+Augmentation		0	4	1
+BG reduction		0	4	4
+Brain lesion		0	4	4
+C5a affinity		0	4	2
+DNA fraction		0	4	1
+Delta TCID50		0	4	1
+Delta logP50		0	4	1
+Fecal weight		0	4	4
+PAO activity		0	4	3
+Rats turning		0	4	2
+ST elevation		0	4	2
+Total uptake		0	4	2
+ADP formation		0	4	1
+Atrial MAPD90		0	4	4
+Basal binding		0	4	2
+DNA on filter		0	4	4
+Ferret emesis		0	4	4
+Level of cGMP		0	4	4
+Limiting t1/2		0	4	1
+Molar content		0	4	1
+Ratio (Ci/Ce)		0	4	1
+Ratio of dose		0	4	2
+S/Cereb Ratio		0	4	4
+Severity mean		0	4	4
+Synaptic site		0	4	4
+Total protein		0	4	4
+Total release		0	4	1
+Total tritium		0	4	1
+Unmetabolized		0	4	1
+pH dependence		0	4	4
+-Log IC50/IC50		0	4	1
+Activity Score		0	4	2
+Analogue level		0	4	3
+Anticonvulsant		0	4	3
+Change of area		0	4	4
+Control vomits		0	4	4
+Dose converted		0	4	2
+EOS inhibition		0	4	4
+Gastric damage		0	4	1
+IMPDH activity		0	4	3
+Log inhibition		0	4	2
+Log10 CCID50/g		0	4	4
+Receptor state		0	4	4
+Response value		0	4	1
+Sign free dose		0	4	1
+Skin thickness		0	4	4
+Zone reduction		0	4	2
+Activity Factor		0	4	1
+Binding potency		0	4	3
+Cartilage space		0	4	1
+Control retches		0	4	4
+Desensitisation		0	4	1
+Fraction change		0	4	2
+Growth response		0	4	2
+Internalisation		0	4	1
+Irreversibility		0	4	1
+Log10 reduction		0	4	1
+Of rats turning		0	4	2
+Plasma integral		0	4	1
+Protective dose		0	4	2
+Ring immobility		0	4	4
+Tubulin content		0	4	1
+ka/kr		0	4	3
+rel T		0	4	1
+1/kmax		0	4	3
+Clones		0	4	4
+Ki/K'i		0	4	1
+Ks app		0	4	2
+Kuncat		0	4	4
+Lesion		0	4	3
+Log PC		0	4	1
+MRTinf		0	4	1
+Vomits		0	4	4
+[A]T,L	Normalized affinity index at given temperature and ligand concentration	0	4	2
+AUC 0-8		0	4	2
+AUC glu		0	4	4
+AUC nom		0	4	2
+Albumin		0	4	3
+CL free	Hepatic Clearance for the unbound fraction of the drug	0	4	3
+DA stim		0	4	2
+ED10 HR		0	4	4
+EPS MED		0	4	1
+Kr/kmax		0	4	3
+Log A50		0	4	2
+Protein		0	4	4
+Retches		0	4	4
+T/C (d)		0	4	2
+Va beta		0	4	4
+kaKr/kr		0	4	3
+AUC 0-4h		0	4	3
+Basal GH		0	4	3
+CFU-GEMM		0	4	2
+Catalase		0	4	3
+Erosions		0	4	1
+Fraction		0	4	2
+ILS days		0	4	1
+Log [-9]		0	4	2
+Occ ED50		0	4	2
+ATP level		0	4	2
+Cmin_PBMC		0	4	4
+I/M ratio		0	4	3
+KA effect		0	4	2
+Log [-10]		0	4	1
+MTD ratio		0	4	1
+Responder		0	4	2
+Acid titer		0	4	4
+Antagonist		0	4	4
+Conc_brain		0	4	2
+Kimut/Kiwt		0	4	1
+MTD/ TGI50		0	4	4
+N20 formed		0	4	3
+NAD+ level		0	4	1
+S/CX Ratio		0	4	4
+Tail flick		0	4	4
+AMPA effect		0	4	2
+Average max		0	4	1
+DA/NE ratio		0	4	4
+Haptoglobin		0	4	4
+Hypokinesia		0	4	4
+Intima area		0	4	1
+LV dP/dtmax		0	4	4
+NMDA effect		0	4	4
+PFC/splleen		0	4	4
+Penetration		0	4	1
+Relative TS		0	4	4
+[3H]-uptake		0	4	1
+AB		0	4	1
+BG		0	4	4
+FD		0	4	4
+T1		0	4	4
+T4		0	4	2
+Vv		0	4	4
+kb		0	4	4
+ko		0	4	1
+ARP		0	4	1
+C6h		0	4	4
+C70		0	4	1
+C90		0	4	1
+FBA		0	4	4
+IUP		0	4	1
+IVR		0	4	4
+K'i		0	4	1
+KOH		0	4	2
+Kd'		0	4	1
+MAT	Mean absorption time	0	4	4
+MDS		0	4	2
+MND		0	4	2
+MTA		0	4	1
+NOL		0	4	4
+SHR		0	4	1
+TCI		0	4	4
+c.v		0	4	1
+k3'		0	4	1
+nKa		0	4	4
+AG80		0	4	1
+C12h		0	4	1
+C24h		0	4	2
+C50k	Drug concentration needed to achieve 50% maximal killing rate	0	4	4
+Clpl		0	4	1
+DL50		0	4	1
+EC60	Effective concentration for 60% activity	0	4	1
+ECAR		0	4	1
+ED97	Effective dose for 97% activity	0	4	2
+F1/2		0	4	1
+F3/4		0	4	1
+Food		0	4	4
+IC35	Inhibitory concentration for 35% acitivity	0	4	2
+ID/g		0	4	4
+IH50		0	4	2
+KI50		0	4	2
+Po/w		0	4	2
+T3/4		0	4	1
+TEWL		0	4	2
+Test		0	4	4
+kirr		0	4	1
+pKa6		0	4	4
+AUC 0		0	4	4
+AUPAP	Area under the population analysis profile curve	0	4	4
+CPmax		0	4	4
+CTC50		0	4	2
+Feces		0	4	4
+Fluid		0	4	4
+Ksolv		0	4	1
+M/NTT		0	4	1
+MEC50		0	4	1
+MLC50	Minimum lethal Concentration for 50% activity	0	4	1
+SPAV3		0	4	1
+T.P.L		0	4	1
+Venom		0	4	1
+k eff		0	4	3
+[3H] thymidine cpm/dish		0	3	3
+Decrease in exit latency		0	3	3
+Fraction cleared renally		0	3	3
+Hydrolysis rate constant		0	3	2
+SHR delta blood pressure		0	3	2
+Survival increase (mean)		0	3	3
+Concentration_unbound_brain		0	3	1
+Duration of increase in SLA		0	3	1
+Carnitine acetyl transferase		0	3	1
+Difference in retention time		0	3	1
+Mineralizing apposition rate		0	3	3
+Presumed drug-related deaths		0	3	3
+Amount of unreacted substrate		0	3	3
+Mean free plasma concentration		0	3	3
+Net log change in tumor burden		0	3	3
+Topical irritation score(0-21)		0	3	2
+Change in myocardial conduction		0	3	2
+Homovanillic acid concentration		0	3	3
+Mean total plasma concentration		0	3	3
+Plasma concentration/IC50 ratio		0	3	1
+Decrease of spontaneous firing rate		0	3	3
+Susceptibilty Ratio (Liver/Intestine)		0	3	1
+Ventricular relative refractory period		0	3	3
+log10CFU/ml/day	log10 colony forming unit per 1 ml per day	0	3	3
+Affinity state 1		0	3	1
+Affinity state 2		0	3	1
+Agonist efficacy		0	3	3
+Bacterial growth		0	3	2
+Hours above EC90		0	3	3
+Loss of activity		0	3	3
+Lysozyme release		0	3	1
+Max displacement		0	3	1
+Max jumping rate		0	3	2
+Mean ulcer index		0	3	3
+Protection ratio		0	3	3
+Protective ratio		0	3	2
+Superoxide anion		0	3	1
+AUC glu reduction		0	3	3
+Activation Factor		0	3	1
+Average half life		0	3	2
+No. of occlusions		0	3	2
+Ratio_liver/blood		0	3	3
+Toxicity (deaths)		0	3	1
+Walking behaviour		0	3	3
+Counts of rotation		0	3	3
+Delta log10 CCID50		0	3	3
+Glutathione levels		0	3	1
+HSF activity x10e2		0	3	2
+Met. stab. Cl. int		0	3	2
+NaCl concentration		0	3	1
+Palmitoyl-CoA oxid		0	3	3
+Total liver weight		0	3	3
+AUC first treatment		0	3	3
+Average food intake		0	3	1
+DOPAC concentration		0	3	3
+Enoyl-CoA hydratase		0	3	3
+Mortality threshold		0	3	2
+Ratio_tumour/plasma		0	3	2
+Skin Graft Survival		0	3	2
+Therapeutic indices		0	3	1
+AUC second treatment		0	3	3
+Dioxygen uptake rate		0	3	1
+Thromboxane B2 level		0	3	3
+Thymus weight change		0	3	1
+Acetylcholine release		0	3	1
+Average sample intake		0	3	1
+Elimination half-life		0	3	1
+Mechanistic reference		0	3	1
+Min plague Inhibitory		0	3	1
+Relative peroxidation		0	3	2
+Transfection activity		0	3	2
+Uterine weight effect		0	3	1
+Vasopressor responses		0	3	3
+t1/2 unbound fraction		0	3	3
+Cellular concentration		0	3	1
+Day of vaginal opening		0	3	3
+Decreased_triglyceride		0	3	2
+Duration of anesthesia		0	3	1
+Elevation of threshold		0	3	3
+Prolactin release rate		0	3	2
+Prostaglandin E2 level		0	3	3
+Radioactivity in blood		0	3	3
+Tumor weight reduction		0	3	2
+Zinc finger reactivity		0	3	1
+Cell plating efficiency		0	3	1
+Cortical infarct volume		0	3	1
+Cumulative urine volume		0	3	1
+Paralysis		0	3	1
+Paw edema		0	3	3
+Plasma TC		0	3	3
+Plasma TG		0	3	3
+Serum TSH		0	3	3
+TDS ratio		0	3	3
+pKa value		0	3	1
+Caco-2 A-B		0	3	1
+Conduction		0	3	3
+DOPA level		0	3	2
+Hematocrit		0	3	1
+Locomotion		0	3	3
+Log Poct C		0	3	1
+Mean index		0	3	1
+Paw weight		0	3	2
+T1/2 regen		0	3	1
+Average IOP		0	3	1
+Eosinophils		0	3	3
+GR activity		0	3	3
+Glutathione		0	3	3
+NAD content		0	3	2
+Neutrophils		0	3	3
+Toxic index		0	3	1
+pInhibition		0	3	3
+([I]/[S]0.5)		0	3	1
+Day of death		0	3	3
+Femur weight		0	3	3
+K cat/Kinact		0	3	2
+NADH content		0	3	1
+Ouabain dose		0	3	1
+RNA fraction		0	3	1
+log10cfu/day		0	3	3
+%Bound_Plasma		0	3	3
+Activity EC50		0	3	1
+FPGS activity		0	3	3
+Fold_increase		0	3	2
+Grip strength		0	3	3
+Learning time		0	3	2
+Nucleic acids		0	3	3
+Plasma_[5-FU]		0	3	3
+TRAP staining		0	3	1
+Thrombin time		0	3	2
+Time in light		0	3	3
+Traction test		0	3	3
+Tumor latency		0	3	1
+Tumour_[5-FU]		0	3	3
+p24 synthesis		0	3	1
+Basal activity		0	3	1
+Drugabsorption	Drug absorption	0	3	1
+Funbound_urine		0	3	3
+GSH reactivity		0	3	1
+Ki app (inact)		0	3	1
+Pleural volume		0	3	3
+Total coenzyme		0	3	1
+Unbound plasma		0	3	3
+Unchanged NDEA		0	3	2
+B incorporation		0	3	1
+Ion enhancement		0	3	1
+Max aggregation		0	3	3
+Overt behavoiur		0	3	3
+Pregnancy index		0	3	3
+Threshold value		0	3	1
+Total clearance		0	3	1
+Tumor incidence		0	3	1
+AI	Atherogenic index	0	3	2
+C1		0	3	2
+RW		0	3	1
+BAT		0	3	1
+CIT		0	3	1
+CR2		0	3	2
+Eff		0	3	1
+GAG		0	3	3
+HVA		0	3	3
+LPS		0	3	1
+LRR		0	3	2
+NAD		0	3	1
+P/D		0	3	3
+PAR		0	3	1
+PSA		0	3	1
+RPE		0	3	1
+S/N		0	3	2
+dPT		0	3	1
+pkb		0	3	1
+AUIC	Area under inhibitory curve	0	3	3
+C120		0	3	1
+CPCC		0	3	1
+DLBT		0	3	2
+Fana		0	3	1
+ICL5		0	3	1
+K SH		0	3	2
+Kiso		0	3	3
+Kkin		0	3	1
+P7.4		0	3	3
+PD'2		0	3	1
+UC50	Drug concentration required for 50% unwinding of DNA	0	3	1
+Vd/F		0	3	3
+kred		0	3	1
+pD10		0	3	2
+pKic		0	3	1
+AUC o		0	3	2
+DOPAC		0	3	3
+EF200		0	3	1
+Empty		0	3	2
+MTD/2		0	3	3
+MTD/4		0	3	3
+MTD/8		0	3	3
+C5 min		0	3	3
+CL(%Q)		0	3	1
+f (po)		0	3	1
+kONOO-		0	3	1
+Ability		0	3	3
+Alpha c		0	3	2
+HR/chol		0	3	1
+K amine		0	3	1
+pKa app		0	3	2
+sigmaSH		0	3	3
+DDT msad		0	3	1
+Improved		0	3	3
+LV dP/dt		0	3	2
+Mean AUC		0	3	3
+RBA data		0	3	3
+TSH/chol		0	3	1
+Abolition		0	3	3
+B/P ratio		0	3	2
+CC50/IC50		0	3	1
+Emesis_ED		0	3	1
+GD200 [d]		0	3	3
+MGDH GI50		0	3	3
+Fraction excreted unchanged		0	2	2
+Max inhibition concentration		0	2	2
+Reduced_circadian_oscillation		0	2	2
+Critical micelle concentration		0	2	1
+Transporter deg rate const (k)		0	2	2
+Transporter production rate (r)		0	2	2
+Relative antiandrogenic activity		0	2	2
+Average gross pathology scores+/- SE		0	2	2
+Dose effecting a 15mmHg change in diastolic blood pressure		0	2	1
+Therapeutic dose		0	2	1
+Time to max. BSR		0	2	1
+Time to righting		0	2	2
+Bone damage score		0	2	2
+Cmax_triphosphate		0	2	2
+Contractile force		0	2	1
+Correct responses		0	2	1
+Max fold increase		0	2	1
+NcoR1_recruitment		0	2	1
+Rate acceleration		0	2	1
+Arterial occlusion		0	2	2
+Life span decrease		0	2	2
+Max reversing rate		0	2	2
+Mean time to death		0	2	1
+Mean tumor latency		0	2	2
+Permeability index		0	2	1
+Rel brain exposure		0	2	1
+Anogenital distance		0	2	2
+Central selectivity		0	2	2
+Delta logPoct-dod N		0	2	2
+Food intake effects		0	2	1
+Survivors at day 28		0	2	2
+Time of peak action		0	2	1
+Average tumor weight		0	2	2
+Delta logDoct-dod7.4		0	2	1
+Ke selectivity ratio		0	2	2
+Left atrial pressure		0	2	2
+Max mean weight loss		0	2	2
+Non-specific binding		0	2	1
+dpm bound to protein		0	2	1
+Uterus to blood ratio		0	2	1
+Weight change of AP-S		0	2	2
+reduction in CL_renal		0	2	2
+Antifertility activity		0	2	1
+Average uterine weight		0	2	1
+Carotid flow reduction		0	2	2
+Change in DA synthesis		0	2	2
+Complete survival dose		0	2	1
+Days to tumor doubling		0	2	2
+Group performance time		0	2	1
+Induction of catalepsy		0	2	2
+Radioactive absorption		0	2	2
+Tumor volume reduction		0	2	2
+Duration of peak action		0	2	1
+Insulin lowering effect		0	2	2
+Molar equivalence bound		0	2	1
+Polymorphonuclear cells		0	2	2
+Rate of [Ca+2] increase		0	2	1
+Reduced_Cyp7a1_gene_exp		0	2	1
+Reduced_Srebf1_gene_exp		0	2	1
+Bioavailability Increase		0	2	2
+Cytostatic concentration		0	2	1
+Diastolic blood pressure		0	2	1
+Parent remaining at time		0	2	2
+Plasma [14C] cholesterol		0	2	2
+Ratio_cerebellum/caudate		0	2	2
+Ratio_cerebellum/putamen		0	2	2
+[35S]-GTP-gammaS binding		0	2	1
+Cardiac contractile force		0	2	2
+Inhibition (alpha = 0.01)		0	2	2
+Metabolic Bioavailability		0	2	2
+Reduced_Serpine1_gene_exp		0	2	1
+Degree of cross resistance		0	2	1
+Relative stimulation index		0	2	1
+CL_biliary		0	2	2
+CSF levels		0	2	1
+Cmax_ratio		0	2	2
+Cr leakage		0	2	1
+Excess MST		0	2	2
+Gross kill		0	2	2
+Kidney VDR		0	2	1
+Log P/logD		0	2	2
+Log Pdod N		0	2	1
+Log Poct N		0	2	2
+Log Poct Z		0	2	1
+Media area		0	2	1
+Resorption		0	2	2
+T1/2 gamma		0	2	2
+inhibition		0	2	2
+ionization		0	2	1
+Anti-emetic		0	2	2
+H2 activity		0	2	2
+LD50 x 1/10		0	2	1
+LD50 x 1/20		0	2	1
+LD50 x 1/40		0	2	1
+OT interval		0	2	2
+Occulations		0	2	2
+Plasma Ca2+		0	2	1
+Pro/Min/Enz		0	2	2
+Stroke work		0	2	2
+Tick action		0	2	1
+-Delta G obs		0	2	1
+Average GI50		0	2	2
+Bactericidal		0	2	2
+Cmax (Ratio)		0	2	2
+Log Ddod 7.4		0	2	1
+Median tumor		0	2	1
+Weight ratio		0	2	2
+ACAT activity		0	2	2
+Brdu positive		0	2	2
+Log10 EID50/g		0	2	2
+Sedative dose		0	2	1
+Seizure stage		0	2	2
+Tissue weight		0	2	2
+Anti-analgesic		0	2	2
+Ca2+ excretion		0	2	1
+Colonic weight		0	2	1
+Gross log kill		0	2	2
+Level in serum		0	2	2
+Occlusion time		0	2	2
+Serum LH level		0	2	1
+Sublethal dose		0	2	2
+Allodynia score		0	2	2
+Blockade effect		0	2	2
+IZ/AAR / AAR/LV		0	2	2
+Striatal uptake		0	2	1
+T/C (tumor vol)		0	2	2
+Time to 30% BSR		0	2	2
+Total glomeruli		0	2	2
+(kcat/KM)/kuncat		0	2	2
+Bacterial counts		0	2	2
+Excreted glucose		0	2	2
+Extraction ratio		0	2	1
+Last therapy day		0	2	2
+Max plasma level		0	2	1
+Mean tumor delay		0	2	2
+Solubility mg/ml		0	2	1
+Stability of BSR		0	2	2
+K ACT		0	2	1
+K act		0	2	2
+Kgmax	Rate constant for maximum microbial growth	0	2	2
+Kiact		0	2	2
+MC100	Minimal drug concentration causing 100% immobilization	0	2	2
+PD 50		0	2	2
+Rlung		0	2	2
+SD200		0	2	1
+SNGFR		0	2	2
+Tonic		0	2	2
+grade		0	2	1
+k2/Ks		0	2	1
+kIAM'		0	2	1
+rel k		0	2	1
+Clonic		0	2	2
+Intake		0	2	1
+Ka app		0	2	1
+Log Ps		0	2	1
+MTD/16		0	2	2
+Min ID		0	2	1
+Quench		0	2	1
+Vinact		0	2	2
+po AUC		0	2	2
+1-logKi		0	2	1
+ALT/GPT		0	2	1
+AUC o-x		0	2	2
+Avg AUC		0	2	1
+CL rate		0	2	2
+CL_Rate		0	2	1
+Delta P		0	2	2
+Exudate		0	2	1
+F_urine		0	2	2
+Log pKa		0	2	1
+Max BSR		0	2	1
+Mean KD		0	2	1
+Mem Rec		0	2	2
+P-value		0	2	2
+kik0/Ki		0	2	1
+log 1/C		0	2	2
+-Log K B		0	2	2
+Blockage		0	2	2
+DA level		0	2	1
+FPT msad		0	2	1
+IUP AD50		0	2	2
+K cat/Km		0	2	2
+K second		0	2	1
+LV DRxHR		0	2	1
+Mean day		0	2	2
+Molarity		0	2	1
+Off-rate		0	2	1
+Staining		0	2	2
+Stenosis		0	2	1
+Bile flow		0	2	1
+ED50(app)	Apparent ED50	0	2	2
+Elevation		0	2	2
+IC50/EC50		0	2	2
+ICdATP-50		0	2	1
+K ass app		0	2	1
+No change		0	2	2
+Of tumors		0	2	2
+POE score		0	2	2
+Treatment		0	2	1
+Turns/1st		0	2	2
+alphat1/2	Primary phase half life	0	2	2
+A2	Antagonist potency	0	2	1
+EU		0	2	1
+FB		0	2	1
+GH		0	2	2
+Hg	Sigmoidicity constant for drug effect on microbial growth	0	2	2
+Hk	Sigmoidicity constant for microbial killing	0	2	2
+IO		0	2	2
+K4		0	2	1
+LL		0	2	1
+OT		0	2	2
+PA	Permeability-surface area product	0	2	1
+PR		0	2	1
+PS		0	2	2
+Ri		0	2	2
+Vi	Volume of infusion	0	2	2
+Ya		0	2	2
+fm		0	2	2
+fp		0	2	1
+kp		0	2	1
+ACR		0	2	1
+AED		0	2	1
+AHA		0	2	1
+BQL		0	2	1
+BSR		0	2	2
+CLs		0	2	2
+ClP		0	2	2
+DPM		0	2	2
+DUR		0	2	1
+EDP		0	2	1
+EIR		0	2	1
+Fos		0	2	1
+HED		0	2	1
+HF2		0	2	1
+I14		0	2	2
+KbS		0	2	1
+Kds		0	2	1
+KiH	Inhibition constant for higher affinity site	0	2	1
+KiL	Inhibition constant for lower affinity site	0	2	1
+MIW		0	2	1
+PKb		0	2	1
+RTG		0	2	1
+SLI		0	2	1
+SPB		0	2	2
+Sni		0	2	1
+TTC		0	2	1
+keq		0	2	2
+%LBF		0	2	2
+1/Ki		0	2	1
+2T11		0	2	2
+C50g	Drug concentration needed to achieve 50% effect on the maximum growth rate	0	2	2
+CDOG		0	2	1
+EF90		0	2	2
+Poct		0	2	1
+RVCF		0	2	2
+SF50	dosage at which 50% of cells survived	0	2	2
+TF/P		0	2	2
+pKiH	-log (inhibition constant for higher affinity site)	0	2	1
+pKiL	-log (inhibition constant for lower affinity site)	0	2	1
+t0.9		0	2	1
+APPTT		0	2	1
+Brain		0	2	2
+CLt/F	Apparent total clearance	0	2	1
+CPD50		0	2	1
+EIC50		0	2	2
+Ratio_Cmax_brain/plasma		0	1	1
+Spontaneous reperfusion		0	1	1
+Ventricular tachycardia		0	1	1
+Dose non renally cleared		0	1	1
+Increase life span (Sur)		0	1	1
+Max contractile activity		0	1	1
+No effective/ no. tested		0	1	1
+Chemosensitizing activity		0	1	1
+Terminal elimination t1/2		0	1	1
+Variation of edema volume		0	1	1
+AUC glu reduction(mM x min)		0	1	1
+Glucose lowering ob/ob dose		0	1	1
+Intraocular pressure change		0	1	1
+Relative contractile potency		0	1	1
+Control at the dose of 5.0 ug/mouse		0	1	1
+Control at the dose of 50.0 ug/mouse		0	1	1
+Mean arterial blood pressure increase		0	1	1
+Time of dosing before antigen challenge.		0	1	1
+Glucose lowering relative to positive control		0	1	1
+Plasma_insulin		0	1	1
+Topical dosage		0	1	1
+Toxicity index		0	1	1
+Twitch tension		0	1	1
+Acid hydrolysis		0	1	1
+Delta non HDL-C		0	1	1
+FRP at 10microM		0	1	1
+Gastric lesions		0	1	1
+Inhibitory dose		0	1	1
+Median toxicity		0	1	1
+Mortality ratio		0	1	1
+Pharmacokinetic		0	1	1
+Time after dose		0	1	1
+Ultrafiltration		0	1	1
+AUC extrapolated		0	1	1
+Antihypertensive		0	1	1
+Average log GI50		0	1	1
+CSF/plasma ratio		0	1	1
+Cytocidal effect		0	1	1
+Ratio ED50/MIC50		0	1	1
+Relative Vmax/Km		0	1	1
+Resistance ratio		0	1	1
+Tm shift degreeC		0	1	1
+Volume reduction		0	1	1
+Anabolic activity		0	1	1
+Anti-HIV activity		0	1	1
+Anxiolytic effect		0	1	1
+Average bile flow		0	1	1
+Cataleptic effect		0	1	1
+Compound in urine		0	1	1
+Photoxic reaction		0	1	1
+Pressure response		0	1	1
+Prolactin release		0	1	1
+Recovered in bile		0	1	1
+Tumour inhibition		0	1	1
+AbA/analogue ratio		0	1	1
+Clinical reference		0	1	1
+Initial inhibition		0	1	1
+Plasma_cholesterol		0	1	1
+Rate of metabolism		0	1	1
+Stimulatory effect		0	1	1
+Synergistic effect		0	1	1
+duration of action		0	1	1
+Antagonist efficacy		0	1	1
+Anticancer activity		0	1	1
+Anxiolytic activity		0	1	1
+Mean effective dose		0	1	1
+Plasma_triglyceride		0	1	1
+Reduced food intake		0	1	1
+Concentration of Cl-		0	1	1
+Infection score mean		0	1	1
+Onset for sleep, min		0	1	1
+Opsin shift activity		0	1	1
+Permeability limited		0	1	1
+Relative weight loss		0	1	1
+Stimulatory activity		0	1	1
+Intraperitoneal score		0	1	1
+Relative inactivation		0	1	1
+Funbound_adrenal_gland		0	1	1
+Funbound_serum_albumin		0	1	1
+Halucinogenic activity		0	1	1
+Log of inhibitory zone		0	1	1
+Radioactivity remained		0	1	1
+IFN gamma concentration		0	1	1
+Intrinsic		0	1	1
+K inact/I		0	1	1
+Locomotor		0	1	1
+Max APD95		0	1	1
+Oral dose		0	1	1
+PActivity		0	1	1
+T1/2 beta		0	1	1
+Tmax/dose		0	1	1
+Vmax (uM)		0	1	1
+1/2Kcat/Km		0	1	1
+5-HT Level		0	1	1
+ET-1 level		0	1	1
+GR control		0	1	1
+Ki' uncomp		0	1	1
+Log Poct A		0	1	1
+P Increase		0	1	1
+P-450 loss		0	1	1
+Paw volume		0	1	1
+T1/2 h/min		0	1	1
+BSA binding		0	1	1
+Molar ratio		0	1	1
+Performance		0	1	1
+Plasma_IL-6		0	1	1
+Plasma_NEFA		0	1	1
+Prlonged QT		0	1	1
+REM latency		0	1	1
+Replacement		0	1	1
+Blood volume		0	1	1
+Cell density		0	1	1
+Dissociation		0	1	1
+Funbound_fat		0	1	1
+GI clearance		0	1	1
+GI tolerance		0	1	1
+Hypoglycemic		0	1	1
+KD non ionic		0	1	1
+Ki obs / [I]		0	1	1
+Of viability		0	1	1
+Range of MIC		0	1	1
+Second order		0	1	1
+Antipsychotic		0	1	1
+Basal glucose		0	1	1
+Control level		0	1	1
+Fold Inc IC50		0	1	1
+Max Reduction		0	1	1
+NBT reduction		0	1	1
+Plasma_leptin		0	1	1
+SCW reduction		0	1	1
+Sleep latency		0	1	1
+Survival dose		0	1	1
+T/C @ 20mg/kg		0	1	1
+T/C @ 30mg/kg		0	1	1
+T/C @ 40mg/kg		0	1	1
+T/C @ 50mg/kg		0	1	1
+Terminal t1/2		0	1	1
+Weight (mg/g)		0	1	1
+Activity_index	Ratio of inhibition zone of the test drug to standard drug	0	1	1
+Adverse effect		0	1	1
+Anti-arhythmic		0	1	1
+Clearance (C1)		0	1	1
+Curative Index		0	1	1
+Generalization		0	1	1
+Liphophilicity		0	1	1
+Liver catalase		0	1	1
+Plasma_glucose		0	1	1
+ppKb		0	1	1
+AD100		0	1	1
+AFLCl		0	1	1
+ECMax		0	1	1
+ER/PR		0	1	1
+Fmean		0	1	1
+IC50H	IC50 for high affinity site	0	1	1
+IC50L	IC50 for low affinity site	0	1	1
+ID100		0	1	1
+KdSPA		0	1	1
+KdSPR		0	1	1
+Ki/ki		0	1	1
+LDH50		0	1	1
+MIC97		0	1	1
+MLogP		0	1	1
+P app		0	1	1
+PD' 2		0	1	1
+TID20		0	1	1
+k3/K1		0	1	1
+tCmax	Time taken to achieve Cmax	0	1	1
+2xAPTT		0	1	1
+EC98.6		0	1	1
+EC99.6		0	1	1
+Killed		0	1	1
+Log K4		0	1	1
+Log KB		0	1	1
+Log KZ		0	1	1
+Log Ke		0	1	1
+[Ca2+]		0	1	1
+pKa AN		0	1	1
+pKa AZ		0	1	1
+pKa BN		0	1	1
+pKa BZ		0	1	1
+pKa E2		0	1	1
+pRatio		0	1	1
+Cp(f)ss		0	1	1
+Effllux		0	1	1
+Ki comp		0	1	1
+Monomer		0	1	1
+PCaco-2		0	1	1
+Peak GH		0	1	1
+T1/2 iv		0	1	1
+Tm(app)	Apparent melting temperature	0	1	1
+Vd area		0	1	1
+Vel rem		0	1	1
+f%T>MIC		0	1	1
+kmax/KS		0	1	1
+washout		0	1	1
+%Cleared		0	1	1
+Ccontrol		0	1	1
+EFF+/-SD		0	1	1
+F (%RSD)		0	1	1
+GTPshift		0	1	1
+ILSmaxOD		0	1	1
+Ki inact		0	1	1
+Log D7.5		0	1	1
+Log Kill		0	1	1
+No_cures		0	1	1
+Relation		0	1	1
+T1/2 h/s		0	1	1
+pKd(app)		0	1	1
+Fold IC50		0	1	1
+GC200 [d]		0	1	1
+Heme loss		0	1	1
+L		0	1	1
+I5		0	1	1
+I7		0	1	1
+IN		0	1	1
+KD		0	1	1
+KS		0	1	1
+LA		0	1	1
+QA		0	1	1
+Ti		0	1	1
+UV		0	1	1
+V1		0	1	1
+V2		0	1	1
+VV		0	1	1
+Vb		0	1	1
+BBB	Blood brain barrier	0	1	1
+CFR		0	1	1
+CIp		0	1	1
+Cls		0	1	1
+Fez		0	1	1
+I10		0	1	1
+I13		0	1	1
+I16		0	1	1
+I20		0	1	1
+I23		0	1	1
+I28		0	1	1
+I30		0	1	1
+I42		0	1	1
+ILA		0	1	1
+K B		0	1	1
+KNa		0	1	1
+Kbb	Ratio of unbound fraction in blood to brain	0	1	1
+Ki0		0	1	1
+MPA		0	1	1
+N/D		0	1	1
+PAP		0	1	1
+PLT		0	1	1
+PkB		0	1	1
+U/P		0	1	1
+VSV		0	1	1
+k12		0	1	1
+k21		0	1	1
+pCB		0	1	1
+pKP		0	1	1
+%AUC		0	1	1
+1/Km		0	1	1
+AD90	energy density necessary to induce apoptosis in 90% of the cells	0	1	1
+CI50		0	1	1
+EC14		0	1	1
+EC16		0	1	1
+EC91		0	1	1
+ED58		0	1	1
+HD40		0	1	1
+IC33	Inhibitory concentration for 33% activity	0	1	1
+ID60		0	1	1
+K on		0	1	1
+LD30		0	1	1
+LD60	Lethal dose for 60% activity	0	1	1
+LDLO		0	1	1
+P50C		0	1	1
+Pka2		0	1	1
+V2/F		0	1	1
+kmax		0	1	1
+pK3'		0	1	1
+pMax		0	1	1

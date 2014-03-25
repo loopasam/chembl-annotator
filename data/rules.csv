@@ -1,0 +1,232 @@
+"rule";"baoid";"comment";"confidence";"highlight"
+"LOWER(description) LIKE '%bioassay%'";"BAO_0000015";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%membrane potential%'";"BAO_0002996";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%membrane potential assay%'";"BAO_0002996";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transmembrane potential%'";"BAO_0002996";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%action potential%'";"BAO_0002996";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%patch clamp%'";"BAO_0002996";"text-mining on BAO synonym";0;t
+"LOWER(description) LIKE '%membrane depolarization%'";"BAO_0002996";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%nuclear membrane potential assay%'";"BAO_0002195";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%nuclear membrane potential%'";"BAO_0002195";"text-mining on BAO label trimmed";0;t
+"LOWER(description) LIKE '%mitochondrial membrane potential assay%'";"BAO_0002190";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%mitochondrial membrane potential%'";"BAO_0002190";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%mitochondrial transmembrane potential%'";"BAO_0002190";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%plasma membrane potential assay%'";"BAO_0002194";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%plasma membrane potential%'";"BAO_0002194";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%ion channel assay%'";"BAO_0002997";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%ion channel%'";"BAO_0002997";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transporter assay%'";"BAO_0003008";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transporter%'";"BAO_0003008";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%chaperone activity assay%'";"BAO_0002761";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%chaperone activity%'";"BAO_0002761";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%localization assay%'";"BAO_0002196";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%localization%'";"BAO_0002196";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%genotoxicity assay%'";"BAO_0002167";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%genotoxicity%'";"BAO_0002167";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell morphology assay%'";"BAO_0002991";"text-mining on BAO label";0;t
+"assay_type = 'B'";"BAO_0002989";"Retrieves the binding assays in ChEMBL";0;f
+"LOWER(description) LIKE '%DNA-RNA interaction%'";"BAO_0000590";"text-mining on BAO label";0;t
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Kd'";"BAO_0002989";"Identification of assays with activity type Kd";0;f
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_dictionary WHERE assays.tid = target_dictionary.tid AND target_dictionary.target_type = 'PROTEIN-PROTEIN INTERACTION'";"BAO_0002990";"Identifies with protein-protein interaction as target";0;f
+"LOWER(description) LIKE '%cell morphology%'";"BAO_0002991";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%neurite outgrowth assay%'";"BAO_0002803";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%neurite outgrowth%'";"BAO_0002803";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%safety pharmacology assay%'";"BAO_0002533";"text-mining on BAO label";0;t
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Ion channel';";"BAO_0002997";"Identifies the assays that are targeting an ion channel";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Transporter';";"BAO_0003008";"Identifies the assay with a target being a transporter";0;f
+"assay_type = 'T'";"BAO_0002189";"Identifies the toxicity assays in ChEMBL";0;f
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CC50'";"BAO_0002993";"Identifies the activity type CC50 in assays";0;f
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'GI50'";"BAO_0002100";"Look for the activity type GI50";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Enzyme';";"BAO_0002994";"Identifies the assays targeting an enzyme";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, activities, target_dictionary, molecule_dictionary WHERE assays.tid = target_dictionary.tid AND target_dictionary.target_type = 'SINGLE PROTEIN' AND assays.assay_id = activities.assay_id AND activities.molregno = molecule_dictionary.molregno AND molecule_dictionary.molecule_type = 'Small molecule';";"BAO_0000110";"Select the assays involving small molecules on single protein targets";0;f
+"LOWER(description) LIKE '%kinomescan%'";"BAO_0003011";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%radioligand binding assay%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%radioligand binding%'";"BAO_0002776";"text-mining on BAO label";0;t
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Isomerase';";"BAO_0002794";"Identifies the assays with an isomerase as target";0;f
+"LOWER(description) LIKE '%cytochrome p450 enzyme activity%'";"BAO_0002736";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%luciferase enzyme activity%'";"BAO_0002735";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%luciferase enzyme activity assay%'";"BAO_0002735";"text-mining on BAO label";0;t
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Lyase';";"BAO_0002793";"Identifies the assays with a lyase as target";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Transferase';";"BAO_0002795";"Identifies the assays with a transferase as target";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Kinase';";"BAO_0002005";"Identifies the assays with a kinase as target";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Reductase';";"BAO_0002792";"Identifies the assays with an oxidoreductase as target";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Hydrolase';";"BAO_0002790";"Identifies the assays with a hydrolase as target";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Phosphatase';";"BAO_0002762";"Identifies the assays with a phosphatase as target";0;f
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Protease';";"BAO_0002764";"Identifies the assays with an oxidoreductase as target";0;f
+"LOWER(description) LIKE '%cytochrome p450 enzyme activity assay%'";"BAO_0002736";"text-mining on BAO label";0;t
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Cmax'";"BAO_0002182";"Identifies the assays with a Cmax as activity type";0;f
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'F'";"BAO_0002530";"Identifies assays with F as activity type";0;f
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Vd'";"BAO_0002182";"Identifies the assays with Vd as activity type";0;f
+"LOWER(description) LIKE '%luciferase reporter gene assay%'";"BAO_0002661";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%luciferase reporter gene%'";"BAO_0002661";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transcriptional response profiling assay%'";"BAO_0002995";"text-mining on BAO label";0;t
+"SELECT DISTINCT assay_id, description, chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Cytochrome P450';";"BAO_0002736";"Identifies the assays with P450 as target";0;f
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CL'";"BAO_0002182";"Identifies the assays with CL as activity type";0;f
+"LOWER(description) LIKE '%safety pharmacology%'";"BAO_0002533";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%qt interval assay%'";"BAO_0002184";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%qt interval%'";"BAO_0002184";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%drug abuse assay%'";"BAO_0002534";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%drug abuse%'";"BAO_0002534";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%drug interaction assay%'";"BAO_0002188";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%drug interaction%'";"BAO_0002188";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%metastasis assay%'";"BAO_0002535";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%metastasis%'";"BAO_0002535";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%oxidative stress assay%'";"BAO_0002168";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%oxidative stress%'";"BAO_0002168";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%rna splicing assay%'";"BAO_0003000";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%rna splicing%'";"BAO_0003000";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%binding assay%'";"BAO_0002989";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%affinity%'";"BAO_0002989";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%displacement of%'";"BAO_0002989";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%kinativ assay%'";"BAO_0002908";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%kinativ%'";"BAO_0002908";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-nucleotide interaction assay%'";"BAO_0000394";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-nucleotide interaction%'";"BAO_0000394";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%DNA-RNA interaction assay%'";"BAO_0000590";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-protein interaction assay%'";"BAO_0002990";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-protein interaction%'";"BAO_0002990";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-DNA interaction assay%'";"BAO_0000591";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-DNA interaction%'";"BAO_0000591";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-RNA interaction assay%'";"BAO_0000593";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-RNA interaction%'";"BAO_0000593";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%kinomescan assay%'";"BAO_0003011";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%[125 i]%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%[125i]%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%radioligand%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%[3h]%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%[35s]%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%[35 s]%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%[3 h]%'";"BAO_0002776";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-small molecule interaction assay%'";"BAO_0000110";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-small molecule interaction%'";"BAO_0000110";"text-mining on BAO label";0;t
+"SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'AUC'";"BAO_0002182";"Identifies the assays with AUC as activity type";0;f
+"LOWER(description) LIKE '%protein-turnover assay%'";"BAO_0003010";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein-turnover%'";"BAO_0003010";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%sensitizer assay%'";"BAO_0003001";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%sensitizer%'";"BAO_0003001";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell proliferation assay%'";"BAO_0002805";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell proliferation%'";"BAO_0002805";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%organism behavior assay%'";"BAO_0002765";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%organism behavior%'";"BAO_0002765";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein stability assay%'";"BAO_0002804";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein stability%'";"BAO_0002804";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cytotoxicity assay%'";"BAO_0002993";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cytotoxicity%'";"BAO_0002993";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%apoptosis assay%'";"BAO_0002043";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell growth assay%'";"BAO_0002100";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell growth%'";"BAO_0002100";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell motility assay%'";"BAO_0002992";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell motility%'";"BAO_0002992";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell migration%'";"BAO_0002992";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%chemotaxis%'";"BAO_0002992";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell cycle assay%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell cycle%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%s phase%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%g0 phase%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%g1 phase%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%m phase%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%mitotic arrest%'";"BAO_0002041";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell cycle state assay%'";"BAO_0002786";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell cycle state%'";"BAO_0002786";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%mitotic cell cycle state assay%'";"BAO_0002584";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%mitotic cell cycle state%'";"BAO_0002584";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%meiotic cell cycle state assay%'";"BAO_0002585";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%enzyme activity assay%'";"BAO_0002994";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%enzyme activity%'";"BAO_0002994";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%oxidoreductase activity assay%'";"BAO_0002792";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%oxidoreductase activity%'";"BAO_0002792";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%apoptosis%'";"BAO_0002043";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%apoptotic%'";"BAO_0002043";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%meiotic cell cycle state%'";"BAO_0002585";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%isomerase enzyme activity assay%'";"BAO_0002794";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%isomerase enzyme activity%'";"BAO_0002794";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%lyase activity assay%'";"BAO_0002793";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%lyase activity%'";"BAO_0002793";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transferase activity assay%'";"BAO_0002795";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transferase activity%'";"BAO_0002795";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%kinase activity assay%'";"BAO_0002005";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%kinase activity%'";"BAO_0002005";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%hydrolase activity assay%'";"BAO_0002790";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%hydrolase activity%'";"BAO_0002790";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%generic hydrolase enzyme activity assay%'";"BAO_0002806";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%beta galactosidase enzyme activity assay%'";"BAO_0002777";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%beta galactosidase enzyme activity%'";"BAO_0002777";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%phosphatase activity assay%'";"BAO_0002762";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%phosphatase activity%'";"BAO_0002762";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protease activity assay%'";"BAO_0002764";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protease activity%'";"BAO_0002764";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%gene expression assay%'";"BAO_0002785";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%gene expression%'";"BAO_0002785";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%reporter gene assay%'";"BAO_0003006";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%reporter gene%'";"BAO_0003006";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%beta galactosidase reporter gene assay%'";"BAO_0003013";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%beta galactosidase reporter gene%'";"BAO_0003013";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%chloramphenicol acetyltransferase reporter gene assay%'";"BAO_0003015";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%chloramphenicol acetyltransferase reporter gene%'";"BAO_0003015";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%fluorescent protein reporter gene assay%'";"BAO_0003012";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%fluorescent protein reporter gene%'";"BAO_0003012";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%beta lactamase reporter gene assay%'";"BAO_0003014";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%beta lactamase reporter gene%'";"BAO_0003014";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%transcriptional response profiling%'";"BAO_0002995";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%signal transduction assay%'";"BAO_0003002";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%signal transduction%'";"BAO_0003002";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%second messenger assay%'";"BAO_0003007";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%second messenger%'";"BAO_0003007";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cyclic amp accumulation%'";"BAO_0003007";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%camp accumulation%'";"BAO_0003007";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%intracellular calcium release%'";"BAO_0003007";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%platelet activation assay%'";"BAO_0002763";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%platelet activation%'";"BAO_0002763";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cytokine secretion assay%'";"BAO_0003003";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cytokine secretion%'";"BAO_0003003";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%posttranslation modification assay%'";"BAO_0003004";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%posttranslation modification%'";"BAO_0003004";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%phosphorylation assay%'";"BAO_0003005";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%phosphorylation%'";"BAO_0003005";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cue signal response assay%'";"BAO_0000042";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cue signal response%'";"BAO_0000042";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%pharmacokinetic assay%'";"BAO_0002182";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%pharmacokinetic%'";"BAO_0002182";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%bioavailability assay%'";"BAO_0002530";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%bioavailability%'";"BAO_0002530";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%tissue distribution assay%'";"BAO_0002532";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%tissue distribution%'";"BAO_0002532";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%biodistribution%'";"BAO_0002532";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%non-specific protein binding assay%'";"BAO_0002531";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%non-specific protein binding%'";"BAO_0002531";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%oxidative phosphorylation assay%'";"BAO_0002181";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%oxidative phosphorylation%'";"BAO_0002181";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%pharmacodynamic assay%'";"BAO_0002183";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%pharmacodynamic%'";"BAO_0002183";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%redistribution assay%'";"BAO_0002999";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%redistribution%'";"BAO_0002999";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%dye redistribution assay%'";"BAO_0000653";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%dye redistribution%'";"BAO_0000653";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein redistribution assay%'";"BAO_0000378";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein redistribution%'";"BAO_0000378";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%metal ion redistribution assay%'";"BAO_0000162";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%metal ion redistribution%'";"BAO_0000162";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%second messenger redistribution assay%'";"BAO_0000379";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%second messenger redistribution%'";"BAO_0000379";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%ip1 redistribution assay%'";"BAO_0002780";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%ip1 redistribution%'";"BAO_0002780";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cgmp redistribution assay%'";"BAO_0000651";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cgmp redistribution%'";"BAO_0000651";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%calcium redistribution assay%'";"BAO_0000649";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%calcium redistribution%'";"BAO_0000649";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%camp redistribution assay%'";"BAO_0000650";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%camp redistribution%'";"BAO_0000650";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%ion redistribution assay%'";"BAO_0000819";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%ion redistribution%'";"BAO_0000819";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein unfolding assay%'";"BAO_0002779";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein unfolding%'";"BAO_0002779";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell viability assay%'";"BAO_0003009";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell viability%'";"BAO_0003009";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell viability atp quantitation assay%'";"BAO_0010001";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell viability atp quantitation%'";"BAO_0010001";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein folding assay%'";"BAO_0002998";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%protein folding%'";"BAO_0002998";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell permeability assay%'";"BAO_0002778";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%cell permeability%'";"BAO_0002778";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%permeability%'";"BAO_0002778";"text-mining on BAO label";0;t
+"LOWER(description) LIKE '%generic hydrolase enzyme activity%'";"BAO_0002806";"text-mining on BAO label";0;t

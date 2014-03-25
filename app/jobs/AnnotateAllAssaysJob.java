@@ -24,6 +24,10 @@ public class AnnotateAllAssaysJob extends Job {
 	public void doJob() throws SQLException{
 
 		List<BaoTerm> terms = BaoTerm.findAll();
+		
+		//TODO comment for full scale
+		terms = BaoTerm.find("byBaoId", "BAO_0000015").fetch();
+		
 		int counter = 0;
 		int total = terms.size();
 
@@ -31,9 +35,21 @@ public class AnnotateAllAssaysJob extends Job {
 			counter++;
 			Logger.info("Term: " + baoTerm.label + "(" + baoTerm.baoId + ") - " + counter + "/" + total);
 			for (AnnotationRule annotationRule : baoTerm.rules) {
+								
+				//TODO check how the query is formed, depending on the highlight flag
+				//or if there's a SELECT statement
+				String rule;
+				
+				if(annotationRule.rule.startsWith("SELECT")){
+					rule = annotationRule.rule;
+				}else{
+					rule = "SELECT DISTINCT assay_id, description, chembl_id FROM assays WHERE " 
+							+ annotationRule.rule +	";";
+				}
+				System.out.println(rule);
+
 				List<Object[]> results = 
-						JPA.em().createNativeQuery("SELECT assay_id, description, chembl_id FROM assays WHERE " 
-								+ annotationRule.rule +	";").getResultList();
+						JPA.em().createNativeQuery(rule).getResultList();
 
 				Logger.info("Rule: "  + annotationRule.rule + " - Number of assays identified: " + results.size());
 
