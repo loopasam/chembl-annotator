@@ -26,7 +26,9 @@ public class AnnotateAllAssaysJob extends Job {
 		List<BaoTerm> terms = BaoTerm.findAll();
 		
 		//TODO comment for full scale
-		terms = BaoTerm.find("byBaoId", "BAO_0000015").fetch();
+//		terms = BaoTerm.find("byBaoId", "BAO_0000015").fetch();
+		
+		//TODO log the info about the annotation process
 		
 		int counter = 0;
 		int total = terms.size();
@@ -36,8 +38,6 @@ public class AnnotateAllAssaysJob extends Job {
 			Logger.info("Term: " + baoTerm.label + "(" + baoTerm.baoId + ") - " + counter + "/" + total);
 			for (AnnotationRule annotationRule : baoTerm.rules) {
 								
-				//TODO check how the query is formed, depending on the highlight flag
-				//or if there's a SELECT statement
 				String rule;
 				
 				if(annotationRule.rule.startsWith("SELECT")){
@@ -46,7 +46,6 @@ public class AnnotateAllAssaysJob extends Job {
 					rule = "SELECT DISTINCT assay_id, description, chembl_id FROM assays WHERE " 
 							+ annotationRule.rule +	";";
 				}
-				System.out.println(rule);
 
 				List<Object[]> results = 
 						JPA.em().createNativeQuery(rule).getResultList();

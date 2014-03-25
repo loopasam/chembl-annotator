@@ -21,7 +21,6 @@ public class BaoLoaderJobTest extends UnitTest {
 
 	@Test
 	public void loadAndSaveBaoTerms() throws InterruptedException, ExecutionException {
-		//Problem with syncronous jobs and postgres for whatever reason
 		//TODO can be tested differently.
 		new LoadBaoJob().now().get();
 		//test more stuff

@@ -4,7 +4,9 @@ import java.util.List;
 
 import jobs.AnnotateAllAssaysJob;
 import jobs.LoadBaoJob;
+import jobs.LoadRulesJob;
 import models.AnnotatedAssay;
+import models.AnnotationRule;
 import models.BaoTerm;
 import models.Reviewer;
 import play.Logger;
@@ -63,5 +65,18 @@ public class Administration extends Controller {
 		String file = sb.toString();
 		renderText(file);
 	}
+	
+	public static void loadRules() {
+		if(AnnotationRule.findAll().size() <= 0){
+			new LoadRulesJob().now();
+		}else{
+			Logger.info("Job not started, as there are some already " +
+					"existing rules in the database. Delete " +
+					"first these rules from the table in order to " +
+					"be able to start the job.");
+		}
+		index();
+	}
+
 
 }
