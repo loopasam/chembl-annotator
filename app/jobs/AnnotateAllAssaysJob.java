@@ -8,10 +8,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import com.google.common.base.Stopwatch;
 
 
 import models.AnnotatedAssay;
@@ -25,6 +28,9 @@ import play.jobs.Job;
 public class AnnotateAllAssaysJob extends Job {
 
 	public void doJob() throws SQLException, IOException{
+		
+		Stopwatch stopwatch = Stopwatch.createUnstarted();
+		stopwatch.start();
 
 		List<BaoTerm> terms = BaoTerm.findAll();
 		
@@ -83,7 +89,8 @@ public class AnnotateAllAssaysJob extends Job {
 			}
 		}
 		FileUtils.writeStringToFile(report, reportContent);
-		Logger.info("Annotation job done.");
+		stopwatch.stop();
+		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 	}
 
 }
