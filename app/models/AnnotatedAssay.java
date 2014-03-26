@@ -9,6 +9,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.Session;
 import org.hibernate.annotations.Type;
@@ -21,9 +22,8 @@ public class AnnotatedAssay extends Model {
 	@ManyToOne
 	public Reviewer reviewer;
 
-	//TODO that was the problem all along
-	@ManyToMany(cascade=CascadeType.MERGE)
-	public List<BaoTerm> annotations;
+	@OneToMany(mappedBy="assay", cascade=CascadeType.ALL)
+	public List<Annotation> annotations;
 
 	public int assayId;
 
@@ -50,27 +50,32 @@ public class AnnotatedAssay extends Model {
 		this.save();
 		return this;
 	}
-	
+
 	public String toString() {
 		return chemblId;
 	}
 
-	public static void annotate(int assayId, String chemblId, String description, BaoTerm baoTerm) {
-		//Checks if the assay exists already
+	public static AnnotatedAssay createOrRetrieve(int assayId, String chemblId, String description) {
 		AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
-
 		if(assay == null){
-			//If not then create a new one
-			assay = new AnnotatedAssay(assayId, chemblId, description);
-			assay.annotations.add(baoTerm);
-			assay.save();
-		}else{
-			//If the assay exists already, then update it with a new term only, if not contained already
-			if(!assay.annotations.contains(baoTerm)){
-				assay.annotations.add(baoTerm);
-				assay.save();
-			}
+			return new AnnotatedAssay(assayId, chemblId, description).save();
 		}
+		return assay;
 	}
-	
+
+	public void annotate(AnnotationRule annotationRule) {
+		//Try to retrieve a potentially existing annotation, for the term to this assay.
+		Annotation annotation = Annotation.find("byTermAndAssay", annotationRule.baoTerm, this).first();
+
+		if(annotation == null){
+			//If no annotation with the term, then create a new one and save it.
+			Annotation newAnnotation = new Annotation(annotationRule.baoTerm, this, annotationRule.confidence).save();
+			this.annotations.add(newAnnotation);
+		}else{
+			//If the annotation exists already, then increase the confidence.
+			annotation.confidence += annotationRule.confidence;
+			annotation.save();
+		}
+		this.save();
+	}
 }
