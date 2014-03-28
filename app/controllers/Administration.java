@@ -1,6 +1,10 @@
 package controllers;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
 
 import jobs.AnnotateAllAssaysJob;
 import jobs.LoadBaoJob;
@@ -65,7 +69,7 @@ public class Administration extends Controller {
 		String file = sb.toString();
 		renderText(file);
 	}
-	
+
 	public static void loadRules() {
 		if(AnnotationRule.findAll().size() <= 0){
 			new LoadRulesJob().now();
@@ -75,6 +79,18 @@ public class Administration extends Controller {
 					"first these rules from the table in order to " +
 					"be able to start the job.");
 		}
+		index();
+	}
+
+	public static void exportRules() throws IOException{
+		File file = new File("data/rules.txt");
+		List<AnnotationRule> rules = AnnotationRule.findAll();
+		StringBuilder sb = new StringBuilder();
+		for (AnnotationRule annotationRule : rules) {
+			sb.append(annotationRule.rule + "|" + annotationRule.baoTerm.baoId + "|" + annotationRule.comment + 
+					"|" + annotationRule.confidence + "|" + annotationRule.highlight + "\n");
+		}
+		FileUtils.writeStringToFile(file, sb.toString());
 		index();
 	}
 

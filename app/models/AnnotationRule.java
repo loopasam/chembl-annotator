@@ -35,4 +35,14 @@ public class AnnotationRule extends Model {
 	public String toString() {
 		return rule;
 	}
+
+	public String getSqlQuery() {
+		if(this.rule.startsWith("SELECT")){
+			return this.rule;
+		}else{
+			return "SELECT DISTINCT assay_id, description, chembl_id FROM assays WHERE " 
+					+ this.rule +	";";
+		}
+	}
+
 }

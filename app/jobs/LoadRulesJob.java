@@ -18,12 +18,11 @@ public class LoadRulesJob extends Job {
 
 	public void doJob() throws IOException {
 
-		Logger.info("Loading the rules from data/rules.csv");
-		File file = new File("data/rules.csv");
+		Logger.info("Loading the rules from data/rules.txt");
+		File file = new File("data/rules.txt");
 		List<String> lines = FileUtils.readLines(file, "UTF-8");
 		for (String line : lines) {
-			System.out.println(line);
-			String[] splits = line.replaceAll("\"", "").split("\\|");
+			String[] splits = line.split("\\|");
 			String rule = splits[0];
 			String baoId = splits[1];
 			String comment = splits[2];

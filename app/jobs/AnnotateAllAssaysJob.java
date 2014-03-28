@@ -53,17 +53,9 @@ public class AnnotateAllAssaysJob extends Job {
 			
 			for (AnnotationRule annotationRule : baoTerm.rules) {
 								
-				String rule;
-				
-				if(annotationRule.rule.startsWith("SELECT")){
-					rule = annotationRule.rule;
-				}else{
-					rule = "SELECT DISTINCT assay_id, description, chembl_id FROM assays WHERE " 
-							+ annotationRule.rule +	";";
-				}
+				String rule = annotationRule.getSqlQuery();				
 
-				List<Object[]> results = 
-						JPA.em().createNativeQuery(rule).getResultList();
+				List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 
 				String ruleMessage = "Rule: "  + annotationRule.rule + " - Number of assays identified: " + results.size();
 				Logger.info(ruleMessage);
@@ -88,6 +80,7 @@ public class AnnotateAllAssaysJob extends Job {
 				}
 			}
 		}
+		
 		FileUtils.writeStringToFile(report, reportContent);
 		stopwatch.stop();
 		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
