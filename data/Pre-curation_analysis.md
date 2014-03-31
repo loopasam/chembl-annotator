@@ -5,32 +5,30 @@
 
 ## Coverage of ChEMBL assays
 
-_Number of annotated assays:_
-
+- Number of annotated assays:
 `SELECT COUNT(DISTINCT id) FROM AnnotatedAssay`
 > 364,857
 
-_Number of assays:_
-
+- Number of assays:
 `SELECT COUNT(DISTINCT assay_id) FROM assays`
 > 734,201
 
-_Percent of assays automatically annotated:_
-
+- Percent of assays automatically annotated:
 > 49.7%
 
-## Annotations' distribution
+## Annotations' distributions
 
-_BAO annotated terms' distribution:_
-
-`SELECT BaoTerm.label, count(AnnotatedAssay.id) as pound
+- BAO annotated terms' distribution:
+```
+SELECT BaoTerm.label, count(AnnotatedAssay.id) as pound
 FROM AnnotatedAssay
 INNER JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id
 INNER JOIN BaoTerm ON Annotation.term_id = BaoTerm.id
 GROUP BY BaoTerm.label
-ORDER BY pound DESC`
+ORDER BY pound DESC
+```
 
-term | #
+term | # of assays annotated
 --- | ---
 binding assay | 199621
 protein-small molecule interaction assay | 166484
@@ -93,4 +91,62 @@ fluorescent protein reporter gene assay | 1
 protein-RNA interaction assay | 1
 protein-DNA interaction assay | 1
 
+- Confidence level of annotations:
+`SELECT COUNT(DISTINCT id) FROM Annotation WHERE confidence = $`
 
+Confidence score | Number of annotations
+--- | ---
+inf. 1 | 0
+1 | 132,304
+2 | 12,556
+3 | 299
+4 | 6738
+5 | 538,172
+sup. 5 | 60,747
+
+## Annotation per assay
+
+- Number of annotations:
+`SELECT COUNT(DISTINCT Annotation.id) FROM Annotation`
+> 750,816
+
+- Number of annotation per annotated assay:
+> 2.06
+
+- Distribution of number of annotation per assay:
+```
+SELECT numberOfTerms, COUNT(chemblid) as numberOfAssay FROM (
+
+SELECT AnnotatedAssay.chemblId as chemblid, COUNT(Annotation.assay_id) AS numberOfTerms
+FROM AnnotatedAssay, Annotation
+WHERE AnnotatedAssay.id = Annotation.assay_id
+GROUP BY Annotation.assay_id
+ORDER BY numberOfTerms DESC
+
+) as x
+GROUP BY numberOfTerms
+```
+Number of annotated terms | number of annotated assays
+--- | ---
+1 | 177509
+2 | 58487
+3 | 61823
+4 | 64380
+5 | 2605
+6 | 52
+7 | 1
+
+- Curation task: for all assays with one annotation, with low confidence (<5), assert whether the prediction is right or wrong
+```
+SELECT numberOfTerms, COUNT(chemblid) as numberOfAssay FROM (
+
+SELECT AnnotatedAssay.chemblId as chemblid, COUNT(Annotation.assay_id) AS numberOfTerms
+FROM AnnotatedAssay, Annotation
+WHERE AnnotatedAssay.id = Annotation.assay_id
+AND Annotation.confidence < 5
+GROUP BY Annotation.assay_id
+
+) as x
+WHERE numberOfTerms = 1
+GROUP BY numberOfTerms
+```
