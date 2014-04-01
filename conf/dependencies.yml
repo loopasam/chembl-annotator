@@ -3,4 +3,5 @@
 require:
     - play
     - play -> crud
+    - play -> secure
     - com.google.guava -> guava 16.0.1

@@ -78,4 +78,11 @@ public class AnnotatedAssay extends Model {
 		}
 		this.save();
 	}
+
+	public void removeAnnotation(Long id) {
+		Annotation annotation = Annotation.find("byId", id).first();
+		this.annotations.remove(annotation);
+		annotation.delete();
+		this.save();
+	}
 }

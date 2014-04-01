@@ -128,15 +128,67 @@ GROUP BY numberOfTerms
 ```
 Number of annotated terms | number of annotated assays
 --- | ---
-1 | 177509
-2 | 58487
-3 | 61823
-4 | 64380
-5 | 2605
+1 | 177,509
+2 | 58,487
+3 | 61,823
+4 | 64,380
+5 | 2,605
 6 | 52
 7 | 1
 
-- Curation task: for all assays with one annotation, with low confidence (<5), assert whether the prediction is right or wrong
+- Annotated assays and the number of annotations they have:
+```
+SELECT AnnotatedAssay.chemblId as chemblid, COUNT(Annotation.assay_id) AS numberOfTerms
+FROM AnnotatedAssay, Annotation
+WHERE AnnotatedAssay.id = Annotation.assay_id
+GROUP BY Annotation.assay_id
+```
+
+- Retrieve all assays with one annotation and a high confidence score (assays to be automatically validated):
+```
+SELECT COUNT(chemblid) FROM ( 
+
+SELECT AnnotatedAssay.chemblId as chemblid, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+FROM AnnotatedAssay
+LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id 
+GROUP BY Annotation.assay_id
+
+) as x
+WHERE numberOfTerms = 1
+AND confidence >= 5
+```
+> 101,353
+
+- Retrieve all assays with one annotation and a low confidence score (assays to be curated):
+```
+SELECT COUNT(chemblid) FROM ( 
+
+SELECT AnnotatedAssay.chemblId as chemblid, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+FROM AnnotatedAssay
+LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id 
+GROUP BY Annotation.assay_id
+
+) as x
+WHERE numberOfTerms = 1
+AND confidence < 5
+```
+> 76,156
+
+- Retrieve all assays annotated with more than one term (to be curated):
+```
+SELECT COUNT(chemblid) FROM ( 
+
+SELECT AnnotatedAssay.chemblId as chemblid, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+FROM AnnotatedAssay
+LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id 
+GROUP BY Annotation.assay_id
+
+) as x
+WHERE numberOfTerms > 1
+```
+> 187,348
+
+- For all assays with one annotation, with low confidence (<5), assert whether the prediction is right or wrong
 ```
 SELECT numberOfTerms, COUNT(chemblid) as numberOfAssay FROM (
 
