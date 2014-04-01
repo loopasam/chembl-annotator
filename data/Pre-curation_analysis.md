@@ -202,3 +202,13 @@ GROUP BY Annotation.assay_id
 WHERE numberOfTerms = 1
 GROUP BY numberOfTerms
 ```
+
+## Later analysis with zooma
+
+- Keep a copy of the automatically annotated database
+- Convert the manually curated database to zooma format
+- Give numbers about time/speed
+- Convert in zooma format (cf email Dani)
+- Load the annotations inside zooma
+- Annotate chembl database using zooma
+- compare zooma outcome versus chembl outcome (automatic and electronic)

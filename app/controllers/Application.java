@@ -28,12 +28,12 @@ public class Application extends Controller {
 	}
 
 	public static void assay(String chemblid) {
-		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();		
+		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();
 		render(assay);
 	}
 
 	public static void randomAssay(){
-		AnnotatedAssay assay = AnnotatedAssay.find("order by random()").first();
+		AnnotatedAssay assay = AnnotatedAssay.find("order by rand()").first();
 		render(assay);
 	}
 
@@ -45,16 +45,16 @@ public class Application extends Controller {
 	public static void stats(){
 		int chemblassays = Integer.parseInt(JPA.em().createNativeQuery("SELECT COUNT(*) FROM assays").getResultList().get(0).toString());
 		renderArgs.put("chemblassays", chemblassays);
-		
+
 		int annotatedchemblassays = AnnotatedAssay.findAll().size();
 		renderArgs.put("annotatedchemblassays", annotatedchemblassays);
-		
+
 		double percentannotated = annotatedchemblassays / (double) chemblassays * 100.0;
 		renderArgs.put("percentannotated", percentannotated);
-		
+
 		long curatedassays = AnnotatedAssay.count("reviewer is not null");
 		renderArgs.put("curatedassays", curatedassays);
-		
+
 		render();
 	}
 
@@ -68,11 +68,21 @@ public class Application extends Controller {
 		reviewer.save();
 		redirect(url);
 	}
-	
+
+	public static void curationRandom() {
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview", true).first();
+		render(assay);
+	}
+
+	public static void curationAssay(String chemblid) {
+		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();
+		render(assay);
+	}
+
 	public static void star(Long id){
 		AnnotatedAssay assay = AnnotatedAssay.findById(id);
-		assay.starred = false;
-		assay.save();
+		assay.star();
+		redirect("Application.curationAssay", assay.chemblId);
 	}
 
 }

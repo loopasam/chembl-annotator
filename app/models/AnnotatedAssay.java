@@ -85,4 +85,19 @@ public class AnnotatedAssay extends Model {
 		annotation.delete();
 		this.save();
 	}
+
+	public void star() {
+		if(this.starred){
+			this.starred = false;
+		}else{
+			this.starred = true;
+		}
+		this.save();
+	}
+
+	public void markAsCurated(Reviewer reviewer) {
+		this.reviewer = reviewer;
+		this.needReview = false;
+		this.save();
+	}
 }

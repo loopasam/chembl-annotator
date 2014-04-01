@@ -33,10 +33,7 @@ public class AnnotateAllAssaysJob extends Job {
 		stopwatch.start();
 
 		List<BaoTerm> terms = BaoTerm.findAll();
-		
-		//TODO comment for full scale
-		terms = BaoTerm.find("byBaoId", "BAO_0000015").fetch();
-		
+				
 		//Report init
 		File report = new File("data/annotation-report.txt");
 		String reportContent = "";

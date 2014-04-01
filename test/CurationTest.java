@@ -51,12 +51,24 @@ public class CurationTest extends UnitTest {
 
 	@Test
 	public void starAssay() {
-
+		AnnotatedAssay assay1 = AnnotatedAssay.find("byChemblId", "CHEMBL4321").first();
+		assay1.star();
+		assertEquals(true, assay1.starred);
+		assay1.star();
+		assertEquals(false, assay1.starred);
+		assay1.star();
+		assay1.star();
+		assertEquals(false, assay1.starred);
 	}
 
 	@Test
 	public void validateAssay() {
-		
+		Reviewer reviewer = Reviewer.find("byEmail", "bob@gmail.com").first();
+		AnnotatedAssay assay1 = AnnotatedAssay.find("byChemblId", "CHEMBL4321").first();
+		assay1.markAsCurated(reviewer);
+		assertEquals(false, assay1.needReview);
+		assertNotNull(assay1.reviewer);
+		assertEquals("bob@gmail.com", assay1.reviewer.email);
 	}
 
 }

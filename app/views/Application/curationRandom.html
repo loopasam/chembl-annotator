@@ -1,0 +1,11 @@
+#{extends 'main.html' /}
+#{set title:'Random Assay' /}
+#{set menu:'rassay' /}
+
+<div class="btn-group btn-group-justified well">
+  <a href="#" class="btn btn-success">Validate</a>
+  <a href="@{Application.star(assay.id)}" class="btn btn-info">${assay.starred ? 'Unstar' : 'Star'}</a>
+  <a href="#" class="btn btn-warning">Pass</a>
+</div>
+
+#{assayToCurate assay:assay /}
