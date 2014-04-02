@@ -1,4 +1,3 @@
-LOWER(description) LIKE '%bioassay%'|BAO_0000015|text-mining on BAO label|1|true
 LOWER(description) LIKE '%membrane potential%'|BAO_0002996|text-mining on BAO label|1|true
 LOWER(description) LIKE '%membrane potential assay%'|BAO_0002996|text-mining on BAO label|3|true
 LOWER(description) LIKE '%transmembrane potential%'|BAO_0002996|text-mining on BAO label|1|true
