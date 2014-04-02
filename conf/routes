@@ -24,8 +24,6 @@ GET     /starred                                        Application.starred
 GET     /stats                                          Application.stats
 
 # Curation routes
-GET     /curation/{chemblid}                            Application.curationAssay
-GET     /curation                                       Application.curationRandom
 GET     /star/{id}                                       Application.star
 
 # Ignore favicon requests

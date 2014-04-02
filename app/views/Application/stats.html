@@ -7,25 +7,38 @@
 	</h1>
 </div>
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>Description</th>
-			<th>Value</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Number of ChEMBL assays</td>
-			<td>${chemblassays}</td>
-		</tr>
-		<tr>
-			<td>Number of automatically annotated ChEMBL assays</td>
-			<td>${annotatedchemblassays}</td>
-		</tr>
-		<tr>
-			<td>Number of curated assays</td>
-			<td>${curatedassays}</td>
-		</tr>
-	</tbody>
-</table>
+<div class="panel panel-default">
+	<div class="panel-heading">General statistics</div>
+	<table class="table table-hover">
+		<tbody>
+			<tr>
+				<td>Number of ChEMBL assays</td>
+				<td>${chemblassays}</td>
+			</tr>
+			<tr>
+				<td>Number of automatically annotated ChEMBL assays</td>
+				<td>${annotatedchemblassays}</td>
+			</tr>
+			<tr>
+				<td>Number of curated assays</td>
+				<td>${curatedassays}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+#{if contributors.size() > 0}
+<div class="panel panel-default">
+	<div class="panel-heading">Contributors</div>
+	<table class="table table-hover">
+		<tbody>
+			#{list items:contributors, as:'contributor'}
+			<tr>
+				<td>${contributor.get("user")}</td>
+				<td>${contributor.get("na")}</td>
+			</tr>
+			#{/list}
+		</tbody>
+	</table>
+</div>
+#{/if}

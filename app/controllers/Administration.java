@@ -18,6 +18,7 @@ import play.Logger;
 import play.mvc.Before;
 import play.mvc.Controller;
 import play.mvc.With;
+import play.test.Fixtures;
 
 @Check("admin")
 @With(Secure.class)
@@ -95,16 +96,21 @@ public class Administration extends Controller {
 		index();
 	}
 
-	public static void generateDummyAnnotation() {
-		if(Annotation.findAll().size() <= 0 || Annotation.findAll().size() <= 0){
+	public static void generateDummyAnnotation() {			
+			Fixtures.delete(Annotation.class);
+			Fixtures.delete(AnnotatedAssay.class);
+			
 			//create fake annotations
 			AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(791527, "CHEMBL1930580", "Fungistatic activity against Saccharomyces cerevisiae ATCC 24657 assessed as cell growth at 100 uM after 48 hrs by spectrophotometric bioassay");			
 			AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of free unbound fraction in serum of methicillin-resistant Staphylococcus aureus infected ddY mouse at 100 mg/kg, ip administered 1 day post infection by paper disk bioassay method");
-			
+			AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(11912, "CHEMBL628657", "Ratio of biodistributions in Athymic mice bearing human Tumor (TE671) xenografts in Tumor (T) and blood (B)");
+						
 			assay1.needReview = true;
 			assay1.save();
 			assay2.needReview = true;
 			assay2.save();
+			assay3.needReview = true;
+			assay3.save();
 			
 			AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
 			AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
@@ -112,13 +118,8 @@ public class Administration extends Controller {
 			assay1.annotate(rule1);
 			assay2.annotate(rule1);
 			assay2.annotate(rule2);
+			assay3.annotate(rule2);
 			Logger.info("Dummy rules added.");
-		}else{
-			Logger.info("Job not started, as there are some already " +
-					"existing annotations in the database. Delete " +
-					"first these annotations and the assays in order to " +
-					"be able to start the job.");
-		}
 		index();
 	}
 

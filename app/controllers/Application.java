@@ -33,8 +33,11 @@ public class Application extends Controller {
 	}
 
 	public static void randomAssay(){
-		AnnotatedAssay assay = AnnotatedAssay.find("order by rand()").first();
-		render(assay);
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by random()").first();
+		if(assay == null){
+			stats();
+		}
+		assay(assay.chemblId);
 	}
 
 	public static void starred(){
@@ -55,6 +58,11 @@ public class Application extends Controller {
 		long curatedassays = AnnotatedAssay.count("reviewer is not null");
 		renderArgs.put("curatedassays", curatedassays);
 
+		List<Map> contributors = AnnotatedAssay.find(
+		        "select new map(r.email as user, count(a.id) as na) from AnnotatedAssay a join a.reviewer as r group by r.email order by na desc"
+		    ).fetch();
+
+		renderArgs.put("contributors", contributors);
 		render();
 	}
 
@@ -69,20 +77,35 @@ public class Application extends Controller {
 		redirect(url);
 	}
 
-	public static void curationRandom() {
-		AnnotatedAssay assay = AnnotatedAssay.find("needReview", true).first();
-		render(assay);
-	}
-
-	public static void curationAssay(String chemblid) {
-		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();
-		render(assay);
-	}
-
 	public static void star(Long id){
 		AnnotatedAssay assay = AnnotatedAssay.findById(id);
 		assay.star();
-		redirect("Application.curationAssay", assay.chemblId);
+		assay(assay.chemblId);
+	}
+
+	public static void removeAnnotation(Long assayId, Long annotationId){
+		AnnotatedAssay assay = AnnotatedAssay.findById(assayId);
+		assay.removeAnnotation(annotationId);
+		flash.success("Annotation successfully removed.");
+		flash.keep();
+		assay(assay.chemblId);
+	}
+
+	public static void validate(Long assayId){
+		AnnotatedAssay assay = AnnotatedAssay.findById(assayId);
+		if(assay.annotations.size() > 1){
+			//Doesn't pass the validation - send back
+			validation.addError("curation", "Please remove some BAO terms before validating. The assay can be have either one or no annotation.");
+			validation.keep();
+			assay(assay.chemblId);
+		}
+		flash.success("Assay successfully validated!");
+		flash.keep();
+		Reviewer reviewer = Reviewer.find("byEmail", Security.connected()).first();
+		assay.markAsCurated(reviewer);
+
+		//TODO redirect toward random function
+		assay(assay.chemblId);
 	}
 
 }

@@ -11,6 +11,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 import org.hibernate.Session;
 import org.hibernate.annotations.Type;
 
@@ -81,9 +84,11 @@ public class AnnotatedAssay extends Model {
 
 	public void removeAnnotation(Long id) {
 		Annotation annotation = Annotation.find("byId", id).first();
-		this.annotations.remove(annotation);
-		annotation.delete();
-		this.save();
+		if(annotation != null){
+			this.annotations.remove(annotation);
+			annotation.delete();
+			this.save();
+		}
 	}
 
 	public void star() {
@@ -96,8 +101,33 @@ public class AnnotatedAssay extends Model {
 	}
 
 	public void markAsCurated(Reviewer reviewer) {
+		//TODO update reviewer score and save
 		this.reviewer = reviewer;
 		this.needReview = false;
 		this.save();
+	}
+
+	public String getRules(){
+		String rules = "";
+		boolean isFirst = true;
+		for (Annotation annotation : this.annotations) {
+			for (AnnotationRule annotationRule : annotation.term.rules) {
+				if(annotationRule.highlight){
+					if(isFirst){
+						isFirst = false;
+					}else{
+						rules += ", ";
+					}
+
+					Pattern p = Pattern.compile("%(.*)%");
+					Matcher m = p.matcher(annotationRule.rule);
+
+					if (m.find()) {
+						rules += "\"" + m.group(1) + "\"";
+					}
+				}
+			}
+		}
+		return rules;
 	}
 }

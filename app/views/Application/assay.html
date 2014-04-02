@@ -1,4 +1,9 @@
 #{extends 'main.html' /}
 #{set title:'Assay - ' + assay.chemblId /}
+#{set menu:'rassay' /}
 
 #{assay assay:assay /}
+
+#{annotations assay:assay /}
+
+#{curation assay:assay /}

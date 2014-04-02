@@ -1,0 +1,34 @@
+<hr>
+
+<div class="btn-group btn-group-lg btn-group-justified well">
+  <a href="@{Application.validate(_assay.id)}" 
+  class="btn btn-success ${_assay.needReview ? '' : 'disabled'}">
+    #{if _assay.reviewer != null}
+    Validated by ${_assay.reviewer}
+    #{/if}
+    #{else}
+    <span class="fa fa-check-square-o"> Validate</span>
+    #{/else}
+  </a>
+  <a href="@{Application.randomAssay()}" class="btn btn-default">
+  <span class="fa fa-refresh"> Pass</span>
+  </a>
+</div>
+
+#{ifErrors} 
+   #{errors}
+    <div class="panel panel-danger">
+    <div class="panel-body">
+    <span class="text-danger">${error}</span>
+    </div>
+   </div>
+  #{/errors}
+#{/ifErrors}
+
+#{if flash.success}
+    <div class="panel panel-success">
+    <div class="panel-body">
+    <span class="text-success">${flash.success}</span>
+    </div>
+   </div>
+#{/if}
