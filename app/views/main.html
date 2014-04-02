@@ -49,7 +49,7 @@
 							Home</a></li>
 					<li class="${menu == 'rassay' ? 'active' : ''}"><a
 						href="@{Application.randomAssay()}"><span class="fa fa-random"></span>
-							Curate random assay</a></li>
+							Curate</a></li>
 					<li class="${menu == 'stats' ? 'active' : ''}"><a
 						href="@{Application.stats()}"><span class="fa fa-bar-chart-o"></span>
 							Statistics</a></li>
@@ -66,6 +66,7 @@
 							<li><a href="@{Application.switchTheme(request.url)}"><span class="fa fa-refresh fa-spin"></span> Switch theme</a></li>
 							<li><a href="@{Secure.logout()}"><span class="fa fa-sign-out"></span> Logout</a></li>
 						</ul></li>
+						<p class="navbar-text navbar-right badge">450 <span class="fa fa-heart"></span></p>
 				</ul>
 			</div>
 			#{/if}
