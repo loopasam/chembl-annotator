@@ -4,3 +4,9 @@
 - 5
 - protein-small molecule interaction assay
 - As now, it takes way too much time to be executed.
+
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
+
+
+INSERT INTO Reviewer (id, email, isadmin, password, cooltheme) VALUES (1, 'samuel.croset@gmail.com', true, 'pouet', false);
