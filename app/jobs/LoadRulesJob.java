@@ -28,7 +28,7 @@ public class LoadRulesJob extends Job {
 			String comment = splits[2];
 			int confidence = Integer.parseInt(splits[3]);
 			boolean highlight;
-			if(splits[4].equals("t")){
+			if(splits[4].equals("true")){
 				highlight = true;	
 			}else{
 				highlight = false;

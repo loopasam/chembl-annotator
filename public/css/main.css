@@ -1,3 +1,7 @@
 .highlight {
     text-decoration: underline;
 }
+
+.star-link:HOVER {
+	text-decoration: none;
+}

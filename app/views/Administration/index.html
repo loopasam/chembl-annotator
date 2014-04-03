@@ -27,32 +27,32 @@ menu:'admin' /} #{set 'moreStyles'}
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>Annotate all the assays based on the rules.</td>
-			<td><a href="@{Administration.annotationJob()}">Annotate
-					assays</a></td>
-		</tr>
-		<tr>
-			<td>3</td>
 			<td>Export all the BAO term as CSV</td>
 			<td><a href="@{Administration.exportBao()}">Export BAO</a></td>
 		</tr>
 		<tr>
-			<td>4</td>
-			<td>Export rules to CSV
-			</td>
-			<td><a href="@{Administration.exportRules()}">Export rules</a></td>
-		</tr>
-		<tr>
-			<td>5</td>
+			<td>3</td>
 			<td>Load the rules from CSV file (<code>data/rules.txt</code>)
 			</td>
 			<td><a href="@{Administration.loadRules()}">Import rules</a></td>
 		</tr>
 		<tr>
-			<td>6</td>
-			<td>Add mock-up annotation data for dev.
+			<td>4</td>
+			<td>Export rules to CSV (<code>data/rules.txt</code>)
 			</td>
-			<td><a href="@{Administration.generateDummyAnnotation()}">Add fake data</a></td>
+			<td><a href="@{Administration.exportRules()}">Export rules</a></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Annotate all the assays based on the rules.</td>
+			<td><a href="@{Administration.annotationJob()}">Annotate
+					assays</a></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Add dummy annotated assays data for development.
+			</td>
+			<td><a href="@{Administration.generateDummyAnnotation()}">Add dummy data</a></td>
 		</tr>
 	</tbody>
 </table>

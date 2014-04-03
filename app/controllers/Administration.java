@@ -86,40 +86,45 @@ public class Administration extends Controller {
 
 	public static void exportRules() throws IOException{
 		File file = new File("data/rules.txt");
-		List<AnnotationRule> rules = AnnotationRule.findAll();
-		StringBuilder sb = new StringBuilder();
-		for (AnnotationRule annotationRule : rules) {
-			sb.append(annotationRule.rule + "|" + annotationRule.baoTerm.baoId + "|" + annotationRule.comment + 
-					"|" + annotationRule.confidence + "|" + annotationRule.highlight + "\n");
+		if(file.exists()){
+			Logger.error("Job not started, as there's already a file containing rules (data/rules.txt)." +
+					" Please delete the file first and re-launch the job.");
+		}else{
+			List<AnnotationRule> rules = AnnotationRule.findAll();
+			StringBuilder sb = new StringBuilder();
+			for (AnnotationRule annotationRule : rules) {
+				sb.append(annotationRule.rule + "|" + annotationRule.baoTerm.baoId + "|" + annotationRule.comment + 
+						"|" + annotationRule.confidence + "|" + annotationRule.highlight + "\n");
+			}
+			FileUtils.writeStringToFile(file, sb.toString());
 		}
-		FileUtils.writeStringToFile(file, sb.toString());
 		index();
 	}
 
 	public static void generateDummyAnnotation() {			
-			Fixtures.delete(Annotation.class);
-			Fixtures.delete(AnnotatedAssay.class);
-			
-			//create fake annotations
-			AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(791527, "CHEMBL1930580", "Fungistatic activity against Saccharomyces cerevisiae ATCC 24657 assessed as cell growth at 100 uM after 48 hrs by spectrophotometric bioassay");			
-			AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of free unbound fraction in serum of methicillin-resistant Staphylococcus aureus infected ddY mouse at 100 mg/kg, ip administered 1 day post infection by paper disk bioassay method");
-			AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(11912, "CHEMBL628657", "Ratio of biodistributions in Athymic mice bearing human Tumor (TE671) xenografts in Tumor (T) and blood (B)");
-						
-			assay1.needReview = true;
-			assay1.save();
-			assay2.needReview = true;
-			assay2.save();
-			assay3.needReview = true;
-			assay3.save();
-			
-			AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
-			AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
-			
-			assay1.annotate(rule1);
-			assay2.annotate(rule1);
-			assay2.annotate(rule2);
-			assay3.annotate(rule2);
-			Logger.info("Dummy rules added.");
+		Fixtures.delete(Annotation.class);
+		Fixtures.delete(AnnotatedAssay.class);
+
+		//create fake annotations
+		AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(791527, "CHEMBL1930580", "Fungistatic activity against Saccharomyces cerevisiae ATCC 24657 assessed as cell growth at 100 uM after 48 hrs by spectrophotometric bioassay");			
+		AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of free unbound fraction in serum of methicillin-resistant Staphylococcus aureus infected ddY mouse at 100 mg/kg, ip administered 1 day post infection by paper disk bioassay method");
+		AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(11912, "CHEMBL628657", "Ratio of biodistributions in Athymic mice bearing human Tumor (TE671) xenografts in Tumor (T) and blood (B)");
+
+		assay1.needReview = true;
+		assay1.save();
+		assay2.needReview = true;
+		assay2.save();
+		assay3.needReview = true;
+		assay3.save();
+
+		AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
+		AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
+
+		assay1.annotate(rule1);
+		assay2.annotate(rule1);
+		assay2.annotate(rule2);
+		assay3.annotate(rule2);
+		Logger.info("Dummy rules added.");
 		index();
 	}
 

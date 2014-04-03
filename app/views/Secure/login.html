@@ -1,57 +1,42 @@
-#{extends 'main.html' /}
-#{set title:'ChEMBL Annotator' /}
+#{extends 'main.html' /} #{set title:'ChEMBL Annotator' /}
 
 <div class="page-header">
-  <h1><span class="fa fa-sign-in"> Login</h1>
+	<h1>
+		<span class="fa fa-sign-in"></span> Login
+	</h1>
 </div>
-<form role="form">
-  <div class="form-group">
-    <label for="exampleInputEmail1"><span class="fa fa-user"> Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1"><span class="fa fa-lock"> Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default"><span class="fa fa-sign-in"> Login</span></button>
-</form>
+
 
 <div id="login">
-	
+
 	<h1>&{'secure.title'}</h1>
-		
-	#{form @authenticate()}
-		
-		#{if flash.error}
-			<p class="error">
-				&{flash.error}
-			</p>
-		#{/if}
-		#{if flash.success}
-			<p class="success">
-				&{flash.success}
-			</p>
-		#{/if}
+
+	#{form @authenticate()} #{if flash.error}
+	<p class="error">&{flash.error}</p>
+	#{/if} #{if flash.success}
+	<p class="success">&{flash.success}</p>
+	#{/if}
+	<div class="form-group">
+		<label for="username"><span class="fa fa-user">
+				&{'secure.username'}</span></label> <input type="email" name="username"
+			class="form-control" id="username" placeholder="Enter email"
+			value="${flash.username}">
+	</div>
+
+	<div class="form-group">
+		<label for="password"><span class="fa fa-lock">
+				&{'secure.password'}</span></label> <input type="password" name="password"
+			class="form-control" id="password" placeholder="Password" value="">
+	</div>
 	
-		<p id="username-field">
-			<label for="username">&{'secure.username'}</label>
-			<input type="text" name="username" id="username" value="${flash.username}" />
-		</p>
-		<p id="password-field">
-			<label for="password">&{'secure.password'}</label>
-			<input type="password" name="password" id="password" value="" />
-		</p>
-		<p id="remember-field">
-			<input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
-			<label for="remember">&{'secure.remember'}</label>
-		</p>
-		<p id="signin-field">
-			<input type="submit" id="signin" value="&{'secure.signin'}" />
-		</p>
+	
+	<div class="checkbox">
+		<label> <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true" ' : ''}>
+		 &{'secure.remember'}</label>
+	</div>
+	
+	<button type="submit" class="btn btn-default">
+	<span class="fa fa-sign-in"> Login</span>
+</button>	
 	#{/form}
 </div>

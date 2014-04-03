@@ -1,7 +1,103 @@
-# Charaterization of automated annotations
+# Data analysis
 
 - Annotation process takes 1240 minutes (20.6 hours on crunch) over ChEMBL 17
 - Commands are for MySQL
+
+## Actionable metrics
+
+- *Curation completion*: 100 x (#annotatedAssay.needReview = true) / (#annotatedAssay)
+- *Curation quality*: 100 - ( 100 x (#Annotation.isFake = true) / (#InitialFakeAnnotations) )
+
+## Workflow over electronically annotated assays
+
+Steps of the workflow after electronic annotations.
+
+### Export electronically annotated database and save it somewhere.
+
+db1 = source and db2 is target. db2 needs to be created before loading.
+
+```
+mysqldump -h [server] -u [user] -p[password] db1 | mysql -h [server] -u [user] -p[password] db2
+```
+
+### Mark as curated assays with 1 annotation and a confidence score greater or equal to 5 (curated by robot user).
+```
+UPDATE AnnotatedAssay
+SET needReview = false, reviewer_id = 1
+WHERE chemblId IN (
+	SELECT chemblId
+	FROM (
+		SELECT AnnotatedAssay.chemblId, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+		FROM AnnotatedAssay
+		LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id
+		GROUP BY Annotation.assay_id
+	) as x
+	WHERE numberOfTerms = 1 AND confidence >= 5
+)
+```
+
+### Flag for review assays with 1 annotation and a confidence score lower than 5 and assays with more than 1 annotation.
+```
+UPDATE AnnotatedAssay
+SET needReview = true
+WHERE chemblId IN (
+	SELECT chemblId
+	FROM (
+		SELECT AnnotatedAssay.chemblId, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+		FROM AnnotatedAssay
+		LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id
+		GROUP BY Annotation.assay_id
+	) as x
+	WHERE numberOfTerms > 1
+)
+```
+
+### Flag assays with 1 annotation but with a confidence inferior to 5
+```
+UPDATE AnnotatedAssay
+SET needReview = true
+WHERE chemblId IN (
+	SELECT chemblId
+	FROM (
+		SELECT AnnotatedAssay.chemblId, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+		FROM AnnotatedAssay
+		LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id
+		GROUP BY Annotation.assay_id
+	) as x
+	WHERE numberOfTerms = 1 AND confidence < 5
+)
+```
+### Generate around 5% of fake annotations (in `application.conf`), added to the assays to be curated only.
+
+Using admin tools.
+
+### Do the manual curation process.
+
+Wait for curators to finish the job.
+
+### Generate full curation report (actionable metrics).
+
+Using admin tools.
+
+### Remove the remaining fake annotations.
+
+Using admin tools.
+
+### Database is in curated state, ready to be incorporated to ChEMBL.
+
+Using admin tools. To be implemented:
+- Apply the last automatic annotation step: assays not annotated are mapped based on their current ChEMBL types.
+- E.g. All binding assays (type = `B`) without annotations are asserted as `bao:BAO_0002989` (`binding assay`).
+- Create two types of rules: the first round ones, to be curated, and the ones to fill the voids.
+
+## Questions of interest
+
+- How many assays have been validated by each curator (stats page)?
+- What are the BAO terms distribution for the assays that will be manually curated (needReview = true)?
+- What is the score of each curator?
+- What is distribution of number of terms per assay?
+- What is the percentage of ChEMBL assays annotated via the rules?
+- How fast is the annotation process?
 
 ## Coverage of ChEMBL assays
 
@@ -158,6 +254,21 @@ WHERE numberOfTerms = 1
 AND confidence >= 5
 ```
 > 101,353
+
+- Same query with update:
+```
+UPDATE AnnotatedAssay 
+SET needReview = false
+WHERE chemblId IN (
+	SELECT chemblId
+	FROM (
+		SELECT AnnotatedAssay.chemblId, Annotation.confidence as confidence, COUNT(Annotation.assay_id) AS numberOfTerms
+		FROM AnnotatedAssay
+		LEFT JOIN Annotation ON AnnotatedAssay.id = Annotation.assay_id
+		GROUP BY Annotation.assay_id
+	) as x
+	WHERE numberOfTerms = 1 AND confidence >= 5)
+```
 
 - Retrieve all assays with one annotation and a low confidence score (assays to be curated):
 ```

@@ -1,10 +1,10 @@
 <div class="page-header">
   <h1>
   <a href="@{Application.star(_assay.id)}" 
-  class="fa ${_assay.starred ? 'fa-star text-primary' : 'fa-star-o text-primary'}">
+  class="fa ${_assay.starred ? 'fa-star text-primary' : 'fa-star-o text-primary'} star-link">
   </a>
   #{if _assay.needReview} <span class="fa fa-flag text-danger"></span> #{/if} 
- Assay ${_assay.chemblId} <small>ID: ${_assay.assayId}</small> 
+ Assay <a href="https://www.ebi.ac.uk/chembl/assay/inspect/${_assay.chemblId}" target=_BLANCK>${_assay.chemblId}</a>
   </h1>
 </div>
 <div class="well lead">${_assay.description}</div>
