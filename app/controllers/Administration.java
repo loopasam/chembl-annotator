@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-import jobs.AnnotateAllAssaysJob;
+import jobs.AnnotateLowConfidenceAssaysJob;
 import jobs.LoadBaoJob;
 import jobs.LoadRulesJob;
 import models.AnnotatedAssay;
@@ -50,7 +50,7 @@ public class Administration extends Controller {
 
 	public static void annotationJob() {
 		if(AnnotatedAssay.findAll().size() <= 0){
-			new AnnotateAllAssaysJob().now();
+			new AnnotateLowConfidenceAssaysJob().now();
 		}else{
 			Logger.info("Job not started, as there are some already " +
 					"existing annotated assays in the database. Delete " +

@@ -7,7 +7,7 @@ import play.mvc.*;
 import java.math.BigInteger;
 import java.util.*;
 
-import jobs.AnnotateAllAssaysJob;
+import jobs.AnnotateLowConfidenceAssaysJob;
 import jobs.LoadBaoJob;
 
 import models.*;
