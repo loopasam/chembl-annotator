@@ -1,9 +1,3 @@
-LOWER(description) LIKE '%membrane potential%'|BAO_0002996|text-mining on BAO label|1|true
-LOWER(description) LIKE '%membrane potential assay%'|BAO_0002996|text-mining on BAO label|3|true
-LOWER(description) LIKE '%transmembrane potential%'|BAO_0002996|text-mining on BAO label|1|true
-LOWER(description) LIKE '%action potential%'|BAO_0002996|text-mining on BAO label|1|true
-LOWER(description) LIKE '%patch clamp%'|BAO_0002996|text-mining on BAO synonym|1|true
-LOWER(description) LIKE '%membrane depolarization%'|BAO_0002996|text-mining on BAO label|1|true
 LOWER(description) LIKE '%nuclear membrane potential assay%'|BAO_0002195|text-mining on BAO label|3|true
 LOWER(description) LIKE '%nuclear membrane potential%'|BAO_0002195|text-mining on BAO label trimmed|1|true
 LOWER(description) LIKE '%mitochondrial membrane potential assay%'|BAO_0002190|text-mining on BAO label|3|true
@@ -72,9 +66,6 @@ LOWER(description) LIKE '%oxidative stress assay%'|BAO_0002168|text-mining on BA
 LOWER(description) LIKE '%oxidative stress%'|BAO_0002168|text-mining on BAO label|1|true
 LOWER(description) LIKE '%rna splicing assay%'|BAO_0003000|text-mining on BAO label|3|true
 LOWER(description) LIKE '%rna splicing%'|BAO_0003000|text-mining on BAO label|1|true
-LOWER(description) LIKE '%binding assay%'|BAO_0002989|text-mining on BAO label|3|true
-LOWER(description) LIKE '%affinity%'|BAO_0002989|text-mining on BAO label|1|true
-LOWER(description) LIKE '%displacement of%'|BAO_0002989|text-mining on BAO label|1|true
 LOWER(description) LIKE '%kinativ assay%'|BAO_0002908|text-mining on BAO label|3|true
 LOWER(description) LIKE '%kinativ%'|BAO_0002908|text-mining on BAO label|1|true
 LOWER(description) LIKE '%protein-nucleotide interaction assay%'|BAO_0000394|text-mining on BAO label|3|true
@@ -133,8 +124,6 @@ LOWER(description) LIKE '%mitotic cell cycle state assay%'|BAO_0002584|text-mini
 LOWER(description) LIKE '%mitotic cell cycle state%'|BAO_0002584|text-mining on BAO label|1|true
 LOWER(description) LIKE '%meiotic cell cycle state assay%'|BAO_0002585|text-mining on BAO label|3|true
 LOWER(description) LIKE '%meiotic cell cycle state%'|BAO_0002585|text-mining on BAO label|1|true
-LOWER(description) LIKE '%enzyme activity assay%'|BAO_0002994|text-mining on BAO label|3|true
-LOWER(description) LIKE '%enzyme activity%'|BAO_0002994|text-mining on BAO label|1|true
 LOWER(description) LIKE '%oxidoreductase activity assay%'|BAO_0002792|text-mining on BAO label|3|true
 LOWER(description) LIKE '%oxidoreductase activity%'|BAO_0002792|text-mining on BAO label|1|true
 LOWER(description) LIKE '%isomerase enzyme activity assay%'|BAO_0002794|text-mining on BAO label|3|true
