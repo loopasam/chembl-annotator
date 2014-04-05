@@ -41,12 +41,11 @@ public class AnnotateTextMining extends Job {
 			reportContent += termMessage + "\n";
 			Logger.info(termMessage);
 
-			String rule = annotationRule.rule + " AND NOT EXISTS (	" +
+			String rule = "SELECT DISTINCT assay_id, description, chembl_id FROM assays WHERE " + annotationRule.rule + " AND NOT EXISTS (	" +
 					"SELECT annotatedassay.assayid " +
 					"FROM annotatedassay " +
 					"WHERE annotatedassay.assayid = assays.assay_id" +
 					");";
-
 
 			List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 

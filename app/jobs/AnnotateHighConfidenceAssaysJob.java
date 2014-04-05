@@ -34,7 +34,7 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 		stopwatch.start();
 
 		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
-				"where r.hasPriority = true and order by r.confidence desc").fetch();
+				"where r.hasPriority = true order by r.confidence desc").fetch();
 		
 		Reviewer robot = Reviewer.find("byEmail", "samuel.croset@gmail.com").first();
 
@@ -51,13 +51,13 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 			String termMessage = "Term: " + annotationRule.baoTerm.label + "(" + annotationRule.baoTerm.baoId + ") - " + counter + "/" + total;
 			reportContent += termMessage + "\n";
 			Logger.info(termMessage);
-
+			
 			String rule = annotationRule.rule + " AND NOT EXISTS (	" +
 					"SELECT annotatedassay.assayid " +
 					"FROM annotatedassay " +
 					"WHERE annotatedassay.assayid = assays.assay_id" +
 					");";
-
+			
 			List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 
 			String ruleMessage = "Rule: "  + annotationRule.rule + " - Number of assays identified: " + results.size();
