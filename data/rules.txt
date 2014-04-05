@@ -1,5 +1,6 @@
 LOWER(description) LIKE '%nuclear membrane potential assay%'|BAO_0002195|text-mining on BAO label|3|true
 LOWER(description) LIKE '%nuclear membrane potential%'|BAO_0002195|text-mining on BAO label trimmed|1|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'GI50'|BAO_0002100|Look for the activity type GI50|106|false
 LOWER(description) LIKE '%mitochondrial membrane potential assay%'|BAO_0002190|text-mining on BAO label|3|true
 LOWER(description) LIKE '%mitochondrial membrane potential%'|BAO_0002190|text-mining on BAO label|1|true
 LOWER(description) LIKE '%mitochondrial transmembrane potential%'|BAO_0002190|text-mining on BAO label|1|true
@@ -19,42 +20,39 @@ LOWER(description) LIKE '%cell morphology assay%'|BAO_0002991|text-mining on BAO
 assay_type = 'B'|BAO_0002989|Retrieves the binding assays in ChEMBL|5|false
 LOWER(description) LIKE '%DNA-RNA interaction%'|BAO_0000590|text-mining on BAO label|1|true
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities, target_dictionary, molecule_dictionary WHERE assays.tid = target_dictionary.tid AND target_dictionary.target_type = 'SINGLE PROTEIN' AND assays.assay_id = activities.assay_id AND activities.molregno = molecule_dictionary.molregno AND molecule_dictionary.molecule_type = 'Small molecule';|BAO_0000110|Select the assays involving small molecules on single protein targets|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Ion channel';|BAO_0002997|Identifies the assays that are targeting an ion channel|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Transporter';|BAO_0003008|Identifies the assay with a target being a transporter|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Enzyme';|BAO_0002994|Identifies the assays targeting an enzyme|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Isomerase';|BAO_0002794|Identifies the assays with an isomerase as target|5|false
-assay_type = 'T'|BAO_0002189|Identifies the toxicity assays in ChEMBL|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CC50'|BAO_0002993|Identifies the activity type CC50 in assays|5|false
-LOWER(description) LIKE '%cytotoxicity assay%'|BAO_0002993|text-mining on BAO label|3|true
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'GI50'|BAO_0002100|Look for the activity type GI50|5|false
-LOWER(description) LIKE '%cell morphology%'|BAO_0002991|text-mining on BAO label|1|true
 LOWER(description) LIKE '%neurite outgrowth assay%'|BAO_0002803|text-mining on BAO label|3|true
 LOWER(description) LIKE '%neurite outgrowth%'|BAO_0002803|text-mining on BAO label|1|true
 LOWER(description) LIKE '%safety pharmacology assay%'|BAO_0002533|text-mining on BAO label|3|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CC50'|BAO_0002993|Identifies the activity type CC50 in assays|105|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Transporter';|BAO_0003008|Identifies the assay with a target being a transporter|107|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Ion channel';|BAO_0002997|Identifies the assays that are targeting an ion channel|108|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Isomerase';|BAO_0002794|Identifies the assays with an isomerase as target|111|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Enzyme';|BAO_0002994|Identifies the assays targeting an enzyme|5|false
+assay_type = 'T'|BAO_0002189|Identifies the toxicity assays in ChEMBL|5|false
+LOWER(description) LIKE '%cytotoxicity assay%'|BAO_0002993|text-mining on BAO label|3|true
+LOWER(description) LIKE '%cell morphology%'|BAO_0002991|text-mining on BAO label|1|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Kinase';|BAO_0002005|Identifies the assays with a kinase as target|114|false
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Kd'|BAO_0002989|Identification of assays with activity type Kd|5|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Transferase';|BAO_0002795|Identifies the assays with a transferase as target|109|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Lyase';|BAO_0002793|Identifies the assays with a lyase as target|110|false
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_dictionary WHERE assays.tid = target_dictionary.tid AND target_dictionary.target_type = 'PROTEIN-PROTEIN INTERACTION'|BAO_0002990|Identifies with protein-protein interaction as target|5|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Reductase';|BAO_0002792|Identifies the assays with an oxidoreductase as target|112|false
 LOWER(description) LIKE '%kinomescan%'|BAO_0003011|text-mining on BAO label|1|true
 LOWER(description) LIKE '%radioligand binding assay%'|BAO_0002776|text-mining on BAO label|3|true
 LOWER(description) LIKE '%radioligand binding%'|BAO_0002776|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cytochrome p450 enzyme activity%'|BAO_0002736|text-mining on BAO label|1|true
 LOWER(description) LIKE '%luciferase enzyme activity assay%'|BAO_0002735|text-mining on BAO label|3|true
 LOWER(description) LIKE '%luciferase enzyme activity%'|BAO_0002735|text-mining on BAO label|1|true
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Reductase';|BAO_0002792|Identifies the assays with an oxidoreductase as target|5|false
 LOWER(description) LIKE '%mitotic arrest%'|BAO_0002041|text-mining on BAO label|1|true
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Lyase';|BAO_0002793|Identifies the assays with a lyase as target|5|false
 LOWER(description) LIKE '%cytochrome p450 enzyme activity assay%'|BAO_0002736|text-mining on BAO label|3|true
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Transferase';|BAO_0002795|Identifies the assays with a transferase as target|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Kinase';|BAO_0002005|Identifies the assays with a kinase as target|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Hydrolase';|BAO_0002790|Identifies the assays with a hydrolase as target|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Phosphatase';|BAO_0002762|Identifies the assays with a phosphatase as target|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Protease';|BAO_0002764|Identifies the assays with an oxidoreductase as target|5|false
 LOWER(description) LIKE '%gene expression assay%'|BAO_0002785|text-mining on BAO label|3|true
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Vd'|BAO_0002182|Identifies the assays with Vd as activity type|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'F'|BAO_0002530|Identifies assays with F as activity type|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CL'|BAO_0002182|Identifies the assays with CL as activity type|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Cytochrome P450';|BAO_0002736|Identifies the assays with P450 as target|5|false
+LOWER(description) LIKE '%cgmp redistribution assay%'|BAO_0000651|text-mining on BAO label|3|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Vd'|BAO_0002182|Identifies the assays with Vd as activity type|101|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Hydrolase';|BAO_0002790|Identifies the assays with a hydrolase as target|113|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Phosphatase';|BAO_0002762|Identifies the assays with a phosphatase as target|117|false
 LOWER(description) LIKE '%safety pharmacology%'|BAO_0002533|text-mining on BAO label|1|true
 LOWER(description) LIKE '%qt interval assay%'|BAO_0002184|text-mining on BAO label|3|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'AUC'|BAO_0002182|Identifies the assays with AUC as activity type|102|false
 LOWER(description) LIKE '%qt interval%'|BAO_0002184|text-mining on BAO label|1|true
 LOWER(description) LIKE '%drug abuse assay%'|BAO_0002534|text-mining on BAO label|3|true
 LOWER(description) LIKE '%drug abuse%'|BAO_0002534|text-mining on BAO label|1|true
@@ -90,25 +88,15 @@ LOWER(description) LIKE '%protein-small molecule interaction%'|BAO_0000110|text-
 LOWER(description) LIKE '%luciferase reporter gene assay%'|BAO_0002661|text-mining on BAO label|3|true
 LOWER(description) LIKE '%luciferase reporter gene%'|BAO_0002661|text-mining on BAO label|1|true
 LOWER(description) LIKE '%transcriptional response profiling assay%'|BAO_0002995|text-mining on BAO label|3|true
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Cmax'|BAO_0002182|Identifies the assays with a Cmax as activity type|5|false
-SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'AUC'|BAO_0002182|Identifies the assays with AUC as activity type|5|false
-LOWER(description) LIKE '%protein-turnover assay%'|BAO_0003010|text-mining on BAO label|3|true
-LOWER(description) LIKE '%protein-turnover%'|BAO_0003010|text-mining on BAO label|1|true
-LOWER(description) LIKE '%sensitizer assay%'|BAO_0003001|text-mining on BAO label|3|true
-LOWER(description) LIKE '%sensitizer%'|BAO_0003001|text-mining on BAO label|1|true
-LOWER(description) LIKE '%cell proliferation assay%'|BAO_0002805|text-mining on BAO label|3|true
-LOWER(description) LIKE '%cell proliferation%'|BAO_0002805|text-mining on BAO label|1|true
-LOWER(description) LIKE '%organism behavior assay%'|BAO_0002765|text-mining on BAO label|3|true
-LOWER(description) LIKE '%organism behavior%'|BAO_0002765|text-mining on BAO label|1|true
-LOWER(description) LIKE '%protein stability assay%'|BAO_0002804|text-mining on BAO label|3|true
-LOWER(description) LIKE '%protein stability%'|BAO_0002804|text-mining on BAO label|1|true
-LOWER(description) LIKE '%cytotoxicity%'|BAO_0002993|text-mining on BAO label|1|true
-LOWER(description) LIKE '%apoptosis assay%'|BAO_0002043|text-mining on BAO label|3|true
-LOWER(description) LIKE '%apoptosis%'|BAO_0002043|text-mining on BAO label|1|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'F'|BAO_0002530|Identifies assays with F as activity type|104|false
 LOWER(description) LIKE '%apoptotic%'|BAO_0002043|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cell growth assay%'|BAO_0002100|text-mining on BAO label|3|true
 LOWER(description) LIKE '%cell growth%'|BAO_0002100|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cell motility assay%'|BAO_0002992|text-mining on BAO label|3|true
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CL'|BAO_0002182|Identifies the assays with CL as activity type|103|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Cytochrome P450';|BAO_0002736|Identifies the assays with P450 as target|115|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Protease';|BAO_0002764|Identifies the assays with an protease as target|116|false
+SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Cmax'|BAO_0002182|Identifies the assays with a Cmax as activity type|100|false
 LOWER(description) LIKE '%cell motility%'|BAO_0002992|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cell migration%'|BAO_0002992|text-mining on BAO label|1|true
 LOWER(description) LIKE '%chemotaxis%'|BAO_0002992|text-mining on BAO label|1|true
@@ -159,15 +147,23 @@ LOWER(description) LIKE '%signal transduction assay%'|BAO_0003002|text-mining on
 LOWER(description) LIKE '%signal transduction%'|BAO_0003002|text-mining on BAO label|1|true
 LOWER(description) LIKE '%second messenger assay%'|BAO_0003007|text-mining on BAO label|3|true
 LOWER(description) LIKE '%second messenger%'|BAO_0003007|text-mining on BAO label|1|true
-LOWER(description) LIKE '%generic hydrolase enzyme activity%'|BAO_0002806|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cyclic amp accumulation%'|BAO_0003007|text-mining on BAO label|1|true
-LOWER(description) LIKE '%camp accumulation%'|BAO_0003007|text-mining on BAO label|1|true
 LOWER(description) LIKE '%intracellular calcium release%'|BAO_0003007|text-mining on BAO label|1|true
 LOWER(description) LIKE '%platelet activation assay%'|BAO_0002763|text-mining on BAO label|3|true
 LOWER(description) LIKE '%platelet activation%'|BAO_0002763|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cytokine secretion assay%'|BAO_0003003|text-mining on BAO label|3|true
 LOWER(description) LIKE '%cytokine secretion%'|BAO_0003003|text-mining on BAO label|1|true
 LOWER(description) LIKE '%posttranslation modification assay%'|BAO_0003004|text-mining on BAO label|3|true
+LOWER(description) LIKE '%protein-turnover assay%'|BAO_0003010|text-mining on BAO label|3|true
+LOWER(description) LIKE '%protein-turnover%'|BAO_0003010|text-mining on BAO label|1|true
+LOWER(description) LIKE '%sensitizer assay%'|BAO_0003001|text-mining on BAO label|3|true
+LOWER(description) LIKE '%sensitizer%'|BAO_0003001|text-mining on BAO label|1|true
+LOWER(description) LIKE '%cell proliferation assay%'|BAO_0002805|text-mining on BAO label|3|true
+LOWER(description) LIKE '%cell proliferation%'|BAO_0002805|text-mining on BAO label|1|true
+LOWER(description) LIKE '%organism behavior assay%'|BAO_0002765|text-mining on BAO label|3|true
+LOWER(description) LIKE '%organism behavior%'|BAO_0002765|text-mining on BAO label|1|true
+LOWER(description) LIKE '%protein stability assay%'|BAO_0002804|text-mining on BAO label|3|true
+LOWER(description) LIKE '%protein stability%'|BAO_0002804|text-mining on BAO label|1|true
 LOWER(description) LIKE '%posttranslation modification%'|BAO_0003004|text-mining on BAO label|1|true
 LOWER(description) LIKE '%phosphorylation assay%'|BAO_0003005|text-mining on BAO label|3|true
 LOWER(description) LIKE '%phosphorylation%'|BAO_0003005|text-mining on BAO label|1|true
@@ -198,7 +194,11 @@ LOWER(description) LIKE '%second messenger redistribution assay%'|BAO_0000379|te
 LOWER(description) LIKE '%second messenger redistribution%'|BAO_0000379|text-mining on BAO label|1|true
 LOWER(description) LIKE '%ip1 redistribution assay%'|BAO_0002780|text-mining on BAO label|3|true
 LOWER(description) LIKE '%ip1 redistribution%'|BAO_0002780|text-mining on BAO label|1|true
-LOWER(description) LIKE '%cgmp redistribution assay%'|BAO_0000651|text-mining on BAO label|3|true
+LOWER(description) LIKE '%cytotoxicity%'|BAO_0002993|text-mining on BAO label|1|true
+LOWER(description) LIKE '%apoptosis assay%'|BAO_0002043|text-mining on BAO label|3|true
+LOWER(description) LIKE '%apoptosis%'|BAO_0002043|text-mining on BAO label|1|true
+LOWER(description) LIKE '%generic hydrolase enzyme activity%'|BAO_0002806|text-mining on BAO label|1|true
+LOWER(description) LIKE '%camp accumulation%'|BAO_0003007|text-mining on BAO label|1|true
 LOWER(description) LIKE '%cgmp redistribution%'|BAO_0000651|text-mining on BAO label|1|true
 LOWER(description) LIKE '%calcium redistribution assay%'|BAO_0000649|text-mining on BAO label|3|true
 LOWER(description) LIKE '%calcium redistribution%'|BAO_0000649|text-mining on BAO label|1|true

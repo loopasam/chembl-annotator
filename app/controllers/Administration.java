@@ -6,7 +6,8 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-import jobs.AnnotateLowConfidenceAssaysJob;
+import jobs.AnnotateHighConfidenceAssaysJob;
+import jobs.AnnotateTextMining;
 import jobs.LoadBaoJob;
 import jobs.LoadRulesJob;
 import models.AnnotatedAssay;
@@ -48,15 +49,20 @@ public class Administration extends Controller {
 		index();
 	}
 
-	public static void annotationJob() {
+	public static void priorityAnnotationJob() {
 		if(AnnotatedAssay.findAll().size() <= 0){
-			new AnnotateLowConfidenceAssaysJob().now();
+			new AnnotateHighConfidenceAssaysJob().now();
 		}else{
 			Logger.info("Job not started, as there are some already " +
 					"existing annotated assays in the database. Delete " +
 					"first these terms from the table in order to " +
 					"be able to start the job.");
 		}
+		index();
+	}
+	
+	public static void textminingAnnotationJob(){
+		new AnnotateTextMining().now();
 		index();
 	}
 
@@ -98,6 +104,7 @@ public class Administration extends Controller {
 			}
 			FileUtils.writeStringToFile(file, sb.toString());
 		}
+		Logger.info("Rules exported.");
 		index();
 	}
 

@@ -18,7 +18,10 @@ public class AnnotationRule extends Model {
 	public String comment;
 
 	public int confidence;
+	
+	public boolean hasPriority;
 
+	//TODO replace name by something more meaningful
 	public boolean highlight;
 
 	@ManyToOne
@@ -30,12 +33,14 @@ public class AnnotationRule extends Model {
 		this.baoTerm = baoTerm;
 		this.confidence = confidence;
 		this.highlight = highlight;
+		this.hasPriority = false;
 	}
 
 	public String toString() {
 		return rule;
 	}
 
+	//TODO to remove
 	public String getSqlQuery() {
 		if(this.rule.startsWith("SELECT")){
 			return this.rule;

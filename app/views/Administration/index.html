@@ -44,9 +44,13 @@ menu:'admin' /} #{set 'moreStyles'}
 		</tr>
 		<tr>
 			<td>5</td>
-			<td>Annotate all the assays based on the rules.</td>
-			<td><a href="@{Administration.annotationJob()}">Annotate
-					assays</a></td>
+			<td>Annotate all the high confidence assays with high semantic terms based on the rules.</td>
+			<td><a href="@{Administration.priorityAnnotationJob()}">Priority annotations</a></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Annotate all the assays with text-mining based on the rules.</td>
+			<td><a href="@{Administration.textminingAnnotationJob()}">Text-mining annotations</a></td>
 		</tr>
 		<tr>
 			<td>8</td>
