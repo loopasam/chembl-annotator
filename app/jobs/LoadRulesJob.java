@@ -33,9 +33,17 @@ public class LoadRulesJob extends Job {
 			}else{
 				highlight = false;
 			}
+			
+			boolean hasPriority;
+			if(splits[5].equals("true")){
+				hasPriority = true;	
+			}else{
+				hasPriority = false;
+			}
+
 
 			BaoTerm term = BaoTerm.find("byBaoId", baoId).first();
-			term.addAnnotationRule(rule, comment, confidence, highlight);
+			term.addAnnotationRule(rule, comment, confidence, highlight, hasPriority);
 		}
 		Logger.info("All rules imported.");
 	}

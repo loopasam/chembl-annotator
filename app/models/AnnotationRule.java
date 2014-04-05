@@ -27,13 +27,13 @@ public class AnnotationRule extends Model {
 	@ManyToOne
 	public BaoTerm baoTerm;
 
-	public AnnotationRule(BaoTerm baoTerm, String rule, String comment, int confidence, boolean highlight) {
+	public AnnotationRule(BaoTerm baoTerm, String rule, String comment, int confidence, boolean highlight, boolean hasPriority) {
 		this.rule = rule;
 		this.comment = comment;
 		this.baoTerm = baoTerm;
 		this.confidence = confidence;
 		this.highlight = highlight;
-		this.hasPriority = false;
+		this.hasPriority = hasPriority;
 	}
 
 	public String toString() {

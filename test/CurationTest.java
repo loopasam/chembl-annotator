@@ -22,10 +22,10 @@ public class CurationTest extends UnitTest {
 		new Reviewer("bob@gmail.com", "password").save();
 
 		BaoTerm baoTerm1 = new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]").save();
-		AnnotationRule rule1 = baoTerm1.addAnnotationRule("description LIKE '%bioassay%'", "test rule", 1, false);
+		AnnotationRule rule1 = baoTerm1.addAnnotationRule("description LIKE '%bioassay%'", "test rule", 1, false, false);
 
 		BaoTerm baoTerm2 = new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000014", "cell growth assay", "A set of instructions, [...]").save();
-		AnnotationRule rule2 = baoTerm2.addAnnotationRule("description LIKE '%cell growth assay%'", "test rule", 1, false);
+		AnnotationRule rule2 = baoTerm2.addAnnotationRule("description LIKE '%cell growth assay%'", "test rule", 1, false, false);
 
 		AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(4321, "CHEMBL4321", "foo description bar");
 		assay1.annotate(rule1);

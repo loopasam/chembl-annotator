@@ -46,20 +46,12 @@ public class BaoTerm extends Model {
 		this.children = new ArrayList<>();
 	}
 
-	public BaoTerm addAnnotationRule(String rule, String description) {
-		AnnotationRule annotationRule = new AnnotationRule(this, rule, description, 1, true).save();
-		this.rules.add(annotationRule);
-		this.save();
-		return this;
-	}
-
-	public AnnotationRule addAnnotationRule(String rule, String comment, int confidence, boolean highlight) {
-		AnnotationRule annotationRule = new AnnotationRule(this, rule, comment, confidence, highlight).save();
+	public AnnotationRule addAnnotationRule(String rule, String description, int confidence, boolean highlight, boolean hasPriority) {
+		AnnotationRule annotationRule = new AnnotationRule(this, rule, description, confidence, true, hasPriority).save();
 		this.rules.add(annotationRule);
 		this.save();
 		return annotationRule;
 	}
-
 	
 	public BaoTerm addChild(String url, String label, String definition) {
 		BaoTerm term = BaoTerm.createOrRetrieveTerm(url, label, definition);
@@ -79,7 +71,6 @@ public class BaoTerm extends Model {
 	public String toString() {
 		return label;
 	}
-
 
 
 }

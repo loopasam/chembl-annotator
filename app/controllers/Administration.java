@@ -100,7 +100,7 @@ public class Administration extends Controller {
 			StringBuilder sb = new StringBuilder();
 			for (AnnotationRule annotationRule : rules) {
 				sb.append(annotationRule.rule + "|" + annotationRule.baoTerm.baoId + "|" + annotationRule.comment + 
-						"|" + annotationRule.confidence + "|" + annotationRule.highlight + "\n");
+						"|" + annotationRule.confidence + "|" + annotationRule.highlight + "|" + annotationRule.hasPriority + "\n");
 			}
 			FileUtils.writeStringToFile(file, sb.toString());
 		}

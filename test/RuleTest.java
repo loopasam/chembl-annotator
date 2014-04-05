@@ -37,18 +37,20 @@ public class RuleTest extends UnitTest {
 		Logger.info("Import the rules...");
 		new LoadRulesJob().now().get();
 		
-		assertEquals(230, AnnotationRule.findAll().size());
+		assertEquals(219, AnnotationRule.findAll().size());
 		
-		AnnotationRule annotationRule = AnnotationRule.find("byRule", "LOWER(description) LIKE '%patch clamp%'").first();
+		AnnotationRule annotationRule = AnnotationRule.find("byRule", "LOWER(description) LIKE '%nuclear membrane potential assay%'").first();
 		assertNotNull(annotationRule);
-		assertEquals("text-mining on BAO synonym", annotationRule.comment);
-		assertEquals(1, annotationRule.confidence);
+		assertEquals("text-mining on BAO label", annotationRule.comment);
+		assertEquals(3, annotationRule.confidence);
 		assertEquals(true, annotationRule.highlight);
-		BaoTerm term = BaoTerm.find("byLabel", "membrane potential assay").first();
+		BaoTerm term = BaoTerm.find("byLabel", "nuclear membrane potential assay").first();
 		assertNotNull(term);
 		assertEquals(term, annotationRule.baoTerm);
 
 		//TODO more test - has to be done over mysql local
+		//Test also for priority
+		
 //		Logger.info("Test the rules for errors");
 //		Connection c = null;
 //		PreparedStatement pstmt = null;
