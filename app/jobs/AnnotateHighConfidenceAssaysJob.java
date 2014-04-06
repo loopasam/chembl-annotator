@@ -36,6 +36,11 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
 				"where r.hasPriority = true order by r.confidence desc").fetch();
 		
+		//TODO test
+//		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
+//				"where r.hasPriority = true order by r.confidence desc").from(0).fetch(1);
+
+		
 		Reviewer robot = Reviewer.find("byEmail", "samuel.croset@gmail.com").first();
 
 		//Report init
@@ -53,9 +58,9 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 			Logger.info(termMessage);
 			
 			String rule = annotationRule.rule + " AND NOT EXISTS (	" +
-					"SELECT annotatedassay.assayid " +
-					"FROM annotatedassay " +
-					"WHERE annotatedassay.assayid = assays.assay_id" +
+					"SELECT AnnotatedAssay.assayid " +
+					"FROM AnnotatedAssay " +
+					"WHERE AnnotatedAssay.assayid = assays.assay_id" +
 					");";
 			
 			List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();

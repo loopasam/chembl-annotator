@@ -51,6 +51,8 @@ public class RuleTest extends UnitTest {
 		//TODO more test - has to be done over mysql local
 		//Test also for priority
 		
+		//TODO test the number of annotation rules per term - should two highlight at least
+		
 //		Logger.info("Test the rules for errors");
 //		Connection c = null;
 //		PreparedStatement pstmt = null;

@@ -1,0 +1,195 @@
+nuclear membrane potential assay|0
+nuclear membrane potential assay|0
+mitochondrial membrane potential assay|1
+mitochondrial membrane potential assay|131
+mitochondrial membrane potential assay|21
+plasma membrane potential assay|0
+plasma membrane potential assay|0
+ion channel assay|3
+ion channel assay|114
+transporter assay|5
+transporter assay|5517
+chaperone activity assay|0
+chaperone activity assay|5
+localization assay|0
+localization assay|229
+genotoxicity assay|0
+genotoxicity assay|316
+cell morphology assay|0
+DNA-RNA interaction assay|0
+neurite outgrowth assay|0
+neurite outgrowth assay|155
+safety pharmacology assay|0
+cytotoxicity assay|161
+cell morphology assay|377
+KINOMEScan assay|10
+radioligand binding assay|676
+radioligand binding assay|1023
+cytochrome P450 enzyme activity assay|0
+luciferase enzyme activity assay|0
+luciferase enzyme activity assay|0
+cell cycle assay|75
+cytochrome P450 enzyme activity assay|0
+gene expression assay|0
+cGMP redistribution assay|0
+safety pharmacology assay|0
+QT interval assay|0
+QT interval assay|78
+drug abuse assay|0
+drug abuse assay|0
+drug interaction assay|0
+drug interaction assay|7
+metastasis assay|0
+metastasis assay|119
+oxidative stress assay|0
+oxidative stress assay|145
+rna splicing assay|0
+rna splicing assay|11
+KiNativ assay|0
+KiNativ assay|0
+protein-nucleotide interaction assay|0
+protein-nucleotide interaction assay|0
+DNA-RNA interaction assay|0
+protein-protein interaction assay|0
+protein-protein interaction assay|18
+protein-DNA interaction assay|0
+protein-DNA interaction assay|0
+protein-RNA interaction assay|0
+protein-RNA interaction assay|0
+KINOMEScan assay|0
+radioligand binding assay|5806
+radioligand binding assay|133
+radioligand binding assay|6840
+radioligand binding assay|29167
+radioligand binding assay|2455
+radioligand binding assay|5
+radioligand binding assay|2
+protein-small molecule interaction assay|0
+protein-small molecule interaction assay|0
+luciferase reporter gene assay|2186
+luciferase reporter gene assay|2450
+transcriptional response profiling assay|0
+apoptosis assay|1774
+cell growth assay|6
+cell growth assay|8107
+cell motility assay|0
+cell motility assay|24
+cell motility assay|288
+cell motility assay|389
+cell cycle assay|0
+cell cycle assay|7517
+cell cycle assay|1847
+cell cycle assay|2872
+cell cycle assay|140
+cell cycle assay|2112
+cell cycle state assay|0
+cell cycle state assay|0
+mitotic cell cycle state assay|0
+mitotic cell cycle state assay|0
+meiotic cell cycle state assay|0
+meiotic cell cycle state assay|0
+oxidoreductase activity assay|0
+oxidoreductase activity assay|8
+isomerase activity assay|0
+isomerase activity assay|0
+lyase activity assay|0
+lyase activity assay|24
+transferase activity assay|0
+transferase activity assay|150
+kinase activity assay|1
+kinase activity assay|630
+hydrolase activity assay|0
+hydrolase activity assay|45
+generic hydrolase enzyme activity assay|0
+beta galactosidase enzyme activity assay|0
+beta galactosidase enzyme activity assay|0
+phosphatase activity assay|1
+phosphatase activity assay|213
+protease activity assay|1
+protease activity assay|63
+reporter gene assay|3477
+reporter gene assay|3068
+gene expression assay|3018
+beta galactosidase reporter gene assay|16
+beta galactosidase reporter gene assay|19
+chloramphenicol acetyltransferase reporter gene assay|0
+chloramphenicol acetyltransferase reporter gene assay|0
+fluorescent protein reporter gene assay|1
+fluorescent protein reporter gene assay|1
+beta lactamase reporter gene assay|11
+beta lactamase reporter gene assay|11
+transcriptional response profiling assay|0
+signal transduction assay|0
+signal transduction assay|28
+second messenger assay|7
+second messenger assay|17
+second messenger assay|11
+second messenger assay|76
+platelet activation assay|0
+platelet activation assay|14
+cytokine secretion assay|0
+cytokine secretion assay|3
+posttranslation modification assay|0
+protein-turnover assay|0
+protein-turnover assay|0
+sensitizer assay|0
+sensitizer assay|111
+cell proliferation assay|100
+cell proliferation assay|1991
+organism behavior assay|0
+organism behavior assay|0
+protein stability assay|0
+protein stability assay|31
+posttranslation modification assay|0
+phosphorylation assay|53
+phosphorylation assay|5295
+Cue Signal Response assay|0
+Cue Signal Response assay|0
+pharmacokinetic assay|1
+pharmacokinetic assay|1415
+bioavailability assay|0
+bioavailability assay|6884
+tissue distribution assay|0
+tissue distribution assay|425
+tissue distribution assay|11509
+non-specific protein binding assay|0
+non-specific protein binding assay|0
+oxidative phosphorylation assay|0
+oxidative phosphorylation assay|4
+pharmacodynamic assay|1
+pharmacodynamic assay|834
+redistribution assay|36
+redistribution assay|54
+dye redistribution assay|0
+dye redistribution assay|0
+protein redistribution assay|0
+protein redistribution assay|0
+metal ion redistribution assay|0
+metal ion redistribution assay|0
+second messenger redistribution assay|0
+second messenger redistribution assay|0
+IP1 redistribution assay|0
+IP1 redistribution assay|0
+cytotoxicity assay|40798
+apoptosis assay|18
+apoptosis assay|7030
+generic hydrolase enzyme activity assay|0
+second messenger assay|1076
+cGMP redistribution assay|0
+calcium redistribution assay|0
+calcium redistribution assay|0
+cAMP redistribution assay|0
+cAMP redistribution assay|0
+ion redistribution assay|0
+ion redistribution assay|0
+protein unfolding assay|0
+protein unfolding assay|6
+cell viability assay|1043
+cell viability assay|4482
+cell viability ATP quantitation assay|0
+cell viability ATP quantitation assay|0
+protein folding assay|0
+protein folding assay|0
+cell permeability assay|2
+cell permeability assay|27
+cell permeability assay|2855

@@ -65,6 +65,11 @@ public class Administration extends Controller {
 		new AnnotateTextMining().now();
 		index();
 	}
+	
+	public static void estimateCountAnnotations(){
+		new AnnotationEstimationCount().now();
+		index();
+	}
 
 	public static void exportBao() {
 		List<BaoTerm> terms = BaoTerm.findAll();

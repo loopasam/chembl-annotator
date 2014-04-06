@@ -1,0 +1,18 @@
+phosphatase activity assay|1384
+protease activity assay|15430
+cytochrome P450 enzyme activity assay|6595
+kinase activity assay|37391
+hydrolase activity assay|3629
+oxidoreductase activity assay|3720
+isomerase activity assay|1246
+lyase activity assay|1733
+transferase activity assay|714
+ion channel assay|9457
+transporter assay|6182
+cell growth assay|17695
+cytotoxicity assay|2597
+bioavailability assay|6568
+pharmacokinetic assay|7046
+pharmacokinetic assay|7359
+pharmacokinetic assay|1208
+pharmacokinetic assay|5797
