@@ -27,6 +27,7 @@ public class LoadRulesJob extends Job {
 			String baoId = splits[1];
 			String comment = splits[2];
 			int confidence = Integer.parseInt(splits[3]);
+			
 			boolean highlight;
 			if(splits[4].equals("true")){
 				highlight = true;	
@@ -40,7 +41,6 @@ public class LoadRulesJob extends Job {
 			}else{
 				hasPriority = false;
 			}
-
 
 			BaoTerm term = BaoTerm.find("byBaoId", baoId).first();
 			term.addAnnotationRule(rule, comment, confidence, highlight, hasPriority);
