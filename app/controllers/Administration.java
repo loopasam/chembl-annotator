@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-import jobs.AnnotateHighConfidenceAssaysJob;
-import jobs.AnnotateTextMining;
+import jobs.RuleAnnotationJob;
+import jobs.TextMatchingAnnotationJob;
 import jobs.LoadBaoJob;
 import jobs.LoadRulesJob;
 import models.AnnotatedAssay;
@@ -49,9 +49,10 @@ public class Administration extends Controller {
 		index();
 	}
 
+	//TODO change name of job launchers
 	public static void priorityAnnotationJob() {
 		if(AnnotatedAssay.findAll().size() <= 0){
-			new AnnotateHighConfidenceAssaysJob().now();
+			new RuleAnnotationJob().now();
 		}else{
 			Logger.info("Job not started, as there are some already " +
 					"existing annotated assays in the database. Delete " +
@@ -62,7 +63,7 @@ public class Administration extends Controller {
 	}
 	
 	public static void textminingAnnotationJob(){
-		new AnnotateTextMining().now();
+		new TextMatchingAnnotationJob().now();
 		index();
 	}
 	
@@ -122,20 +123,13 @@ public class Administration extends Controller {
 		AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of free unbound fraction in serum of methicillin-resistant Staphylococcus aureus infected ddY mouse at 100 mg/kg, ip administered 1 day post infection by paper disk bioassay method");
 		AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(11912, "CHEMBL628657", "Ratio of biodistributions in Athymic mice bearing human Tumor (TE671) xenografts in Tumor (T) and blood (B)");
 
-		assay1.needReview = true;
-		assay1.save();
-		assay2.needReview = true;
-		assay2.save();
-		assay3.needReview = true;
-		assay3.save();
-
 		AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
 		AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
 
-		assay1.annotate(rule1);
-		assay2.annotate(rule1);
-		assay2.annotate(rule2);
-		assay3.annotate(rule2);
+		assay1.annotate(rule1, true);
+		assay2.annotate(rule1, true);
+		assay2.annotate(rule2, true);
+		assay3.annotate(rule2, true);
 		Logger.info("Dummy rules added.");
 		index();
 	}

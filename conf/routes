@@ -18,13 +18,15 @@ GET     /assay/{chemblid}                                       Application.assa
 GET     /                                       Application.index
 
 # Application routes
-GET     /rassay                                         Application.randomAssay
 GET     /stats                                          Application.stats
 GET     /starred                                        Application.starred
 GET     /stats                                          Application.stats
 
 # Curation routes
 GET     /star/{id}                                       Application.star
+GET     /random                                         Application.random
+GET     /pass                                         Application.pass
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

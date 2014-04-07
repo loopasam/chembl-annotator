@@ -66,7 +66,7 @@ public class AnnotatedAssay extends Model {
 		return assay;
 	}
 
-	public void annotate(AnnotationRule annotationRule) {
+	public void annotate(AnnotationRule annotationRule, boolean needReview) {
 		//Try to retrieve a potentially existing annotation, for the term to this assay.
 		Annotation annotation = Annotation.find("byTermAndAssay", annotationRule.baoTerm, this).first();
 
@@ -79,6 +79,7 @@ public class AnnotatedAssay extends Model {
 			annotation.confidence += annotationRule.confidence;
 			annotation.save();
 		}
+		this.needReview = needReview;
 		this.save();
 	}
 

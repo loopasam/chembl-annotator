@@ -7,7 +7,7 @@ import play.mvc.*;
 import java.math.BigInteger;
 import java.util.*;
 
-import jobs.AnnotateHighConfidenceAssaysJob;
+import jobs.RuleAnnotationJob;
 import jobs.LoadBaoJob;
 
 import models.*;
@@ -32,14 +32,24 @@ public class Application extends Controller {
 		render(assay);
 	}
 
-	public static void randomAssay(){
+	public static void random(){
+		flash.keep();
+		validation.keep();
 		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by random()").first();
 		if(assay == null){
 			stats();
 		}
 		assay(assay.chemblId);
 	}
-
+	
+	public static void pass() {
+		flash.error("-2 points for passing.");
+		validation.addError("curation", "-2pts for passing");
+		validation.keep();
+		flash.keep();
+		random();
+	}
+	
 	public static void starred(){
 		List<Object> assays = AnnotatedAssay.find("starred", true).fetch();
 		render(assays);
@@ -58,11 +68,15 @@ public class Application extends Controller {
 		long curatedassays = AnnotatedAssay.count("reviewer is not null");
 		renderArgs.put("curatedassays", curatedassays);
 
+		double percentcurated = curatedassays / (double) annotatedchemblassays * 100.0;
+		renderArgs.put("percentcurated", percentcurated);
+
 		List<Map> contributors = AnnotatedAssay.find(
-		        "select new map(r.email as user, count(a.id) as na) from AnnotatedAssay a join a.reviewer as r group by r.email order by na desc"
-		    ).fetch();
+				"select new map(r.email as user, count(a.id) as na) from AnnotatedAssay a join a.reviewer as r group by r.email order by na desc"
+				).fetch();
 
 		renderArgs.put("contributors", contributors);
+
 		render();
 	}
 
@@ -103,9 +117,7 @@ public class Application extends Controller {
 		flash.keep();
 		Reviewer reviewer = Reviewer.find("byEmail", Security.connected()).first();
 		assay.markAsCurated(reviewer);
-
-		//TODO redirect toward random function
-		assay(assay.chemblId);
+		random();
 	}
 
 }

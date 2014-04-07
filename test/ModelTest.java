@@ -116,27 +116,28 @@ public class ModelTest extends UnitTest {
 		term1.addAnnotationRule("description LIKE '%foo bar%'", "test rule", 2, false, false);
 		
 		//creates an annotation on the assay
-		assay1.annotate(term1.rules.get(0));
+		assay1.annotate(term1.rules.get(0), false);
 		assertEquals(2, Annotation.findAll().size());
 		assertEquals(1, assay1.annotations.size());
 		assertEquals(2, assay1.annotations.get(0).confidence);
+		assertEquals(false, assay1.needReview);
 		
 		//increases confidence as the assay is already annotated with the term
-		assay1.annotate(term1.rules.get(0));
+		assay1.annotate(term1.rules.get(0), false);
 		assertEquals(2, Annotation.findAll().size());
 		assertEquals(1, assay1.annotations.size());
 		assertEquals(4, assay1.annotations.get(0).confidence);
 		
 		//Increases the confidence as the assay is already annotated with the term, even if the rule is different
 		term1.addAnnotationRule("description LIKE '%fox bar%'", "test rule", 3, false, false);
-		assay1.annotate(term1.rules.get(1));
+		assay1.annotate(term1.rules.get(1), true);
 		assertEquals(1, assay1.annotations.size());
 		assertEquals(7, assay1.annotations.get(0).confidence);
 		
 		//Create a second term to put two annotations on the assay
 		BaoTerm term2 = new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000013", "radioligand assay", "def").save();
 		term2.addAnnotationRule("description LIKE '%radioligand foo%'", "test rule", 1, false, false);
-		assay1.annotate(term2.rules.get(0));
+		assay1.annotate(term2.rules.get(0), false);
 		assertEquals(2, assay1.annotations.size());
 	}
 

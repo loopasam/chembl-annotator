@@ -17,7 +17,7 @@ import play.Logger;
 import play.db.jpa.JPA;
 import play.jobs.Job;
 
-public class AnnotateTextMining extends Job {
+public class TextMatchingAnnotationJob extends Job {
 
 	public void doJob() throws IOException{
 
@@ -28,7 +28,7 @@ public class AnnotateTextMining extends Job {
 				"where r.highlight = true").fetch();
 
 		//Report init
-		File report = new File("data/annotation-report-high-priority.txt");
+		File report = new File("data/annotation-report-text-matching.txt");
 		String reportContent = "";
 
 		int counter = 0;
@@ -59,7 +59,7 @@ public class AnnotateTextMining extends Job {
 				String chemblId = (String) object[2];
 
 				AnnotatedAssay assay = AnnotatedAssay.createOrRetrieve(assayId, chemblId, description);
-				assay.annotate(annotationRule);
+				assay.annotate(annotationRule, true);
 
 				counterFlush++;
 				if (counterFlush%100 == 0) {

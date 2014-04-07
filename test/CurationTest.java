@@ -28,11 +28,11 @@ public class CurationTest extends UnitTest {
 		AnnotationRule rule2 = baoTerm2.addAnnotationRule("description LIKE '%cell growth assay%'", "test rule", 1, false, false);
 
 		AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(4321, "CHEMBL4321", "foo description bar");
-		assay1.annotate(rule1);
+		assay1.annotate(rule1, false);
 
 		AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(1234, "CHEMBL1234", "foo description bar");
-		assay2.annotate(rule1);
-		assay2.annotate(rule2);
+		assay2.annotate(rule1, false);
+		assay2.annotate(rule2, false);
 	}
 
 	@Test

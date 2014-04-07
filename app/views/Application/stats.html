@@ -7,6 +7,14 @@
 	</h1>
 </div>
 
+<p>Curation progress:</p>
+
+<div class="progress progress-striped active">
+  <div class="progress-bar"  role="progressbar" aria-valuenow="${percentcurated}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentcurated}%">
+    <span class="sr-only">${percentcurated}% Complete</span>
+  </div>
+</div>
+
 <div class="panel panel-default">
 	<div class="panel-heading">General statistics</div>
 	<table class="table table-hover">
@@ -16,12 +24,12 @@
 				<td>${chemblassays}</td>
 			</tr>
 			<tr>
-				<td>Number of automatically annotated ChEMBL assays</td>
-				<td>${annotatedchemblassays}</td>
+				<td>Number of annotated ChEMBL assays</td>
+				<td>${annotatedchemblassays} (${percentannotated.format('###.##')}% of total)</td>
 			</tr>
 			<tr>
 				<td>Number of curated assays</td>
-				<td>${curatedassays}</td>
+				<td>${curatedassays} (completion of ${percentcurated.format('###.##')}%)</td>
 			</tr>
 		</tbody>
 	</table>

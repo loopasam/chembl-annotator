@@ -26,7 +26,7 @@ import play.Logger;
 import play.db.jpa.JPA;
 import play.jobs.Job;
 
-public class AnnotateHighConfidenceAssaysJob extends Job {
+public class RuleAnnotationJob extends Job {
 
 	public void doJob() throws SQLException, IOException{
 
@@ -34,17 +34,13 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 		stopwatch.start();
 
 		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
-				"where r.hasPriority = true order by r.confidence desc").fetch();
+				"where highlight = false").fetch();
 		
-		//TODO test
-//		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
-//				"where r.hasPriority = true order by r.confidence desc").from(0).fetch(1);
-
-		
+		//TODO change by using the robot user
 		Reviewer robot = Reviewer.find("byEmail", "samuel.croset@gmail.com").first();
 
 		//Report init
-		File report = new File("data/annotation-report-high-priority.txt");
+		File report = new File("data/annotation-report-rules.txt");
 		String reportContent = "";
 
 		int counter = 0;
@@ -57,11 +53,7 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 			reportContent += termMessage + "\n";
 			Logger.info(termMessage);
 			
-			String rule = annotationRule.rule + " AND NOT EXISTS (	" +
-					"SELECT AnnotatedAssay.assayid " +
-					"FROM AnnotatedAssay " +
-					"WHERE AnnotatedAssay.assayid = assays.assay_id" +
-					");";
+			String rule = annotationRule.rule + ";";
 			
 			List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 
@@ -78,7 +70,7 @@ public class AnnotateHighConfidenceAssaysJob extends Job {
 				String chemblId = (String) object[2];
 
 				AnnotatedAssay assay = AnnotatedAssay.createOrRetrieve(assayId, chemblId, description);
-				assay.annotate(annotationRule);
+				assay.annotate(annotationRule, false);
 				
 				//Automatically marked as curated
 				assay.setReviewer(robot);
