@@ -35,7 +35,9 @@ public class Application extends Controller {
 	public static void random(){
 		flash.keep();
 		validation.keep();
-		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by rand() limit 1").first();
+		
+		//TODO rand mechanism: get it from a global variable holding the range of ids
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by rand()").first();
 		if(assay == null){
 			stats();
 		}
