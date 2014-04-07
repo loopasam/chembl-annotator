@@ -35,7 +35,7 @@ public class Application extends Controller {
 	public static void random(){
 		flash.keep();
 		validation.keep();
-		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by random()").first();
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by rand() limit 1").first();
 		if(assay == null){
 			stats();
 		}
