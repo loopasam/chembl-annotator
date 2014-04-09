@@ -54,14 +54,7 @@ public class Administration extends Controller {
 
 	//TODO change name of job launchers
 	public static void priorityAnnotationJob() {
-		if(AnnotatedAssay.findAll().size() <= 0){
-			new RuleAnnotationJob().now();
-		}else{
-			Logger.info("Job not started, as there are some already " +
-					"existing annotated assays in the database. Delete " +
-					"first these terms from the table in order to " +
-					"be able to start the job.");
-		}
+		new RuleAnnotationJob().now();
 		index();
 	}
 
@@ -69,7 +62,7 @@ public class Administration extends Controller {
 		new TextMatchingAnnotationJob().now();
 		index();
 	}
-	
+
 	public static void removeFakeAnnotations(){
 		new RemoveFakeAnnotationJob().now();
 		index();
@@ -126,7 +119,7 @@ public class Administration extends Controller {
 		new SemanticSimplificationJob().now();
 		index();
 	}
-	
+
 	public static void generateFakeAnnotations() {
 		new FakeAnnotationsJob().now();
 		index();
