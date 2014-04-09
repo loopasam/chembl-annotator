@@ -1,20 +1,15 @@
 <hr>
-
-<div class="btn-group btn-group-lg btn-group-justified well">
+<p>
   <a href="@{Application.validate(_assay.id)}" 
-  class="btn btn-success ${_assay.needReview ? '' : 'disabled'}">
-    #{if _assay.reviewer != null}
-    Validated by ${_assay.reviewer}
-    #{/if}
-    #{else}
+  class="btn btn-success btn-lg btn-block ${_assay.needReview ? '' : 'disabled'}">
+  #{if _assay.needReview}
     <span class="fa fa-check-square-o"></span> Validate
-    #{/else}
+  #{/if}
+  #{else}
+  Validated by ${_assay.reviewer.email}
+  #{/else}
   </a>
-  <a href="@{Application.pass()}" class="btn btn-default">
-  <span class="fa fa-refresh"></span> Pass
-  </a>
-</div>
-
+</p>
 #{ifErrors} 
    #{errors}
     <div class="panel panel-danger">

@@ -98,7 +98,7 @@ public class ModelTest extends UnitTest {
 		term.addAnnotationRule("description LIKE '%binding%'", "test rule", 1, true);
 
 		AnnotatedAssay assay = new AnnotatedAssay(1234, "CHEMBL1234", "foo description").save();
-		new Annotation(term, assay, 2).save();
+		new Annotation(term, assay, 2, false).save();
 		
 		Annotation annotation = Annotation.find("byAssay", assay).first();
 		assertNotNull(annotation);

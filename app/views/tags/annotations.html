@@ -3,13 +3,14 @@
   <li>
   
   <div class="btn-group">
-  <button type="button" class="btn btn-default disabled">
+  <button type="button" class="btn disabled ${annotation.isFake ? 'btn-danger' : 'btn-default'}">
   #{list items:1..annotation.confidence, as:'i'}
     <span class="fa fa-tag"></span>
   #{/list}
    ${annotation.term.label}
   </button>
-  <a type="button" class="btn btn-default ${_assay.needReview ? '' : 'disabled'}" href="@{Application.removeAnnotation(_assay.id, annotation.id)}">
+  <a type="button" class="btn ${annotation.isFake ? 'btn-danger' : 'btn-default'} ${_assay.needReview ? '' : 'disabled'}" 
+  href="@{Application.removeAnnotation(_assay.id, annotation.id)}">
   <span class="fa fa-times"></span>
   </a>
 </div>

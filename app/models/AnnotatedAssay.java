@@ -16,6 +16,9 @@ import java.util.regex.Matcher;
 
 import org.hibernate.Session;
 import org.hibernate.annotations.Type;
+import org.hibernate.mapping.Array;
+
+import controllers.Security;
 
 import play.Logger;
 import play.db.jpa.Model;
@@ -67,13 +70,14 @@ public class AnnotatedAssay extends Model {
 		return assay;
 	}
 
+	//TODO get rid of the isFake parameter
 	public void annotate(AnnotationRule annotationRule, boolean needReview, Reviewer reviewer) {
 		//Try to retrieve a potentially existing annotation, for the term to this assay.
 		Annotation annotation = Annotation.find("byTermAndAssay", annotationRule.baoTerm, this).first();
 
 		if(annotation == null){
 			//If no annotation with the term, then create a new one and save it.
-			Annotation newAnnotation = new Annotation(annotationRule.baoTerm, this, annotationRule.confidence).save();
+			Annotation newAnnotation = new Annotation(annotationRule.baoTerm, this, annotationRule.confidence, false).save();
 			this.annotations.add(newAnnotation);
 		}else{
 			//If the annotation exists already, then increase the confidence.
@@ -85,13 +89,23 @@ public class AnnotatedAssay extends Model {
 		this.save();
 	}
 
-	public void removeAnnotation(Long id) {
+	public String removeAnnotation(Long id) {
 		Annotation annotation = Annotation.find("byId", id).first();
+		int deltaScore = 0;
 		if(annotation != null){
+			if(annotation.isFake){
+				deltaScore = Scores.REMOVE_FAKE_ANNOTATION_POINTS;
+				this.reviewer.updateScore(deltaScore);
+			}
+
 			this.annotations.remove(annotation);
 			annotation.delete();
 			this.save();
 		}
+
+		//TODO change the message depending of what happened
+		//Put the messages in Scores class
+		return "Annotation successfully removed.";
 	}
 
 	public void star() {
@@ -103,11 +117,19 @@ public class AnnotatedAssay extends Model {
 		this.save();
 	}
 
-	public void markAsCurated(Reviewer reviewer) {
-		//TODO update reviewer score and save
-		this.reviewer = reviewer;
+	public void markAsCurated(int numberOfFake) {
+		int deltaScore = 0;
+
+		if(numberOfFake > 0){
+			deltaScore = numberOfFake * Scores.MISS_FAKE_ANNOTATION_POINTS;
+		}else{
+			deltaScore = Scores.CORRECT_VALIDATION_POINTS;
+		}
+
+		this.reviewer.updateScore(deltaScore);
+
 		this.needReview = false;
-		this.save();
+		this.save();		
 	}
 
 	public String getRules(){
@@ -167,5 +189,38 @@ public class AnnotatedAssay extends Model {
 			}
 
 		}
+	}
+
+	public void addFakeAnnotation() {
+		List<BaoTerm> terms = this.getAnnotatedTerms();
+
+		BaoTerm randomTerm = BaoTerm.find("order by rand()").first();;
+
+		while(terms.contains(randomTerm)){
+			randomTerm = BaoTerm.find("order by rand()").first();
+		}
+
+		//TODO Generate random confidence
+		Annotation newAnnotation = new Annotation(randomTerm, this, 1, true).save();
+		this.annotations.add(newAnnotation);
+		this.save();
+	}
+
+	private List<BaoTerm> getAnnotatedTerms() {
+		List<BaoTerm> terms = new ArrayList<BaoTerm>();
+		for (Annotation annotation : this.annotations) {
+			terms.add(annotation.term);
+		}
+		return terms;
+	}
+
+	public int getNumberOfFakeAnnotations() {
+		int number = 0;
+		for (Annotation annotation : this.annotations) {
+			if(annotation.isFake){
+				number++;
+			}
+		}
+		return number;
 	}
 }

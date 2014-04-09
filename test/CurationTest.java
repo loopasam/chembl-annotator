@@ -33,6 +33,8 @@ public class CurationTest extends UnitTest {
 		AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(1234, "CHEMBL1234", "foo description bar");
 		assay2.annotate(rule1, false, null);
 		assay2.annotate(rule2, false, null);
+
+		new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000013", "dummy term", "A set of instructions, [...]").save();
 	}
 
 	@Test
@@ -65,10 +67,29 @@ public class CurationTest extends UnitTest {
 	public void validateAssay() {
 		Reviewer reviewer = Reviewer.find("byEmail", "bob@gmail.com").first();
 		AnnotatedAssay assay1 = AnnotatedAssay.find("byChemblId", "CHEMBL4321").first();
-		assay1.markAsCurated(reviewer);
+		assay1.setReviewer(reviewer);
 		assertEquals(false, assay1.needReview);
 		assertNotNull(assay1.reviewer);
 		assertEquals("bob@gmail.com", assay1.reviewer.email);
+	}
+
+	@Test
+	public void addFakeAnnotation() {
+		AnnotatedAssay assay2 = AnnotatedAssay.find("byChemblId", "CHEMBL1234").first();
+		assertEquals(2, assay2.annotations.size());
+		BaoTerm term1 = assay2.annotations.get(0).term;
+		BaoTerm term2 = assay2.annotations.get(1).term;
+
+		assay2.addFakeAnnotation();
+		assertEquals(3, assay2.annotations.size());
+		assertEquals(3, assay2.annotations.size());
+
+		BaoTerm term3 = assay2.annotations.get(2).term;
+
+		assertNotSame(term1, term3);
+		assertNotSame(term2, term3);
+		assertEquals("dummy term", term3.label);
+		assertEquals(assay2.annotations.get(2).isFake, true);
 	}
 
 }

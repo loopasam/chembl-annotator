@@ -10,7 +10,7 @@
 <div class="well lead">${_assay.description}</div>
 
 <script type="text/javascript">
-
+//Highlight the matches in text
 var words = [${_assay.getRules().raw()}];
 words.forEach(function(entry) {
     $('.well').highlight(entry);
@@ -19,5 +19,4 @@ words.forEach(function(entry) {
 $("#star").click(function(){
 	$(this).addClass("fa-spin");
 });
-
 </script>

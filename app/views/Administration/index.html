@@ -43,19 +43,19 @@ menu:'admin' /} #{set 'moreStyles'}
 			<td><a href="@{Administration.exportRules()}">Export rules</a></td>
 		</tr>
 		<tr>
-			<td>5</td>
-			<td>//TODO remove. Estimate the number of annotation per rule.</td>
-			<td><a href="@{Administration.estimateCountAnnotations()}">Estimate annotations</a></td>
-		</tr>
-		<tr>
 			<td>6</td>
 			<td>Annotate all the assays with text-matching.</td>
 			<td><a href="@{Administration.textminingAnnotationJob()}">Text-matching annotations</a></td>
 		</tr>
 		<tr>
+			<td>5</td>
+			<td>Generate decoy annotations.</td>
+			<td><a href="@{Administration.generateFakeAnnotations()}">Add fake annotations</a></td>
+		</tr>
+		<tr>
 			<td>6</td>
-			<td>Randomly assigns assays to reviewers.</td>
-			<td><a href="@{Administration.assignAssays()}">Assign assays</a></td>
+			<td>Remove all fake annotations.</td>
+			<td><a href="@{Administration.removeFakeAnnotations()}">Remove fake annotations</a></td>
 		</tr>
 		<tr>
 			<td>5</td>

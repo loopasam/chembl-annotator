@@ -7,6 +7,7 @@ import play.mvc.*;
 import java.math.BigInteger;
 import java.util.*;
 
+import jobs.FakeAnnotationsJob;
 import jobs.RuleAnnotationJob;
 import jobs.LoadBaoJob;
 
@@ -32,26 +33,18 @@ public class Application extends Controller {
 		render(assay);
 	}
 
-	public static void random(){
+	public static void next(){
 		flash.keep();
 		validation.keep();
-		
-		//TODO rand mechanism: get it from a global variable holding the range of ids
-		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true order by rand()").first();
+
+		//Get the next assay related to a user
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true and reviewer.email = ?", Security.connected()).first();
 		if(assay == null){
 			stats();
 		}
 		assay(assay.chemblId);
 	}
-	
-	public static void pass() {
-		flash.error("-2 points for passing.");
-		validation.addError("curation", "-2pts for passing");
-		validation.keep();
-		flash.keep();
-		random();
-	}
-	
+
 	public static void starred(){
 		List<Object> assays = AnnotatedAssay.find("starred", true).fetch();
 		render(assays);
@@ -67,17 +60,36 @@ public class Application extends Controller {
 		double percentannotated = annotatedchemblassays / (double) chemblassays * 100.0;
 		renderArgs.put("percentannotated", percentannotated);
 
-		long curatedassays = AnnotatedAssay.count("reviewer is not null");
+		long curatedassays = AnnotatedAssay.count("needReview is false");
 		renderArgs.put("curatedassays", curatedassays);
 
 		double percentcurated = curatedassays / (double) annotatedchemblassays * 100.0;
 		renderArgs.put("percentcurated", percentcurated);
 
 		List<Map> contributors = AnnotatedAssay.find(
-				"select new map(r.email as user, count(a.id) as na) from AnnotatedAssay a join a.reviewer as r group by r.email order by na desc"
+				"select new map(r.email as user, count(a.id) as na) " +
+						"from AnnotatedAssay a join a.reviewer as r " +
+						"where a.needReview is false " +
+						"group by r.email " +
+						"order by na desc"
 				).fetch();
 
 		renderArgs.put("contributors", contributors);
+
+		int totalInitFake = FakeAnnotationsJob.numberOfFakeAnnotations;
+		renderArgs.put("totalInitFake", totalInitFake);
+
+		long fakeNeedReview = Annotation.count("assay.needReview is true and isFake is true");
+		renderArgs.put("fakeNeedReview", fakeNeedReview);
+
+		long fakeValidated = Annotation.count("assay.needReview is false and isFake is true");
+		renderArgs.put("fakeValidated", fakeValidated);
+
+		double curationQuality = 100.0 * (1 - ((double) fakeValidated / totalInitFake));
+		renderArgs.put("curationQuality", curationQuality);
+
+		double qualityConfidence = 100.0 * (1 - ((double) fakeNeedReview / totalInitFake));
+		renderArgs.put("qualityConfidence", qualityConfidence);
 
 		render();
 	}
@@ -101,25 +113,33 @@ public class Application extends Controller {
 
 	public static void removeAnnotation(Long assayId, Long annotationId){
 		AnnotatedAssay assay = AnnotatedAssay.findById(assayId);
-		assay.removeAnnotation(annotationId);
-		flash.success("Annotation successfully removed.");
+		String message = assay.removeAnnotation(annotationId);
+
+		//TODO manage how it will be handled: put a message anyway, then the flag will
+		//determine whether the message will be shown or not
+		flash.success(message);
 		flash.keep();
 		assay(assay.chemblId);
 	}
 
 	public static void validate(Long assayId){
+
 		AnnotatedAssay assay = AnnotatedAssay.findById(assayId);
-		if(assay.annotations.size() > 1){
-			//Doesn't pass the validation - send back
-			validation.addError("curation", "Please remove some BAO terms before validating. The assay can be have either one or no annotation.");
+
+		int numberofFake = assay.getNumberOfFakeAnnotations();
+
+		assay.markAsCurated(numberofFake);
+		
+		if(numberofFake > 0){
+			validation.addError("curation", "There's still some fake " +
+					"annotations present (" + numberofFake + ").");
 			validation.keep();
-			assay(assay.chemblId);
+		}else{
+			flash.success("Assay successfully validated!");
+			flash.keep();
 		}
-		flash.success("Assay successfully validated!");
-		flash.keep();
-		Reviewer reviewer = Reviewer.find("byEmail", Security.connected()).first();
-		assay.markAsCurated(reviewer);
-		random();
+
+		next();
 	}
 
 }

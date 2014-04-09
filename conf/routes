@@ -24,9 +24,7 @@ GET     /stats                                          Application.stats
 
 # Curation routes
 GET     /star/{id}                                       Application.star
-GET     /random                                         Application.random
-GET     /pass                                         Application.pass
-
+GET     /next                                         Application.next
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -31,6 +31,22 @@
 				<td>Number of curated assays</td>
 				<td>${curatedassays} (completion of ${percentcurated.format('###.##')}%)</td>
 			</tr>
+			<tr>
+				<td>Number fake annotations in total</td>
+				<td>${totalInitFake}</td>
+			</tr>
+			<tr>
+				<td>Number fake annotations remaining to be curated</td>
+				<td>${fakeNeedReview}</td>
+			</tr>
+			<tr>
+				<td>Number fake annotations that passed curation</td>
+				<td>${fakeValidated}</td>
+			</tr>
+			<tr>
+				<td>Curation quality</td>
+				<td>${curationQuality.format('###.##')}% (confidence of ${qualityConfidence.format('###.##')}%)</td>
+			</tr>
 		</tbody>
 	</table>
 </div>

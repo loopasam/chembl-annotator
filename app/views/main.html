@@ -48,7 +48,7 @@
 						href="@{Application.index()}"><span class="fa fa-home"></span>
 							Home</a></li>
 					<li class="${menu == 'curation' ? 'active' : ''}"><a
-						href="@{Application.random()}"><span class="fa fa-eye"></span>
+						href="@{Application.next()}"><span class="fa fa-eye"></span>
 							Curation</a></li>
 					<li class="${menu == 'stats' ? 'active' : ''}"><a
 						href="@{Application.stats()}"><span class="fa fa-bar-chart-o"></span>
@@ -66,7 +66,7 @@
 							<li><a href="@{Application.switchTheme(request.url)}"><span class="fa fa-refresh fa-spin"></span> Switch theme</a></li>
 							<li><a href="@{Secure.logout()}"><span class="fa fa-sign-out"></span> Logout</a></li>
 						</ul></li>
-						<p class="navbar-text navbar-right badge">450 <span class="fa fa-heart"></span></p>
+						<p class="navbar-text navbar-right badge">${reviewer.score} <span class="fa fa-heart"></span></p>
 				</ul>
 			</div>
 			#{/if}

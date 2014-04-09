@@ -36,7 +36,6 @@ public class RuleAnnotationJob extends Job {
 		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
 				"where highlight = false").fetch();
 		
-		//TODO change by using the robot user
 		Reviewer robot = Reviewer.find("byEmail", "super.cool.bot@gmail.com").first();
 
 		//Report init

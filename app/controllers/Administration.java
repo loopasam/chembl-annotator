@@ -6,7 +6,8 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-import jobs.AssignReviewersJob;
+import jobs.FakeAnnotationsJob;
+import jobs.RemoveFakeAnnotationJob;
 import jobs.RuleAnnotationJob;
 import jobs.SemanticSimplificationJob;
 import jobs.TextMatchingAnnotationJob;
@@ -68,17 +69,16 @@ public class Administration extends Controller {
 		new TextMatchingAnnotationJob().now();
 		index();
 	}
+	
+	public static void removeFakeAnnotations(){
+		new RemoveFakeAnnotationJob().now();
+		index();
+	}
 
 	public static void estimateCountAnnotations(){
 		new AnnotationEstimationCount().now();
 		index();
 	}
-	
-	public static void assignAssays(){
-		new AssignReviewersJob().now();
-		index();
-	}
-
 
 	public static void exportBao() {
 		List<BaoTerm> terms = BaoTerm.findAll();
@@ -126,6 +126,11 @@ public class Administration extends Controller {
 		new SemanticSimplificationJob().now();
 		index();
 	}
+	
+	public static void generateFakeAnnotations() {
+		new FakeAnnotationsJob().now();
+		index();
+	}
 
 	public static void generateDummyAnnotation() {			
 		Fixtures.delete(Annotation.class);
@@ -139,10 +144,10 @@ public class Administration extends Controller {
 		AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
 		AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
 
-		assay1.annotate(rule1, true, null);
-		assay2.annotate(rule1, true, null);
-		assay2.annotate(rule2, true, null);
-		assay3.annotate(rule2, true, null);
+		assay1.annotate(rule1, true, Reviewer.randomReviewer());
+		assay2.annotate(rule1, true, Reviewer.randomReviewer());
+		assay2.annotate(rule2, true, Reviewer.randomReviewer());
+		assay3.annotate(rule2, true, Reviewer.randomReviewer());
 		Logger.info("Dummy rules added.");
 		index();
 	}

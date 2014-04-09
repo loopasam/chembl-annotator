@@ -15,11 +15,14 @@ public class Annotation extends Model {
 	public AnnotatedAssay assay;
 
 	public int confidence;
+	
+	public boolean isFake;
 
-	public Annotation(BaoTerm term, AnnotatedAssay assay, int confidence) {
+	public Annotation(BaoTerm term, AnnotatedAssay assay, int confidence, boolean isFake) {
 		this.term = term;
 		this.assay = assay;
 		this.confidence = confidence;
+		this.isFake = isFake;
 	}
 
 }
