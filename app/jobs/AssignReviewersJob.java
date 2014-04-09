@@ -15,7 +15,7 @@ import play.jobs.Job;
 public class AssignReviewersJob extends Job {
 
 	public void doJob(){
-		Logger.info("Simplification started...");
+		Logger.info("Assigning assays...");
 		Stopwatch stopwatch = Stopwatch.createUnstarted();
 		stopwatch.start();
 
@@ -24,10 +24,12 @@ public class AssignReviewersJob extends Job {
 		int total = assays.size();
 		int counter = 0;
 
+		//Get all reviewer except super cool bot
 		List<Reviewer> reviewers = Reviewer.find("email != 'super.cool.bot@gmail.com'").fetch();
 
 		int totalReviewers = reviewers.size()-1;
-
+		int counterFlush = 0;
+		
 		for (AnnotatedAssay assay : assays) {
 			counter++;
 			Logger.info("Assay: " + counter + "/" + total);
@@ -35,6 +37,13 @@ public class AssignReviewersJob extends Job {
 			Random rand = new Random();
 			int randomNum = rand.nextInt((totalReviewers - 0) + 1);
 			assay.setReviewer(reviewers.get(randomNum));
+			
+			counterFlush++;
+			if (counterFlush%100 == 0) {
+				AnnotatedAssay.em().flush();
+				AnnotatedAssay.em().clear();
+			}
+
 		}
 
 		stopwatch.stop();
