@@ -144,6 +144,8 @@ public class AnnotatedAssay extends Model {
 				annotatedTerms.add(annotation.term);
 			}
 
+			List<Annotation> toRemove = new ArrayList<Annotation>();
+
 			for (Annotation annotation : annotations) {
 				//If the children of an annotated term are
 				//present in the annotated terms, then delete the annotation
@@ -151,13 +153,20 @@ public class AnnotatedAssay extends Model {
 				List<BaoTerm> children = annotation.term.children;
 				for (BaoTerm child : children) {
 					if(annotatedTerms.contains(child)){
-						//The annotation should be removed
-						this.annotations.remove(annotation);
-						annotation.delete();
-						this.save();
+						//The annotation should be removed - flag as such to avoid concurrency problems
+						toRemove.add(annotation);
 					}
-				}				
-			}	
+				}
+			}
+
+			for (Annotation annotationToRemove : toRemove) {
+				System.out.println("assay: " + this.chemblId);
+				System.out.println("deleting: " + annotationToRemove.term.label);
+				this.annotations.remove(annotationToRemove);
+				annotationToRemove.delete();
+				this.save();
+			}
+
 		}
 	}
 }
