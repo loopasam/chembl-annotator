@@ -142,10 +142,7 @@ public class AnnotatedAssay extends Model {
 			for (Annotation annotation : annotations) {
 				//Retrieves all the annotated terms
 				annotatedTerms.add(annotation.term);
-				System.out.println(annotation.term);
 			}
-
-			System.out.println(annotatedTerms);
 			
 			for (Annotation annotation : annotations) {
 				//If the children of an annotated term are

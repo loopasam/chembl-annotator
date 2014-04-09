@@ -24,6 +24,7 @@ public class SemanticSimplificationJob extends Job {
 
 		for (AnnotatedAssay annotatedAssay : assays) {
 			counter++;
+			//TODO uncomment
 			//Logger.info("Assay " + counter + "/" + total);
 			annotatedAssay.doSemanticSimplification();
 		}
