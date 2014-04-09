@@ -44,14 +44,12 @@ public class RuleTest extends UnitTest {
 		assertEquals("text-mining on BAO label", annotationRule.comment);
 		assertEquals(3, annotationRule.confidence);
 		assertEquals(true, annotationRule.highlight);
-		assertEquals(false, annotationRule.hasPriority);
 		BaoTerm term = BaoTerm.find("byLabel", "nuclear membrane potential assay").first();
 		assertNotNull(term);
 		assertEquals(term, annotationRule.baoTerm);
 		
 		AnnotationRule rule = AnnotationRule.find("byComment", "Look for the activity type GI50").first();
 		assertNotNull(rule);
-		assertEquals(true, rule.hasPriority);
 		assertEquals(false, rule.highlight);
 
 		//TODO more test - has to be done over mysql local

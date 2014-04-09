@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 
 import jobs.RuleAnnotationJob;
+import jobs.SemanticSimplificationJob;
 import jobs.TextMatchingAnnotationJob;
 import jobs.LoadBaoJob;
 import jobs.LoadRulesJob;
@@ -61,12 +62,12 @@ public class Administration extends Controller {
 		}
 		index();
 	}
-	
+
 	public static void textminingAnnotationJob(){
 		new TextMatchingAnnotationJob().now();
 		index();
 	}
-	
+
 	public static void estimateCountAnnotations(){
 		new AnnotationEstimationCount().now();
 		index();
@@ -106,11 +107,16 @@ public class Administration extends Controller {
 			StringBuilder sb = new StringBuilder();
 			for (AnnotationRule annotationRule : rules) {
 				sb.append(annotationRule.rule + "|" + annotationRule.baoTerm.baoId + "|" + annotationRule.comment + 
-						"|" + annotationRule.confidence + "|" + annotationRule.highlight + "|" + annotationRule.hasPriority + "\n");
+						"|" + annotationRule.confidence + "|" + annotationRule.highlight + "\n");
 			}
 			FileUtils.writeStringToFile(file, sb.toString());
 		}
 		Logger.info("Rules exported.");
+		index();
+	}
+
+	public static void semanticSimplification() {
+		new SemanticSimplificationJob().now();
 		index();
 	}
 

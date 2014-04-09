@@ -41,7 +41,7 @@ public class ModelTest extends UnitTest {
 	public void createAndRetrieveRules() {
 		new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]").save();
 		BaoTerm bioassayTerm = BaoTerm.find("byBaoId", "BAO_0000015").first();
-		new AnnotationRule(bioassayTerm, "SELECT * FROM foo", "identification of the word assay", 1, true, false).save();
+		new AnnotationRule(bioassayTerm, "SELECT * FROM foo", "identification of the word assay", 1, true).save();
 		AnnotationRule bioassayRs = AnnotationRule.find("byBaoTerm", bioassayTerm).first();	
 		assertNotNull(bioassayRs);
 		//Relationship not maintained this way
@@ -52,7 +52,7 @@ public class ModelTest extends UnitTest {
 	public void createAndRetrieveAndMaintainRules() {
 		new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "A set of instructions, [...]").save();
 		BaoTerm bioassayTerm = BaoTerm.find("byBaoId", "BAO_0000015").first();
-		bioassayTerm.addAnnotationRule("SELECT * FROM foo", "identification of the word assay", 1, true, false);
+		bioassayTerm.addAnnotationRule("SELECT * FROM foo", "identification of the word assay", 1, true);
 
 		AnnotationRule bioassayRs = AnnotationRule.find("byBaoTerm", bioassayTerm).first();	
 		assertNotNull(bioassayRs);
@@ -95,7 +95,7 @@ public class ModelTest extends UnitTest {
 		
 		//Create a BAO term and add an annotation rule:
 		BaoTerm term = new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000015", "bioassay", "def").save();
-		term.addAnnotationRule("description LIKE '%binding%'", "test rule", 1, true, false);
+		term.addAnnotationRule("description LIKE '%binding%'", "test rule", 1, true);
 
 		AnnotatedAssay assay = new AnnotatedAssay(1234, "CHEMBL1234", "foo description").save();
 		new Annotation(term, assay, 2).save();
@@ -113,7 +113,7 @@ public class ModelTest extends UnitTest {
 		assertEquals(2, AnnotatedAssay.findAll().size());
 
 		BaoTerm term1 = new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000014", "binding assay", "def").save();
-		term1.addAnnotationRule("description LIKE '%foo bar%'", "test rule", 2, false, false);
+		term1.addAnnotationRule("description LIKE '%foo bar%'", "test rule", 2, false);
 		
 		//creates an annotation on the assay
 		assay1.annotate(term1.rules.get(0), false);
@@ -129,14 +129,14 @@ public class ModelTest extends UnitTest {
 		assertEquals(4, assay1.annotations.get(0).confidence);
 		
 		//Increases the confidence as the assay is already annotated with the term, even if the rule is different
-		term1.addAnnotationRule("description LIKE '%fox bar%'", "test rule", 3, false, false);
+		term1.addAnnotationRule("description LIKE '%fox bar%'", "test rule", 3, false);
 		assay1.annotate(term1.rules.get(1), true);
 		assertEquals(1, assay1.annotations.size());
 		assertEquals(7, assay1.annotations.get(0).confidence);
 		
 		//Create a second term to put two annotations on the assay
 		BaoTerm term2 = new BaoTerm("http://www.bioassayontology.org/bao#BAO_0000013", "radioligand assay", "def").save();
-		term2.addAnnotationRule("description LIKE '%radioligand foo%'", "test rule", 1, false, false);
+		term2.addAnnotationRule("description LIKE '%radioligand foo%'", "test rule", 1, false);
 		assay1.annotate(term2.rules.get(0), false);
 		assertEquals(2, assay1.annotations.size());
 	}

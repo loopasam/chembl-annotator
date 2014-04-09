@@ -46,8 +46,8 @@ public class BaoTerm extends Model {
 		this.children = new ArrayList<>();
 	}
 
-	public AnnotationRule addAnnotationRule(String rule, String description, int confidence, boolean highlight, boolean hasPriority) {
-		AnnotationRule annotationRule = new AnnotationRule(this, rule, description, confidence, highlight, hasPriority).save();
+	public AnnotationRule addAnnotationRule(String rule, String description, int confidence, boolean highlight) {
+		AnnotationRule annotationRule = new AnnotationRule(this, rule, description, confidence, highlight).save();
 		this.rules.add(annotationRule);
 		this.save();
 		return annotationRule;
