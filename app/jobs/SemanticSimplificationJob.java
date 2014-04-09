@@ -14,7 +14,7 @@ import play.jobs.Job;
 public class SemanticSimplificationJob extends Job {
 
 	public void doJob(){
-		
+
 		Logger.info("Simplification started...");
 
 		List<AnnotatedAssay> assays = AnnotatedAssay.findAll();
@@ -24,11 +24,10 @@ public class SemanticSimplificationJob extends Job {
 
 		for (AnnotatedAssay annotatedAssay : assays) {
 			counter++;
-			//TODO uncomment
-			//Logger.info("Assay " + counter + "/" + total);
+			Logger.info("Assay " + counter + "/" + total);
 			annotatedAssay.doSemanticSimplification();
 		}
-		
+
 		Logger.info("Job done...");
 	}
 
