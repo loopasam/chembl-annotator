@@ -26,24 +26,35 @@ public class AssignReviewersJob extends Job {
 
 		//Get all reviewer except super cool bot
 		List<Reviewer> reviewers = Reviewer.find("email != 'super.cool.bot@gmail.com'").fetch();
+		
+		Reviewer.randomReviewer();
 
 		int totalReviewers = reviewers.size()-1;
-		int counterFlush = 0;
 		
 		for (AnnotatedAssay assay : assays) {
 			counter++;
 			Logger.info("Assay: " + counter + "/" + total);
 			//get random reviewer
+			
+			Stopwatch swRand = Stopwatch.createUnstarted();
+			swRand.start();
+
 			Random rand = new Random();
 			int randomNum = rand.nextInt((totalReviewers - 0) + 1);
+			
+			swRand.stop();
+			Logger.info("rand " + swRand.elapsed(TimeUnit.MILLISECONDS) + " millisecs.");
+			
+			
+			
+			Stopwatch swset = Stopwatch.createUnstarted();
+			swset.start();
+
 			assay.setReviewer(reviewers.get(randomNum));
 			
-			counterFlush++;
-			if (counterFlush%100 == 0) {
-				AnnotatedAssay.em().flush();
-				AnnotatedAssay.em().clear();
-			}
-
+			swset.stop();
+			Logger.info("rand " + swset.elapsed(TimeUnit.MILLISECONDS) + " millisecs.");
+			
 		}
 
 		stopwatch.stop();

@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import models.AnnotatedAssay;
 import models.AnnotationRule;
 import models.BaoTerm;
+import models.Reviewer;
 
 import org.apache.commons.io.FileUtils;
 
@@ -59,7 +60,7 @@ public class TextMatchingAnnotationJob extends Job {
 				String chemblId = (String) object[2];
 
 				AnnotatedAssay assay = AnnotatedAssay.createOrRetrieve(assayId, chemblId, description);
-				assay.annotate(annotationRule, true);
+				assay.annotate(annotationRule, true, Reviewer.randomReviewer());
 
 				counterFlush++;
 				if (counterFlush%100 == 0) {

@@ -37,7 +37,7 @@ public class RuleAnnotationJob extends Job {
 				"where highlight = false").fetch();
 		
 		//TODO change by using the robot user
-		Reviewer robot = Reviewer.find("byEmail", "samuel.croset@gmail.com").first();
+		Reviewer robot = Reviewer.find("byEmail", "super.cool.bot@gmail.com").first();
 
 		//Report init
 		File report = new File("data/annotation-report-rules.txt");
@@ -70,11 +70,8 @@ public class RuleAnnotationJob extends Job {
 				String chemblId = (String) object[2];
 
 				AnnotatedAssay assay = AnnotatedAssay.createOrRetrieve(assayId, chemblId, description);
-				assay.annotate(annotationRule, false);
+				assay.annotate(annotationRule, false, robot);
 				
-				//Automatically marked as curated
-				assay.setReviewer(robot);
-
 				counterFlush++;
 				if (counterFlush%100 == 0) {
 					AnnotatedAssay.em().flush();

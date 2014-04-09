@@ -35,8 +35,8 @@ public class SemanticSimplificationTest extends UnitTest {
 
 		AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(4321, "CHEMBL4321", "foo description bar");
 		//Create redundant annotation
-		assay1.annotate(rule1, false);
-		assay1.annotate(rule2, false);
+		assay1.annotate(rule1, false, null);
+		assay1.annotate(rule2, false, null);
 
 		AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", "CHEMBL4321").first();
 		assertNotNull(assay);

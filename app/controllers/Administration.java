@@ -139,10 +139,10 @@ public class Administration extends Controller {
 		AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
 		AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
 
-		assay1.annotate(rule1, true);
-		assay2.annotate(rule1, true);
-		assay2.annotate(rule2, true);
-		assay3.annotate(rule2, true);
+		assay1.annotate(rule1, true, null);
+		assay2.annotate(rule1, true, null);
+		assay2.annotate(rule2, true, null);
+		assay3.annotate(rule2, true, null);
 		Logger.info("Dummy rules added.");
 		index();
 	}

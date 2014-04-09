@@ -35,4 +35,8 @@ public class Reviewer extends Model {
 		return email;
 	}
 
+	public static Reviewer randomReviewer() {
+		return Reviewer.find("email != 'super.cool.bot@gmail.com' order by rand()").first();
+	}
+
 }
