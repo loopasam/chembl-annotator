@@ -153,7 +153,7 @@ public class AnnotatedAssay extends Model {
 					if(annotatedTerms.contains(child)){
 						//The annotation should be removed
 						Logger.info("assay: " + this.chemblId);
-						Logger.info("term to remove: " + child.label);
+						Logger.info("term to remove: " + annotation.term);
 						//this.annotations.remove(annotation);
 						//annotation.delete();
 						//this.save();
