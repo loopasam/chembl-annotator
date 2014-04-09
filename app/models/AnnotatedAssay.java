@@ -160,8 +160,6 @@ public class AnnotatedAssay extends Model {
 			}
 
 			for (Annotation annotationToRemove : toRemove) {
-				System.out.println("assay: " + this.chemblId);
-				System.out.println("deleting: " + annotationToRemove.term.label);
 				this.annotations.remove(annotationToRemove);
 				annotationToRemove.delete();
 				this.save();

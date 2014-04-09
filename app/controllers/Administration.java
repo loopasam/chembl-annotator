@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
+import jobs.AssignReviewersJob;
 import jobs.RuleAnnotationJob;
 import jobs.SemanticSimplificationJob;
 import jobs.TextMatchingAnnotationJob;
@@ -72,6 +73,12 @@ public class Administration extends Controller {
 		new AnnotationEstimationCount().now();
 		index();
 	}
+	
+	public static void assignAssays(){
+		new AssignReviewersJob().now();
+		index();
+	}
+
 
 	public static void exportBao() {
 		List<BaoTerm> terms = BaoTerm.findAll();

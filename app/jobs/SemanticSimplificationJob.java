@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.TimeUnit;
+
+import com.google.common.base.Stopwatch;
 
 import models.AnnotatedAssay;
 import models.Annotation;
@@ -16,6 +19,8 @@ public class SemanticSimplificationJob extends Job {
 	public void doJob(){
 
 		Logger.info("Simplification started...");
+		Stopwatch stopwatch = Stopwatch.createUnstarted();
+		stopwatch.start();
 
 		List<AnnotatedAssay> assays = AnnotatedAssay.findAll();
 
@@ -28,7 +33,7 @@ public class SemanticSimplificationJob extends Job {
 			annotatedAssay.doSemanticSimplification();
 		}
 
-		Logger.info("Job done...");
+		stopwatch.stop();
+		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 	}
-
 }

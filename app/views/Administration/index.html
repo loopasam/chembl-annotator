@@ -48,14 +48,19 @@ menu:'admin' /} #{set 'moreStyles'}
 			<td><a href="@{Administration.estimateCountAnnotations()}">Estimate annotations</a></td>
 		</tr>
 		<tr>
-			<td>5</td>
-			<td>Annotate all the assays with rules.</td>
-			<td><a href="@{Administration.priorityAnnotationJob()}">Rule annotations</a></td>
-		</tr>
-		<tr>
 			<td>6</td>
 			<td>Annotate all the assays with text-matching.</td>
 			<td><a href="@{Administration.textminingAnnotationJob()}">Text-matching annotations</a></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Randomly assigns assays to reviewers.</td>
+			<td><a href="@{Administration.assignAssays()}">Assign assays</a></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Annotate all the assays with rules.</td>
+			<td><a href="@{Administration.priorityAnnotationJob()}">Rule annotations</a></td>
 		</tr>
 		<tr>
 			<td>6</td>
