@@ -134,29 +134,34 @@ public class AnnotatedAssay extends Model {
 	}
 
 	public void doSemanticSimplification() {
-		List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
 		List<Annotation> annotations = this.annotations;
-		
-		for (Annotation annotation : annotations) {
-			//Retrieves all the annotated terms
-			annotatedTerms.add(annotation.term);
+
+		if(annotations.size() > 1){
+			List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
+
+			for (Annotation annotation : annotations) {
+				//Retrieves all the annotated terms
+				annotatedTerms.add(annotation.term);
+			}
+
+			System.out.println(annotatedTerms);
+			
+			for (Annotation annotation : annotations) {
+				//If the children of an annotated term are
+				//present in the annotated terms, then delete the annotation
+
+				List<BaoTerm> children = annotation.term.children;
+				for (BaoTerm child : children) {
+					if(annotatedTerms.contains(child)){
+						//The annotation should be removed
+						Logger.info("assay: " + this.chemblId);
+						Logger.info("term to remove: " + child.label);
+						//this.annotations.remove(annotation);
+						//annotation.delete();
+						//this.save();
+					}
+				}				
+			}	
 		}
-
-		for (Annotation annotation : annotations) {
-			//If the children of an annotated term are
-			//present in the annotated terms, then delete the annotation
-
-			List<BaoTerm> children = annotation.term.children;
-			for (BaoTerm child : children) {
-				if(annotatedTerms.contains(child)){
-					//The annotation should be removed
-					Logger.info("assay: " + this.chemblId);
-					Logger.info("term to remove: " + child.label);
-					//this.annotations.remove(annotation);
-					//annotation.delete();
-					//this.save();
-				}
-			}				
-		}		
 	}
 }
