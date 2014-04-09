@@ -142,7 +142,6 @@ public class AnnotatedAssay extends Model {
 			annotatedTerms.add(annotation.term);
 		}
 
-		Logger.info("assay: " + this.chemblId);
 		for (Annotation annotation : annotations) {
 			//If the children of an annotated term are
 			//present in the annotated terms, then delete the annotation
@@ -151,7 +150,7 @@ public class AnnotatedAssay extends Model {
 			for (BaoTerm child : children) {
 				if(annotatedTerms.contains(child)){
 					//The annotation should be removed
-					
+					Logger.info("assay: " + this.chemblId);
 					Logger.info("term to remove: " + child.label);
 					//this.annotations.remove(annotation);
 					//annotation.delete();
