@@ -6,6 +6,7 @@ import java.util.List;
 
 import models.AnnotatedAssay;
 import models.Annotation;
+import models.Utils;
 import play.Logger;
 import play.jobs.Job;
 
@@ -23,6 +24,8 @@ public class RemoveFakeAnnotationJob extends Job {
 			assay.removeAnnotation(annotation.id);
 		}
 		
+		Utils.emailAdmin("RemoveFakeAnnotationJob completed", "There was still " + annotations.size() + " still present " +
+				"(starting from " + FakeAnnotationsJob.numberOfFakeAnnotations + ").");
 		Logger.info("Fake annotations removed.");
 	}
 

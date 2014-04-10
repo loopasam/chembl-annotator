@@ -52,7 +52,7 @@ public class RuleAnnotationJob extends Job {
 			reportContent += termMessage + "\n";
 			Logger.info(termMessage);
 			
-			String rule = annotationRule.rule + ";";
+			String rule = annotationRule.getSQLRule();
 			
 			List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 

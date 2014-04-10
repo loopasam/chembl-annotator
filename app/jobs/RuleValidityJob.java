@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 
 import models.AnnotatedAssay;
 import models.AnnotationRule;
+import models.Utils;
 import play.Logger;
 import play.db.jpa.JPA;
 import play.jobs.Job;
@@ -37,10 +38,13 @@ public class RuleValidityJob extends Job {
 				"where r.highlight = false").fetch();
 		counter = 0;
 		totalRules = rules.size();
-		for (AnnotationRule annotationRule : rules) {
-			String rule = annotationRule.rule + ";";
+		for (AnnotationRule annotationRule : rules) {			
+			
+			String rule = annotationRule.getSQLRule();
 			estimate(rule, totalRules, annotationRule);			
 		}
+		
+		Utils.emailAdmin("RuleValidityJob completed", "All rules were tested. Job finished without errors.");
 		Logger.info("All rules checked done.");
 	}
 
