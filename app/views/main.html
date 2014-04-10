@@ -24,54 +24,13 @@
 </head>
 <body style="padding-top: 50px">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="@{'/public/js/jquery.min.js'}"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="@{'/public/js/jquery.highlight-4.js'}"></script>
+<script src="@{'/public/js/bootstrap.min.js'}"></script>
+ 
+#{navbar reviewer:reviewer /}   
 
-    <script src="@{'/public/js/bootstrap.min.js'}"></script>
-    
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="@{Application.index()}"><span
-					class="fa fa-flask"></span> ChEMBL Assay Annotator</a>
-			</div>
-			
-			#{if reviewer != null}
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="${menu == 'home' ? 'active' : ''}"><a
-						href="@{Application.index()}"><span class="fa fa-home"></span>
-							Home</a></li>
-					<li class="${menu == 'curation' ? 'active' : ''}"><a
-						href="@{Application.next()}"><span class="fa fa-eye"></span>
-							Curation</a></li>
-					<li class="${menu == 'stats' ? 'active' : ''}"><a
-						href="@{Application.stats()}"><span class="fa fa-bar-chart-o"></span>
-							Statistics</a></li>
-					<li class="${menu == 'starred' ? 'active' : ''}"><a
-						href="@{Application.starred()}"><span class="fa fa-star"></span>
-							Starred</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown"><span class="fa fa-user"></span> ${reviewer} <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-						    #{secure.check 'admin'}
-							<li><a href="/crud"><span class="fa fa-table"></span> CRUD</a></li>
-							<li><a href="/admin"><span class="fa fa-cogs"></span> Administration</a></li>
-							#{/secure.check}
-							<li><a href="@{Application.switchTheme(request.url)}"><span class="fa fa-refresh fa-spin"></span> Switch theme</a></li>
-							<li><a href="@{Secure.logout()}"><span class="fa fa-sign-out"></span> Logout</a></li>
-						</ul></li>
-						<p class="navbar-text navbar-right badge">${reviewer.score} <span class="fa fa-heart"></span></p>
-				</ul>
-			</div>
-			#{/if}
-		</div>
-	</div>
-	<div class="container">#{doLayout /}</div>
+<div class="container">#{doLayout /}</div>
 </body>
 </html>

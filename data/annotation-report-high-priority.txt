@@ -1,2 +1,0 @@
-Term: phosphatase activity assay(BAO_0002762) - 1/1
-Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Phosphatase' - Number of assays identified: 1384

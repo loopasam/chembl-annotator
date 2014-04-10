@@ -1,6 +1,0 @@
-protein-small molecule interaction assay|166484
-binding assay|196587
-enzyme activity assay|97819
-toxicity assay|0
-binding assay|6439
-protein-protein interaction assay|99

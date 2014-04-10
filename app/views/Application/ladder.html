@@ -1,0 +1,28 @@
+#{extends 'main.html' /} #{set title:'Ladder' /} #{set menu:'ladder' /}
+
+<div class="page-header">
+	<h1>
+		<span class="fa fa-trophy"></span> Ladder
+	</h1>
+</div>
+
+<p>Curation progress:</p>
+
+<div class="progress progress-striped active">
+  <div class="progress-bar"  role="progressbar" aria-valuenow="${percentcurated}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentcurated}%">
+    <span class="sr-only">% Complete</span>
+  </div>
+</div>
+
+#{if ladder.size() > 0 && reviewer.isPlayer}
+	<table class="table table-hover">
+		<tbody>
+			#{list items:ladder, as:'contributor'}
+			<tr>
+				<td><span class="fa fa-user"></span> ${contributor.get("user")}</td>
+				<td>${contributor.get("score")} <span class="fa fa-heart"></span></td>
+			</tr>
+			#{/list}
+		</tbody>
+	</table>
+#{/if}

@@ -1,0 +1,47 @@
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="@{Application.index()}"><span
+					class="fa fa-flask"></span> ChEMBL Assay Annotator</a>
+			</div>
+			
+			#{if _reviewer != null}
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="${menu == 'home' ? 'active' : ''}"><a
+						href="@{Application.index()}"><span class="fa fa-home"></span>
+							Home</a></li>
+					<li class="${menu == 'curation' ? 'active' : ''}"><a
+						href="@{Application.next()}"><span class="fa fa-eye"></span>
+							Curation</a></li>
+					#{if _reviewer.isPlayer}<li class="${menu == 'ladder' ? 'active' : ''}"><a
+						href="@{Application.ladder()}"><span class="fa fa-trophy"></span>
+							Ladder</a></li>#{/if}
+					<li class="${menu == 'starred' ? 'active' : ''}"><a
+						href="@{Application.starred()}"><span class="fa fa-star"></span>
+							Starred</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><span class="fa fa-user"></span> ${_reviewer} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						    #{secure.check 'admin'}
+							<li><a href="/crud"><span class="fa fa-table"></span> CRUD</a></li>
+							<li><a href="/admin"><span class="fa fa-cogs"></span> Administration</a></li>
+							<li><a href="/stats"><span class="fa fa-bar-chart-o"></span> Statistics</a></li>
+							#{/secure.check}
+							<li><a href="@{Application.switchTheme(request.url)}">
+							<span class="fa fa-refresh fa-spin"></span> Switch theme</a></li>
+							<li><a href="@{Secure.logout()}"><span class="fa fa-sign-out"></span> Logout</a></li>
+						</ul></li>
+						#{if _reviewer.isPlayer}
+						<p class="navbar-text navbar-right badge">${_reviewer.score} <span class="fa fa-heart"></span></p>
+						#{/if}
+				</ul>
+			</div>
+			#{/if}
+		</div>
+	</div>

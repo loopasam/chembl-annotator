@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
+import jobs.ExportTimesJob;
 import jobs.RuleValidityJob;
 import jobs.FakeAnnotationsJob;
 import jobs.RemoveFakeAnnotationJob;
@@ -73,7 +74,7 @@ public class Administration extends Controller {
 		new RuleValidityJob().now();
 		index();
 	}
-	
+
 	public static void testRules() {
 		new RuleValidityJob().now();
 		index();
@@ -123,6 +124,11 @@ public class Administration extends Controller {
 
 	public static void semanticSimplification() {
 		new SemanticSimplificationJob().now();
+		index();
+	}
+
+	public static void exportTimes(){
+		new ExportTimesJob().now();
 		index();
 	}
 

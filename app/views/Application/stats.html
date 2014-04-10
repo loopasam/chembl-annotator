@@ -7,14 +7,6 @@
 	</h1>
 </div>
 
-<p>Curation progress:</p>
-
-<div class="progress progress-striped active">
-  <div class="progress-bar"  role="progressbar" aria-valuenow="${percentcurated}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentcurated}%">
-    <span class="sr-only">${percentcurated}% Complete</span>
-  </div>
-</div>
-
 <div class="panel panel-default">
 	<div class="panel-heading">General statistics</div>
 	<table class="table table-hover">
@@ -50,19 +42,3 @@
 		</tbody>
 	</table>
 </div>
-
-#{if contributors.size() > 0}
-<div class="panel panel-default">
-	<div class="panel-heading">Contributors</div>
-	<table class="table table-hover">
-		<tbody>
-			#{list items:contributors, as:'contributor'}
-			<tr>
-				<td>${contributor.get("user")}</td>
-				<td>${contributor.get("na")}</td>
-			</tr>
-			#{/list}
-		</tbody>
-	</table>
-</div>
-#{/if}

@@ -8,6 +8,12 @@
 - *Curation completion*: 100 x (#annotatedAssay.needReview = true) / (#annotatedAssay)
 - *Curation quality*: 100 - ( 100 x (#Annotation.isFake = true) / (#InitialFakeAnnotations) )
 
+## Beta test questions
+
+- Random assays or keep order?
+- Can we improve the rules?
+- What information difference should it be between players and non players?
+
 ## Workflow over electronically annotated assays
 
 Steps of the workflow after electronic annotations.

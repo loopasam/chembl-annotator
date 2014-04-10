@@ -27,7 +27,7 @@ public class Annotation extends Model implements Comparable<Annotation> {
 
 	@Override
 	public int compareTo(Annotation otherAnnotation) {
-		return term.label.compareTo(otherAnnotation.term.label);
+		return term.label.toLowerCase().compareTo(otherAnnotation.term.label.toLowerCase());
 	}
 
 }

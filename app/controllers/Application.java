@@ -38,9 +38,10 @@ public class Application extends Controller {
 		validation.keep();
 
 		//Get the next assay related to a user
+		//Get a random one assigned to the user instead?
 		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true and reviewer.email = ?", Security.connected()).first();
 		if(assay == null){
-			stats();
+			ladder();
 		}
 		assay(assay.chemblId);
 	}
@@ -66,16 +67,6 @@ public class Application extends Controller {
 		double percentcurated = curatedassays / (double) annotatedchemblassays * 100.0;
 		renderArgs.put("percentcurated", percentcurated);
 
-		List<Map> contributors = AnnotatedAssay.find(
-				"select new map(r.email as user, count(a.id) as na) " +
-						"from AnnotatedAssay a join a.reviewer as r " +
-						"where a.needReview is false " +
-						"group by r.email " +
-						"order by na desc"
-				).fetch();
-
-		renderArgs.put("contributors", contributors);
-
 		int totalInitFake = FakeAnnotationsJob.numberOfFakeAnnotations;
 		renderArgs.put("totalInitFake", totalInitFake);
 
@@ -92,6 +83,20 @@ public class Application extends Controller {
 		renderArgs.put("qualityConfidence", qualityConfidence);
 
 		render();
+	}
+
+	public static void ladder(){
+		List<Map> ladder = AnnotatedAssay.find(
+				"select new map(r.email as user, r.score as score) " +
+						"from Reviewer r where r.email != 'super.cool.bot@gmail.com' " +
+						"order by score desc"
+				).fetch();
+
+		int annotatedchemblassays = AnnotatedAssay.findAll().size();
+		long curatedassays = AnnotatedAssay.count("needReview is false");
+		double percentcurated = curatedassays / (double) annotatedchemblassays * 100.0;
+
+		render(ladder, percentcurated);
 	}
 
 	public static void switchTheme(String url){
@@ -114,9 +119,6 @@ public class Application extends Controller {
 	public static void removeAnnotation(Long assayId, Long annotationId){
 		AnnotatedAssay assay = AnnotatedAssay.findById(assayId);
 		String message = assay.removeAnnotation(annotationId);
-
-		//TODO manage how it will be handled: put a message anyway, then the flag will
-		//determine whether the message will be shown or not
 		flash.success(message);
 		flash.keep();
 		assay(assay.chemblId);
@@ -129,13 +131,12 @@ public class Application extends Controller {
 		int numberofFake = assay.getNumberOfFakeAnnotations();
 
 		assay.markAsCurated(numberofFake);
-		
-		if(numberofFake > 0){
-			validation.addError("curation", "There's still some fake " +
-					"annotations present (" + numberofFake + ").");
+
+		if(numberofFake > 0 && assay.reviewer.isPlayer){
+			validation.addError("curation", GameConstants.MISS_FAKE_ANNOTATION_MESSAGE);
 			validation.keep();
 		}else{
-			flash.success("Assay successfully validated!");
+			flash.success(GameConstants.ASSAY_VALIDATED_MESSAGE);
 			flash.keep();
 		}
 

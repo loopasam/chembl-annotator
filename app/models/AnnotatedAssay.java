@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -44,6 +45,8 @@ public class AnnotatedAssay extends Model {
 	public boolean starred;
 
 	public boolean needReview;
+
+	public Date validationDate;
 
 	public AnnotatedAssay(int assayId, String chemblId, String description) {
 		this.assayId = assayId;
@@ -93,20 +96,23 @@ public class AnnotatedAssay extends Model {
 	public String removeAnnotation(Long id) {
 		Annotation annotation = Annotation.find("byId", id).first();
 		int deltaScore = 0;
+		String message = GameConstants.REMOVE_ANNOTATION_MESSAGE;
+
 		if(annotation != null){
 			if(annotation.isFake){
-				deltaScore = Scores.REMOVE_FAKE_ANNOTATION_POINTS;
+				deltaScore = GameConstants.REMOVE_FAKE_ANNOTATION_POINTS;
+				if(this.reviewer.isPlayer){
+					message = GameConstants.REMOVE_FAKE_ANNOTATION_MESSAGE;
+				}
 				this.reviewer.updateScore(deltaScore);
 			}
-
+			
 			this.annotations.remove(annotation);
 			annotation.delete();
 			this.save();
 		}
 
-		//TODO change the message depending of what happened
-		//Put the messages in Scores class
-		return "Annotation successfully removed.";
+		return message;
 	}
 
 	public void star() {
@@ -119,12 +125,14 @@ public class AnnotatedAssay extends Model {
 	}
 
 	public void markAsCurated(int numberOfFake) {
+		this.validationDate = new Date();
+
 		int deltaScore = 0;
 
 		if(numberOfFake > 0){
-			deltaScore = numberOfFake * Scores.MISS_FAKE_ANNOTATION_POINTS;
+			deltaScore = numberOfFake * GameConstants.MISS_FAKE_ANNOTATION_POINTS;
 		}else{
-			deltaScore = Scores.CORRECT_VALIDATION_POINTS;
+			deltaScore = GameConstants.CORRECT_VALIDATION_POINTS;
 		}
 
 		this.reviewer.updateScore(deltaScore);

@@ -2,7 +2,7 @@
 #{list items:_assay.annotations.sort(), as:'annotation' }
   <li>
   
-  <div class="btn-group" style="margin-top: 5px;">
+  <div class="btn-group" style="margin-top: 10px;">
   <button type="button" 
   class="btn disabled ${annotation.isFake ? 'btn-danger' : 'btn-default'}">
   #{list items:1..annotation.confidence, as:'i'}
@@ -18,11 +18,3 @@
   </li>
 #{/list}
 </ul>
-
-<script type="text/javascript">
-//Tooltip control
-$('[data-toggle="tooltip"]').tooltip({
-    'placement': 'top'
-});
-
-</script>
