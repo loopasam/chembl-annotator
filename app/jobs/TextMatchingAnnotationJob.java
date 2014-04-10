@@ -9,6 +9,7 @@ import models.AnnotatedAssay;
 import models.AnnotationRule;
 import models.BaoTerm;
 import models.Reviewer;
+import models.Utils;
 
 import org.apache.commons.io.FileUtils;
 
@@ -72,6 +73,7 @@ public class TextMatchingAnnotationJob extends Job {
 
 		FileUtils.writeStringToFile(report, reportContent);
 		stopwatch.stop();
+		Utils.emailAdmin("TextMatchingAnnotationJob completed", "Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 	}
 

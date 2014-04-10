@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import models.AnnotatedAssay;
 import models.BaoTerm;
+import models.Utils;
 
 import com.google.common.base.Stopwatch;
 
@@ -20,11 +21,14 @@ public class FakeAnnotationsJob extends Job {
 
 		for (int i = 1; i <= numberOfFakeAnnotations; i++) {
 			Logger.info("Fake annotation: " + i + "/" + numberOfFakeAnnotations);
-			AnnotatedAssay assay = AnnotatedAssay.find("order by rand()").first();
+			AnnotatedAssay assay = AnnotatedAssay.find("order by random()").first();
 			assay.addFakeAnnotation();
 		}
 		
 		stopwatch.stop();
+		Utils.emailAdmin("FakeAnnotationsJob completed", "Job done in " +
+				"" + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes and generating " + numberOfFakeAnnotations
+				+ " fake annotations.");
 		Logger.info("Job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 
 	}

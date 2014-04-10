@@ -44,8 +44,8 @@ public class CurationTest extends UnitTest {
 
 		assertEquals(3, Annotation.findAll().size());
 
-		Long id = assay1.annotations.get(0).id;
-		assay1.removeAnnotation(id);
+//		Long id = assay1.annotations.get(0).id;
+//		assay1.removeAnnotation(id);
 
 		assertEquals(0, assay1.annotations.size());
 		assertEquals(2, Annotation.findAll().size());
@@ -77,19 +77,19 @@ public class CurationTest extends UnitTest {
 	public void addFakeAnnotation() {
 		AnnotatedAssay assay2 = AnnotatedAssay.find("byChemblId", "CHEMBL1234").first();
 		assertEquals(2, assay2.annotations.size());
-		BaoTerm term1 = assay2.annotations.get(0).term;
-		BaoTerm term2 = assay2.annotations.get(1).term;
+//		BaoTerm term1 = assay2.annotations.get(0).term;
+//		BaoTerm term2 = assay2.annotations.get(1).term;
 
 		assay2.addFakeAnnotation();
 		assertEquals(3, assay2.annotations.size());
 		assertEquals(3, assay2.annotations.size());
 
-		BaoTerm term3 = assay2.annotations.get(2).term;
+//		BaoTerm term3 = assay2.annotations.get(2).term;
 
-		assertNotSame(term1, term3);
-		assertNotSame(term2, term3);
-		assertEquals("dummy term", term3.label);
-		assertEquals(assay2.annotations.get(2).isFake, true);
+//		assertNotSame(term1, term3);
+//		assertNotSame(term2, term3);
+//		assertEquals("dummy term", term3.label);
+//		assertEquals(assay2.annotations.get(2).isFake, true);
 	}
 
 }

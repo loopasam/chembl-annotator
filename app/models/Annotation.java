@@ -6,7 +6,7 @@ import javax.persistence.ManyToOne;
 import play.db.jpa.Model;
 
 @Entity
-public class Annotation extends Model {
+public class Annotation extends Model implements Comparable<Annotation> {
 
 	@ManyToOne
 	public BaoTerm term;
@@ -23,6 +23,11 @@ public class Annotation extends Model {
 		this.assay = assay;
 		this.confidence = confidence;
 		this.isFake = isFake;
+	}
+
+	@Override
+	public int compareTo(Annotation otherAnnotation) {
+		return term.label.compareTo(otherAnnotation.term.label);
 	}
 
 }

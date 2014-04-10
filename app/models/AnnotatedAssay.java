@@ -2,6 +2,8 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -30,7 +32,7 @@ public class AnnotatedAssay extends Model {
 	public Reviewer reviewer;
 
 	@OneToMany(mappedBy="assay", cascade=CascadeType.ALL)
-	public List<Annotation> annotations;
+	public Set<Annotation> annotations;
 
 	public int assayId;
 
@@ -49,7 +51,7 @@ public class AnnotatedAssay extends Model {
 		this.chemblId = chemblId;
 		this.needReview = false;
 		this.starred = false;
-		this.annotations = new ArrayList<>();
+		this.annotations = new TreeSet<>();
 	}
 
 	public AnnotatedAssay setReviewer(Reviewer reviewer) {
@@ -70,7 +72,6 @@ public class AnnotatedAssay extends Model {
 		return assay;
 	}
 
-	//TODO get rid of the isFake parameter
 	public void annotate(AnnotationRule annotationRule, boolean needReview, Reviewer reviewer) {
 		//Try to retrieve a potentially existing annotation, for the term to this assay.
 		Annotation annotation = Annotation.find("byTermAndAssay", annotationRule.baoTerm, this).first();
@@ -157,7 +158,7 @@ public class AnnotatedAssay extends Model {
 	}
 
 	public void doSemanticSimplification() {
-		List<Annotation> annotations = this.annotations;
+		Set<Annotation> annotations = this.annotations;
 
 		if(annotations.size() > 1){
 			List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
@@ -194,10 +195,10 @@ public class AnnotatedAssay extends Model {
 	public void addFakeAnnotation() {
 		List<BaoTerm> terms = this.getAnnotatedTerms();
 
-		BaoTerm randomTerm = BaoTerm.find("order by rand()").first();;
+		BaoTerm randomTerm = BaoTerm.find("order by random()").first();;
 
 		while(terms.contains(randomTerm)){
-			randomTerm = BaoTerm.find("order by rand()").first();
+			randomTerm = BaoTerm.find("order by random()").first();
 		}
 
 		//TODO Generate random confidence
