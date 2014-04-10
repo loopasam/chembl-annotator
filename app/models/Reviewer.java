@@ -40,8 +40,7 @@ public class Reviewer extends Model {
 	}
 
 	public static Reviewer randomReviewer() {
-		//TODO change for rand()
-		return Reviewer.find("email != 'super.cool.bot@gmail.com' order by rand()").first();
+		return Reviewer.find("email != 'super.cool.bot@gmail.com' order by random()").first();
 	}
 
 	public void updateScore(int deltaScore) {

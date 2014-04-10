@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
+import jobs.RuleValidityJob;
 import jobs.FakeAnnotationsJob;
 import jobs.RemoveFakeAnnotationJob;
 import jobs.RuleAnnotationJob;
@@ -69,7 +70,12 @@ public class Administration extends Controller {
 	}
 
 	public static void estimateCountAnnotations(){
-		new AnnotationEstimationCount().now();
+		new RuleValidityJob().now();
+		index();
+	}
+	
+	public static void testRules() {
+		new RuleValidityJob().now();
 		index();
 	}
 
