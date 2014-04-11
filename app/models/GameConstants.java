@@ -4,7 +4,7 @@ public class GameConstants {
 	
 	//TODO add comment and rationale behind the points
 	
-	public static final int REMOVE_FAKE_ANNOTATION_POINTS = 5;
+	public static final int REMOVE_FAKE_ANNOTATION_POINTS = 10;
 	
 	public static final int MISS_FAKE_ANNOTATION_POINTS = -20;
 	

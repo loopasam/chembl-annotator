@@ -19,20 +19,40 @@ on the <a href="https://github.com/loopasam/chembl-annotator/issues">GitHub issu
   Some of them are already listed below (//link).</li>
   <li>The most important thing to consider at this stage is to see whether the rules are making
   sense at all and what can be improved regarding this. New rules? New terms? No validation?
-  Should be manually go over them?</li>
-  <li>The game mechanism is in place too, but fake annotations are not yet hidden.</li>
-  <li>In case you don't like the current themes, please <a href="http://bootswatch.com/">pick of these</a> (scroll a bit) and tell me which one
-    you would prefer (as now the app uses <code>Cosmo</code> and <code>Cyborg</code>).</li>
-    <li>Icons</li>
-  <li>You can start the curation process, work on a few assays and note somewhere your thoughts.</li>
+  Should we manually go over them?</li>
+  <li>The game mechanism is in place too, but fake annotations are not yet hidden and visible (in red).</li>
+  <li>You can star the assays of interest to be discussed later</li>
+  <li>In case you don't like the current themes, please <a href="http://bootswatch.com/">choose one</a> (scroll a bit) that you prefer and I will
+  include it in a later release (as now the app uses <code>Cosmo</code> and <code>Cyborg</code>).</li>
+    <li>Same for icons, any can be replaced by one of <a href="http://fontawesome.io/icons/">this list</a>. 
+    Feel free to make recommendations.</li>
+  <li>You can start the <a href="@{Application.next()}">curation process</a>, work on a few assays and note somewhere your thoughts.</li>
 </ul>
 
 <h2><span class="fa fa-trophy"></span> The Rules</h2>
+<p>The goal of the platform is to manually verify the relevance of automatic annotations. There's a limited number of assays
+needing curation, each one of them annotated with one or more assay types. The goal of the curation is to identify the terms correctly
+assigns, and remove the unnecessary annotations. You earn points (the symbol " #{point /} ") all the time the process is correctly done.
+Your score is indicated on the top right corner of the screen.</p>
 <ul>
-  <li></li>
+  <li>For each ChEMBL assay, remove the all annotations that are not relevant, then validate the assay. Each validation brings you
+  +${models.GameConstants.CORRECT_VALIDATION_POINTS} #{point /}.</li>
+  <li>There's some fake annotations present; you need to identify and remove them. Removing a fake annotation generously brings 
+  +${models.GameConstants.REMOVE_FAKE_ANNOTATION_POINTS} #{point /}.</li>
+  <li>If an assay if validated with still some fake annotations 
+  left on it, you will loose ${models.GameConstants.MISS_FAKE_ANNOTATION_POINTS} #{point /}.</li>
+  <li>The scores are all displayed in the <a href="@{Application.ladder()}">ladder</a>, which gives an estimation of the remaining
+  assays to curate and the score of each curator. 
+  At the end of the task, the user with the best score will win a meal at JPO's expenses.</li>
+  <li>To start playing, go to <a href="@{Application.next()}">curation</a>.</li>
+  <li>Good luck and have fun!</li>
 </ul>
 
 <h2><span class="fa fa-thumbs-o-up"></span> Ideas for improvement</h2>
 <ul>
-  <li>It's under development.</li>
+  <li>Increasing confidence for a rule when an annotation is validated.</li>
+  <li>Add rule from application</li>
+  <li>Manually add an assay type</li>
+  <li>PubChem can be used to validate the performance</li>
+  <li>Undo box to annotate back an assay</li>
 </ul>
