@@ -25,6 +25,7 @@ public class Application extends Controller {
 	}
 
 	public static void index() {
+		renderArgs.put("version", (String) play.Play.configuration.get("application.version"));
 		render();
 	}
 

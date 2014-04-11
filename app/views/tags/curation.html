@@ -20,18 +20,25 @@
   #{/errors}
 #{/ifErrors}
 
+
 #{if flash.success}
-    <div class="panel panel-success">
+    <div class="panel ${flash.success.contains("!") ? 'panel-success' : 'panel-info'}">
     <div class="panel-body">
-    <span class="text-success">${flash.success}</span>
+    <span class="${flash.success.contains("!") ? 'text-success' : 'text-info'}">${flash.success}</span>
     </div>
    </div>
 #{/if}
 
 <script type="text/javascript">
-//Animate color
-$( ".panel" ).animate({
-          backgroundColor: "#aa0000",
-          color: "#000",
-        }, 1000 );
+//Animation script
+//Save the original color of background
+var originalColorBg = $(".panel").css("background-color");
+//Replace the background with the color of the border
+var originalColorBorder = $(".panel").css("border-color");
+$(".panel").css("background-color", originalColorBorder);
+//Goes back to the original background color
+$(".panel").animate({
+          backgroundColor: originalColorBg,
+        }, 700 );
+$(".panel").delay(2000).fadeOut(700);
 </script>
