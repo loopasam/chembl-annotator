@@ -54,8 +54,7 @@ public class Administration extends Controller {
 		index();
 	}
 
-	//TODO change name of job launchers
-	public static void priorityAnnotationJob() {
+	public static void ruleAnnotationJob() {
 		new RuleAnnotationJob().now();
 		index();
 	}

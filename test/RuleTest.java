@@ -51,36 +51,5 @@ public class RuleTest extends UnitTest {
 		AnnotationRule rule = AnnotationRule.find("byComment", "Look for the activity type GI50").first();
 		assertNotNull(rule);
 		assertEquals(false, rule.highlight);
-
-		//TODO more test - has to be done over mysql local
-		//Test also for priority
-
-		//TODO test the number of annotation rules per term - should two highlight at least
-
-		//		Logger.info("Test the rules for errors");
-		//		Connection c = null;
-		//		PreparedStatement pstmt = null;
-		//		ResultSet rs = null;
-		//		String url = "jdbc:postgresql://localhost/chembl_17";
-		//		Class.forName("org.postgresql.Driver").newInstance();
-		//		c = DriverManager.getConnection(url, "postgres", "pouet");
-		//		
-		//		List<AnnotationRule> rules = AnnotationRule.findAll();
-		//
-		//TODO change the database to the MySQL one
-		//		for (AnnotationRule rule : rules) {
-		//			Logger.info("Testing rule: " + rule);
-		//			try {
-		//				pstmt = c.prepareStatement(rule.getSqlQuery());
-		//				rs = pstmt.executeQuery();
-		//			}catch(Exception e){
-		//				fail("Error while trying to execute the SQL query related to the rule: " +
-		//						rule.rule);
-		//			}
-		//		}
-
-		//		try { if (rs != null) rs.close(); } catch (Exception e) {};
-		//		try { if (pstmt != null) pstmt.close(); } catch (Exception e) {};
-		//		try { if (c != null) c.close(); } catch (Exception e) {};
 	}
 }

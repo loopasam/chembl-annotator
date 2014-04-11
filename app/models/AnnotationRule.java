@@ -19,7 +19,8 @@ public class AnnotationRule extends Model {
 
 	public int confidence;
 
-	//TODO replace name by something more meaningful
+	//Flag to identifying tect-mining rules to be highlighted in the description
+	//later on
 	public boolean highlight;
 
 	@ManyToOne

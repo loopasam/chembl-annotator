@@ -14,13 +14,13 @@
   </div>
 </div>
 
-#{if ladder.size() > 0 && reviewer.isPlayer}
+#{if reviewers.size() > 0 && reviewer.isPlayer}
 	<table class="table table-hover">
 		<tbody>
-			#{list items:ladder, as:'contributor'}
+			#{list items:reviewers, as:'player'}
 			<tr>
-				<td><span class="fa fa-user"></span> ${contributor.get("user")}</td>
-				<td class="text-right">${contributor.get("score")} <span class="fa fa-heart"></span></td>
+				<td><span class="fa fa-user"></span> ${player.email}</td>
+				<td class="text-right">${player.score} <span class="fa fa-heart"></span></td>
 			</tr>
 			#{/list}
 		</tbody>

@@ -209,8 +209,13 @@ public class AnnotatedAssay extends Model {
 			randomTerm = BaoTerm.find("order by random()").first();
 		}
 
-		//TODO Generate random confidence
-		Annotation newAnnotation = new Annotation(randomTerm, this, 1, true).save();
+		int confidence;
+		if(Math.random() > 0.5){
+			confidence = 1;
+		}else{
+			confidence = 3;
+		}
+		Annotation newAnnotation = new Annotation(randomTerm, this, confidence, true).save();
 		this.annotations.add(newAnnotation);
 		this.save();
 	}

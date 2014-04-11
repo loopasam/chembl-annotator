@@ -87,18 +87,12 @@ public class Application extends Controller {
 	}
 
 	public static void ladder(){
-		//TODO do something easier and faster than taht
-		List<Map> ladder = AnnotatedAssay.find(
-				"select new map(r.email as user, r.score as score) " +
-						"from Reviewer r where r.email != 'super.cool.bot@gmail.com' " +
-						"order by score desc"
-				).fetch();
-
+		List<Reviewer> reviewers = Reviewer.find("email != 'super.cool.bot@gmail.com' order by score desc").fetch();
 		int annotatedchemblassays = AnnotatedAssay.findAll().size();
 		long curatedassays = AnnotatedAssay.count("needReview is false");
 		double percentcurated = curatedassays / (double) annotatedchemblassays * 100.0;
 
-		render(ladder, percentcurated);
+		render(reviewers, percentcurated);
 	}
 
 	public static void switchTheme(String url){
