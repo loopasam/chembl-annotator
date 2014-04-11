@@ -87,6 +87,7 @@ public class Application extends Controller {
 	}
 
 	public static void ladder(){
+		//TODO do something easier and faster than taht
 		List<Map> ladder = AnnotatedAssay.find(
 				"select new map(r.email as user, r.score as score) " +
 						"from Reviewer r where r.email != 'super.cool.bot@gmail.com' " +

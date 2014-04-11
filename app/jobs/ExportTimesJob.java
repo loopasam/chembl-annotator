@@ -26,12 +26,12 @@ public class ExportTimesJob extends Job {
 			File report = new File("data/times/" + reviewer.email + ".csv");
 			String reportContent = "";
 
-			List<AnnotatedAssay> assays = AnnotatedAssay.find("reviewer_id = ? order by validationDate", reviewer.id).fetch();
+			List<AnnotatedAssay> assays = AnnotatedAssay.find("reviewer_id = ? and needReview = false order by validationDate", reviewer.id).fetch();
 
 			for (int i = 1; i < assays.size(); i++) {
 				AnnotatedAssay old = assays.get(i-1);
 				AnnotatedAssay young = assays.get(i);
-				long time = (young.validationDate.getTime()-old.validationDate.getTime());
+				long time = (young.validationDate.getTime() - old.validationDate.getTime());
 				reportContent += time + "\n";
 			}
 			
