@@ -203,10 +203,10 @@ public class AnnotatedAssay extends Model {
 	public void addFakeAnnotation() {
 		List<BaoTerm> terms = this.getAnnotatedTerms();
 
-		BaoTerm randomTerm = BaoTerm.find("order by random()").first();;
+		BaoTerm randomTerm = BaoTerm.find("order by rand()").first();;
 
 		while(terms.contains(randomTerm)){
-			randomTerm = BaoTerm.find("order by random()").first();
+			randomTerm = BaoTerm.find("order by rand()").first();
 		}
 
 		int confidence;

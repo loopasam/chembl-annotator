@@ -21,7 +21,7 @@ public class FakeAnnotationsJob extends Job {
 
 		for (int i = 1; i <= numberOfFakeAnnotations; i++) {
 			Logger.info("Fake annotation: " + i + "/" + numberOfFakeAnnotations);
-			AnnotatedAssay assay = AnnotatedAssay.find("order by random()").first();
+			AnnotatedAssay assay = AnnotatedAssay.find("order by rand()").first();
 			assay.addFakeAnnotation();
 		}
 		
