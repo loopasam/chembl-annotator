@@ -29,10 +29,6 @@ public class TextMatchingAnnotationJob extends Job {
 		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
 				"where r.highlight = true").fetch();
 
-		//Report init
-		File report = new File("data/annotation-report-text-matching.txt");
-		String reportContent = "";
-
 		int counter = 0;
 		int total = rules.size();
 
@@ -40,7 +36,6 @@ public class TextMatchingAnnotationJob extends Job {
 			counter++;
 
 			String termMessage = "Term: " + annotationRule.baoTerm.label + "(" + annotationRule.baoTerm.baoId + ") - " + counter + "/" + total;
-			reportContent += termMessage + "\n";
 			Logger.info(termMessage);
 
 			String rule = "SELECT DISTINCT assay_id, description, chembl_id FROM assays " +
@@ -50,7 +45,6 @@ public class TextMatchingAnnotationJob extends Job {
 
 			String ruleMessage = "Rule: "  + annotationRule.rule + " - Number of assays identified: " + results.size();
 			Logger.info(ruleMessage);
-			reportContent += ruleMessage + "\n";
 
 			int counterFlush = 0;
 
@@ -71,7 +65,6 @@ public class TextMatchingAnnotationJob extends Job {
 			}
 		}
 
-		FileUtils.writeStringToFile(report, reportContent);
 		stopwatch.stop();
 		Utils.emailAdmin("TextMatchingAnnotationJob completed", "Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");

@@ -6,21 +6,21 @@
 	</h1>
 </div>
 
-<p>Curation progress:</p>
-
-<div class="progress progress-striped active">
-  <div class="progress-bar"  role="progressbar" aria-valuenow="${percentcurated}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentcurated}%">
-    <span class="sr-only">% Complete</span>
-  </div>
-</div>
-
 #{if reviewers.size() > 0 && reviewer.isPlayer}
 	<table class="table table-hover">
+	<thead>
+        <tr>
+          <th>Rank</th>
+          <th>Curator</th>
+          <th class="text-right">Score</th>
+        </tr>
+      </thead>
 		<tbody>
-			#{list items:reviewers, as:'player'}
+			#{list items:0..reviewers.size()-1, as:'i'}
 			<tr>
-				<td><span class="fa fa-user"></span> ${player.email}</td>
-				<td class="text-right">${player.score} <span class="fa fa-heart"></span></td>
+			    <td>#${i+1} #{if i == 0} <span class="fa fa-trophy"></span> #{/if}</td>
+			    <td>${reviewers.get(i).email}</td>
+				<td class="text-right">${reviewers.get(i).score} <span class="fa fa-heart"></span></td>
 			</tr>
 			#{/list}
 		</tbody>

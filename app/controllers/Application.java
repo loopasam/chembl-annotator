@@ -40,7 +40,7 @@ public class Application extends Controller {
 
 		//Get the next assay related to a user
 		//Get a random one assigned to the user instead?
-		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true and reviewer.email = ?", Security.connected()).first();
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true and reviewer.email = ? order by random()", Security.connected()).first();
 		if(assay == null){
 			ladder();
 		}
@@ -88,11 +88,7 @@ public class Application extends Controller {
 
 	public static void ladder(){
 		List<Reviewer> reviewers = Reviewer.find("email != 'super.cool.bot@gmail.com' order by score desc").fetch();
-		int annotatedchemblassays = AnnotatedAssay.findAll().size();
-		long curatedassays = AnnotatedAssay.count("needReview is false");
-		double percentcurated = curatedassays / (double) annotatedchemblassays * 100.0;
-
-		render(reviewers, percentcurated);
+		render(reviewers);
 	}
 
 	public static void switchTheme(String url){
