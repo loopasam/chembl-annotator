@@ -40,7 +40,7 @@ public class Application extends Controller {
 
 		//Get the next assay related to a user
 		//Get a random one assigned to the user instead?
-		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true and reviewer.email = ? order by random()", Security.connected()).first();
+		AnnotatedAssay assay = AnnotatedAssay.find("needReview is true and reviewer.email = ? order by rand()", Security.connected()).first();
 		if(assay == null){
 			ladder();
 		}
