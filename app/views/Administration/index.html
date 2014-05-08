@@ -1,88 +1,93 @@
 #{extends 'main.html' /} #{set title:'Administration' /} #{set
 menu:'admin' /} #{set 'moreStyles'}
 <link rel="stylesheet" type="text/css" media="screen"
-	href="@{'/public/stylesheets/crud.css'}" />
+      href="@{'/public/stylesheets/crud.css'}" />
 #{/set}
 
 <div class="page-header">
-	<h1>
-		<span class="fa fa-cogs"></span> Administration
-	</h1>
+    <h1>
+        <span class="fa fa-cogs"></span> Administration
+    </h1>
 </div>
 
 
 <table class="table">
-	<thead>
-		<tr>
-			<th>#</th>
-			<th>Job description</th>
-			<th>Launcher</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>Download and save BAO terms related to assays</td>
-			<td><a href="@{Administration.baoJob()}">Download BAO</a></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Export all the BAO term as CSV</td>
-			<td><a href="@{Administration.exportBao()}">Export BAO</a></td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Load the rules from CSV file (<code>data/rules.txt</code>)
-			</td>
-			<td><a href="@{Administration.loadRules()}">Import rules</a></td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Export rules to CSV (<code>data/rules.txt</code>)
-			</td>
-			<td><a href="@{Administration.exportRules()}">Export rules</a></td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Test validity of rules over the production database.
-			</td>
-			<td><a href="@{Administration.testRules()}">Test rules</a></td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Annotate all the assays with text-matching.</td>
-			<td><a href="@{Administration.textminingAnnotationJob()}">Text-matching annotations</a></td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Generate decoy annotations.</td>
-			<td><a href="@{Administration.generateFakeAnnotations()}">Add fake annotations</a></td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Remove all fake annotations.</td>
-			<td><a href="@{Administration.removeFakeAnnotations()}">Remove fake annotations</a></td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Annotate all the assays with rules.</td>
-			<td><a href="@{Administration.ruleAnnotationJob()}">Rule annotations</a></td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Semantic simplification over the remaining annotations.</td>
-			<td><a href="@{Administration.semanticSimplification()}">Semantic simplification</a></td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>Export times for all users.</td>
-			<td><a href="@{Administration.exportTimes()}">Export times</a></td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>Add dummy annotated assays data for development.
-			</td>
-			<td><a href="@{Administration.generateDummyAnnotation()}">Add dummy data</a></td>
-		</tr>
-	</tbody>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Job description</th>
+            <th>Launcher</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Download and save BAO terms related to assays</td>
+            <td><a href="@{Administration.baoJob()}">Download BAO</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Export all the BAO term as CSV</td>
+            <td><a href="@{Administration.exportBao()}">Export BAO</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Load the rules from CSV file (<code>data/rules.txt</code>)
+            </td>
+            <td><a href="@{Administration.loadRules()}">Import rules</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Export rules to CSV (<code>data/rules.txt</code>)
+            </td>
+            <td><a href="@{Administration.exportRules()}">Export rules</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Test validity of rules over the production database.
+            </td>
+            <td><a href="@{Administration.testRules()}">Test rules</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Annotate all the assays with text-matching and assigns reviewers</td>
+            <td><a href="@{Administration.textminingAnnotationJob()}">Text-matching annotations</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Remove the assays and annotations matching the filtering rules.</td>
+            <td><a href="@{Administration.filterAssays()}">Filter assays</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Generate decoy annotations.</td>
+            <td><a href="@{Administration.generateFakeAnnotations()}">Add fake annotations</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Remove all fake annotations.</td>
+            <td><a href="@{Administration.removeFakeAnnotations()}">Remove fake annotations</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Annotate all the assays with rules.</td>
+            <td><a href="@{Administration.ruleAnnotationJob()}">Rule annotations</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Semantic simplification over the remaining annotations.</td>
+            <td><a href="@{Administration.semanticSimplification()}">Semantic simplification</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Export times for all users (delta between annotations in milliseconds).</td>
+            <td><a href="@{Administration.exportTimes()}">Export times</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Add dummy annotated assays data for development.
+            </td>
+            <td><a href="@{Administration.generateDummyAnnotation()}">Add dummy data</a></td>
+        </tr>
+    </tbody>
 </table>

@@ -16,7 +16,6 @@ import org.hibernate.Transaction;
 
 import com.google.common.base.Stopwatch;
 
-
 import models.AnnotatedAssay;
 import models.AnnotationRule;
 import models.BaoTerm;
@@ -28,60 +27,61 @@ import play.jobs.Job;
 
 public class RuleAnnotationJob extends Job {
 
-	public void doJob() throws SQLException, IOException{
+    @Override
+    public void doJob() throws SQLException, IOException {
 
-		Stopwatch stopwatch = Stopwatch.createUnstarted();
-		stopwatch.start();
+        Stopwatch stopwatch = Stopwatch.createUnstarted();
+        stopwatch.start();
 
-		List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r " +
-				"where highlight = false").fetch();
-		
-		Reviewer robot = Reviewer.find("byEmail", "super.cool.bot@gmail.com").first();
+        List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r "
+                + "where highlight = false").fetch();
 
-		//Report init
-		File report = new File("data/annotation-report-rules.txt");
-		String reportContent = "";
+        Reviewer robot = Reviewer.find("byEmail", "super.cool.bot@gmail.com").first();
 
-		int counter = 0;
-		int total = rules.size();
+        //Report init
+        File report = new File("data/annotation-report-rules.txt");
+        String reportContent = "";
 
-		for (AnnotationRule annotationRule : rules) {
-			counter++;
+        int counter = 0;
+        int total = rules.size();
 
-			String termMessage = "Term: " + annotationRule.baoTerm.label + "(" + annotationRule.baoTerm.baoId + ") - " + counter + "/" + total;
-			reportContent += termMessage + "\n";
-			Logger.info(termMessage);
-			
-			String rule = annotationRule.getSQLRule();
-			
-			List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
+        for (AnnotationRule annotationRule : rules) {
+            counter++;
 
-			String ruleMessage = "Rule: "  + annotationRule.rule + " - Number of assays identified: " + results.size();
-			Logger.info(ruleMessage);
-			reportContent += ruleMessage + "\n";
+            String termMessage = "Term: " + annotationRule.baoTerm.label + "(" + annotationRule.baoTerm.baoId + ") - " + counter + "/" + total;
+            reportContent += termMessage + "\n";
+            Logger.info(termMessage);
 
-			int counterFlush = 0;
+            String rule = annotationRule.getSQLRule();
 
-			for (Object[] object : results) {
+            List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 
-				String description = (String) object[1];
-				int assayId = (int) object[0];
-				String chemblId = (String) object[2];
+            String ruleMessage = "Rule: " + annotationRule.rule + " - Number of assays identified: " + results.size();
+            Logger.info(ruleMessage);
+            reportContent += ruleMessage + "\n";
 
-				AnnotatedAssay assay = AnnotatedAssay.createOrRetrieve(assayId, chemblId, description);
-				assay.annotate(annotationRule, false, robot);
-				
-				counterFlush++;
-				if (counterFlush%100 == 0) {
-					AnnotatedAssay.em().flush();
-					AnnotatedAssay.em().clear();
-				}
-			}
-		}
+            int counterFlush = 0;
 
-		FileUtils.writeStringToFile(report, reportContent);
-		stopwatch.stop();
-		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
-	}
+            for (Object[] object : results) {
+
+                String description = (String) object[1];
+                int assayId = (int) object[0];
+                String chemblId = (String) object[2];
+
+                AnnotatedAssay assay = AnnotatedAssay.createOrRetrieve(assayId, chemblId, description);
+                assay.annotate(annotationRule, false, robot);
+
+                counterFlush++;
+                if (counterFlush % 100 == 0) {
+                    AnnotatedAssay.em().flush();
+                    AnnotatedAssay.em().clear();
+                }
+            }
+        }
+
+        FileUtils.writeStringToFile(report, reportContent);
+        stopwatch.stop();
+        Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
+    }
 
 }

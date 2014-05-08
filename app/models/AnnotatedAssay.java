@@ -29,212 +29,215 @@ import play.db.jpa.Model;
 @Entity
 public class AnnotatedAssay extends Model {
 
-	@ManyToOne
-	public Reviewer reviewer;
+    @ManyToOne
+    public Reviewer reviewer;
 
-	@OneToMany(mappedBy="assay", cascade=CascadeType.ALL)
-	public Set<Annotation> annotations;
+    @OneToMany(mappedBy = "assay", cascade = CascadeType.ALL)
+    public Set<Annotation> annotations;
 
-	public int assayId;
+    public int assayId;
 
-	public String chemblId;
+    public String chemblId;
 
-	@Type(type = "org.hibernate.type.TextType")
-	public String description;
+    @Type(type = "org.hibernate.type.TextType")
+    public String description;
 
-	public boolean starred;
+    public boolean starred;
 
-	public boolean needReview;
+    public boolean needReview;
 
-	public Date validationDate;
+    public Date validationDate;
 
-	public AnnotatedAssay(int assayId, String chemblId, String description) {
-		this.assayId = assayId;
-		this.description = description;
-		this.chemblId = chemblId;
-		this.needReview = false;
-		this.starred = false;
-		this.annotations = new TreeSet<>();
-	}
+    public AnnotatedAssay(int assayId, String chemblId, String description) {
+        this.assayId = assayId;
+        this.description = description;
+        this.chemblId = chemblId;
+        this.needReview = false;
+        this.starred = false;
+        this.annotations = new TreeSet<Annotation>();
+    }
 
-	public AnnotatedAssay setReviewer(Reviewer reviewer) {
-		this.reviewer = reviewer;
-		this.save();
-		return this;
-	}
+    public AnnotatedAssay setReviewer(Reviewer reviewer) {
+        this.reviewer = reviewer;
+        this.save();
+        return this;
+    }
 
-	public String toString() {
-		return chemblId;
-	}
+    
+    @Override
+    public String toString() {
+        return chemblId;
+    }
 
-	public static AnnotatedAssay createOrRetrieve(int assayId, String chemblId, String description) {
-		AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
-		if(assay == null){
-			return new AnnotatedAssay(assayId, chemblId, description).save();
-		}
-		return assay;
-	}
+    public static AnnotatedAssay createOrRetrieve(int assayId, String chemblId, String description) {
+        AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
+        if (assay == null) {
+            return new AnnotatedAssay(assayId, chemblId, description).save();
+        }
+        return assay;
+    }
 
-	public void annotate(AnnotationRule annotationRule, boolean needReview, Reviewer reviewer) {
-		//Try to retrieve a potentially existing annotation, for the term to this assay.
-		Annotation annotation = Annotation.find("byTermAndAssay", annotationRule.baoTerm, this).first();
+    public void annotate(AnnotationRule annotationRule, boolean needReview, Reviewer reviewer) {
+        //Try to retrieve a potentially existing annotation, for the term to this assay.
+        Annotation annotation = Annotation.find("byTermAndAssay", annotationRule.baoTerm, this).first();
 
-		if(annotation == null){
-			//If no annotation with the term, then create a new one and save it.
-			Annotation newAnnotation = new Annotation(annotationRule.baoTerm, this, annotationRule.confidence, false).save();
-			this.annotations.add(newAnnotation);
-		}else{
-			//If the annotation exists already, then increase the confidence.
-			annotation.confidence += annotationRule.confidence;
-			annotation.save();
-		}
-		this.needReview = needReview;
-		this.reviewer = reviewer;
-		this.save();
-	}
+        if (annotation == null) {
+            //If no annotation with the term, then create a new one and save it.
+            Annotation newAnnotation = new Annotation(annotationRule.baoTerm, this, annotationRule.confidence, false).save();
+            this.annotations.add(newAnnotation);
+        } else {
+            //If the annotation exists already, then increase the confidence.
+            annotation.confidence += annotationRule.confidence;
+            annotation.save();
+        }
+        this.needReview = needReview;
+        this.reviewer = reviewer;
+        this.save();
+    }
 
-	public String removeAnnotation(Long id) {
-		Annotation annotation = Annotation.find("byId", id).first();
-		int deltaScore = 0;
-		String message = GameConstants.REMOVE_ANNOTATION_MESSAGE;
+    public String removeAnnotation(Long id) {
+        Annotation annotation = Annotation.find("byId", id).first();
+        int deltaScore = 0;
+        String message = GameConstants.REMOVE_ANNOTATION_MESSAGE;
 
-		if(annotation != null){
-			if(annotation.isFake){
-				deltaScore = GameConstants.REMOVE_FAKE_ANNOTATION_POINTS;
-				if(this.reviewer.isPlayer){
-					message = GameConstants.REMOVE_FAKE_ANNOTATION_MESSAGE;
-				}
-				this.reviewer.updateScore(deltaScore);
-			}
-			
-			this.annotations.remove(annotation);
-			annotation.delete();
-			this.save();
-		}
+        if (annotation != null) {
+            if (annotation.isFake) {
+                deltaScore = GameConstants.REMOVE_FAKE_ANNOTATION_POINTS;
+                if (this.reviewer.isPlayer) {
+                    message = GameConstants.REMOVE_FAKE_ANNOTATION_MESSAGE;
+                }
+                this.reviewer.updateScore(deltaScore);
+            }
 
-		return message;
-	}
+            //Do not remove - flag as to remove
+            this.annotations.remove(annotation);
+            annotation.delete();
+            this.save();
+        }
 
-	public void star() {
-		if(this.starred){
-			this.starred = false;
-		}else{
-			this.starred = true;
-		}
-		this.save();
-	}
+        return message;
+    }
 
-	public void markAsCurated(int numberOfFake) {
-		this.validationDate = new Date();
+    public void star() {
+        if (this.starred) {
+            this.starred = false;
+        } else {
+            this.starred = true;
+        }
+        this.save();
+    }
 
-		int deltaScore = 0;
+    public void markAsCurated(int numberOfFake) {
+        this.validationDate = new Date();
 
-		if(numberOfFake > 0){
-			deltaScore = numberOfFake * GameConstants.MISS_FAKE_ANNOTATION_POINTS;
-		}else{
-			deltaScore = GameConstants.CORRECT_VALIDATION_POINTS;
-		}
+        int deltaScore = 0;
 
-		this.reviewer.updateScore(deltaScore);
+        if (numberOfFake > 0) {
+            deltaScore = numberOfFake * GameConstants.MISS_FAKE_ANNOTATION_POINTS;
+        } else {
+            deltaScore = GameConstants.CORRECT_VALIDATION_POINTS;
+        }
 
-		this.needReview = false;
-		this.save();		
-	}
+        this.reviewer.updateScore(deltaScore);
 
-	public String getRules(){
-		String rules = "";
-		boolean isFirst = true;
-		for (Annotation annotation : this.annotations) {
-			for (AnnotationRule annotationRule : annotation.term.rules) {
-				if(annotationRule.highlight){
-					if(isFirst){
-						isFirst = false;
-					}else{
-						rules += ", ";
-					}
+        this.needReview = false;
+        this.save();
+    }
 
-					Pattern p = Pattern.compile("%(.*)%");
-					Matcher m = p.matcher(annotationRule.rule);
+    public String getRules() {
+        String rules = "";
+        boolean isFirst = true;
+        for (Annotation annotation : this.annotations) {
+            for (AnnotationRule annotationRule : annotation.term.rules) {
+                if (annotationRule.highlight) {
+                    if (isFirst) {
+                        isFirst = false;
+                    } else {
+                        rules += ", ";
+                    }
 
-					if (m.find()) {
-						rules += "\"" + m.group(1) + "\"";
-					}
-				}
-			}
-		}
-		return rules;
-	}
+                    Pattern p = Pattern.compile("%(.*)%");
+                    Matcher m = p.matcher(annotationRule.rule);
 
-	public void doSemanticSimplification() {
-		Set<Annotation> annotations = this.annotations;
+                    if (m.find()) {
+                        rules += "\"" + m.group(1) + "\"";
+                    }
+                }
+            }
+        }
+        return rules;
+    }
 
-		if(annotations.size() > 1){
-			List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
+    public void doSemanticSimplification() {
+        Set<Annotation> annotations = this.annotations;
 
-			for (Annotation annotation : annotations) {
-				//Retrieves all the annotated terms
-				annotatedTerms.add(annotation.term);
-			}
+        if (annotations.size() > 1) {
+            List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
 
-			List<Annotation> toRemove = new ArrayList<Annotation>();
+            for (Annotation annotation : annotations) {
+                //Retrieves all the annotated terms
+                annotatedTerms.add(annotation.term);
+            }
 
-			for (Annotation annotation : annotations) {
-				//If the children of an annotated term are
-				//present in the annotated terms, then delete the annotation
+            List<Annotation> toRemove = new ArrayList<Annotation>();
 
-				List<BaoTerm> children = annotation.term.children;
-				for (BaoTerm child : children) {
-					if(annotatedTerms.contains(child)){
-						//The annotation should be removed - flag as such to avoid concurrency problems
-						toRemove.add(annotation);
-					}
-				}
-			}
+            for (Annotation annotation : annotations) {
+                //If the children of an annotated term are
+                //present in the annotated terms, then delete the annotation
 
-			for (Annotation annotationToRemove : toRemove) {
-				this.annotations.remove(annotationToRemove);
-				annotationToRemove.delete();
-				this.save();
-			}
+                List<BaoTerm> children = annotation.term.children;
+                for (BaoTerm child : children) {
+                    if (annotatedTerms.contains(child)) {
+                        //The annotation should be removed - flag as such to avoid concurrency problems
+                        toRemove.add(annotation);
+                    }
+                }
+            }
 
-		}
-	}
+            for (Annotation annotationToRemove : toRemove) {
+                this.annotations.remove(annotationToRemove);
+                annotationToRemove.delete();
+                this.save();
+            }
 
-	public void addFakeAnnotation() {
-		List<BaoTerm> terms = this.getAnnotatedTerms();
+        }
+    }
 
-		BaoTerm randomTerm = BaoTerm.find("order by rand()").first();;
+    public void addFakeAnnotation() {
+        List<BaoTerm> terms = this.getAnnotatedTerms();
 
-		while(terms.contains(randomTerm)){
-			randomTerm = BaoTerm.find("order by rand()").first();
-		}
+        BaoTerm randomTerm = BaoTerm.find("order by rand()").first();;
 
-		int confidence;
-		if(Math.random() > 0.5){
-			confidence = 1;
-		}else{
-			confidence = 3;
-		}
-		Annotation newAnnotation = new Annotation(randomTerm, this, confidence, true).save();
-		this.annotations.add(newAnnotation);
-		this.save();
-	}
+        while (terms.contains(randomTerm)) {
+            randomTerm = BaoTerm.find("order by rand()").first();
+        }
 
-	private List<BaoTerm> getAnnotatedTerms() {
-		List<BaoTerm> terms = new ArrayList<BaoTerm>();
-		for (Annotation annotation : this.annotations) {
-			terms.add(annotation.term);
-		}
-		return terms;
-	}
+        int confidence;
+        if (Math.random() > 0.5) {
+            confidence = 1;
+        } else {
+            confidence = 3;
+        }
+        Annotation newAnnotation = new Annotation(randomTerm, this, confidence, true).save();
+        this.annotations.add(newAnnotation);
+        this.save();
+    }
 
-	public int getNumberOfFakeAnnotations() {
-		int number = 0;
-		for (Annotation annotation : this.annotations) {
-			if(annotation.isFake){
-				number++;
-			}
-		}
-		return number;
-	}
+    private List<BaoTerm> getAnnotatedTerms() {
+        List<BaoTerm> terms = new ArrayList<BaoTerm>();
+        for (Annotation annotation : this.annotations) {
+            terms.add(annotation.term);
+        }
+        return terms;
+    }
+
+    public int getNumberOfFakeAnnotations() {
+        int number = 0;
+        for (Annotation annotation : this.annotations) {
+            if (annotation.isFake) {
+                number++;
+            }
+        }
+        return number;
+    }
 }
