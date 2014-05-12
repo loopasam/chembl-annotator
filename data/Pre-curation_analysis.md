@@ -3,6 +3,10 @@
 - Annotation process takes 1240 minutes (20.6 hours on crunch) over ChEMBL 17
 - Commands are for MySQL
 
+## Error analysis
+
+`SELECT assay_id, description FROM assays WHERE assays.assay_id NOT IN (SELECT AnnotatedAssay.assayId FROM AnnotatedAssay) LIMIT 100;`
+
 ## Actionable metrics
 
 - *Curation completion*: 100 x (#annotatedAssay.needReview = true) / (#annotatedAssay)
