@@ -3,7 +3,12 @@
   <a id="star" href="@{Application.star(_assay.id)}" 
   class="fa ${_assay.starred ? 'fa-star text-primary' : 'fa-star-o text-primary'} star-link">
   </a>
-  #{if _assay.needReview} <span class="fa fa-flag text-danger"></span> #{/if} 
+  #{if _assay.needReview} <span class="fa fa-flag text-danger"></span> #{/if}
+  #{else} 
+  <a class="star-link" href="@{Application.revert(_assay.id)}">
+      <span class="fa fa-undo text-danger"></span>
+  </a>
+  #{/else}
  Assay <a href="https://www.ebi.ac.uk/chembl/assay/inspect/${_assay.chemblId}" target=_BLANCK>${_assay.chemblId}</a>
   </h1>
 </div>

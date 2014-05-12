@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ChEMBL ID</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        #{list items:_assays, as:'assay'}
+        <tr>
+            <td><a href="@{Application.assay(assay.chemblId)}">${assay.chemblId}</a></td>
+            <td>${assay.description}</td>
+        </tr>
+        #{/list}
+    </tbody>
+</table>

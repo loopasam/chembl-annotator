@@ -19,6 +19,7 @@ import play.jobs.Job;
  */
 public class FilterAssayJob extends Job {
 
+    @Override
     public void doJob() throws Exception {
         Logger.info("Filtering job...");
 
@@ -69,7 +70,7 @@ public class FilterAssayJob extends Job {
                 }
             }
         }
-        
+
         Logger.info("Filtering done.");
 
     }

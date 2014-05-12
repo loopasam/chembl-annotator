@@ -1,44 +1,50 @@
 <hr>
 <p>
-  <a href="@{Application.validate(_assay.id)}" 
-  class="btn btn-success btn-lg btn-block ${_assay.needReview ? '' : 'disabled'}">
-  #{if _assay.needReview}
-    <span class="fa fa-check-square-o"></span> Validate
-  #{/if}
-  #{else}
-  Validated by ${_assay.reviewer.email}
-  #{/else}
-  </a>
+
+<form method="post" action="@{Application.validate()}">
+    <button type="submit"
+            class="btn btn-success btn-lg btn-block ${_assay.needReview ? '' : 'disabled'}">
+        #{if _assay.needReview}
+        <span class="fa fa-check-square-o"></span> Validate
+        #{/if}
+        #{else}
+        Validated by ${_assay.reviewer.email}
+        #{/else}
+    </button>
+    <input type='hidden' name='assayId' value='${_assay.id}'>
+</form>
 </p>
 #{ifErrors} 
-   #{errors}
-    <div class="panel panel-danger">
+#{errors}
+<div class="panel panel-danger">
     <div class="panel-body">
-    <span class="text-danger">${error}</span>
+        <span class="text-danger">${error}</span>
     </div>
-   </div>
-  #{/errors}
+</div>
+#{/errors}
 #{/ifErrors}
 
 
 #{if flash.success}
-    <div class="panel ${flash.success.contains("!") ? 'panel-success' : 'panel-info'}">
-    <div class="panel-body">
-    <span class="${flash.success.contains("!") ? 'text-success' : 'text-info'}">${flash.success}</span>
-    </div>
-   </div>
-#{/if}
+<div class="panel ${flash.success.contains("!") ? 'panel-success' : 'panel-info'}">
+            <div class="panel-body">
+                <span class="${flash.success.contains("!") ? 'text-success' : 'text-info'}">
+                    #{verbatim}${flash.success}#{/verbatim}
+                </span>
+                </div>
+            </div>
+            #{/if}
 
-<script type="text/javascript">
-//Animation script
-//Save the original color of background
-var originalColorBg = $(".panel").css("background-color");
-//Replace the background with the color of the border
-var originalColorBorder = $(".panel").css("border-color");
-$(".panel").css("background-color", originalColorBorder);
-//Goes back to the original background color
-$(".panel").animate({
-          backgroundColor: originalColorBg,
-        }, 700 );
-$(".panel").delay(2000).fadeOut(700);
-</script>
+            <script type="text/javascript">
+            //Animation script
+            //Save the original color of background
+                var originalColorBg = $(".panel").css("background-color");
+            //Replace the background with the color of the border
+                var originalColorBorder = $(".panel").css("border-color");
+                $(".panel").css("background-color", originalColorBorder);
+            //Goes back to the original background color
+                $(".panel").animate({
+                    backgroundColor: originalColorBg,
+                }, 700);
+                $(".panel").delay(2000).fadeOut(700);
+            </script>

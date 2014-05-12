@@ -63,7 +63,6 @@ public class AnnotatedAssay extends Model {
         return this;
     }
 
-    
     @Override
     public String toString() {
         return chemblId;
@@ -109,9 +108,8 @@ public class AnnotatedAssay extends Model {
                 this.reviewer.updateScore(deltaScore);
             }
 
-            //Do not remove - flag as to remove
-            this.annotations.remove(annotation);
-            annotation.delete();
+            annotation.toRemove = true;
+            annotation.save();
             this.save();
         }
 
@@ -234,10 +232,30 @@ public class AnnotatedAssay extends Model {
     public int getNumberOfFakeAnnotations() {
         int number = 0;
         for (Annotation annotation : this.annotations) {
-            if (annotation.isFake) {
+            if (annotation.isFake && !annotation.toRemove) {
                 number++;
             }
         }
         return number;
+    }
+
+    public void revert() {
+        //The number of points to be removed is to be equal to the maximum
+        //of points that can be earned by the assay. This should prevent cheating.
+        int delta = -GameConstants.CORRECT_VALIDATION_POINTS;
+
+        this.needReview = true;
+        for (Annotation annotation : this.annotations) {
+            if (annotation.isFake) {
+                delta -= GameConstants.REMOVE_FAKE_ANNOTATION_POINTS;
+            }
+
+            if (annotation.toRemove) {
+                annotation.toRemove = false;
+                annotation.save();
+            }
+        }
+        this.reviewer.updateScore(delta);
+        this.save();
     }
 }

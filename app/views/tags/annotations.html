@@ -1,7 +1,8 @@
 <ul class="list-inline">
 #{list items:_assay.annotations.sort(), as:'annotation' }
+
+#{if !annotation.toRemove}
   <li>
-  
   <div class="btn-group" style="margin-top: 10px;">
   <button type="button" 
   class="btn disabled ${annotation.isFake ? 'btn-danger' : 'btn-default'}">
@@ -16,5 +17,6 @@
   </a>
 </div>
   </li>
+  #{/if}
 #{/list}
 </ul>

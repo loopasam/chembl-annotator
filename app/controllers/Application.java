@@ -1,15 +1,11 @@
 package controllers;
 
-import play.*;
 import play.db.jpa.JPA;
 import play.mvc.*;
 
-import java.math.BigInteger;
 import java.util.*;
 
 import jobs.FakeAnnotationsJob;
-import jobs.RuleAnnotationJob;
-import jobs.LoadBaoJob;
 
 import models.*;
 
@@ -29,9 +25,29 @@ public class Application extends Controller {
         render();
     }
 
+    //Inspect quickly the annotations related to a BAO term
+    public static void listAssays(String baoId) {
+        BaoTerm term = BaoTerm.find("byBaoId", baoId).first();
+        List<AnnotatedAssay> assays = AnnotatedAssay.find("select distinct "
+                + "assay from AnnotatedAssay assay "
+                + "join assay.annotations as anno "
+                + "where anno.term = ?", term).fetch(100);
+
+        render(assays, term);
+    }
+
     public static void assay(String chemblid) {
         AnnotatedAssay assay = AnnotatedAssay.find("byChemblId", chemblid).first();
+        response.setHeader("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store");
         render(assay);
+    }
+
+    public static void revert(Long id) {
+        AnnotatedAssay assay = AnnotatedAssay.findById(id);
+        assay.revert();
+        flash.success("Annotations reverted");
+        flash.keep();
+        assay(assay.chemblId);
     }
 
     public static void next() {
@@ -128,7 +144,7 @@ public class Application extends Controller {
             validation.addError("curation", GameConstants.MISS_FAKE_ANNOTATION_MESSAGE);
             validation.keep();
         } else {
-            flash.success(GameConstants.ASSAY_VALIDATED_MESSAGE);
+            flash.success("Assay <a href='/assay/" + assay.chemblId + "'>" + assay.chemblId + "</a> successfully validated");
             flash.keep();
         }
 

@@ -22,6 +22,7 @@ GET     /stats                                          Application.stats
 GET     /ladder                                          Application.ladder
 GET     /starred                                        Application.starred
 GET     /stats                                          Application.stats
+GET     /assays/{baoId}                                          Application.listAssays
 
 # Curation routes
 GET     /star/{id}                                       Application.star
