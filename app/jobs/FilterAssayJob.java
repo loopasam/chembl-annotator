@@ -5,10 +5,13 @@
  */
 package jobs;
 
+import com.google.common.base.Stopwatch;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import models.AnnotatedAssay;
 import models.Annotation;
 import models.AnnotationRule;
+import models.Utils;
 import play.Logger;
 import play.db.jpa.JPA;
 import play.jobs.Job;
@@ -22,6 +25,8 @@ public class FilterAssayJob extends Job {
     @Override
     public void doJob() throws Exception {
         Logger.info("Filtering job...");
+        Stopwatch stopwatch = Stopwatch.createUnstarted();
+        stopwatch.start();
 
         List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r "
                 + "where r.isFilter = true").fetch();
@@ -45,6 +50,8 @@ public class FilterAssayJob extends Job {
             int counterFlush = 0;
 
             for (Object[] result : results) {
+                
+                Logger.info("i: " + counterFlush + "/" + results.size());
 
                 int assayId = (int) result[0];
                 AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
@@ -72,6 +79,8 @@ public class FilterAssayJob extends Job {
         }
 
         Logger.info("Filtering done.");
+        stopwatch.stop();
+        Utils.emailAdmin("FilterAssayJob completed", "Job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
 
     }
 
