@@ -40,7 +40,9 @@ public class FilterAssayJob extends Job {
             Logger.info(termMessage);
 
             String rule = "SELECT DISTINCT assay_id, description FROM assays "
-                    + "WHERE " + annotationRule.rule + ";";
+                    + "WHERE " + annotationRule.rule + " "
+                    + "AND assay_id "
+                    + "IN (SELECT assayId FROM AnnotatedAssay);";
 
             List<Object[]> results = JPA.em().createNativeQuery(rule).getResultList();
 
@@ -50,25 +52,20 @@ public class FilterAssayJob extends Job {
             int counterFlush = 0;
 
             for (Object[] result : results) {
-                
+
                 Logger.info("i: " + counterFlush + "/" + results.size());
 
                 int assayId = (int) result[0];
                 AnnotatedAssay assay = AnnotatedAssay.find("byAssayId", assayId).first();
 
-                //Check if the assay exists already, otherwise does nothing
-                if (assay != null) {
-                    Logger.info("removed: " + assay.chemblId);
-                    assay.needReview = false;
+                assay.needReview = false;
 
-                    for (Annotation annotation : assay.annotations) {
-                        annotation.toRemove = true;
-                        annotation.save();
-                    }
-
-                    assay.save();
-
+                for (Annotation annotation : assay.annotations) {
+                    annotation.toRemove = true;
+                    annotation.save();
                 }
+
+                assay.save();
 
                 counterFlush++;
                 if (counterFlush % 100 == 0) {
