@@ -204,9 +204,6 @@ public class AnnotatedAssay extends Model {
             }
             //this.save();
         }
-        Annotation.em().flush();
-        Annotation.em().clear();
-
     }
 
     public void addFakeAnnotation() {
