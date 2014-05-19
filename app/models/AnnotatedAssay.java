@@ -199,10 +199,13 @@ public class AnnotatedAssay extends Model {
 
             Logger.info("Flaging annotations to be removed: " + toRemove.size() + " (" + this.chemblId + ")");
             for (Annotation annotationToRemove : toRemove) {
-                annotationToRemove.toRemove = true;
+                this.annotations.remove(annotationToRemove);
+                annotationToRemove.delete();
+                
+                //annotationToRemove.toRemove = true;
                 annotationToRemove.save();
             }
-            //this.save();
+            this.save();
         }
     }
 
