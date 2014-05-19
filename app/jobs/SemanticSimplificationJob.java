@@ -29,12 +29,6 @@ public class SemanticSimplificationJob extends Job {
 
             //TODO implement better
             annotatedAssay.doSemanticSimplification();
-
-            if (counter % 100 == 0) {
-                AnnotatedAssay.em().flush();
-                AnnotatedAssay.em().clear();
-            }
-
         }
 
         stopwatch.stop();

@@ -169,6 +169,7 @@ public class AnnotatedAssay extends Model {
     public void doSemanticSimplification() {
 
         if (this.annotations.size() > 1) {
+            Logger.info("Retrieving current annotations...");
             List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
 
             for (Annotation annotation : this.annotations) {
@@ -178,15 +179,15 @@ public class AnnotatedAssay extends Model {
                 }
             }
 
+            Logger.info("Identifying annotations to remove...");
             List<Annotation> toRemove = new ArrayList<Annotation>();
 
             for (Annotation annotation : this.annotations) {
 
                 if (!annotation.toRemove) {
-                    
+
                     //If the children of an annotated term are
                     //present in the annotated terms, then delete the annotation
-
                     List<BaoTerm> children = annotation.term.children;
                     for (BaoTerm child : children) {
                         if (annotatedTerms.contains(child)) {
@@ -198,12 +199,12 @@ public class AnnotatedAssay extends Model {
 
             }
 
+            Logger.info("Flaging annotations to be removed...");
             for (Annotation annotationToRemove : toRemove) {
                 annotationToRemove.toRemove = true;
                 annotationToRemove.save();
-                this.save();
             }
-
+            this.save();
         }
     }
 
