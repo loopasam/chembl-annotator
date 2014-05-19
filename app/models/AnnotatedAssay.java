@@ -195,7 +195,6 @@ public class AnnotatedAssay extends Model {
                         }
                     }
                 }
-
             }
 
             Logger.info("Flaging annotations to be removed: " + toRemove.size() + " (" + this.chemblId + ")");
@@ -203,6 +202,9 @@ public class AnnotatedAssay extends Model {
                 annotationToRemove.toRemove = true;
                 annotationToRemove.save();
             }
+            AnnotatedAssay.em().flush();
+            AnnotatedAssay.em().clear();
+
             //this.save();
         }
     }
