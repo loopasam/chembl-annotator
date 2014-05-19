@@ -202,8 +202,6 @@ public class AnnotatedAssay extends Model {
                 annotationToRemove.toRemove = true;
                 annotationToRemove.save();
             }
-            AnnotatedAssay.em().flush();
-            AnnotatedAssay.em().clear();
 
             //this.save();
         }

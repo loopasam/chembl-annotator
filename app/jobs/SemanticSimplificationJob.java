@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import com.google.common.base.Stopwatch;
 
 import models.AnnotatedAssay;
+import models.Annotation;
 import play.Logger;
 import play.jobs.Job;
 
@@ -28,6 +29,10 @@ public class SemanticSimplificationJob extends Job {
             Logger.info("Assay " + counter + "/" + total);
 
             annotatedAssay.doSemanticSimplification();
+            if (counter % 100 == 0) {
+                Annotation.em().flush();
+                Annotation.em().clear();
+            }
 
         }
 
