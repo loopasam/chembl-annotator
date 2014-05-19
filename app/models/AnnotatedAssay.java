@@ -202,11 +202,11 @@ public class AnnotatedAssay extends Model {
                 annotationToRemove.toRemove = true;
                 annotationToRemove.save();
             }
-            Annotation.em().flush();
-            Annotation.em().clear();
-
             //this.save();
         }
+        Annotation.em().flush();
+        Annotation.em().clear();
+
     }
 
     public void addFakeAnnotation() {
