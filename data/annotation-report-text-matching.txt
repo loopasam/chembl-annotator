@@ -1,0 +1,390 @@
+Term: nuclear membrane potential assay(BAO_0002195) - 1/195
+Rule: LOWER(description) LIKE '%nuclear membrane potential assay%' - Number of assays identified: 0
+Term: nuclear membrane potential assay(BAO_0002195) - 2/195
+Rule: LOWER(description) LIKE '%nuclear membrane potential%' - Number of assays identified: 0
+Term: mitochondrial membrane potential assay(BAO_0002190) - 3/195
+Rule: LOWER(description) LIKE '%mitochondrial membrane potential assay%' - Number of assays identified: 1
+Term: mitochondrial membrane potential assay(BAO_0002190) - 4/195
+Rule: LOWER(description) LIKE '%mitochondrial membrane potential%' - Number of assays identified: 167
+Term: mitochondrial membrane potential assay(BAO_0002190) - 5/195
+Rule: LOWER(description) LIKE '%mitochondrial transmembrane potential%' - Number of assays identified: 21
+Term: plasma membrane potential assay(BAO_0002194) - 6/195
+Rule: LOWER(description) LIKE '%plasma membrane potential assay%' - Number of assays identified: 0
+Term: plasma membrane potential assay(BAO_0002194) - 7/195
+Rule: LOWER(description) LIKE '%plasma membrane potential%' - Number of assays identified: 0
+Term: ion channel assay(BAO_0002997) - 8/195
+Rule: LOWER(description) LIKE '%ion channel assay%' - Number of assays identified: 3
+Term: ion channel assay(BAO_0002997) - 9/195
+Rule: LOWER(description) LIKE '%ion channel%' - Number of assays identified: 138
+Term: transporter assay(BAO_0003008) - 10/195
+Rule: LOWER(description) LIKE '%transporter assay%' - Number of assays identified: 5
+Term: transporter assay(BAO_0003008) - 11/195
+Rule: LOWER(description) LIKE '%transporter%' - Number of assays identified: 5571
+Term: chaperone activity assay(BAO_0002761) - 12/195
+Rule: LOWER(description) LIKE '%chaperone activity assay%' - Number of assays identified: 0
+Term: chaperone activity assay(BAO_0002761) - 13/195
+Rule: LOWER(description) LIKE '%chaperone activity%' - Number of assays identified: 8
+Term: localization assay(BAO_0002196) - 14/195
+Rule: LOWER(description) LIKE '%localization assay%' - Number of assays identified: 0
+Term: localization assay(BAO_0002196) - 15/195
+Rule: LOWER(description) LIKE '%localization%' - Number of assays identified: 260
+Term: genotoxicity assay(BAO_0002167) - 16/195
+Rule: LOWER(description) LIKE '%genotoxicity assay%' - Number of assays identified: 0
+Term: genotoxicity assay(BAO_0002167) - 17/195
+Rule: LOWER(description) LIKE '%genotoxicity%' - Number of assays identified: 374
+Term: cell morphology assay(BAO_0002991) - 18/195
+Rule: LOWER(description) LIKE '%cell morphology assay%' - Number of assays identified: 0
+Term: DNA-RNA interaction assay(BAO_0000590) - 19/195
+Rule: LOWER(description) LIKE '%DNA-RNA interaction%' - Number of assays identified: 0
+Term: neurite outgrowth assay(BAO_0002803) - 20/195
+Rule: LOWER(description) LIKE '%neurite outgrowth assay%' - Number of assays identified: 0
+Term: neurite outgrowth assay(BAO_0002803) - 21/195
+Rule: LOWER(description) LIKE '%neurite outgrowth%' - Number of assays identified: 163
+Term: safety pharmacology assay(BAO_0002533) - 22/195
+Rule: LOWER(description) LIKE '%safety pharmacology assay%' - Number of assays identified: 0
+Term: cytotoxicity assay(BAO_0002993) - 23/195
+Rule: LOWER(description) LIKE '%cytotoxicity assay%' - Number of assays identified: 183
+Term: cell morphology assay(BAO_0002991) - 24/195
+Rule: LOWER(description) LIKE '%cell morphology%' - Number of assays identified: 396
+Term: KINOMEScan assay(BAO_0003011) - 25/195
+Rule: LOWER(description) LIKE '%kinomescan%' - Number of assays identified: 10
+Term: radioligand binding assay(BAO_0002776) - 26/195
+Rule: LOWER(description) LIKE '%radioligand binding assay%' - Number of assays identified: 762
+Term: radioligand binding assay(BAO_0002776) - 27/195
+Rule: LOWER(description) LIKE '%radioligand binding%' - Number of assays identified: 1109
+Term: cytochrome P450 enzyme activity assay(BAO_0002736) - 28/195
+Rule: LOWER(description) LIKE '%cytochrome p450 enzyme activity%' - Number of assays identified: 0
+Term: luciferase enzyme activity assay(BAO_0002735) - 29/195
+Rule: LOWER(description) LIKE '%luciferase enzyme activity assay%' - Number of assays identified: 0
+Term: luciferase enzyme activity assay(BAO_0002735) - 30/195
+Rule: LOWER(description) LIKE '%luciferase enzyme activity%' - Number of assays identified: 0
+Term: cell cycle assay(BAO_0002041) - 31/195
+Rule: LOWER(description) LIKE '%mitotic arrest%' - Number of assays identified: 84
+Term: cytochrome P450 enzyme activity assay(BAO_0002736) - 32/195
+Rule: LOWER(description) LIKE '%cytochrome p450 enzyme activity assay%' - Number of assays identified: 0
+Term: gene expression assay(BAO_0002785) - 33/195
+Rule: LOWER(description) LIKE '%gene expression assay%' - Number of assays identified: 0
+Term: cGMP redistribution assay(BAO_0000651) - 34/195
+Rule: LOWER(description) LIKE '%cgmp redistribution assay%' - Number of assays identified: 0
+Term: safety pharmacology assay(BAO_0002533) - 35/195
+Rule: LOWER(description) LIKE '%safety pharmacology%' - Number of assays identified: 0
+Term: QT interval assay(BAO_0002184) - 36/195
+Rule: LOWER(description) LIKE '%qt interval assay%' - Number of assays identified: 0
+Term: QT interval assay(BAO_0002184) - 37/195
+Rule: LOWER(description) LIKE '%qt interval%' - Number of assays identified: 83
+Term: drug abuse assay(BAO_0002534) - 38/195
+Rule: LOWER(description) LIKE '%drug abuse assay%' - Number of assays identified: 0
+Term: drug abuse assay(BAO_0002534) - 39/195
+Rule: LOWER(description) LIKE '%drug abuse%' - Number of assays identified: 0
+Term: drug interaction assay(BAO_0002188) - 40/195
+Rule: LOWER(description) LIKE '%drug interaction assay%' - Number of assays identified: 0
+Term: drug interaction assay(BAO_0002188) - 41/195
+Rule: LOWER(description) LIKE '%drug interaction%' - Number of assays identified: 7
+Term: metastasis assay(BAO_0002535) - 42/195
+Rule: LOWER(description) LIKE '%metastasis assay%' - Number of assays identified: 0
+Term: metastasis assay(BAO_0002535) - 43/195
+Rule: LOWER(description) LIKE '%metastasis%' - Number of assays identified: 122
+Term: oxidative stress assay(BAO_0002168) - 44/195
+Rule: LOWER(description) LIKE '%oxidative stress assay%' - Number of assays identified: 0
+Term: oxidative stress assay(BAO_0002168) - 45/195
+Rule: LOWER(description) LIKE '%oxidative stress%' - Number of assays identified: 180
+Term: rna splicing assay(BAO_0003000) - 46/195
+Rule: LOWER(description) LIKE '%rna splicing assay%' - Number of assays identified: 0
+Term: rna splicing assay(BAO_0003000) - 47/195
+Rule: LOWER(description) LIKE '%rna splicing%' - Number of assays identified: 11
+Term: KiNativ assay(BAO_0002908) - 48/195
+Rule: LOWER(description) LIKE '%kinativ assay%' - Number of assays identified: 0
+Term: KiNativ assay(BAO_0002908) - 49/195
+Rule: LOWER(description) LIKE '%kinativ%' - Number of assays identified: 0
+Term: protein-nucleotide interaction assay(BAO_0000394) - 50/195
+Rule: LOWER(description) LIKE '%protein-nucleotide interaction assay%' - Number of assays identified: 0
+Term: protein-nucleotide interaction assay(BAO_0000394) - 51/195
+Rule: LOWER(description) LIKE '%protein-nucleotide interaction%' - Number of assays identified: 0
+Term: DNA-RNA interaction assay(BAO_0000590) - 52/195
+Rule: LOWER(description) LIKE '%DNA-RNA interaction assay%' - Number of assays identified: 0
+Term: protein-protein interaction assay(BAO_0002990) - 53/195
+Rule: LOWER(description) LIKE '%protein-protein interaction assay%' - Number of assays identified: 0
+Term: protein-protein interaction assay(BAO_0002990) - 54/195
+Rule: LOWER(description) LIKE '%protein-protein interaction%' - Number of assays identified: 18
+Term: protein-DNA interaction assay(BAO_0000591) - 55/195
+Rule: LOWER(description) LIKE '%protein-DNA interaction assay%' - Number of assays identified: 0
+Term: protein-DNA interaction assay(BAO_0000591) - 56/195
+Rule: LOWER(description) LIKE '%protein-DNA interaction%' - Number of assays identified: 1
+Term: protein-RNA interaction assay(BAO_0000593) - 57/195
+Rule: LOWER(description) LIKE '%protein-RNA interaction assay%' - Number of assays identified: 0
+Term: protein-RNA interaction assay(BAO_0000593) - 58/195
+Rule: LOWER(description) LIKE '%protein-RNA interaction%' - Number of assays identified: 1
+Term: KINOMEScan assay(BAO_0003011) - 59/195
+Rule: LOWER(description) LIKE '%kinomescan assay%' - Number of assays identified: 0
+Term: radioligand binding assay(BAO_0002776) - 60/195
+Rule: LOWER(description) LIKE '%[125i]%' - Number of assays identified: 5913
+Term: radioligand binding assay(BAO_0002776) - 61/195
+Rule: LOWER(description) LIKE '%[125 i]%' - Number of assays identified: 133
+Term: radioligand binding assay(BAO_0002776) - 62/195
+Rule: LOWER(description) LIKE '%radioligand%' - Number of assays identified: 7174
+Term: radioligand binding assay(BAO_0002776) - 63/195
+Rule: LOWER(description) LIKE '%[3h]%' - Number of assays identified: 30177
+Term: radioligand binding assay(BAO_0002776) - 64/195
+Rule: LOWER(description) LIKE '%[35s]%' - Number of assays identified: 2562
+Term: radioligand binding assay(BAO_0002776) - 65/195
+Rule: LOWER(description) LIKE '%[35 s]%' - Number of assays identified: 5
+Term: radioligand binding assay(BAO_0002776) - 66/195
+Rule: LOWER(description) LIKE '%[3 h]%' - Number of assays identified: 2
+Term: protein-small molecule interaction assay(BAO_0000110) - 67/195
+Rule: LOWER(description) LIKE '%protein-small molecule interaction assay%' - Number of assays identified: 0
+Term: protein-small molecule interaction assay(BAO_0000110) - 68/195
+Rule: LOWER(description) LIKE '%protein-small molecule interaction%' - Number of assays identified: 0
+Term: luciferase reporter gene assay(BAO_0002661) - 69/195
+Rule: LOWER(description) LIKE '%luciferase reporter gene assay%' - Number of assays identified: 2528
+Term: luciferase reporter gene assay(BAO_0002661) - 70/195
+Rule: LOWER(description) LIKE '%luciferase reporter gene%' - Number of assays identified: 2807
+Term: transcriptional response profiling assay(BAO_0002995) - 71/195
+Rule: LOWER(description) LIKE '%transcriptional response profiling assay%' - Number of assays identified: 0
+Term: apoptosis assay(BAO_0002043) - 72/195
+Rule: LOWER(description) LIKE '%apoptotic%' - Number of assays identified: 4979
+Term: cell growth assay(BAO_0002100) - 73/195
+Rule: LOWER(description) LIKE '%cell growth assay%' - Number of assays identified: 6
+Term: cell growth assay(BAO_0002100) - 74/195
+Rule: LOWER(description) LIKE '%cell growth%' - Number of assays identified: 10145
+Term: cell motility assay(BAO_0002992) - 75/195
+Rule: LOWER(description) LIKE '%cell motility assay%' - Number of assays identified: 0
+Term: cell motility assay(BAO_0002992) - 76/195
+Rule: LOWER(description) LIKE '%cell motility%' - Number of assays identified: 25
+Term: cell motility assay(BAO_0002992) - 77/195
+Rule: LOWER(description) LIKE '%cell migration%' - Number of assays identified: 305
+Term: cell motility assay(BAO_0002992) - 78/195
+Rule: LOWER(description) LIKE '%chemotaxis%' - Number of assays identified: 398
+Term: cell cycle assay(BAO_0002041) - 79/195
+Rule: LOWER(description) LIKE '%cell cycle assay%' - Number of assays identified: 0
+Term: cell cycle assay(BAO_0002041) - 80/195
+Rule: LOWER(description) LIKE '%cell cycle%' - Number of assays identified: 8378
+Term: cell cycle assay(BAO_0002041) - 81/195
+Rule: LOWER(description) LIKE '%s phase%' - Number of assays identified: 2046
+Term: cell cycle assay(BAO_0002041) - 82/195
+Rule: LOWER(description) LIKE '%g1 phase%' - Number of assays identified: 3208
+Term: cell cycle assay(BAO_0002041) - 83/195
+Rule: LOWER(description) LIKE '%g0 phase%' - Number of assays identified: 158
+Term: cell cycle assay(BAO_0002041) - 84/195
+Rule: LOWER(description) LIKE '%m phase%' - Number of assays identified: 2347
+Term: cell cycle state assay(BAO_0002786) - 85/195
+Rule: LOWER(description) LIKE '%cell cycle state assay%' - Number of assays identified: 0
+Term: cell cycle state assay(BAO_0002786) - 86/195
+Rule: LOWER(description) LIKE '%cell cycle state%' - Number of assays identified: 0
+Term: mitotic cell cycle state assay(BAO_0002584) - 87/195
+Rule: LOWER(description) LIKE '%mitotic cell cycle state assay%' - Number of assays identified: 0
+Term: mitotic cell cycle state assay(BAO_0002584) - 88/195
+Rule: LOWER(description) LIKE '%mitotic cell cycle state%' - Number of assays identified: 0
+Term: meiotic cell cycle state assay(BAO_0002585) - 89/195
+Rule: LOWER(description) LIKE '%meiotic cell cycle state assay%' - Number of assays identified: 0
+Term: meiotic cell cycle state assay(BAO_0002585) - 90/195
+Rule: LOWER(description) LIKE '%meiotic cell cycle state%' - Number of assays identified: 0
+Term: oxidoreductase activity assay(BAO_0002792) - 91/195
+Rule: LOWER(description) LIKE '%oxidoreductase activity assay%' - Number of assays identified: 0
+Term: oxidoreductase activity assay(BAO_0002792) - 92/195
+Rule: LOWER(description) LIKE '%oxidoreductase activity%' - Number of assays identified: 8
+Term: isomerase activity assay(BAO_0002794) - 93/195
+Rule: LOWER(description) LIKE '%isomerase enzyme activity assay%' - Number of assays identified: 0
+Term: isomerase activity assay(BAO_0002794) - 94/195
+Rule: LOWER(description) LIKE '%isomerase enzyme activity%' - Number of assays identified: 0
+Term: lyase activity assay(BAO_0002793) - 95/195
+Rule: LOWER(description) LIKE '%lyase activity assay%' - Number of assays identified: 0
+Term: lyase activity assay(BAO_0002793) - 96/195
+Rule: LOWER(description) LIKE '%lyase activity%' - Number of assays identified: 24
+Term: transferase activity assay(BAO_0002795) - 97/195
+Rule: LOWER(description) LIKE '%transferase activity assay%' - Number of assays identified: 0
+Term: transferase activity assay(BAO_0002795) - 98/195
+Rule: LOWER(description) LIKE '%transferase activity%' - Number of assays identified: 151
+Term: kinase activity assay(BAO_0002005) - 99/195
+Rule: LOWER(description) LIKE '%kinase activity assay%' - Number of assays identified: 1
+Term: kinase activity assay(BAO_0002005) - 100/195
+Rule: LOWER(description) LIKE '%kinase activity%' - Number of assays identified: 631
+Term: hydrolase activity assay(BAO_0002790) - 101/195
+Rule: LOWER(description) LIKE '%hydrolase activity assay%' - Number of assays identified: 0
+Term: hydrolase activity assay(BAO_0002790) - 102/195
+Rule: LOWER(description) LIKE '%hydrolase activity%' - Number of assays identified: 45
+Term: generic hydrolase enzyme activity assay(BAO_0002806) - 103/195
+Rule: LOWER(description) LIKE '%generic hydrolase enzyme activity assay%' - Number of assays identified: 0
+Term: beta galactosidase enzyme activity assay(BAO_0002777) - 104/195
+Rule: LOWER(description) LIKE '%beta galactosidase enzyme activity assay%' - Number of assays identified: 0
+Term: beta galactosidase enzyme activity assay(BAO_0002777) - 105/195
+Rule: LOWER(description) LIKE '%beta galactosidase enzyme activity%' - Number of assays identified: 0
+Term: phosphatase activity assay(BAO_0002762) - 106/195
+Rule: LOWER(description) LIKE '%phosphatase activity assay%' - Number of assays identified: 15
+Term: phosphatase activity assay(BAO_0002762) - 107/195
+Rule: LOWER(description) LIKE '%phosphatase activity%' - Number of assays identified: 232
+Term: protease activity assay(BAO_0002764) - 108/195
+Rule: LOWER(description) LIKE '%protease activity assay%' - Number of assays identified: 1
+Term: protease activity assay(BAO_0002764) - 109/195
+Rule: LOWER(description) LIKE '%protease activity%' - Number of assays identified: 78
+Term: reporter gene assay(BAO_0003006) - 110/195
+Rule: LOWER(description) LIKE '%reporter gene%' - Number of assays identified: 3923
+Term: reporter gene assay(BAO_0003006) - 111/195
+Rule: LOWER(description) LIKE '%reporter gene assay%' - Number of assays identified: 3495
+Term: gene expression assay(BAO_0002785) - 112/195
+Rule: LOWER(description) LIKE '%gene expression%' - Number of assays identified: 3061
+Term: beta galactosidase reporter gene assay(BAO_0003013) - 113/195
+Rule: LOWER(description) LIKE '%beta galactosidase reporter gene assay%' - Number of assays identified: 16
+Term: beta galactosidase reporter gene assay(BAO_0003013) - 114/195
+Rule: LOWER(description) LIKE '%beta galactosidase reporter gene%' - Number of assays identified: 19
+Term: chloramphenicol acetyltransferase reporter gene assay(BAO_0003015) - 115/195
+Rule: LOWER(description) LIKE '%chloramphenicol acetyltransferase reporter gene assay%' - Number of assays identified: 1
+Term: chloramphenicol acetyltransferase reporter gene assay(BAO_0003015) - 116/195
+Rule: LOWER(description) LIKE '%chloramphenicol acetyltransferase reporter gene%' - Number of assays identified: 2
+Term: fluorescent protein reporter gene assay(BAO_0003012) - 117/195
+Rule: LOWER(description) LIKE '%fluorescent protein reporter gene assay%' - Number of assays identified: 1
+Term: fluorescent protein reporter gene assay(BAO_0003012) - 118/195
+Rule: LOWER(description) LIKE '%fluorescent protein reporter gene%' - Number of assays identified: 1
+Term: beta lactamase reporter gene assay(BAO_0003014) - 119/195
+Rule: LOWER(description) LIKE '%beta lactamase reporter gene assay%' - Number of assays identified: 14
+Term: beta lactamase reporter gene assay(BAO_0003014) - 120/195
+Rule: LOWER(description) LIKE '%beta lactamase reporter gene%' - Number of assays identified: 14
+Term: transcriptional response profiling assay(BAO_0002995) - 121/195
+Rule: LOWER(description) LIKE '%transcriptional response profiling%' - Number of assays identified: 0
+Term: signal transduction assay(BAO_0003002) - 122/195
+Rule: LOWER(description) LIKE '%signal transduction assay%' - Number of assays identified: 0
+Term: signal transduction assay(BAO_0003002) - 123/195
+Rule: LOWER(description) LIKE '%signal transduction%' - Number of assays identified: 28
+Term: second messenger assay(BAO_0003007) - 124/195
+Rule: LOWER(description) LIKE '%second messenger assay%' - Number of assays identified: 7
+Term: second messenger assay(BAO_0003007) - 125/195
+Rule: LOWER(description) LIKE '%second messenger%' - Number of assays identified: 17
+Term: second messenger assay(BAO_0003007) - 126/195
+Rule: LOWER(description) LIKE '%cyclic amp accumulation%' - Number of assays identified: 11
+Term: second messenger assay(BAO_0003007) - 127/195
+Rule: LOWER(description) LIKE '%intracellular calcium release%' - Number of assays identified: 84
+Term: platelet activation assay(BAO_0002763) - 128/195
+Rule: LOWER(description) LIKE '%platelet activation assay%' - Number of assays identified: 0
+Term: platelet activation assay(BAO_0002763) - 129/195
+Rule: LOWER(description) LIKE '%platelet activation%' - Number of assays identified: 14
+Term: cytokine secretion assay(BAO_0003003) - 130/195
+Rule: LOWER(description) LIKE '%cytokine secretion assay%' - Number of assays identified: 0
+Term: cytokine secretion assay(BAO_0003003) - 131/195
+Rule: LOWER(description) LIKE '%cytokine secretion%' - Number of assays identified: 3
+Term: posttranslation modification assay(BAO_0003004) - 132/195
+Rule: LOWER(description) LIKE '%posttranslation modification assay%' - Number of assays identified: 0
+Term: protein-turnover assay(BAO_0003010) - 133/195
+Rule: LOWER(description) LIKE '%protein-turnover assay%' - Number of assays identified: 0
+Term: protein-turnover assay(BAO_0003010) - 134/195
+Rule: LOWER(description) LIKE '%protein-turnover%' - Number of assays identified: 0
+Term: sensitizer assay(BAO_0003001) - 135/195
+Rule: LOWER(description) LIKE '%sensitizer assay%' - Number of assays identified: 0
+Term: sensitizer assay(BAO_0003001) - 136/195
+Rule: LOWER(description) LIKE '%sensitizer%' - Number of assays identified: 111
+Term: cell proliferation assay(BAO_0002805) - 137/195
+Rule: LOWER(description) LIKE '%cell proliferation assay%' - Number of assays identified: 102
+Term: cell proliferation assay(BAO_0002805) - 138/195
+Rule: LOWER(description) LIKE '%cell proliferation%' - Number of assays identified: 2016
+Term: organism behavior assay(BAO_0002765) - 139/195
+Rule: LOWER(description) LIKE '%organism behavior assay%' - Number of assays identified: 0
+Term: organism behavior assay(BAO_0002765) - 140/195
+Rule: LOWER(description) LIKE '%organism behavior%' - Number of assays identified: 0
+Term: protein stability assay(BAO_0002804) - 141/195
+Rule: LOWER(description) LIKE '%protein stability assay%' - Number of assays identified: 0
+Term: protein stability assay(BAO_0002804) - 142/195
+Rule: LOWER(description) LIKE '%protein stability%' - Number of assays identified: 31
+Term: posttranslation modification assay(BAO_0003004) - 143/195
+Rule: LOWER(description) LIKE '%posttranslation modification%' - Number of assays identified: 0
+Term: phosphorylation assay(BAO_0003005) - 144/195
+Rule: LOWER(description) LIKE '%phosphorylation assay%' - Number of assays identified: 54
+Term: phosphorylation assay(BAO_0003005) - 145/195
+Rule: LOWER(description) LIKE '%phosphorylation%' - Number of assays identified: 5822
+Term: Cue Signal Response assay(BAO_0000042) - 146/195
+Rule: LOWER(description) LIKE '%cue signal response assay%' - Number of assays identified: 0
+Term: Cue Signal Response assay(BAO_0000042) - 147/195
+Rule: LOWER(description) LIKE '%cue signal response%' - Number of assays identified: 0
+Term: pharmacokinetic assay(BAO_0002182) - 148/195
+Rule: LOWER(description) LIKE '%pharmacokinetic assay%' - Number of assays identified: 1
+Term: pharmacokinetic assay(BAO_0002182) - 149/195
+Rule: LOWER(description) LIKE '%pharmacokinetic%' - Number of assays identified: 1420
+Term: bioavailability assay(BAO_0002530) - 150/195
+Rule: LOWER(description) LIKE '%bioavailability assay%' - Number of assays identified: 0
+Term: bioavailability assay(BAO_0002530) - 151/195
+Rule: LOWER(description) LIKE '%bioavailability%' - Number of assays identified: 7204
+Term: tissue distribution assay(BAO_0002532) - 152/195
+Rule: LOWER(description) LIKE '%tissue distribution assay%' - Number of assays identified: 0
+Term: tissue distribution assay(BAO_0002532) - 153/195
+Rule: LOWER(description) LIKE '%tissue distribution%' - Number of assays identified: 425
+Term: tissue distribution assay(BAO_0002532) - 154/195
+Rule: LOWER(description) LIKE '%biodistribution%' - Number of assays identified: 12217
+Term: non-specific protein binding assay(BAO_0002531) - 155/195
+Rule: LOWER(description) LIKE '%non-specific protein binding assay%' - Number of assays identified: 0
+Term: non-specific protein binding assay(BAO_0002531) - 156/195
+Rule: LOWER(description) LIKE '%non-specific protein binding%' - Number of assays identified: 0
+Term: oxidative phosphorylation assay(BAO_0002181) - 157/195
+Rule: LOWER(description) LIKE '%oxidative phosphorylation assay%' - Number of assays identified: 0
+Term: oxidative phosphorylation assay(BAO_0002181) - 158/195
+Rule: LOWER(description) LIKE '%oxidative phosphorylation%' - Number of assays identified: 4
+Term: pharmacodynamic assay(BAO_0002183) - 159/195
+Rule: LOWER(description) LIKE '%pharmacodynamic assay%' - Number of assays identified: 1
+Term: pharmacodynamic assay(BAO_0002183) - 160/195
+Rule: LOWER(description) LIKE '%pharmacodynamic%' - Number of assays identified: 836
+Term: redistribution assay(BAO_0002999) - 161/195
+Rule: LOWER(description) LIKE '%redistribution assay%' - Number of assays identified: 36
+Term: redistribution assay(BAO_0002999) - 162/195
+Rule: LOWER(description) LIKE '%redistribution%' - Number of assays identified: 54
+Term: dye redistribution assay(BAO_0000653) - 163/195
+Rule: LOWER(description) LIKE '%dye redistribution assay%' - Number of assays identified: 0
+Term: dye redistribution assay(BAO_0000653) - 164/195
+Rule: LOWER(description) LIKE '%dye redistribution%' - Number of assays identified: 0
+Term: protein redistribution assay(BAO_0000378) - 165/195
+Rule: LOWER(description) LIKE '%protein redistribution assay%' - Number of assays identified: 0
+Term: protein redistribution assay(BAO_0000378) - 166/195
+Rule: LOWER(description) LIKE '%protein redistribution%' - Number of assays identified: 0
+Term: metal ion redistribution assay(BAO_0000162) - 167/195
+Rule: LOWER(description) LIKE '%metal ion redistribution assay%' - Number of assays identified: 0
+Term: metal ion redistribution assay(BAO_0000162) - 168/195
+Rule: LOWER(description) LIKE '%metal ion redistribution%' - Number of assays identified: 0
+Term: second messenger redistribution assay(BAO_0000379) - 169/195
+Rule: LOWER(description) LIKE '%second messenger redistribution assay%' - Number of assays identified: 0
+Term: second messenger redistribution assay(BAO_0000379) - 170/195
+Rule: LOWER(description) LIKE '%second messenger redistribution%' - Number of assays identified: 0
+Term: IP1 redistribution assay(BAO_0002780) - 171/195
+Rule: LOWER(description) LIKE '%ip1 redistribution assay%' - Number of assays identified: 0
+Term: IP1 redistribution assay(BAO_0002780) - 172/195
+Rule: LOWER(description) LIKE '%ip1 redistribution%' - Number of assays identified: 0
+Term: cytotoxicity assay(BAO_0002993) - 173/195
+Rule: LOWER(description) LIKE '%cytotoxicity%' - Number of assays identified: 45049
+Term: apoptosis assay(BAO_0002043) - 174/195
+Rule: LOWER(description) LIKE '%apoptosis assay%' - Number of assays identified: 18
+Term: apoptosis assay(BAO_0002043) - 175/195
+Rule: LOWER(description) LIKE '%apoptosis%' - Number of assays identified: 8191
+Term: generic hydrolase enzyme activity assay(BAO_0002806) - 176/195
+Rule: LOWER(description) LIKE '%generic hydrolase enzyme activity%' - Number of assays identified: 0
+Term: second messenger assay(BAO_0003007) - 177/195
+Rule: LOWER(description) LIKE '%camp accumulation%' - Number of assays identified: 1134
+Term: cGMP redistribution assay(BAO_0000651) - 178/195
+Rule: LOWER(description) LIKE '%cgmp redistribution%' - Number of assays identified: 0
+Term: calcium redistribution assay(BAO_0000649) - 179/195
+Rule: LOWER(description) LIKE '%calcium redistribution assay%' - Number of assays identified: 0
+Term: calcium redistribution assay(BAO_0000649) - 180/195
+Rule: LOWER(description) LIKE '%calcium redistribution%' - Number of assays identified: 0
+Term: cAMP redistribution assay(BAO_0000650) - 181/195
+Rule: LOWER(description) LIKE '%camp redistribution assay%' - Number of assays identified: 0
+Term: cAMP redistribution assay(BAO_0000650) - 182/195
+Rule: LOWER(description) LIKE '%camp redistribution%' - Number of assays identified: 0
+Term: ion redistribution assay(BAO_0000819) - 183/195
+Rule: LOWER(description) LIKE '%ion redistribution assay%' - Number of assays identified: 0
+Term: ion redistribution assay(BAO_0000819) - 184/195
+Rule: LOWER(description) LIKE '%ion redistribution%' - Number of assays identified: 0
+Term: protein unfolding assay(BAO_0002779) - 185/195
+Rule: LOWER(description) LIKE '%protein unfolding assay%' - Number of assays identified: 0
+Term: protein unfolding assay(BAO_0002779) - 186/195
+Rule: LOWER(description) LIKE '%protein unfolding%' - Number of assays identified: 6
+Term: cell viability assay(BAO_0003009) - 187/195
+Rule: LOWER(description) LIKE '%cell viability assay%' - Number of assays identified: 1045
+Term: cell viability assay(BAO_0003009) - 188/195
+Rule: LOWER(description) LIKE '%cell viability%' - Number of assays identified: 4913
+Term: cell viability ATP quantitation assay(BAO_0010001) - 189/195
+Rule: LOWER(description) LIKE '%cell viability atp quantitation assay%' - Number of assays identified: 0
+Term: cell viability ATP quantitation assay(BAO_0010001) - 190/195
+Rule: LOWER(description) LIKE '%cell viability atp quantitation%' - Number of assays identified: 0
+Term: protein folding assay(BAO_0002998) - 191/195
+Rule: LOWER(description) LIKE '%protein folding assay%' - Number of assays identified: 0
+Term: protein folding assay(BAO_0002998) - 192/195
+Rule: LOWER(description) LIKE '%protein folding%' - Number of assays identified: 0
+Term: cell permeability assay(BAO_0002778) - 193/195
+Rule: LOWER(description) LIKE '%cell permeability assay%' - Number of assays identified: 2
+Term: cell permeability assay(BAO_0002778) - 194/195
+Rule: LOWER(description) LIKE '%cell permeability%' - Number of assays identified: 27
+Term: cell permeability assay(BAO_0002778) - 195/195
+Rule: LOWER(description) LIKE '%permeability%' - Number of assays identified: 3079

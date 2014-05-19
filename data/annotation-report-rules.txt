@@ -1,0 +1,52 @@
+Term: cell growth assay(BAO_0002100) - 1/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'GI50' - Number of assays identified: 19555
+Term: protein-small molecule interaction assay(BAO_0000110) - 2/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities, target_dictionary, molecule_dictionary WHERE assays.tid = target_dictionary.tid AND target_dictionary.target_type = 'SINGLE PROTEIN' AND assays.assay_id = activities.assay_id AND activities.molregno = molecule_dictionary.molregno AND molecule_dictionary.molecule_type = 'Small molecule' - Number of assays identified: 175133
+Term: binding assay(BAO_0002989) - 3/26
+Rule: assay_type = 'B' - Number of assays identified: 208775
+Term: enzyme activity assay(BAO_0002994) - 4/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Enzyme' - Number of assays identified: 100819
+Term: isomerase activity assay(BAO_0002794) - 5/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Isomerase' - Number of assays identified: 1345
+Term: cytotoxicity assay(BAO_0002993) - 6/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CC50' - Number of assays identified: 2752
+Term: ion channel assay(BAO_0002997) - 7/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Ion channel' - Number of assays identified: 10578
+Term: transporter assay(BAO_0003008) - 8/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Transporter' - Number of assays identified: 7165
+Term: toxicity assay(BAO_0002189) - 9/26
+Rule: assay_type = 'T' - Number of assays identified: 271764
+Term: binding assay(BAO_0002989) - 10/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Kd' - Number of assays identified: 6720
+Term: oxidoreductase activity assay(BAO_0002792) - 11/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Reductase' - Number of assays identified: 0
+Term: lyase activity assay(BAO_0002793) - 12/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Lyase' - Number of assays identified: 1874
+Term: protein-protein interaction assay(BAO_0002990) - 13/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_dictionary WHERE assays.tid = target_dictionary.tid AND target_dictionary.target_type = 'PROTEIN-PROTEIN INTERACTION' - Number of assays identified: 119
+Term: transferase activity assay(BAO_0002795) - 14/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Transferase' - Number of assays identified: 670
+Term: kinase activity assay(BAO_0002005) - 15/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Kinase' - Number of assays identified: 39962
+Term: pharmacokinetic assay(BAO_0002182) - 16/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Vd' - Number of assays identified: 1242
+Term: hydrolase activity assay(BAO_0002790) - 17/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Hydrolase' - Number of assays identified: 2632
+Term: phosphatase activity assay(BAO_0002762) - 18/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Phosphatase' - Number of assays identified: 1503
+Term: cytochrome P450 enzyme activity assay(BAO_0002736) - 19/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Cytochrome P450' - Number of assays identified: 7079
+Term: pharmacokinetic assay(BAO_0002182) - 20/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'AUC' - Number of assays identified: 7713
+Term: bioavailability assay(BAO_0002530) - 21/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'F' - Number of assays identified: 6887
+Term: pharmacokinetic assay(BAO_0002182) - 22/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'CL' - Number of assays identified: 7454
+Term: protease activity assay(BAO_0002764) - 23/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Protease' - Number of assays identified: 15910
+Term: pharmacokinetic assay(BAO_0002182) - 24/26
+Rule: SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Cmax' - Number of assays identified: 6085
+Term: bioassay(BAO_0000015) - 25/26
+Rule: LOWER(description) LIKE '%drugmatrix%' - Number of assays identified: 113678
+Term: bioassay(BAO_0000015) - 26/26
+Rule: LOWER(description) LIKE '%tg-gates%' - Number of assays identified: 158199
