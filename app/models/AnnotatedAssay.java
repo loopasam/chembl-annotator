@@ -197,15 +197,17 @@ public class AnnotatedAssay extends Model {
                 }
             }
 
-            Logger.info("Flaging annotations to be removed: " + toRemove.size() + " (" + this.chemblId + ")");
-            for (Annotation annotationToRemove : toRemove) {
-                this.annotations.remove(annotationToRemove);
-                annotationToRemove.delete();
-                
-                //annotationToRemove.toRemove = true;
-                annotationToRemove.save();
+            if (toRemove.size() > 0) {
+                Logger.info("Flaging annotations to be removed: " + toRemove.size() + " (" + this.chemblId + ")");
+                for (Annotation annotationToRemove : toRemove) {
+                    this.annotations.remove(annotationToRemove);
+                    annotationToRemove.delete();
+
+                    //annotationToRemove.toRemove = true;
+                    annotationToRemove.save();
+                }
+                this.save();
             }
-            this.save();
         }
     }
 
