@@ -204,7 +204,7 @@ public class AnnotatedAssay extends Model {
                     annotationToRemove.delete();
 
                     //annotationToRemove.toRemove = true;
-                    annotationToRemove.save();
+                    //annotationToRemove.save();
                 }
                 this.save();
             }
