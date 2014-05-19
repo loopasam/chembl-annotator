@@ -1,39 +1,37 @@
 package jobs;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Stopwatch;
 
 import models.AnnotatedAssay;
-import models.Annotation;
-import models.BaoTerm;
 import play.Logger;
 import play.jobs.Job;
 
 public class SemanticSimplificationJob extends Job {
 
-	public void doJob(){
+    @Override
+    public void doJob() {
 
-		Logger.info("Simplification started...");
-		Stopwatch stopwatch = Stopwatch.createUnstarted();
-		stopwatch.start();
+        Logger.info("Simplification started...");
+        Stopwatch stopwatch = Stopwatch.createUnstarted();
+        stopwatch.start();
 
-		List<AnnotatedAssay> assays = AnnotatedAssay.findAll();
+        List<AnnotatedAssay> assays = AnnotatedAssay.findAll();
 
-		int total = assays.size();
-		int counter = 0;
+        int total = assays.size();
+        int counter = 0;
 
-		for (AnnotatedAssay annotatedAssay : assays) {
-			counter++;
-			Logger.info("Assay " + counter + "/" + total);
-			annotatedAssay.doSemanticSimplification();
-		}
+        for (AnnotatedAssay annotatedAssay : assays) {
+            counter++;
+            Logger.info("Assay " + counter + "/" + total);
+            
+            //TODO implement better
+            annotatedAssay.doSemanticSimplification();
+        }
 
-		stopwatch.stop();
-		Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
-	}
+        stopwatch.stop();
+        Logger.info("Annotation job done in " + stopwatch.elapsed(TimeUnit.MINUTES) + " minutes.");
+    }
 }

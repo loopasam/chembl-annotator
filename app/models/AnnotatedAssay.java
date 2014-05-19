@@ -167,34 +167,40 @@ public class AnnotatedAssay extends Model {
     }
 
     public void doSemanticSimplification() {
-        Set<Annotation> annotations = this.annotations;
 
-        if (annotations.size() > 1) {
+        if (this.annotations.size() > 1) {
             List<BaoTerm> annotatedTerms = new ArrayList<BaoTerm>();
 
-            for (Annotation annotation : annotations) {
-                //Retrieves all the annotated terms
-                annotatedTerms.add(annotation.term);
+            for (Annotation annotation : this.annotations) {
+                //Retrieves all the annotated terms not to be removed
+                if (!annotation.toRemove) {
+                    annotatedTerms.add(annotation.term);
+                }
             }
 
             List<Annotation> toRemove = new ArrayList<Annotation>();
 
-            for (Annotation annotation : annotations) {
-                //If the children of an annotated term are
-                //present in the annotated terms, then delete the annotation
+            for (Annotation annotation : this.annotations) {
 
-                List<BaoTerm> children = annotation.term.children;
-                for (BaoTerm child : children) {
-                    if (annotatedTerms.contains(child)) {
-                        //The annotation should be removed - flag as such to avoid concurrency problems
-                        toRemove.add(annotation);
+                if (!annotation.toRemove) {
+                    
+                    //If the children of an annotated term are
+                    //present in the annotated terms, then delete the annotation
+
+                    List<BaoTerm> children = annotation.term.children;
+                    for (BaoTerm child : children) {
+                        if (annotatedTerms.contains(child)) {
+                            //The annotation should be removed - flag as such to avoid concurrency problems
+                            toRemove.add(annotation);
+                        }
                     }
                 }
+
             }
 
             for (Annotation annotationToRemove : toRemove) {
-                this.annotations.remove(annotationToRemove);
-                annotationToRemove.delete();
+                annotationToRemove.toRemove = true;
+                annotationToRemove.save();
                 this.save();
             }
 
