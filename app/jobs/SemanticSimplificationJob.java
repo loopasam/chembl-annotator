@@ -29,11 +29,6 @@ public class SemanticSimplificationJob extends Job {
             Logger.info("Assay " + counter + "/" + total);
 
             annotatedAssay.doSemanticSimplification();
-            if (counter % 100 == 0) {
-                Annotation.em().flush();
-                Annotation.em().clear();
-            }
-
         }
 
         stopwatch.stop();
