@@ -34,7 +34,7 @@ public class RuleAnnotationJob extends Job {
         stopwatch.start();
 
         List<AnnotationRule> rules = AnnotationRule.find("select r from AnnotationRule r "
-                + "where highlight = false").fetch();
+                + "where highlight = false and isFilter = false").fetch();
 
         Reviewer robot = Reviewer.find("byEmail", "super.cool.bot@gmail.com").first();
 

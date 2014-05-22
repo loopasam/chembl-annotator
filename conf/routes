@@ -18,7 +18,6 @@ GET     /assay/{chemblid}                                       Application.assa
 GET     /                                       Application.index
 
 # Application routes
-GET     /stats                                          Application.stats
 GET     /ladder                                          Application.ladder
 GET     /starred                                        Application.starred
 GET     /stats                                          Application.stats

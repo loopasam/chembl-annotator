@@ -5,8 +5,13 @@
 
 ## Error analysis
 
-`SELECT assay_id, description FROM assays WHERE assays.assay_id NOT IN (SELECT AnnotatedAssay.assayId FROM AnnotatedAssay) LIMIT 100;`
-
+```
+SELECT assay_id, description 
+FROM assays 
+WHERE assays.assay_id 
+NOT IN (SELECT AnnotatedAssay.assayId FROM AnnotatedAssay) 
+LIMIT 100;
+```
 ## Actionable metrics
 
 - *Curation completion*: 100 x (#annotatedAssay.needReview = true) / (#annotatedAssay)

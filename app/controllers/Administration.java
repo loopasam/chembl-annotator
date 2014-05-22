@@ -154,14 +154,39 @@ public class Administration extends Controller {
         Fixtures.delete(AnnotatedAssay.class);
 
         //create fake annotations
-        AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(791527, "CHEMBL1930580", "Fungistatic activity against Saccharomyces cerevisiae ATCC 24657 assessed as cell growth at 100 uM after 48 hrs by spectrophotometric bioassay");
-        AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of free unbound fraction in serum of methicillin-resistant Staphylococcus aureus infected ddY mouse at 100 mg/kg, ip administered 1 day post infection by paper disk bioassay method");
-        AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(774643, "CHEMBL628657", "DRUGMATRIX: Cysteinyl leukotriene receptor 1 radioligand binding (ligand: [3H]LTD4)");
+        AnnotatedAssay assay1 = AnnotatedAssay.createOrRetrieve(791527, "CHEMBL1930580", "Fungistatic "
+                + "activity against Saccharomyces cerevisiae ATCC 24657 assessed as cell growth at 100 "
+                + "uM after 48 hrs by spectrophotometric bioassay");
+        
+        AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of "
+                + "free unbound fraction in serum of methicillin-resistant Staphylococcus aureus "
+                + "infected ddY mouse at 100 mg/kg, ip administered 1 day post infection "
+                + "by paper disk bioassay method");
+        
+        AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(774643, "CHEMBL628657", "DRUGMATRIX: Cysteinyl "
+                + "leukotriene receptor 1 "
+                + "radioligand binding (ligand: [3H]LTD4)");
 
         AnnotationRule rule1 = AnnotationRule.find("byConfidence", 1).first();
         AnnotationRule rule2 = AnnotationRule.find("byConfidence", 5).first();
+        
+        //Get rule for binding, protein-small and radioligand
+        //Annotate one assay with the three and assign to me, the others
+        //to random users.
+        AnnotationRule radiobinding = AnnotationRule.find("byRule", "LOWER(description) LIKE '%radioligand binding assay%'").first();
+        AnnotationRule proteinSmall = AnnotationRule.find("byRule", "LOWER(description) LIKE '%protein-small molecule interaction assay%'").first();
+        AnnotationRule binding = AnnotationRule.find("byRule", "assay_type = 'B'").first();
+        
+        Reviewer sam  = Reviewer.find("byEmail", "samuel.croset@gmail.com").first();
+        
+        assay1.annotate(radiobinding, true, sam);
+        assay1.annotate(proteinSmall, true, sam);
+        assay1.annotate(binding, true, sam);
+        
+        assay2.annotate(radiobinding, true, sam);
+        assay2.annotate(proteinSmall, true, sam);
+        assay2.annotate(binding, true, sam);
 
-        assay1.annotate(rule1, true, Reviewer.randomReviewer());
         assay2.annotate(rule1, true, Reviewer.randomReviewer());
         assay2.annotate(rule2, true, Reviewer.randomReviewer());
         assay3.annotate(rule2, true, Reviewer.randomReviewer());

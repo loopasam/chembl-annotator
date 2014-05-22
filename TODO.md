@@ -10,3 +10,5 @@ VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
 
 
 INSERT INTO Reviewer (id, email, isadmin, password, cooltheme) VALUES (1, 'samuel.croset@gmail.com', true, 'pouet', false);
+
+export _JAVA_OPTIONS="-Xms2G -Xmx4G"

@@ -22,7 +22,6 @@ public class SemanticSimplificationJob extends Job {
         stopwatch.start();
 
         List<AnnotatedAssay> assays = AnnotatedAssay.findAll();
-
         int total = assays.size();
         int counter = 0;
 
@@ -51,7 +50,7 @@ public class SemanticSimplificationJob extends Job {
                         //present in the annotated terms, then delete the annotation
                         List<BaoTerm> children = annotation.term.children;
                         for (BaoTerm child : children) {
-                            if (annotatedTerms.contains(child)) {
+                            if (annotatedTerms.contains(child) && !toRemove.contains(annotation.id)) {
                                 //The annotation should be removed - flag as such to avoid concurrency problems
                                 toRemove.add(annotation.id);
                             }
@@ -72,7 +71,8 @@ public class SemanticSimplificationJob extends Job {
             Annotation annotation = Annotation.findById(id);
             annotation.toRemove = true;
             annotation.save();
-            if (counterToRemove % 100 == 0) {
+            Logger.info("Annotation: " + annotation.term.label + " - " + annotation.assay.chemblId);
+            if (counterToRemove % 50 == 0) {
                 Annotation.em().flush();
                 Annotation.em().clear();
             }
