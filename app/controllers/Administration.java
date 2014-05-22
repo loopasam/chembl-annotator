@@ -158,10 +158,11 @@ public class Administration extends Controller {
                 + "activity against Saccharomyces cerevisiae ATCC 24657 assessed as cell growth at 100 "
                 + "uM after 48 hrs by spectrophotometric bioassay");
         
-        AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL1267020", "Half life of "
-                + "free unbound fraction in serum of methicillin-resistant Staphylococcus aureus "
-                + "infected ddY mouse at 100 mg/kg, ip administered 1 day post infection "
-                + "by paper disk bioassay method");
+        AnnotatedAssay assay2 = AnnotatedAssay.createOrRetrieve(673225, "CHEMBL751881", "Functional "
+                + "antagonism at the NMDA receptor-ion channel "
+                + "complex was demonstarted by the ability to "
+                + "inhibit the binding of the "
+                + "channel-blocking agent [3H](+)-MK-801");
         
         AnnotatedAssay assay3 = AnnotatedAssay.createOrRetrieve(774643, "CHEMBL628657", "DRUGMATRIX: Cysteinyl "
                 + "leukotriene receptor 1 "
