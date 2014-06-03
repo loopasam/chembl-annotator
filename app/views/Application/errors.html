@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'Error Analysis' /}
+
+<div class="page-header">
+    <h1>
+        <span class="fa fa-exclamation-triangle"></span> Error Analysis
+        <small>
+            #{if page > 0 }            
+            <a href="@{Application.errors(page - 1)}"><span class="fa fa-long-arrow-left"></span> Previous</a> | 
+            #{/if}
+            <a href="@{Application.errors(page + 1)}">Next <span class="fa fa-long-arrow-right"></span></a>
+        </small>
+    </h1>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ChEMBL ID</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        #{list items:assays, as:'assay'}
+        <tr>
+            <td><a href="https://www.ebi.ac.uk/chembl/assay/inspect/${assay.chemblId}">${assay.chemblId}</a></td>
+            <td>${assay.description}</td>
+        </tr>
+        #{/list}
+    </tbody>
+</table>

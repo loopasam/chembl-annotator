@@ -29,7 +29,7 @@ SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assay
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Ion channel'|BAO_0002997|Identifies the assays that are targeting an ion channel|108|false|false
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L1 = 'Transporter'|BAO_0003008|Identifies the assay with a target being a transporter|107|false|false
 assay_type = 'T'|BAO_0002189|Identifies the toxicity assays in ChEMBL|5|false|false
-LOWER(description) LIKE '%cytotoxicity assay%'|BAO_0002993|text-mining on BAO label|3|true|false
+LOWER(description) LIKE '%cytotoxicity assay%'|BAO_0002993|text-mining on BAO label|3|false|false
 LOWER(description) LIKE '%cell morphology%'|BAO_0002991|text-mining on BAO label|1|true|false
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, activities WHERE activities.assay_id = assays.assay_id AND activities.standard_type = 'Kd'|BAO_0002989|Identification of assays with activity type Kd|5|false|false
 SELECT DISTINCT assays.assay_id, assays.description, assays.chembl_id FROM assays, target_components, component_class, protein_family_classification WHERE assays.tid = target_components.tid AND target_components.component_id = component_class.component_id AND component_class.protein_class_id = protein_family_classification.protein_class_id AND protein_family_classification.L2 = 'Reductase'|BAO_0002792|Identifies the assays with an oxidoreductase as target|112|false|false
@@ -77,13 +77,13 @@ LOWER(description) LIKE '%protein-DNA interaction%'|BAO_0000591|text-mining on B
 LOWER(description) LIKE '%protein-RNA interaction assay%'|BAO_0000593|text-mining on BAO label|3|true|false
 LOWER(description) LIKE '%protein-RNA interaction%'|BAO_0000593|text-mining on BAO label|1|true|false
 LOWER(description) LIKE '%kinomescan assay%'|BAO_0003011|text-mining on BAO label|3|true|false
-LOWER(description) LIKE '%[125i]%'|BAO_0002776|text-mining on BAO label|1|true|false
-LOWER(description) LIKE '%[125 i]%'|BAO_0002776|text-mining on BAO label|1|true|false
+LOWER(description) LIKE '%[125i]%' AND (LOWER(description) LIKE '%binding%' OR LOWER(description) LIKE '%affinity%' OR LOWER(description) LIKE '%displacement%') AND NOT LOWER(description) LIKE '%[35s]gtp-gamma%'|BAO_0002776|text-mining on BAO label|1|false|false
+LOWER(description) LIKE '%[125 i]%' AND (LOWER(description) LIKE '%binding%' OR LOWER(description) LIKE '%affinity%' OR LOWER(description) LIKE '%displacement%') AND NOT LOWER(description) LIKE '%[35s]gtp-gamma%'|BAO_0002776|text-mining on BAO label|1|false|false
 LOWER(description) LIKE '%radioligand%'|BAO_0002776|text-mining on BAO label|1|true|false
-LOWER(description) LIKE '%[3h]%'|BAO_0002776|text-mining on BAO label|1|true|false
-LOWER(description) LIKE '%[35s]%'|BAO_0002776|text-mining on BAO label|1|true|false
-LOWER(description) LIKE '%[35 s]%'|BAO_0002776|text-mining on BAO label|1|true|false
-LOWER(description) LIKE '%[3 h]%'|BAO_0002776|text-mining on BAO label|1|true|false
+LOWER(description) LIKE '%[3h]%' AND (LOWER(description) LIKE '%binding%' OR LOWER(description) LIKE '%affinity%' OR LOWER(description) LIKE '%displacement%') AND NOT LOWER(description) LIKE '%[35s]gtp-gamma%'|BAO_0002776|text-mining on BAO label|1|false|false
+LOWER(description) LIKE '%[35s]%' AND (LOWER(description) LIKE '%binding%' OR LOWER(description) LIKE '%affinity%' OR LOWER(description) LIKE '%displacement%') AND NOT LOWER(description) LIKE '%[35s]gtp-gamma%'|BAO_0002776|text-mining on BAO label|1|false|false
+LOWER(description) LIKE '%[35 s]%' AND (LOWER(description) LIKE '%binding%' OR LOWER(description) LIKE '%affinity%' OR LOWER(description) LIKE '%displacement%') AND NOT LOWER(description) LIKE '%[35s]gtp-gamma%'|BAO_0002776|text-mining on BAO label|1|false|false
+LOWER(description) LIKE '%[3 h]%' AND (LOWER(description) LIKE '%binding%' OR LOWER(description) LIKE '%affinity%' OR LOWER(description) LIKE '%displacement%') AND NOT LOWER(description) LIKE '%[35s]gtp-gamma%'|BAO_0002776|text-mining on BAO label|1|false|false
 LOWER(description) LIKE '%protein-small molecule interaction assay%'|BAO_0000110|text-mining on BAO label|3|true|false
 LOWER(description) LIKE '%protein-small molecule interaction%'|BAO_0000110|text-mining on BAO label|1|true|false
 LOWER(description) LIKE '%luciferase reporter gene assay%'|BAO_0002661|text-mining on BAO label|3|true|false
@@ -218,4 +218,4 @@ LOWER(description) LIKE '%cell permeability assay%'|BAO_0002778|text-mining on B
 LOWER(description) LIKE '%cell permeability%'|BAO_0002778|text-mining on BAO label|1|true|false
 LOWER(description) LIKE '%permeability%'|BAO_0002778|text-mining on BAO label|1|true|false
 LOWER(description) LIKE '%drugmatrix%'|BAO_0000015|Filter out the DrugMatrix assays, annotated separateley|0|false|true
-LOWER(description) LIKE '%tg-gates%'|BAO_0000015|Filter out the TG-GATES assays, dealt with separately|0|false|false
+LOWER(description) LIKE '%tg-gates%'|BAO_0000015|Filter out the TG-GATES assays, dealt with separately|0|false|true

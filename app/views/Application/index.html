@@ -13,22 +13,37 @@ In case of problem contact
 <a href="mailto:croset@ebi.ac.uk?Subject=annotator" target="_top">croset@ebi.ac.uk</a> or report
 on the <a href="https://github.com/loopasam/chembl-annotator/issues">GitHub issue tracker of the project</a>.</p>
 
+<h2><span class="fa fa-question-circle"></span> Project summary</h2>
+<ul>
+    <li>Currently in ChEMBL, there's only 6 different 
+        types to calssify assays (ADME, Binding, Functional, Physicochemical, Toxicity, Unassigned).</li>
+    <li>We would like to describe assays with more types, 
+        in particular using the vocabulary 
+        coming from <a href="http://bioportal.bioontology.org/ontologies/BAO/?p=classes&conceptid=http%3A%2F%2Fwww.bioassayontology.org%2Fbao%23BAO_0000015">BAO</a> (over 90 types).</li>
+    <li>It is possible to use some text matching over the assay description in ChEMBL (so called "rules"). For instance, if an assay contains the 
+        word <code>cytotoxicity</code> in its description, it can be annotated using the BAO term <code>BAO_0002993</code> (= <code>cytotoxicity assay</code>).</li>
+    <li>There's over 180 of such rules, applied over all assays present in ChEMBL.</li>
+    <li>Such annotations are electronic, meaning no one checked them. This web application is meant for people to review these electronic annotations and 
+    improve the quality of the annotation process.</li>
+</ul>
+
 <h2><span class="fa fa-book"></span> Instructions for beta testing</h2>
 <ul>
   <li>The application is still under development, please report all improvement or ideas you can think of.
-  Some of them are already listed below (//link).</li>
+  Some of them are already listed below.</li>
   <li>The most important thing to consider at this stage is to see whether the rules are making
   sense at all and what can be improved regarding this. New rules? New terms? No validation?
   Should we manually go over them?</li>
   <li>The game mechanism is in place too, but fake annotations are not yet hidden and visible (in red).</li>
-  <li>You can star the assays of interest to be discussed later</li>
+  <li>You can star the assays of interest, if you want to discuss about it later on.</li>
   <li>In case you don't like the current themes, please <a href="http://bootswatch.com/">choose one</a> (scroll a bit) that you prefer and I will
   include it in a later release (as now the app uses <code>Cosmo</code> and <code>Cyborg</code>).</li>
     <li>Same for icons, any can be replaced by one of <a href="http://fontawesome.io/icons/">this list</a>. 
     Feel free to make recommendations.</li>
-  <li>You can start the <a href="@{Application.next()}">curation process</a>, work on a few assays and note somewhere your thoughts.</li>
+  <li>Some assays are not picked-up by any rule and therefore not annotated. You can have a look at them, under <a href="@{Application.errors(0)}">Error analysis</a>, in order to help us deriving more rules.</li>
 </ul>
 
+#{if reviewer.isPlayer}
 <h2><span class="fa fa-trophy"></span> The Rules</h2>
 <p>The goal of the platform is to manually verify the relevance of automatic annotations. There's a limited number of assays
 needing curation, each one of them annotated with one or more assay types. The goal of the curation is to identify the terms correctly
@@ -47,6 +62,7 @@ Your score is indicated on the top right corner of the screen.</p>
   <li>To start playing, go to <a href="@{Application.next()}">curation</a>.</li>
   <li>Good luck and have fun!</li>
 </ul>
+#{/if}
 
 <h2><span class="fa fa-thumbs-o-up"></span> Ideas for improvement</h2>
 <ul>

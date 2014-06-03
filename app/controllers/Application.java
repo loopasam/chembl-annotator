@@ -1,13 +1,14 @@
 package controllers;
 
-import play.db.jpa.JPA;
-import play.mvc.*;
-
 import java.util.*;
 
+import javax.persistence.Query;
 import jobs.FakeAnnotationsJob;
 
 import models.*;
+import play.Logger;
+import play.db.jpa.JPA;
+import play.mvc.*;
 
 @With(Secure.class)
 public class Application extends Controller {
@@ -122,6 +123,31 @@ public class Application extends Controller {
         AnnotatedAssay assay = AnnotatedAssay.findById(id);
         assay.star();
         assay(assay.chemblId);
+    }
+
+    public static void errors(int page) {
+                        
+        Query query = JPA.em().createNativeQuery("SELECT assay_id, chembl_id, description "
+                + "FROM assays "
+                + "WHERE assays.assay_id "
+                + "NOT IN (SELECT AnnotatedAssay.assayId FROM AnnotatedAssay)").setFirstResult(page * 10).setMaxResults(10);
+
+        List<Object[]> results = query.getResultList();
+        List<AnnotatedAssay> assays = new ArrayList<AnnotatedAssay>();
+
+        for (Object[] result : results) {
+
+            int assayId = Integer.parseInt(result[0].toString());
+            String chemblId = result[1].toString();
+            String description = null;
+            if (result[2] != null) {
+                description = result[2].toString();
+            }
+
+            AnnotatedAssay assay = new AnnotatedAssay(assayId, chemblId, description);
+            assays.add(assay);
+        }
+        render(assays, page);
     }
 
     public static void removeAnnotation(Long assayId, Long annotationId) {
