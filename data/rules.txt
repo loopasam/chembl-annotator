@@ -194,7 +194,7 @@ LOWER(description) LIKE '%second messenger redistribution assay%'|BAO_0000379|te
 LOWER(description) LIKE '%second messenger redistribution%'|BAO_0000379|text-mining on BAO label|1|true|false
 LOWER(description) LIKE '%ip1 redistribution assay%'|BAO_0002780|text-mining on BAO label|3|true|false
 LOWER(description) LIKE '%ip1 redistribution%'|BAO_0002780|text-mining on BAO label|1|true|false
-LOWER(description) LIKE '%cytotoxicity%'|BAO_0002993|text-mining on BAO label|1|true|false
+LOWER(description) LIKE '%cytotoxicity%'|BAO_0002993|text-mining on BAO label|1|false|false
 LOWER(description) LIKE '%apoptosis assay%'|BAO_0002043|text-mining on BAO label|3|true|false
 LOWER(description) LIKE '%apoptosis%'|BAO_0002043|text-mining on BAO label|1|true|false
 LOWER(description) LIKE '%generic hydrolase enzyme activity%'|BAO_0002806|text-mining on BAO label|1|true|false
